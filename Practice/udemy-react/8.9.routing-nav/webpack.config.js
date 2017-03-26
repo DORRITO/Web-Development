@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require('webpack');
 
 module.exports = {
-    //sourcemap//
+    //sourcemap
     devtool: 'cheep-module-eval-source-map',
     entry: [
         "script!jquery/dist/jquery.min.js",
