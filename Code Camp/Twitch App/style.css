@@ -1,0 +1,22 @@
+body{
+    background: url("https://i1.wp.com/i98.photobucket.com/albums/l280/kachina2012/Swiss_Flag_Switzerland.gif");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 0% 5%;
+}
+
+img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.twitchBox{
+    background-color: white;
+}
+
+.follower{
+    margin-bottom: 1%;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}

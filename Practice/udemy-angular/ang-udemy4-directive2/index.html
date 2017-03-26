@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Directives and data binding</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body ng-controller="mainCtrl">
+
+        <input type="text" ng-model="name" /><br/>
+        {{name}}
+        
+        <!-- ng-if-->
+        <div class="alert" ng-if="name.length !== characters">
+            Must be 5 characters
+        </div>
+        <!--ng-show (or ng-hide)-->
+        <div class="alert" ng-class="{ 'alert-warning': name.length < characters,
+        'alert-danger': name.length > characters }" ng-show="name.length !== characters">
+            Must be 5 characters
+        </div>
+        
+        <h3>Rules</h3>
+        <ul>
+            <li ng-repeat="rule in rules">
+                {{ rule.rulename }}
+            </li>
+        </ul>
+    
+    <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>

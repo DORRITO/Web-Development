@@ -1,0 +1,56 @@
+{
+    "ric": {
+        "name": "Rychar",
+        "surname": "Jamison",
+        "race": "half-elf",
+        "class": "Fighter",
+        "profession": "Thief, politician",
+        "stats": {
+            "str": "8 + 1",
+            "skill": "6 + 1",
+            "dex": "11 + 3",
+            "charisma": "8 + 3",
+            "const/health": "11 + 2",
+            "int": "9",
+            "wisdom": "8"
+        },
+        "affiliation": "Mayor's Croos map townsmanship oficionados club",
+        "talents": "bluff, pickpocket"
+    },
+    "cleavan": {
+        "name": "Tylendel",
+        "surname": "Ashkevron",
+        "race": "half elf / sea dweller",
+        "class": "mage",
+        "profession": "Arcane-order",
+        "stats": {
+            "str": "11",
+            "skill": "8 + 2",
+            "dex": "11",
+            "charisma": "6 + 2",
+            "const/health": "10",
+            "int": "9 + 3",
+            "wisdom": "7 + 3"
+        },
+        "affiliation": "Arcane Order",
+        "talents": "healing, sensitive to magic objects"
+    },
+    "reynor": {
+        "name": "Reygan",
+        "surname": "Wolfbane",
+        "race": "elf",
+        "class": "Hunter",
+        "profession": "Scout, spy",
+        "stats": {
+            "str": "10 + 1",
+            "skill": "11 + 2",
+            "dex": "9 + 3",
+            "charisma": " 10 + 2",
+            "const/health": "11",
+            "int": "7 + 1",
+            "wisdom": "9 + 1 " 
+        },
+        "affiliation": "None",
+        "talents": "acrobatic, multilingual"
+    }
+}

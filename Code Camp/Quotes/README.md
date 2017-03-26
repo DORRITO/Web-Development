@@ -1,0 +1,1 @@
+#Uses Jquery to creat a random quote page, accessing from an API.

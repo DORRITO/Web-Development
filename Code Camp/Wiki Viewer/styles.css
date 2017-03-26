@@ -1,0 +1,44 @@
+body{
+    background-color: #0C3140;
+}
+
+h3,h4{
+    color: white;
+    border-color: black;
+    text-shadow: 3px 3px black;
+}
+
+a{
+    text-shadow: 1px 1px 1px black;
+}
+
+p{
+    color: white;
+}
+
+li{
+    list-style: none;
+    background-color: rgba(15,117,80,.80);
+    border-color: black;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: medium;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.box{
+    position:relative;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    border-color: black;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: medium;
+    background-color: rgba(15,117,80,.80);
+    max-width: 400px;
+}
+
+.randomLink{
+    margin-top: 1%;
+    margin-bottom: 3%;
+}

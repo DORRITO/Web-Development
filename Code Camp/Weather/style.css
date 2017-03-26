@@ -1,0 +1,17 @@
+.box{
+    position:relative;
+    margin-top: 20%;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgba(144,217,255,0.50);
+    max-width: 400px;
+} 
+
+.changeTemp{
+    background-color: rgba(234,243,255, .75);
+    color: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 8px;
+    
+}

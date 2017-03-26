@@ -1,0 +1,17 @@
+body{
+    background: url("https://wallpaperscraft.com/image/greens_meadow_trees_clouds_colors_14917_2560x1600.jpg");
+    background-size: cover;   
+}
+
+.box{
+    position:relative;
+    margin-top: 20%;
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgba(144,217,255,0.75);
+} 
+
+.quote{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
