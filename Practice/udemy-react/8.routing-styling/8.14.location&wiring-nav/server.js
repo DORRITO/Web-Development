@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(function(req, res, next) {
     //is traffitc http?
-    if(req.headers['x-forwarded-proto'] === 'http') {
+    if(req.headers['x-forwarded-proto'] === 'https') {
         res.redirect('http://' + req.hostname + req.url);
     } else {
         next();
