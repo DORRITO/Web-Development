@@ -30,7 +30,8 @@ module.exports = {
             Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
             Timer: path.resolve(__dirname, 'app/components/Timer.jsx'),
             Countdown: path.resolve(__dirname, 'app/components/Countdown.jsx'),
-            Clock: path.resolve(__dirname, 'app/components/Clock.jsx')
+            Clock: path.resolve(__dirname, 'app/components/Clock.jsx'),
+            CountdownForm: path.resolve(__dirname, 'app/components/CountdownForm.jsx')
         },
         extensions: ['', '.js', 'jsx']
     },
