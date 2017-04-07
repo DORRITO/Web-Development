@@ -24,12 +24,15 @@ module.exports = {
         filename: "./public/bundle.js"
     },
     resolve: {
-        modules: [
-            path.resolve(__dirname, 'app/components'),
-            "node_modules"
-        ],
+//        modules: [
+//            path.resolve(__dirname, 'app/components'),
+//            "node_modules"
+//        ],
         alias: {
             applicationStyles: path.resolve(__dirname, 'app/styles/app.scss'),
+            TodoApp: path.resolve(__dirname, 'app/components/TodoApp.jsx'),
+            TodoList: path.resolve(__dirname, 'app/components/TodoList.jsx'),
+            Todo: path.resolve(__dirname, 'app/components/Todo.jsx')
         },
         extensions: ['', '.js', 'jsx']
     },
