@@ -32,17 +32,21 @@ module.exports = {
         filename: "./public/bundle.js"
     },
     resolve: {
-//        modules: [
-//            path.resolve(__dirname, 'app/components'),
-//            "node_modules"
-//        ],
+        modules: [
+            __dirname,
+            "app/components",
+            "node_modules",
+//            path.resolve('app/components'),
+//            path.resolve('node_modules'),
+//            path.resolve(__dirname, "app/components"),
+        ],
         alias: {
-            applicationStyles: path.resolve(__dirname, 'app/styles/app.scss'),
-//            TodoApp: path.resolve(__dirname, 'app/components/TodoApp.jsx'),
-//            TodoList: path.resolve(__dirname, 'app/components/TodoList.jsx'),
-//            Todo: path.resolve(__dirname, 'app/components/Todo.jsx'),
-//            AddTodo: path.resolve(__dirname, 'app/components/AddTodo.jsx'),
-//            TodoSearch: path.resolve(__dirname, 'app/components/TodoSearch.jsx'),
+            applicationStyles: 'app/styles/app.scss',
+            TodoApp: 'app/components/TodoApp.jsx',
+            TodoList: 'app/components/TodoList.jsx',
+            Todo: 'app/components/Todo.jsx',
+            AddTodo: 'app/components/AddTodo.jsx',
+            TodoSearch: 'app/components/TodoSearch.jsx',
         },
         extensions: ['.js', 'jsx']
     },
@@ -58,9 +62,4 @@ module.exports = {
             }
         ]
     },
-//    sassLoader: {
-//        includePaths: [
-//            path.resolve(__dirname, './node_module/foundation-sites/scss')
-//        ]
-//    },
 };
