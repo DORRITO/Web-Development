@@ -5,8 +5,8 @@ module.exports = {
     //sourcemap
     devtool: 'cheep-module-eval-source-map',
     entry: [
-        "script!jquery/dist/jquery.min.js",
-        "script!foundation-sites/dist/js/foundation.min.js",
+        "script-loader!jquery/dist/jquery.min.js",
+        "script-loader!foundation-sites/dist/js/foundation.min.js",
         "./app/app.jsx"
     ],
     externals: {
@@ -16,10 +16,18 @@ module.exports = {
         new webpack.ProvidePlugin({
             '$': 'jquery',
             'jQuery': 'jquery'
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                context: __dirname,
+                sassLoader: {
+                    path: './node_module/foundation-sites/scss'
+                }
+            }
         })
     ],
     output: {
-        //publicPath: "/",
+        publicPath: "/",
         path: __dirname,
         filename: "./public/bundle.js"
     },
@@ -30,13 +38,13 @@ module.exports = {
 //        ],
         alias: {
             applicationStyles: path.resolve(__dirname, 'app/styles/app.scss'),
-            TodoApp: path.resolve(__dirname, 'app/components/TodoApp.jsx'),
-            TodoList: path.resolve(__dirname, 'app/components/TodoList.jsx'),
-            Todo: path.resolve(__dirname, 'app/components/Todo.jsx'),
-            AddTodo: path.resolve(__dirname, 'app/components/AddTodo.jsx'),
-            TodoSearch: path.resolve(__dirname, 'app/components/TodoSearch.jsx')
+//            TodoApp: path.resolve(__dirname, 'app/components/TodoApp.jsx'),
+//            TodoList: path.resolve(__dirname, 'app/components/TodoList.jsx'),
+//            Todo: path.resolve(__dirname, 'app/components/Todo.jsx'),
+//            AddTodo: path.resolve(__dirname, 'app/components/AddTodo.jsx'),
+//            TodoSearch: path.resolve(__dirname, 'app/components/TodoSearch.jsx'),
         },
-        extensions: ['', '.js', 'jsx']
+        extensions: ['.js', 'jsx']
     },
     module: {
         loaders: [
@@ -50,9 +58,9 @@ module.exports = {
             }
         ]
     },
-    sassLoader: {
-        includePaths: [
-            path.resolve(__dirname, './node_module/foundation-sites/scss')
-        ]
-    },
+//    sassLoader: {
+//        includePaths: [
+//            path.resolve(__dirname, './node_module/foundation-sites/scss')
+//        ]
+//    },
 };
