@@ -10,7 +10,7 @@ var TodoList = React.createClass({
             return todos.map((todo) => {
                 return(
                     //... passes down every attribute as props, cool!  key makes it so react can keep track of list items.
-                    <Todo key={todo.id} {...todo}/>
+                    <Todo key={todo.id} {...todo} onToggle={this.props.onToggle} />
                 )
             });
         };
