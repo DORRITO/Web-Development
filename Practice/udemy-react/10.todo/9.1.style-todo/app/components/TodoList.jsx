@@ -7,6 +7,13 @@ var TodoList = React.createClass({
         var {todos} = this.props;
         
         var renderTodos = () => {
+            
+            if (todos.length === 0){
+                return(
+                    <p className='container__message'>Nothing to do</p>
+                );
+            }
+            
             return todos.map((todo) => {
                 return(
                     //... passes down every attribute as props, cool!  key makes it so react can keep track of list items.
