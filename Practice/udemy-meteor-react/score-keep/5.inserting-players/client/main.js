@@ -27,6 +27,9 @@ const handleSubmit = function(e) {
   }
 };
 
+let things = [1, 3, 5];
+let newThings = things.map((num) => num);
+console.log(newThings);
 Meteor.startup(function() {
     //call tracker.autroun
     //creat variable called players, set equal to fetch query
