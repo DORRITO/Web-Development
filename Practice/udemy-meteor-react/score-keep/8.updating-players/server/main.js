@@ -2,6 +2,7 @@ import {Meteor} from 'meteor/meteor';
 import {Players} from './../imports/api/players';
 
 Meteor.startup(() => {
+  //class example
   class Person {
     constructor(age = '0') {
       this.age = age;
