@@ -4,6 +4,8 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 
 import {Players} from './../imports/api/players';
+import AddPlayer from './../imports/ui/AddPlayer';
+import TitleBar from './../imports/ui/TitleBar';
 
 const renderPlayers = (playersList) => {
   return playersList.map((player) => {
@@ -35,19 +37,14 @@ const handleSubmit = (e) => {
 };
 
 Meteor.startup(() => {
-    //call tracker.autroun
-    //creat variable called players, set equal to fetch query
-    // render players to screen
-    Tracker.autorun(function() {
+    Tracker.autorun(() => {
       let players = Players.find().fetch();
       let title = "account settings";
-      let name = 'CHIp';
       let jsx = (
                 <div>
-                  <h1>{title}</h1>
-                  <p>Hello {name}</p>
-                  <p>This is my second p tag</p>
+                  <TitleBar />
                   {renderPlayers(players)}
+                  <AddPlayer />
                   <form onSubmit={handleSubmit}>
                     <input type="text" name="playerName" placeholder="Player name" />
                     <button>Add Player</button>
