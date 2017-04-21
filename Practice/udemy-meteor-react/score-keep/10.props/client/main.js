@@ -42,7 +42,7 @@ Meteor.startup(() => {
       let title = "account settings";
       let jsx = (
                 <div>
-                  <TitleBar />
+                  <TitleBar title={title} subtitle="this is the subtitle"/>
                   {renderPlayers(players)}
                   <AddPlayer />
                   <form onSubmit={handleSubmit}>
