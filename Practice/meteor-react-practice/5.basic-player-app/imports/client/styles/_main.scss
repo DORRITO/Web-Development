@@ -1,0 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  // makes it easy to conver rem's to pixels.  1.4 rem = 14 pixels, 20 rem = 200 pixels
+  font-size: 62.5%;
+}
