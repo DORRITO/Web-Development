@@ -12,6 +12,13 @@ export default class Login extends React.Component{
     };
   }///////////////////////
 
+  //////take page back if no auth/////
+  componentWillMount(){
+    if(Meteor.userId()) {
+        this.props.history.replace('/links');
+      }
+  }//////////////////////////////////
+
   ////////error handler////
   onSubmit(e) {
     e.preventDefault();

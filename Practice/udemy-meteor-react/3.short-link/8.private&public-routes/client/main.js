@@ -20,8 +20,8 @@ const authenticatedPages = ['/links'];
 const routes = (
   <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Login}/>
-        <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/signup" component={Signup} />
         <Route exact path="/links" component={Link}/>
         <Route path="*" component={NotFound}/>
       </Switch>
@@ -40,10 +40,10 @@ Tracker.autorun(() => {
   const isAuthenticatedPage = authenticatedPages.includes(pathname);
 
   if (isUnauthenticatedPage && isAuthenticated) {
-    history.push('/links');
+    history.replace('/links');
   }
   else if (isAuthenticatedPage && !isAuthenticated) {
-    history.push('/');
+    history.replace('/');
   }
   //if authenticated page, redirect to /links
     //browserHistory.push
