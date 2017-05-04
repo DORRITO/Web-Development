@@ -26,6 +26,10 @@ export default class Signup extends React.Component{
     let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
 
+    if(password.length < 3) {
+      return this.setState({error: 'Password must be more than 2 chars long'});
+    }
+
     Accounts.createUser({email, password}, (err) => {
       //if else
       err ? this.setState({error: err.reason}) : this.setState({error: ''});
@@ -41,7 +45,7 @@ export default class Signup extends React.Component{
 
         {this.state.error ? <p>{this.state.error}</p> : undefined}
 
-        <form onSubmit={this.onSubmit.bind(this)}>
+        <form onSubmit={this.onSubmit.bind(this)} noValidate>
           <input type="email" ref="email" name="email" placeholder="email" />
           <input type="password" ref="password" name="password" placeholder="password" />
           <button>Create Account</button>
