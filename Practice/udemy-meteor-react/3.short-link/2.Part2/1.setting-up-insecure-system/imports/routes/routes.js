@@ -17,7 +17,6 @@ const authenticatedPages = ['/links'];
 
 ///////////////authenticate page pushes/////////////
 export const onAuthChange = (isAuthenticated) => {
-  console.log('isauthenticated =', isAuthenticated);
   //location shows the url path '/name'
   const pathname = location.pathname;
   const isUnauthenticatedPage = unauthenticatedPages.includes(pathname);
