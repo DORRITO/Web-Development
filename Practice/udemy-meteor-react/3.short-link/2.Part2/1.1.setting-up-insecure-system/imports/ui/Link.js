@@ -6,17 +6,17 @@ import LinksList from './LinksList';
 
 export default class Link extends React.Component{
 
+  /////////////////////
+  onLogout() {
+    Accounts.logout();
+  }///////////////////
+
   //////take page back if no auth/////
   componentWillMount(){
     if(!Meteor.userId()) {
         this.props.history.replace('/');
       }
   }//////////////////////////////////
-
-  /////////////////////
-  onLogout() {
-    Accounts.logout();
-  }///////////////////
 
   ////////////send url///////////////////////
   onSubmit(e){
@@ -35,7 +35,7 @@ export default class Link extends React.Component{
       <div>
         <h1>Your links</h1>
         <button onClick={this.onLogout.bind(this)}>Logout</button>
-        <LinksList key='this-key'/>
+        <LinksList />
         <p>Add Link</p>
         <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" ref='url' placeholder="URL" />

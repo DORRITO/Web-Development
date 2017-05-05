@@ -15,7 +15,7 @@ const history = createBrowserHistory({
 const unauthenticatedPages = ['/', '/signup'];
 const authenticatedPages = ['/links'];
 
-///////////////authenticate page pushes/////////////
+///////////////authenticate page pushes////////////
 export const onAuthChange = (isAuthenticated) => {
   //location shows the url path '/name'
   const pathname = location.pathname;
