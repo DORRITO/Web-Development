@@ -5,17 +5,15 @@ import {Accounts} from 'meteor/accounts-base';
 Accounts.validateNewUser((user) => {
   const email = user.emails[0].address;
 
-  ///////try to validate///////////
-  try{
-    new SimpleSchema({
-      email: {
-        type: String,
-        regEx: SimpleSchema.RegEx.Email
-      }
-    }).validate({email})//email: email.  but im using es6 here
-  } catch(e) {
-    throw new Meteor.Error(400, e.message);
-  }///////////////////////////////////
+  ///////validate///////////
+  new SimpleSchema({
+    email: {
+      type: String,
+      regEx: SimpleSchema.RegEx.Email
+    }
+  }).validate({email})//email: email.  but im using es6 here
+  ////////////////////////////////
+
   return true; //allows user to be created
 });
 
