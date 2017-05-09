@@ -13,7 +13,7 @@ export default class Link extends React.Component{
         this.props.history.replace('/');
       }
   }//////////////////////////////////
-  
+
   render(){
     return(
       <div>
