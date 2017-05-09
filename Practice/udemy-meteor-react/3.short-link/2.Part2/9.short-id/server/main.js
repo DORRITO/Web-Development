@@ -16,7 +16,7 @@ Meteor.startup(() => {
 
     if (link){
       res.statusCode = 302;
-      res.setHeader('Location', 'link.url');
+      res.setHeader('Location', link.url);
       res.end();
     } else {
       next();
