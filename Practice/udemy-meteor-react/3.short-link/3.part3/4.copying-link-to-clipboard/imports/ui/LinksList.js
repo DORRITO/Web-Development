@@ -22,10 +22,11 @@ export default class LinksList extends React.Component {
       this.setState({ links });
     });
   }
-  componentWillUnmount() {
-    console.log('componentWillUnmount linkslist');
-    this.linksTracker.stop();
-  }
+  //dont need, newest react destroys it
+  // componentWillUnmount() {
+  //   console.log('componentWillUnmount linkslist');
+  //   this.linksTracker.stop();
+  // }
 
   renderLinksListItems() {
     return this.state.links.map((link) => {
