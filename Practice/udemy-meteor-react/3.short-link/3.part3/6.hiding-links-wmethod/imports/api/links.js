@@ -14,7 +14,6 @@ if (Meteor.isServer) {
 }
 //naming convention:  name then . action.  (emails.archive, llllinks.insert)
 Meteor.methods({
-
   //////////////////////////insert///////////////////////////////////////////
   'links.insert'(url) {
     if (!this.userId) {
