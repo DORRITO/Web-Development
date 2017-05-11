@@ -14,12 +14,13 @@ if (Meteor.isServer) {
 }
 //naming convention:  name then . action.  (emails.archive, llllinks.insert)
 Meteor.methods({
+
+  //////////////////////////insert///////////////////////////////////////////
   'links.insert'(url) {
     if (!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
 
-    /////////////validate url///////////
     new SimpleSchema({
       url: {
         type: String,
@@ -27,7 +28,6 @@ Meteor.methods({
         regEx: SimpleSchema.RegEx.Url
       }
     }).validate({url});//es6, could be url: url
-    /////////////////////////////////////
 
     Links.insert({
       _id: shortid.generate(),
@@ -35,8 +35,9 @@ Meteor.methods({
       userId: this.userId,
       visible: true
     });
-  },
+  },//////////////////////////////////////////////////////////////////////////
 
+  ///////////////////////////visibility////////////////////////////////////
   'links.setVisibility'(_id, visible) {
     if (!this.userId) {
       throw new Meteor.Error('not-authorized');
@@ -58,5 +59,5 @@ Meteor.methods({
     }, {
       $set: { visible }
     });
-  }
+  }////////////////////////////////////////////////////////////////////
 });
