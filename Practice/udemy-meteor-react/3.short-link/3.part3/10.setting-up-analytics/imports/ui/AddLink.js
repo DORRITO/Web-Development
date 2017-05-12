@@ -13,7 +13,7 @@ export default class AddLink extends React.Component{
 
   ////////////send url///////////////////////
   onSubmit(e){
-    const url = this.refs.url.value.trim();
+    const {url} = this.state;
 
     e.preventDefault();
 
