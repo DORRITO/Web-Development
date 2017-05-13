@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {Links} from '../api/links';
 import LinksList from './LinksList';
 import PrivateHeader from './PrivateHeader';
 import AddLink from './AddLink';
@@ -20,8 +19,8 @@ export default class Link extends React.Component{
       <div>
         <PrivateHeader title="Your links" />
         <LinksListFilters />
-        <LinksList key='this-key'/>
         <AddLink />
+        <LinksList key='this-key'/>
       </div>
     );
   }
