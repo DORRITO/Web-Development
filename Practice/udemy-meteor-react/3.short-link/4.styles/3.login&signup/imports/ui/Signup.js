@@ -46,7 +46,7 @@ export default class Signup extends React.Component{
 
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
-          <form onSubmit={this.onSubmit.bind(this)} noValidate>
+          <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
             <input type="email" ref="email" name="email" placeholder="email" />
             <input type="password" ref="password" name="password" placeholder="password" />
             <button>Create Account</button>
