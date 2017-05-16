@@ -18,9 +18,11 @@ export default class Link extends React.Component{
     return(
       <div>
         <PrivateHeader title="Your links" />
-        <LinksListFilters />
-        <AddLink />
-        <LinksList key='this-key'/>
+        <div className="page-content">
+          <LinksListFilters />
+          <AddLink />
+          <LinksList key='this-key' />
+        </div>
       </div>
     );
   }
