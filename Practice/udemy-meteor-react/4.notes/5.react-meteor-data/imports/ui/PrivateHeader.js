@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {Accounts} from 'meteor/accounts-base';
+import {createContainer} from 'meteor/react-meteor-data';
 
-const PrivateHeader = (props) => {  //const instead of export default because name is being used in PropTypes
+export const PrivateHeader = (props) => {  //const instead of export default because name is being used in PropTypes
     return(
       <div className="header">
         <div className="header__content">
@@ -17,5 +17,12 @@ const PrivateHeader = (props) => {  //const instead of export default because na
 PrivateHeader.propTypes = {
   title: PropTypes.string.isRequired,
   handleLogout: PropTypes.func.isRequired
-};
-export default PrivateHeader;
+};//////////////////////////////////////////////////////////
+
+export default createContainer(() => {
+  return{
+    handleLogout: () => Accounts.logout()
+  };
+}, PrivateHeader);
+
+// export default PrivateHeader;
