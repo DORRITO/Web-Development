@@ -43,7 +43,7 @@ Meteor.methods({
   },/////////////////////////////////////////////
 
   /////////////////update note////////////
-  'notes.update'({_id, updates) {
+  'notes.update'(_id, updates) {
     if (!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
