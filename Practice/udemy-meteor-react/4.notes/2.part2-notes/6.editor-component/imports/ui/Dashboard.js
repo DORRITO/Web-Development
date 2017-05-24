@@ -1,7 +1,11 @@
 import React from 'react';
+import {Session} from 'meteor/session';
+
 import PrivateHeader from './PrivateHeader';
 import NoteList from './NoteList';
-import {Session} from 'meteor/session';
+import Editor from './Editor';
+
+
 
 export default class Link extends React.Component{
 
@@ -20,6 +24,7 @@ export default class Link extends React.Component{
         <PrivateHeader title="Dashboard" />
         <div className="page-content">
           <NoteList />
+          <Editor />
         </div>
       </div>
     );
