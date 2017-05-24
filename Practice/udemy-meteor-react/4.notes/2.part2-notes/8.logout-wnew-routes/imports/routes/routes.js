@@ -34,13 +34,15 @@ export const onAuthChange = (isAuthenticated) => {
 
 export const routes = (
   <BrowserRouter>
+    <Route>
       <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/signup" component={Signup} />
-        <Route exact path="/dashboard" component={Dashboard}/>
-        <Route exact path="/dashboard/:id" component={Dashboard} />
+        <Route exact path="/" component={Login} privacy="unauth" />
+        <Route exact path="/signup" component={Signup} privacy="unauth" />
+        <Route exact path="/dashboard" component={Dashboard} privacy="auth" />
+        <Route exact path="/dashboard/:id" component={Dashboard} privacy="auth" />
         <Route path="*" component={NotFound}/>
       </Switch>
+    </Route>
   </BrowserRouter>
   // <BrowserRouter><Link path="/links" /></BrowserRouter>
 );

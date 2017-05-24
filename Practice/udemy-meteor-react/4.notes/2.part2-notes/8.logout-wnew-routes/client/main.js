@@ -15,6 +15,8 @@ const history = createBrowserHistory({
 //tracker is tracking anytime something in the database changes!
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
+  const currentPagePrivacy = Session.get('currentPagePrivacy');
+  console.log('currentPagePrivacy', currentPagePrivacy);
   onAuthChange(isAuthenticated);
 });
 ///////////////if there is a note, go to it///////////

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
 import {createContainer} from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import {Session} from 'meteor/session';
 
 export class Signup extends React.Component{
 
@@ -10,6 +11,7 @@ export class Signup extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
+      privacy: 'unauth',
       error: ''
     };
   }///////////////////////
@@ -18,7 +20,8 @@ export class Signup extends React.Component{
   componentWillMount(){
     if(Meteor.userId()) {
         this.props.history.replace('/links');
-      }
+    }
+    Session.set('currentPagePrivacy', this.state.privacy);
   }//////////////////////////////////
 
   ////////error handler////
