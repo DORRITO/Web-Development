@@ -6,9 +6,10 @@ import createBrowserHistory from 'history/createBrowserHistory';
 
 import {routes, onAuthChange} from '../imports/routes/routes';
 import '../imports/startup/simple-schema-configuration.js';
+
 ///////////////////////////////////////
 const history = createBrowserHistory({
-  forceRefresh: true
+  forceRefresh: false
 });////////////////////////////////////
 
 //tracker is tracking anytime something in the database changes!
