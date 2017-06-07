@@ -7,20 +7,39 @@ html {
   font-size: 62.5%;
 }
 
-h1{
-  font-weight: 400;
-  color: blue;
+img{
+  height: 25rem;
+  width: 25rem;
 }
 
-button{
-    background-color: aquamarine;
+a{
+  text-decoration: none;
 }
-
-.hello{
+.pic{
     display: flex;
+    font-size: 5rem;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 20%;
-//    max-width: 20rem;
+    padding: 1.3rem;
+}
+
+.cat-happy{
+  border-style: solid;
+  margin-right: 5rem;
+}
+.cat-grumpy{
+  border-style: solid;
+  margin-left: 5rem;
+}
+.cat-random{
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    margin-top: 3rem;
     padding: 1.3rem;
 }
