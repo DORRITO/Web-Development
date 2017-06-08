@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import ReactDOM from 'react-dom';
 
-import { cat } from '../imports/cat';
+import { box } from '../imports/box';
 
 Meteor.startup(() => {
-    ReactDOM.render(cat, document.getElementById('app'));
+    ReactDOM.render(box, document.getElementById('app'));
 });
