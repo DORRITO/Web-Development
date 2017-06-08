@@ -34,13 +34,26 @@ html, body {
 
 .box--top-left{
   background-color: blue;
+  &:active{
+    background-color: red;
+  }
 }
+
 .box--top-right{
   background-color: red;
+  &:active{
+    background-color: blue;
+  }
 }
 .box--bottom-left{
   background-color: yellow;
+  &:active{
+    background-color: green;
+  }
 }
 .box--bottom-right{
   background-color: green;
+  &:active{
+    background-color: yellow;
+  }
 }
