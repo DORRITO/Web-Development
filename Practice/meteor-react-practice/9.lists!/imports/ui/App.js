@@ -10,13 +10,13 @@ import GameList from './GameList';
 export default class App extends React.Component {
   render() {
     return(
-      <div>
-        <div className="nameDiv">
+      <div className="container">
+        <div className="name-div">
           <TitleBar title={this.props.title} subtitle="List of Names" />
           <NameList names={this.props.names} />
           <AddName />
         </div>
-        <div className="gameDiv">
+        <div className="game-div">
           <TitleBar title={this.props.title} subtitle="List of Games" />
           <GameList games={this.props.games} />
           <AddGame />

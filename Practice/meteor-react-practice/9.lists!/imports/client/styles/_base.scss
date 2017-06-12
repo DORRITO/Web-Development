@@ -22,12 +22,24 @@ html, body {
   margin-top: 5rem;
 }
 
-.box{
-    align-items: center;
+.name-div{
+    background-color: red;
+    border-radius: 3rem;
     border-style: solid;
-    font-size: 2rem;
-    margin-right: 5rem;
+    font-size: 1rem;
+    margin: 5rem;
     padding: 1.3rem;
     width: 20rem;
-    height: 20rem;
+    height: 30rem;
+}
+
+.game-div{
+    background-color: orange;
+    border-radius: 3rem;
+    border-style: solid;
+    font-size: 1rem;
+    margin: 5rem;
+    padding: 1.3rem;
+    width: 20rem;
+    height: 30rem;
 }
