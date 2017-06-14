@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router';
 
 export default class General extends React.Component{
   render() {
       return(
-        <p>This is the default page</p>
+        <div>
+          <h1>link page</h1>
+          <Link to="/Link1">page 1</Link>
+        </div>
       );
   }
 };
