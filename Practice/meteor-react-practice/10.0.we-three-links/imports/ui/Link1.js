@@ -6,7 +6,6 @@ export default class Link1 extends React.Component{
   onLogout(){
     browserHistory.push('/');
   }
-
   render() {
       return(
         <div>
