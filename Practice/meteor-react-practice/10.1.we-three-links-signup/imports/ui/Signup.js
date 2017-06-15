@@ -27,6 +27,7 @@ export default class Signup extends React.Component{
           <p>
             {this.state.count}
             <button onClick={this.increment.bind(this)}>+1</button>
+            <button onClick={() => {this.setState({count: this.state.count - 1})}}>-1</button>
           </p>
           <Link to="/">Back to the beginning</Link>
         </div>
