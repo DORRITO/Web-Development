@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 
-export default class General extends React.Component{
+export default class Splash extends React.Component{
   render() {
       return(
         <div>
