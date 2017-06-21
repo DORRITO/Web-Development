@@ -20,6 +20,17 @@ export default class Signup extends React.Component{
     });
   }//////////////////////////////
 
+  onSubmit(e){
+    e.preventDefault();
+
+    let name = this.refs.name.vaule.trim();
+    let password = this.refs.password.trim();
+
+    Accounts.createUser({name, password}, (err) => {
+
+    });
+  }
+
   ////////////////html////////////////////////////////
   render() {
       return(
@@ -31,8 +42,9 @@ export default class Signup extends React.Component{
             <button onClick={() => {this.setState({count: this.state.count - 1})}}>-1</button>
           </p> */}
           <form>
-            <input type="text" name="name" placeholder="enter name" />
-            <input type="password" name="password" placeholder="password" />
+            <input type="text" ref="name" name="name" placeholder="enter name" />
+            <input type="password" ref="password" name="password" placeholder="password" />
+            <button>Create Character</button>
           </form>
           <Link to="/">Back to home page!</Link>
         </div>
