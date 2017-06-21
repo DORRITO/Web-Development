@@ -13,7 +13,6 @@ export default class Splash extends React.Component{
         <div>
           <h1>Terraria</h1>
           <p><Link to="/Link1">page 1</Link></p>
-          <p><Link to="/Signup">Signup</Link></p>
           <Rychar />
           <Tylendel />
           <Reygan />
