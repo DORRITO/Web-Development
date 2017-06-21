@@ -7,6 +7,8 @@ import Reygan from './players/Reygan';
 import Tylendel from './players/Tylendel';
 import GM from './players/GM';
 
+
+
 export default class Splash extends React.Component{
   render() {
       return(

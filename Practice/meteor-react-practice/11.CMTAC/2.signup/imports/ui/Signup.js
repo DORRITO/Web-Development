@@ -5,14 +5,6 @@ import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
 
-  /////////props///////////
-  constructor(props){
-    super(props);
-    this.state = {
-      count: 0
-    };
-  }///////////////////////
-
   ///////////add to count////////
   increment(){
     this.setState({
@@ -20,28 +12,23 @@ export default class Signup extends React.Component{
     });
   }//////////////////////////////
 
+  ////////////////on submit//////////////////////////
   onSubmit(e){
     e.preventDefault();
-
-    let name = this.refs.name.vaule.trim();
-    let password = this.refs.password.trim();
+    let name = this.refs.name.value.trim();
+    let password = this.refs.password.value.trim();
 
     Accounts.createUser({name, password}, (err) => {
-
+      console.log('Signup callback', err);
     });
-  }
+  }/////////////////////////////////////////////
 
   ////////////////html////////////////////////////////
   render() {
       return(
         <div>
           <h1>sign up</h1>
-          {/* <p>
-            {this.state.count}
-            <button onClick={this.increment.bind(this)}>+1</button>
-            <button onClick={() => {this.setState({count: this.state.count - 1})}}>-1</button>
-          </p> */}
-          <form>
+          <form onSubmit={this.onSubmit.bind(this)}>
             <input type="text" ref="name" name="name" placeholder="enter name" />
             <input type="password" ref="password" name="password" placeholder="password" />
             <button>Create Character</button>
