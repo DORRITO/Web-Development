@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 export default class GM extends React.Component{
   render(){
     return(
-      <div>
+      <div className="game-div">
         <p>GM</p>
         <p><Link to="/Signup">Signup</Link></p>
       </div>

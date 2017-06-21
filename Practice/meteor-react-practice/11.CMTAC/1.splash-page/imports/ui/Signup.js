@@ -20,16 +20,16 @@ export default class Signup extends React.Component{
     });
   }//////////////////////////////
 
-  onSubmit(e){
-    e.preventDefault();
-
-    let name = this.refs.name.vaule.trim();
-    let password = this.refs.password.trim();
-
-    Accounts.createUser({name, password}, (err) => {
-
-    });
-  }
+  // onSubmit(e){
+  //   e.preventDefault();
+  //
+  //   let name = this.refs.name.vaule.trim();
+  //   let password = this.refs.password.trim();
+  //
+  //   Accounts.createUser({name, password}, (err) => {
+  //
+  //   });
+  // }
 
   ////////////////html////////////////////////////////
   render() {

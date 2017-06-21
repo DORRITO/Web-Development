@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 export default class Rychar extends React.Component{
   render(){
     return(
-      <div>
+      <div className="game-div">
         <p>Rychar</p>
         <p><Link to="/Signup">Signup</Link></p>
       </div>
