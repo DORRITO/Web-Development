@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Router, Route, browserHistory} from 'react-router';
 
-import Default from './../ui/Default';
-import Signup from './../ui/Signup';
-import Login from './../ui/Login';
+import Default from './../ui/pages/Default';
+import Signup from './../ui/pages/Signup';
+import Login from './../ui/pages/Login';
 
 export const App = (
   <Router history={browserHistory}>
