@@ -5,20 +5,13 @@ import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
 
-  ///////////add to count////////
-  increment(){
-    this.setState({
-      count: this.state.count + 1
-    });
-  }//////////////////////////////
-
   ////////////////on submit//////////////////////////
   onSubmit(e){
     e.preventDefault();
-    let name = this.refs.name.value.trim();
+    let username = this.refs.name.value.trim();
     let password = this.refs.password.value.trim();
 
-    Accounts.createUser({name, password}, (err) => {
+    Accounts.createUser({username, password}, (err) => {
       console.log('Signup callback', err);
     });
   }/////////////////////////////////////////////
