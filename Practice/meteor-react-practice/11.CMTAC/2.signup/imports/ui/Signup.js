@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router';
-import {Accounts} from 'meteor/accounts-base';
+import {Meteor} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
   /////////////////////
@@ -28,6 +28,9 @@ export default class Signup extends React.Component{
       return(
         <div>
           <h1>sign up</h1>
+
+          {this.state.error ? <p>{this.state.error}</p> : undefined}
+
           <form onSubmit={this.onSubmit.bind(this)}>
             <input type="text" ref="name" name="name" placeholder="enter name" />
             <input type="password" ref="password" name="password" placeholder="password" />
