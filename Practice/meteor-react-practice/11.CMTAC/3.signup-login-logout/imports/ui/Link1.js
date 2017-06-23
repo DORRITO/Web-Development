@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {browserHistory} from 'react-router';
+import {Accounts} from 'meteor/accounts-base';
 
 export default class Link1 extends React.Component{
   onLogout(){
-    browserHistory.push('/');
+    Accounts.logout();
   }
   render() {
       return(
         <div>
           <p>Link1</p>
-          <button onClick={this.onLogout.bind(this)}>Back to the main page</button>
+          <button onClick={this.onLogout.bind(this)}>Logout</button>
         </div>
       );
   }

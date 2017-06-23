@@ -8,7 +8,7 @@ export default class Rychar extends React.Component{
     return(
       <div className="game-div">
         <p>Rychar</p>
-        <p><Link to="/Signup">Signup</Link></p>
+        <p><Link to="/login">Login</Link></p>
       </div>
     );
   }

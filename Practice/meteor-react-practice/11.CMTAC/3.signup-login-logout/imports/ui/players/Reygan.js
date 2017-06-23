@@ -8,7 +8,7 @@ export default class Reygan extends React.Component{
     return(
       <div className="game-div">
         <p>Reygan</p>
-        <p><Link to="/Signup">Signup</Link></p>
+        <p><Link to="/login">Login</Link></p>
       </div>
     );
   }

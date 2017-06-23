@@ -8,7 +8,7 @@ export default class GM extends React.Component{
     return(
       <div className="game-div">
         <p>GM</p>
-        <p><Link to="/Signup">Signup</Link></p>
+        <p><Link to="/login">Login</Link></p>
       </div>
     );
   }
