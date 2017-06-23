@@ -4,6 +4,13 @@ import {Link} from 'react-router';
 import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
+  /////////////////////
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: ''
+    };
+  }///////////////////
 
   ////////////////on submit//////////////////////////
   onSubmit(e){
