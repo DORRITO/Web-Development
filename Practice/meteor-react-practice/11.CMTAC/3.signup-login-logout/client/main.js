@@ -18,9 +18,9 @@ Tracker.autorun(() => {
   const isAuthenticatedPage = authenticatedPages.includes(pathname);
 
   if(isUnauthenticatedPage && isAuthenticated) {
-    browserHistory.push('/gamepage');
+    browserHistory.replace('/gamepage');
   } else if(isAuthenticatedPage && !isAuthenticated) {
-    browserHistory.push('/');
+    browserHistory.replace('/');
   }
 
   console.log('isAuthenticated?', isAuthenticated);
