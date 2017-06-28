@@ -4,7 +4,6 @@ import {browserHistory} from 'react-router';
 import {Link} from 'react-router';
 
 import LoginOrDice from './../LoginOrDice';
-
 export default class GM extends React.Component{
   render(){
     return(
