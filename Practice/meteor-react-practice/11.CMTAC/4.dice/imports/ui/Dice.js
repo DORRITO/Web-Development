@@ -4,13 +4,17 @@ import {Accounts} from 'meteor/accounts-base';
 
 export default class Dice extends React.Component{
 
+  constructor(props){
+    super(props);
+  }
+
   //////////////////////////////////if logged in, show dice! otherwise showlogin form///////////////////////
-  rollDice(modifier){
+  rollDice(){
     d20 = () => {
       return Math.floor(Math.random() * (20 - 1 + 1)) + 1;
     }
     // const showLoginStatus = !!Meteor.userId() ? 'this will be a dice roll' : <Link to="/login">Login</Link>;
-    return <p>dice roll {d20()}</p>
+    return <p>dice roll is {d20()} plus {this.props.modifier}!</p>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   render(){
@@ -20,4 +24,8 @@ export default class Dice extends React.Component{
       </div>
     );
   }
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Dice.propTypes = {
+  // modifier: React.PropTypes.number.isRequired
 };
