@@ -4,10 +4,6 @@ import {Accounts} from 'meteor/accounts-base';
 
 export default class Dice extends React.Component{
 
-  constructor(props){
-    super(props);
-  }
-
   //////////////////////////////////if logged in, show dice! otherwise showlogin form///////////////////////
   rollDice(){
     d20 = () => {

@@ -12,7 +12,7 @@ export default class Rychar extends React.Component{
     return(
       <div className="game-div">
         <p>Rychar</p>
-        <LoginOrDice />
+        <LoginOrDice modifier="0"/>
       </div>
     );
   }

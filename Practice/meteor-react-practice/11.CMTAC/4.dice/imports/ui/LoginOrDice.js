@@ -9,15 +9,15 @@ import Dice from './Dice';
 export default class LoginOrDice extends React.Component{
 
   //////////////////////////////////if logged in, show dice! otherwise showlogin form///////////////////////
-  showLogin(modifier){
-    const showLoginStatus = !!Meteor.userId() ? <Dice modifier={modifier}/> : <Link to="/login">Login</Link>;
+  showLogin(){
+    const showLoginStatus = !!Meteor.userId() ? <Dice modifier={this.props.modifier}/> : <Link to="/login">Login</Link>;
     return <div>{showLoginStatus}</div>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   render(){
     return(
       <div>
-        {this.showLogin('hello')}
+        {this.showLogin()}
       </div>
     );
   }

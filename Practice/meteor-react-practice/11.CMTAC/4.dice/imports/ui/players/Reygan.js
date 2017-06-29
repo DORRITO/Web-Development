@@ -10,7 +10,7 @@ export default class Reygan extends React.Component{
     return(
       <div className="game-div">
         <p>Reygan</p>
-        <LoginOrDice />
+        <LoginOrDice modifier="0"/>
       </div>
     );
   }
