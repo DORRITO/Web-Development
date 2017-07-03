@@ -9,7 +9,7 @@ export default class GM extends React.Component{
     return(
       <div className="game-div">
         <p>GM</p>
-        <LoginOrDice modifier={2}/>
+        <LoginOrDice modifier={0}/>
       </div>
     );
   }

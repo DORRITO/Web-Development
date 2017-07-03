@@ -10,13 +10,25 @@ export default class Dice extends React.Component{
       return Math.floor(Math.random() * (20 - 1 + 1)) + 1;
     }
     // const showLoginStatus = !!Meteor.userId() ? 'this will be a dice roll' : <Link to="/login">Login</Link>;
-    return <p>dice roll is {d20()} plus {this.props.modifier}!</p>
+    return <p>dice roll is {d20()}! (+/- {this.props.modifier})</p>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  /////////show modifier input the user the gm////////
+  isGM(){
+    if (!!Meteor.userId && Meteor.user()) {
+      // let modifierInput = this.refs.modInput.value.trim();
+      // console.log(modifierInput);
+
+      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} />
+      return <div>{modInput}</div>
+    }
+  }///////////////////////////////////////////////
 
   render(){
     return(
       <div>
         {this.rollDice()}
+        {this.isGM()}
       </div>
     );
   }
