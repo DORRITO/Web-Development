@@ -15,10 +15,10 @@ export default class Dice extends React.Component{
 
   /////////show modifier input the user the gm////////
   isGM(){
-    if (!!Meteor.userId && Meteor.user()) {
+    if (Meteor.userId() === 'y7aACCi9zEYNc6g2p') {
       // let modifierInput = this.refs.modInput.value.trim();
       // console.log(modifierInput);
-
+      console.log("we're in business")
       const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} />
       return <div>{modInput}</div>
     }
