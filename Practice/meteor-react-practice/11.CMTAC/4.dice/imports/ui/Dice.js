@@ -18,8 +18,8 @@ export default class Dice extends React.Component{
     if (Meteor.userId() === 'y7aACCi9zEYNc6g2p') {
       // let modifierInput = this.refs.modInput.value.trim();
       // console.log(modifierInput);
-      console.log("we're in business")
-      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} />
+
+      const modInput = <form><input type="number" ref="modInput" name="modInput" placeholder={5} /></form>
       return <div>{modInput}</div>
     }
   }///////////////////////////////////////////////
@@ -28,7 +28,9 @@ export default class Dice extends React.Component{
     return(
       <div>
         {this.rollDice()}
-        {this.isGM()}
+        <form>
+          {this.isGM()}
+        </form>
       </div>
     );
   }
