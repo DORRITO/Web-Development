@@ -19,7 +19,7 @@ export default class Dice extends React.Component{
       // let modifierInput = this.refs.modInput.value.trim();
       // console.log(modifierInput);
 
-      const modInput = <form><input type="number" ref="modInput" name="modInput" placeholder={5} /></form>
+      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} />
       return <div>{modInput}</div>
     }
   }///////////////////////////////////////////////
@@ -28,9 +28,7 @@ export default class Dice extends React.Component{
     return(
       <div>
         {this.rollDice()}
-        <form>
-          {this.isGM()}
-        </form>
+        {this.isGM()}
       </div>
     );
   }
