@@ -35,11 +35,16 @@ export default class Dice extends React.Component{
     }
   }///////////////////////////////////////////////
 
+  PLAYERSEESTHIS(){
+    return <div>+ {this.state.modifier} PLAYER SEES THIS</div>
+  }
+
   render(){
     return(
       <div>
         {this.rollDice()}
         {this.isGM()}
+        {this.PLAYERSEESTHIS()}
       </div>
     );
   }
