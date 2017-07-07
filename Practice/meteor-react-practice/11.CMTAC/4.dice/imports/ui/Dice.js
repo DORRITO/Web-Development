@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 
 export default class Dice extends React.Component{
+  ///////////////////////
+  constructor(props){
+    super(props);
+      this.state = {
+        modifier: 80
+    }
+  }/////////////////////
 
   //////////////////////////////////if logged in, show dice! otherwise showlogin form///////////////////////
   rollDice(){
@@ -14,16 +21,17 @@ export default class Dice extends React.Component{
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   ////when the input field changes///
-  onChange(event){
-    let modifyInput = event.target.value.trim();
-    console.log(modifyInput)
+  onChange = (event) => {
+    let modifyInput = event ? this.setState({modifier: event.target.value}) : this.state.modifier;
   }/////////////////////////////////
 
   /////////show modifier input the user the gm////////
   isGM(){
     if (Meteor.userId() === 'y7aACCi9zEYNc6g2p') {
-      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={1} onChange={this.onChange}/>
+      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={this.state.modifier} onChange={this.onChange}/>
       return <div>{modInput}</div>
+    } else {
+      return <div>+ {this.state.modifier}</div>
     }
   }///////////////////////////////////////////////
 

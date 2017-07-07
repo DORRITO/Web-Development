@@ -13,7 +13,7 @@ export default class Splash extends React.Component{
   render() {
       return(
         <div>
-          <h1>Terraria</h1>
+          <h1>Terra</h1>
           <h2>Brought to you by the Mayors Cross Townsmanship Aficionados Club</h2>
           <p>hiyahhh</p>
           <Rychar />

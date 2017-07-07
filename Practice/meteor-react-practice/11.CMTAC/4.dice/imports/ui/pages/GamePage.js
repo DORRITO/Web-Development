@@ -12,7 +12,7 @@ export default class GamePage extends React.Component{
   render() {
       return(
         <div>
-          <h1>Terraria THIS IS THE GAME PAGE YAH YAH YAH</h1>
+          <h1>Terra THIS IS THE GAME PAGE  AFTER LOGIN YAH YAH YAH</h1>
           <h2>Brought to you by the Mayors Cross Townsmanship Aficionados Club</h2>
           <Logout />
           <Rychar />
