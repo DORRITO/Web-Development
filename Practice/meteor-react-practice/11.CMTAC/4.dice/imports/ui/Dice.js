@@ -31,9 +31,10 @@ export default class Dice extends React.Component{
     }
   }///////////////////////////////////////////////
 
+  ////////////////////DELETE LATER?////////////////////////
   PLAYERSEESTHIS(){
     return <div>+ {this.state.modifier} PLAYER SEES THIS</div>
-  }
+  }///////////////////////////////////////////////////////
 
   render(){
     return(
