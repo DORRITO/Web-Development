@@ -16,7 +16,6 @@ export default class Dice extends React.Component{
     d20 = () => {
       return Math.floor(Math.random() * (20 - 1 + 1)) + 1;
     }
-    // const showLoginStatus = !!Meteor.userId() ? 'this will be a dice roll' : <Link to="/login">Login</Link>;
     return <p>dice roll is {d20()}! (+/- {this.state.modifier})</p>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
