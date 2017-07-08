@@ -10,7 +10,7 @@ export default class Tylendel extends React.Component{
     return(
       <div className="game-div">
         <p>Tylendel</p>
-        <LoginOrDice modifier="0"/>
+        <LoginOrDice />
       </div>
     );
   }

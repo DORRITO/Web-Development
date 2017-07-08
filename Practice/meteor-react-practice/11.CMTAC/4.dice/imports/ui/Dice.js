@@ -16,7 +16,7 @@ export default class Dice extends React.Component{
     d20 = () => {
       return Math.floor(Math.random() * (20 - 1 + 1)) + 1;
     }
-    return <p>dice roll is {d20()}! (+/- {this.state.modifier})</p>
+    return <p>dice roll is {d20()}! (+ {this.state.modifier})</p>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /////////show modifier input the user the gm////////
@@ -24,7 +24,7 @@ export default class Dice extends React.Component{
     onChange = (event) => {this.setState({modifier: event.target.value})}
 
     if (Meteor.userId() === 'y7aACCi9zEYNc6g2p') {
-      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={this.state.modifier} onChange={onChange}/>
+      const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} onChange={onChange}/>
       return <div>{modInput}</div>
     } else {
       return <div>+ {this.state.modifier}</div>
