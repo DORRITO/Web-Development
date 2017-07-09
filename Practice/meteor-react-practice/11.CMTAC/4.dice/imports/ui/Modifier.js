@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 
-export default class Modifer extends React.Component{
+export default class Modifier extends React.Component{
   ///////////////////////
   constructor(props){
     super(props);
