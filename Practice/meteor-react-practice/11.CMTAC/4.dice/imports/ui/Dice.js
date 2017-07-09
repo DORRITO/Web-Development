@@ -21,7 +21,7 @@ export default class Dice extends React.Component{
         <div> dice roll is {d20} </div>
       )
     }
-
+//
     return(
       <div>
         <p>
