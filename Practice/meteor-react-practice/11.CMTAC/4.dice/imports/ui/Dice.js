@@ -20,7 +20,7 @@ export default class Dice extends React.Component{
     return(
       <div>
         <p>
-          <button onClick={d20}>dice roll is {d20}</button>
+          <button onClick={d20}>dice roll is {d20()}</button>
           + {this.state.modifier}
         </p>
       </div>

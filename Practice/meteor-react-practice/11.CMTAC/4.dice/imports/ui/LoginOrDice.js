@@ -10,7 +10,7 @@ export default class LoginOrDice extends React.Component{
 
   //////////////////////////////////if logged in, show dice! otherwise showlogin form///////////////////////
   showLogin(){
-    const showLoginStatus = !!Meteor.userId() ? <Dice modifier={this.props.modifier}/> : <Link to="/login">Login</Link>;
+    const showLoginStatus = !!Meteor.userId() ? <Dice /> : <Link to="/login">Login</Link>;
     return <div>{showLoginStatus}</div>
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
