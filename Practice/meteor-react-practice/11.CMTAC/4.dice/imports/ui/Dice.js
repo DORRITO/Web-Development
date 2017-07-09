@@ -13,14 +13,19 @@ export default class Dice extends React.Component{
 
   ///////////////if logged in, show dice! otherwise showlogin form//////////////////////////////////////////
   rollDice(){
+
     d20 = () => {
-      return Math.floor(Math.random() * 20 + 1);
+      let d20 = Math.floor(Math.random() * 20 + 1)
+      console.log(d20)
+      return (
+        <div> dice roll is {d20} </div>
+      )
     }
 
     return(
       <div>
         <p>
-          <button onClick={d20}>dice roll is {d20()}</button>
+          <button onClick={d20}>Roll {d20}</button>
           + {this.state.modifier}
         </p>
       </div>
