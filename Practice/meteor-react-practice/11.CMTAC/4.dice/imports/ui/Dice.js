@@ -13,10 +13,18 @@ export default class Dice extends React.Component{
 
   ///////////////if logged in, show dice! otherwise showlogin form//////////////////////////////////////////
   rollDice(){
-    d20 = () => {
-      return Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+    d20 = (mod) => {
+      return Math.floor(Math.random() * 20 + 1) + mod;
     }
-    return <p>dice roll is {d20()}! (+ {this.state.modifier})</p>
+
+    return(
+      <div>
+        <p>
+          <button onClick={d20}>dice roll is {d20(this.state.modifier)}</button>
+          + {this.state.modifier}
+        </p>
+      </div>
+    )
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /////////show modifier input the user the gm////////
@@ -31,17 +39,11 @@ export default class Dice extends React.Component{
     }
   }///////////////////////////////////////////////
 
-  ////////////////////DELETE LATER?////////////////////////
-  PLAYERSEESTHIS(){
-    return <div>+ {this.state.modifier} PLAYER SEES THIS</div>
-  }///////////////////////////////////////////////////////
-
   render(){
     return(
       <div>
         {this.rollDice()}
         {this.isGM()}
-        {this.PLAYERSEESTHIS()}
       </div>
     );
   }
