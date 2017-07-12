@@ -20,7 +20,7 @@ export default class Dice extends React.Component{
       const d20 = Math.floor(Math.random() * 20 + 1 ) + modifier;
       this.setState({diceRoll: d20})
     }
-// 
+
     return(
       <div>
         <p>
