@@ -11,7 +11,7 @@ export default class Signup extends React.Component{
       error: ''
     };
   }///////////////////
-
+//
   ////////////////on submit//////////////////////////
   onSubmit(e){
     e.preventDefault();
