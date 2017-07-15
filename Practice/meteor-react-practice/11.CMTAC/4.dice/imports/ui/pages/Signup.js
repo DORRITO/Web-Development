@@ -19,7 +19,7 @@ export default class Signup extends React.Component{
     let password = this.refs.password.value.trim();
 
     Accounts.createUser({username, password}, (err) => {
-      console.log('Signup callback', err);
+      err ? this.setState({error: err.reason}) : this.setState({error: ''});
     });
   }/////////////////////////////////////////////
 
