@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
-// import {Names, Games} from './../imports/api/lists';
+
+import {Links} from './../imports/api/links';
 
 Meteor.startup(() => {
   console.log('server up and running');
