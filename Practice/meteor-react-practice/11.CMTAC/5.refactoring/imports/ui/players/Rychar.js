@@ -4,7 +4,7 @@ import {browserHistory} from 'react-router';
 import {Link} from 'react-router';
 import {Meteor} from 'meteor/meteor';
 
-import LoginOrDice from './../LoginOrDice';
+import LoginOrDice from './../dice/LoginOrDice';
 
 export default class Rychar extends React.Component{
 

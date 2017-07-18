@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {browserHistory} from 'react-router';
 import {Link} from 'react-router';
 
-import LoginOrDice from './../LoginOrDice';
+import LoginOrDice from './../dice/LoginOrDice';
 
 export default class Tylendel extends React.Component{
   render(){
