@@ -35,7 +35,7 @@ export default class Dice extends React.Component{
   isGM(){
     changeMod = (event) => {this.setState({modifier: event.target.value})}
 
-    if (Meteor.userId() === 'y7aACCi9zEYNc6g2p') {
+    if (Meteor.userId() === 'm3t2jSH3vYnxdzuvF') {
       const modInput = <input type="number" ref="modInput" name="modInput" placeholder={0} onChange={changeMod}/>
       return <div>{modInput}</div>
     }
