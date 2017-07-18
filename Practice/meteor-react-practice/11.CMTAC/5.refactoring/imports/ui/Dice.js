@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 
+import {DiceData} from '../api/dicedata';
+
 export default class Dice extends React.Component{
   ///////////////////////
   constructor(props){
