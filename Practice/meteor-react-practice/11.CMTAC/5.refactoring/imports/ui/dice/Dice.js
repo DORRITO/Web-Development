@@ -53,6 +53,7 @@ export default class Dice extends React.Component{
       <div>
         {this.isGM()}
         {this.rollDice()}
+        <ResultAndModifier />
       </div>
     );
   }
