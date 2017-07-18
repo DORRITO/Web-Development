@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
 
-import {Links} from './../imports/api/links';
+import {DiceData} from './../imports/api/dicedata';
 
 Meteor.startup(() => {
   console.log('server up and running');
