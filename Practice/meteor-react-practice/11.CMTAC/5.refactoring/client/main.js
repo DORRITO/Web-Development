@@ -13,6 +13,12 @@ Tracker.autorun(() => {
   onAuthChange(isAuthenticated);
 });///////////////////////////////////////////////////////////////////
 
+////////////////////update on changes///////////////////////////
+Tracker.autorun(() => {
+  const dicedata = DiceData.find().fetch();
+  console.log('new dice data', dicedata);
+});///////////////////////////////////////////////////////////////////
+
 Meteor.startup(() => {
     Tracker.autorun(() => {
       ReactDOM.render(App, document.getElementById('app'));
