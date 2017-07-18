@@ -5,7 +5,7 @@ import {Tracker} from 'meteor/tracker';
 // import {Router, Route, browserHistory} from 'react-router';
 
 import {App, onAuthChange} from '../imports/app/App';
-import {Links} from '../imports/api/links';
+import {DiceData} from '../imports/api/dicedata';
 
 ////////////////////update on changes///////////////////////////
 Tracker.autorun(() => {
