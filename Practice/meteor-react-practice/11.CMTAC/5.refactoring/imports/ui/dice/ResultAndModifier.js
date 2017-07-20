@@ -13,21 +13,25 @@ export default class ResultAndModifier extends React.Component{
     };
   }/////////////////////
 
+  //////////get data from dice data///////////
   componentDidMount(){
-    Tracker.autorun(() => {
+    this.modTracker = Tracker.autorun(() => {
       const dicedata = DiceData.find().fetch();
-      console.log('new dice data', dicedata);
+      this.setState({ links: dicedata});
     });
-  }
+  }///////////////////////////////////////////
 
+  //////////stops the tracker from continually running///
   componentWillUnmount(){
     console.log('component unmounted result mod component!!')
-  }
+    // this.modTracker.stop();
+  }///////////////////////////////////////////////////
 
   render() {
     return(
       <div>
-        <p>resutl and mod</p>
+        <p>result and mod</p>
+        <div>{this.state.modifier}</div>
       </div>
     );
   }
