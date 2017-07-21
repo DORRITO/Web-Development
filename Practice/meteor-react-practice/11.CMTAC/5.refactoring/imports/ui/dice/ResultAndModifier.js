@@ -9,7 +9,7 @@ export default class ResultAndModifier extends React.Component{
     super(props);
       this.state = {
         modifier: 0,
-        diceRoll: undefined
+        d20: undefined
     };
   }/////////////////////
 
@@ -31,8 +31,7 @@ export default class ResultAndModifier extends React.Component{
   render() {
     return(
       <div>
-        <p>result and mod</p>
-        <div>{this.state.modifier}</div>
+        <div>result and mod: {this.state.d20} + {this.state.modifier}</div>
       </div>
     );
   }
