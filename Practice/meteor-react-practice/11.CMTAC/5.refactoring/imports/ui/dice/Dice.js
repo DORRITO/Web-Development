@@ -22,6 +22,7 @@ export default class Dice extends React.Component{
     d20 = () => {
       const d20 = Math.floor(Math.random() * 20 + 1 ) + modifier;
       this.setState({diceRoll: d20})
+      DiceData.insert({d20})
     }
 
     return(
@@ -37,9 +38,9 @@ export default class Dice extends React.Component{
   /////////show modifier input if the user is the gm////////
   isGM(){
     changeMod = (event) => {
-      const dicemod = event.target.value
-      if(dicemod){DiceData.update({_id: dicemod})}
-      this.setState({modifier: dicemod})
+      const modifier = event.target.value;
+      this.setState({modifier});
+      DiceData.insert({modifier})
     }
 
     if (Meteor.userId() === 'm3t2jSH3vYnxdzuvF') {
