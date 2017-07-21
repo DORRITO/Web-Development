@@ -17,7 +17,8 @@ export default class ResultAndModifier extends React.Component{
   componentDidMount(){
     this.modTracker = Tracker.autorun(() => {
       const dicedata = DiceData.find().fetch();
-      this.setState({ links: dicedata});
+      // this.setState({ links: dicedata});
+      console.log(dicedata);
     });
   }///////////////////////////////////////////
 
