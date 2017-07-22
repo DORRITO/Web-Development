@@ -30,13 +30,13 @@ export default class ResultAndModifier extends React.Component{
     // this.modTracker.stop();
   }///////////////////////////////////////////////////
 
+  ///////////////////update modifiers//////////////
   renderLinksListItems(){
     return this.state.links.map((link) => {
-      // return <p key={link._id}>result and mod: {link.d20} + {link.modifier}</p>
       this.state.d20 = link.d20
       this.state.modifier = link.modifier
     });
-  }
+  }///////////////////////////////////////////////
 
   render() {
     this.renderLinksListItems()
