@@ -8,8 +8,9 @@ export default class ResultAndModifier extends React.Component{
   constructor(props){
     super(props);
       this.state = {
+        links: [],
+        d20: 'placeholder',
         modifier: 0,
-        d20: undefined
     };
   }/////////////////////
 
@@ -17,7 +18,7 @@ export default class ResultAndModifier extends React.Component{
   componentDidMount(){
     this.modTracker = Tracker.autorun(() => {
       const dicedata = DiceData.find().fetch();
-      // this.setState({ links: dicedata});
+      this.setState({ links: dicedata});
       console.log(dicedata);
     });
   }///////////////////////////////////////////
@@ -28,10 +29,20 @@ export default class ResultAndModifier extends React.Component{
     // this.modTracker.stop();
   }///////////////////////////////////////////////////
 
+  renderLinksListItems(){
+    return this.state.links.map((link) => {
+      // return <p key={link._id}>result and mod: {link.d20} + {link.modifier}</p>
+      this.state.d20 = link.d20
+      this.state.modifier = link.modifier
+    });
+  }
+
   render() {
+    this.renderLinksListItems()
     return(
       <div>
         <div>result and mod: {this.state.d20} + {this.state.modifier}</div>
+        {/* <div>temp links: {this.renderLinksListItems()}</div> */}
       </div>
     );
   }
