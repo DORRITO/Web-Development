@@ -23,7 +23,7 @@ export default class ResultAndModifier extends React.Component{
       console.log(d20);
     });
   }///////////////////////////////////////////
-//
+
   //////////stops the tracker from continually running///
   componentWillUnmount(){
     console.log('component unmounted result mod component!!')
