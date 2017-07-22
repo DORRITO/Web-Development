@@ -2,7 +2,6 @@ import React from 'react';
 import {Tracker} from 'meteor/tracker';
 
 import {D20Data} from '../../api/d20data';
-import {ModifierData} from '../../api/modifierdata';
 
 export default class ResultAndModifier extends React.Component{
   ///////////////////////

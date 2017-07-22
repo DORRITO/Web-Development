@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 
 import {D20Data} from '../../api/d20data';
-import {ModifierData} from '../../api/modifierdata';
 import ResultAndModifier from './ResultAndModifier';
 
 export default class Dice extends React.Component{
