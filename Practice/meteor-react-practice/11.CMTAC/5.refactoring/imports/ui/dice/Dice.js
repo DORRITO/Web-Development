@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 
-import {DiceData} from '../../api/dicedata';
+import {D20Data} from '../../api/d20data';
 import ResultAndModifier from './ResultAndModifier';
 
 export default class Dice extends React.Component{
@@ -22,7 +22,7 @@ export default class Dice extends React.Component{
     d20 = () => {
       const d20 = Math.floor(Math.random() * 20 + 1 ) + modifier;
       this.setState({diceRoll: d20})
-      DiceData.insert({d20})
+      D20Data.insert({d20})
     }
 
     return(
@@ -40,7 +40,7 @@ export default class Dice extends React.Component{
     changeMod = (event) => {
       const modifier = event.target.value;
       this.setState({modifier});
-      DiceData.insert({modifier})
+      D20Data.insert({modifier})
     }
 
     if (Meteor.userId() === 'm3t2jSH3vYnxdzuvF') {

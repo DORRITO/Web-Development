@@ -1,7 +1,8 @@
 import React from 'react';
 import {Tracker} from 'meteor/tracker';
 
-import {DiceData} from '../../api/dicedata';
+import {D20Data} from '../../api/d20data';
+import {ModifierData} from '../../api/modifierdata';
 
 export default class ResultAndModifier extends React.Component{
   ///////////////////////
@@ -17,9 +18,9 @@ export default class ResultAndModifier extends React.Component{
   //////////get data from dice data///////////
   componentDidMount(){
     this.modTracker = Tracker.autorun(() => {
-      const dicedata = DiceData.find().fetch();
-      this.setState({ links: dicedata});
-      console.log(dicedata);
+      const d20 = D20Data.find().fetch();
+      this.setState({ links: d20 });
+      console.log(d20);
     });
   }///////////////////////////////////////////
 
