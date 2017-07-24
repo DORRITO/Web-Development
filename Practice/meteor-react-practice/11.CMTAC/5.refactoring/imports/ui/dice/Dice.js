@@ -49,7 +49,7 @@ export default class Dice extends React.Component{
       return <div>{modInput}</div>
     }
   }/////////////////////////////////////////////////////////
-//
+
   render(){
     return(
       <div>
