@@ -25,14 +25,7 @@ export default class Dice extends React.Component{
       D20Data.insert({d20, modifier})
     }
 
-    return(
-      <div>
-        <p>
-          <button onClick={d20}>Roll</button>{diceRoll ? diceRoll : ''}
-           + {this.state.modifier}
-        </p>
-      </div>
-    )
+    return(<button onClick={d20}>Roll</button>)
   }/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /////////show modifier input if the user is the gm////////
