@@ -14,10 +14,9 @@ export default class Dice extends React.Component{
         diceRoll: undefined
     }
   }/////////////////////
-
+//
   ///////////////Dice, dice roll result, and modifier on dice//////////////////////////////////////////
   rollDice(){
-    const diceRoll = Number(this.state.diceRoll);
     const modifier = Number(this.state.modifier);
     d20 = () => {
       const d20 = Math.floor(Math.random() * 20 + 1 ) + modifier;
