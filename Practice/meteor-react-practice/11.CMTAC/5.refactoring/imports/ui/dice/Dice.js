@@ -14,7 +14,7 @@ export default class Dice extends React.Component{
         diceRoll: undefined
     }
   }/////////////////////
-//
+
   ///////////////Dice, dice roll result, and modifier on dice//////////////////////////////////////////
   rollDice(){
     const modifier = Number(this.state.modifier);
