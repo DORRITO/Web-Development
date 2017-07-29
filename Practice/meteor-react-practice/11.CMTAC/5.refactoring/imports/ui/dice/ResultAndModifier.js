@@ -16,7 +16,7 @@ export default class ResultAndModifier extends React.Component{
 
   //////////get data from dice data///////////
   componentDidMount(){
-    this.modTracker = Tracker.autorun(() => {
+    this.DiceTracker = Tracker.autorun(() => {
       const d20 = D20Data.find().fetch();
       this.setState({ links: d20 });
       console.log(d20);
@@ -26,7 +26,7 @@ export default class ResultAndModifier extends React.Component{
   //////////stops the tracker from continually running///
   componentWillUnmount(){
     console.log('component unmounted result mod component!!')
-    // this.modTracker.stop();
+    this.DiceTracker.stop();
   }///////////////////////////////////////////////////
 
   ///////////////////update modifiers//////////////
