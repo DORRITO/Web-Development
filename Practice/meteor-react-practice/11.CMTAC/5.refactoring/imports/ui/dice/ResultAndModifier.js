@@ -28,7 +28,7 @@ export default class ResultAndModifier extends React.Component{
     console.log('component unmounted result mod component!!')
     this.DiceTracker.stop();
   }///////////////////////////////////////////////////
-//
+
   ///////////////////update modifiers//////////////
   renderLinksListItems(){
     return this.state.links.map((link) => {
