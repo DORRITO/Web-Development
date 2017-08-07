@@ -56,3 +56,4 @@ export default class Dice extends React.Component{
 Dice.propTypes = {
   // modifier: React.PropTypes.number.isRequired
 };
+//
