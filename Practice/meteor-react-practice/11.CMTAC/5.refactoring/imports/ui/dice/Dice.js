@@ -4,7 +4,7 @@ import {Accounts} from 'meteor/accounts-base';
 
 import {D20Data} from '../../api/d20data';
 import ResultAndModifier from './ResultAndModifier';
-//
+
 export default class Dice extends React.Component{
   ///////////////////////
   constructor(props){
