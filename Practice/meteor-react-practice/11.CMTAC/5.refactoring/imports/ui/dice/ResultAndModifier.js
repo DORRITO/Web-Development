@@ -1,4 +1,5 @@
 import React from 'react';
+import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 
 import {D20Data} from '../../api/d20data';
@@ -17,6 +18,7 @@ export default class ResultAndModifier extends React.Component{
   //////////get data from dice data///////////
   componentDidMount(){
     this.DiceTracker = Tracker.autorun(() => {
+      Meteor.subscribe('d20Data');
       const d20 = D20Data.find().fetch();
       this.setState({ links: d20 });
       console.log(d20);
