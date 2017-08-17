@@ -5,6 +5,6 @@ export const D20Data = new Mongo.Collection('d20Data');
 
 if(Meteor.isServer){
   Meteor.publish('d20Data', () => {
-    return D20Data.find();
+    return D20Data.find();  //{userId: this.userId}
   });
 }

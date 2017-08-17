@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Meteor} from 'meteor/meteor';
 import {Accounts} from 'meteor/accounts-base';
 
 import {D20Data} from '../../api/d20data';
@@ -21,7 +22,7 @@ export default class Dice extends React.Component{
     d20 = () => {
       const d20 = Math.floor(Math.random() * 20 + 1 ) + modifier;
       this.setState({diceRoll: d20})
-      D20Data.insert({d20, modifier})
+      D20Data.insert({d20, modifier, userId: Meteor.userId()})
     }
 
     return(<button onClick={d20}>Roll</button>)
@@ -33,7 +34,7 @@ export default class Dice extends React.Component{
       const d20 = this.state.diceRoll
       const modifier = event.target.value;
       this.setState({modifier});
-      D20Data.insert({modifier, d20})
+      D20Data.insert({modifier, d20, userId: Meteor.userId() })
     }
 
     if (Meteor.userId() === 'm3t2jSH3vYnxdzuvF') {
