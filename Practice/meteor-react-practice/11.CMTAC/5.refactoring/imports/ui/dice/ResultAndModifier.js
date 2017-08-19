@@ -24,7 +24,7 @@ export default class ResultAndModifier extends React.Component{
       console.log(d20);
     });
   }///////////////////////////////////////////
-
+//
   //////////stops the tracker from continually running///
   componentWillUnmount(){
     console.log('component unmounted result mod component!!')
@@ -43,7 +43,7 @@ export default class ResultAndModifier extends React.Component{
     this.renderLinksListItems()
     return(
       <div>
-        <div>result and mod: {this.state.d20} + {this.state.modifier}</div>
+        <div>result and mod: {this.state.d20} (+ {this.state.modifier})</div>
         {/* <div>temp links: {this.renderLinksListItems()}</div> */}
       </div>
     );
