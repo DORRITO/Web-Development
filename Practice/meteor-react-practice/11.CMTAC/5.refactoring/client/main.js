@@ -13,7 +13,11 @@ Tracker.autorun(() => {
 });///////////////////////////////////////////////////////////////////
 
 Meteor.startup(() => {
+  Meteor.call('greetUser', (err, res) => {
+    console.log('greet user arguments', err, res);
+  })
     Tracker.autorun(() => {
       ReactDOM.render(App, document.getElementById('app'));
     });
+
 })
