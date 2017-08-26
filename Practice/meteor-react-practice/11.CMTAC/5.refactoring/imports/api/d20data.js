@@ -8,7 +8,7 @@ if(Meteor.isServer){
     return D20Data.find();  //{userId: this.userId}
   });
 }
-
+//
 Meteor.methods({
   greetUser(){
     console.log('greetUser is running');
