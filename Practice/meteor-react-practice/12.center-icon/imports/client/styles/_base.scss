@@ -5,6 +5,20 @@
 html, body{
   height: 100%;
   font-size: 62.5%;
-  color: red;
-  background-color: blue;
+}
+body{
+  body { position:absolute; top:0; bottom:0; right:0; left:0; }
+}
+
+.square{
+  border-style: solid;
+  width: 20rem;
+  height: 20rem;
+  margin-top: 20rem;
+  margin-left: 50rem;
+}
+
+.centerWords{
+  text-align: center;
+  margin-top: 50%;
 }
