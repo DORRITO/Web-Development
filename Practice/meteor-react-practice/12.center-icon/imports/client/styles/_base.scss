@@ -6,12 +6,21 @@ html, body{
   height: 100%;
   font-size: 62.5%;
 }
-body{
-  body { position:absolute; top:0; bottom:0; right:0; left:0; }
+body {
+  background-color: #FDF3E7;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
 }
 
+
 .square{
+  background-color: rgba(240, 98, 146, .75);
   border-style: solid;
+  border-radius: .5rem;
+  box-shadow: 10px 10px 10px black;
   width: 20rem;
   height: 20rem;
   margin-top: 20rem;
