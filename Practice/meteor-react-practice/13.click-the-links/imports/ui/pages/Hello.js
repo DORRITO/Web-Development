@@ -6,6 +6,6 @@ export default class Hello extends React.Component{
       <div>
         <h2>hiiiii</h2>
       </div>
-    );
+    )
   }
 };
