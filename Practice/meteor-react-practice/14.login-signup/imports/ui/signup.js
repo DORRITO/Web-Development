@@ -4,6 +4,13 @@ import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state ={
+      error: ''
+    };
+  }
+
   ////////////////////create user///////////////////
   onSubmit(e){
     e.preventDefault();
@@ -12,7 +19,11 @@ export default class Signup extends React.Component{
     let password = this.refs.password.value.trim();
 
     Accounts.createUser({email, password}, (err) => {
-      console.log('signup callback', err);
+      if(err){
+        this.setState({error: err.reason});
+      } else {
+        this.setState({error: ''});
+      }
     });
   }/////////////////////////////////////////////////
 
