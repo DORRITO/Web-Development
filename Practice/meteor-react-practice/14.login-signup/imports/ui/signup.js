@@ -32,6 +32,7 @@ export default class Signup extends React.Component{
     return(
       <div>
         {this.state.error}
+                                  {/*no validate gets rid of browser validation  */}
         <form onSubmit={this.onSubmit.bind(this)} noValidate>
             <input type="email" ref="email" name="email" placeholder="email" />
             <input type="password" ref="password" name="password" placeholder="password" />
