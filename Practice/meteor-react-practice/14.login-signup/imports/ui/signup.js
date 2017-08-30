@@ -31,11 +31,13 @@ export default class Signup extends React.Component{
   render(){
     return(
       <div>
+        {this.state.error}
         <form onSubmit={this.onSubmit.bind(this)} noValidate>
             <input type="email" ref="email" name="email" placeholder="email" />
             <input type="password" ref="password" name="password" placeholder="password" />
             <button>Create account</button>
         </form>
+        <Link to="/login"> Need to signin?</Link>
       </div>
     );
   }//////////////////////////////////

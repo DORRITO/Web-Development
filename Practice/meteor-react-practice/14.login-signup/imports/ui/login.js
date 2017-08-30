@@ -5,6 +5,13 @@ import {Meteor} from 'meteor/meteor';
 
 export default class Login extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state ={
+      error: ''
+    };
+  }
+
   ////////////////////create user///////////////////
   onSubmit(e){
     e.preventDefault();
@@ -13,7 +20,11 @@ export default class Login extends React.Component{
     let password = this.refs.password.value.trim();
 
     Meteor.loginWithPassword({email}, password, (err) => {
-      console.log('login callback', err);
+      if(err){
+        this.setState({error: "unable to login"});
+      } else {
+        this.setState({error: ''});
+      }
     });
   }/////////////////////////////////////////////////
 
@@ -22,11 +33,13 @@ export default class Login extends React.Component{
     return(
       <div>
         <h1>Login</h1>
+        {this.state.error}
         <form onSubmit={this.onSubmit.bind(this)} noValidate>
             <input type="email" ref="email" name="email" placeholder="email" />
             <input type="password" ref="password" name="password" placeholder="password" />
             <button>Login</button>
         </form>
+        <Link to="/"> Need to make an account?</Link>
       </div>
     );
   }//////////////////////////////////
