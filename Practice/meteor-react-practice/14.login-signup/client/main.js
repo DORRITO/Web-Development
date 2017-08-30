@@ -6,7 +6,7 @@ import {Router, Route, browserHistory} from 'react-router';
 
 import {App} from '../imports/ui/App';
 
-const unauthenticatedPages = ['/', 'login'];
+const unauthenticatedPages = ['/', '/login'];
 const authenticatedPages = ['/logout'];
 
 Tracker.autorun(() => {
@@ -20,7 +20,8 @@ Tracker.autorun(() => {
     console.log('your in');
     browserHistory.replace('/logout');
   } else if(isAuthenticatedPage && !isAuthenticated){
-    browserHistory.replace('/');
+    console.log('your out')
+    browserHistory.replace('/login');
   }
 });
 
