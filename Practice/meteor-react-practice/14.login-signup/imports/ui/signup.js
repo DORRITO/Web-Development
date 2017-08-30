@@ -1,15 +1,20 @@
 import React from 'react';
-
 import {Link} from 'react-router';
+import {Accounts} from 'meteor/accounts-base';
 
 export default class Signup extends React.Component{
 
+  ////////////////////create user///////////////////
   onSubmit(e){
     e.preventDefault();
 
-    let username = this.refs.email.value.trim();
+    let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
-  }
+
+    Accounts.createUser({email, password}, (err) => {
+      console.log('signup callback', err);
+    });
+  }/////////////////////////////////////////////////
 
   ////////////////////////////////
   render(){
