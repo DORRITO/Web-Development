@@ -1,5 +1,5 @@
 import React from 'react';
-import {Accounts} from 'meteor/accounts-base';
+import {Metoer} from 'meteor/meteor'
 import {Link} from 'react-router';
 
 export default class Login extends React.Component{
@@ -20,11 +20,12 @@ export default class Login extends React.Component{
     let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
 
-    Accounts.createUser({email,password}, (err) => {
+    Meteor.loginWithPassword({email}, password, (err) => {
       if(err){
         this.setState({error: err.reason});
       } else {
         this.setState({error: ''});
+        console.log('your in');
       }
     });
   }
