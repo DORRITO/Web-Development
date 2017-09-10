@@ -10,7 +10,7 @@ export default class Main extends React.Component{
       <div>
         <h1>This is the main page</h1>
         <Link to="/login">Login</Link>
-        <p><Link to="/"> Need to make an account?</Link></p>
+        <p><Link to="/signup"> Need to make an account?</Link></p>
       </div>
     );
   }//////////////////////////////////
