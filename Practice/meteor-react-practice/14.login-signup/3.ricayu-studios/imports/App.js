@@ -9,6 +9,9 @@ import Account from './ui/Account';
 import Login from './ui/Login';
 import Signup from './ui/Signup';
 
+const unauthenticatedPages = ['/', '/login', '/signup'];
+const authenticatedPages = ['/logout'];
+
 export const App=(
   <div>
     <Router history={browserHistory}>

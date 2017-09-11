@@ -1,5 +1,5 @@
 import React from 'react';
-import {Metoer} from 'meteor/meteor'
+import {Meteor} from 'meteor/meteor'
 import {Link} from 'react-router';
 
 export default class Login extends React.Component{
@@ -15,7 +15,6 @@ export default class Login extends React.Component{
   ////////////////////////////////
   onSubmit(e){
     e.preventDefault();
-
 
     let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
