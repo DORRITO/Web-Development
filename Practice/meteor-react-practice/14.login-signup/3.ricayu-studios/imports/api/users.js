@@ -15,6 +15,5 @@ Accounts.validateNewUser((user) => {
   } catch(e) {
     throw new Meteor.Error(400, e.message);
   }
-
   return true;
 });
