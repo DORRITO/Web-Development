@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import Navigation from './Navigation';
+import Navigation from './components/Navigation';
 
 export default class Main extends React.Component{
 
