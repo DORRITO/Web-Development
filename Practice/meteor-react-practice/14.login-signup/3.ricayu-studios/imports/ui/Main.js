@@ -1,6 +1,7 @@
 import React from 'react';
-
 import {Link} from 'react-router';
+
+import Navigation from './Navigation';
 
 export default class Main extends React.Component{
 
@@ -9,8 +10,7 @@ export default class Main extends React.Component{
     return(
       <div>
         <h1>This is the main page</h1>
-        <p><Link to="/login">login</Link></p>
-        <p><Link to="/signup">signup</Link></p>
+        <Navigation />
       </div>
     );
   }//////////////////////////////////
