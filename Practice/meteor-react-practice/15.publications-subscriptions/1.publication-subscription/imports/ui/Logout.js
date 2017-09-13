@@ -28,7 +28,6 @@ export default class Logout extends React.Component{
         <h1>Your Links</h1>
         <button onClick={this.onLogout.bind(this)}>Logout</button>
         <LinksList />
-        <p>Add Link</p>
         <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" ref="url" placeholder="URL" />
           <button>Add Link</button>
