@@ -13,14 +13,14 @@ export default class LinksList extends React.Component{
   }
 
   componentDidMount(){
-    Tracker.autorun(() => {
+    this.linksTracker = Tracker.autorun(() => {
       const links = Links.find().fetch();
       this.setState({ links });
     });
   }
 
   componentWillUnmount(){
-    console.log('componentWillUnmount linklist');
+    this.linksTracker.stop();
   }
 
   renderLinksListItems(){
