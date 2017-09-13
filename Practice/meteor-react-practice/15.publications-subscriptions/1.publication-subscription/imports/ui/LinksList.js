@@ -5,30 +5,35 @@ import {Links} from '../api/links';
 
 export default class LinksList extends React.Component{
 
-  constructor(props){
-    super(props)
-      this.state = {
-        links: []
-      };
-  }
+  ////////////////////////
+  constructor(props){   //
+    super(props)        //
+      this.state = {    //
+        links: []       //
+      };                //
+  }///////////////////////
 
+  //////////////////////////////////////
   componentDidMount(){
     this.linksTracker = Tracker.autorun(() => {
       const links = Links.find().fetch();
       this.setState({ links });
     });
-  }
+  }//////////////////////////////////////
 
+  //////////////////////////////////////
   componentWillUnmount(){
     this.linksTracker.stop();
-  }
+  }//////////////////////////////////////
 
+  //////////////////////////////////////
   renderLinksListItems(){
     return this.state.links.map((link) => {
       return <p key={link._id}>{link.url}</p>
     });
-  }
+  }//////////////////////////////////////
 
+  ////////////////////////////////////////////////
   render(){
     return(
       <div>
@@ -36,5 +41,5 @@ export default class LinksList extends React.Component{
         <div>{this.renderLinksListItems()}</div>
       </div>
     )
-  }
+  }///////////////////////////////////////////////
 }
