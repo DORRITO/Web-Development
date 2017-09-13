@@ -1,4 +1,5 @@
 import React from 'react';
+import {Meteor} from 'meteor/meteor';
 import {Accounts} from 'meteor/accounts-base';
 
 import {Links} from '../api/links';
@@ -17,7 +18,7 @@ export default class Logout extends React.Component{
     e.preventDefault();
 
     if(url){
-      Links.insert({ url });
+      Links.insert({ url, userId: Meteor.userId() });
       this.refs.url.value = '';
     }
   }///////////////////////////////

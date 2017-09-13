@@ -8,7 +8,8 @@ if(Meteor.isServer){
   //makes a publication, only available on server.  publications let us see api collections.
   //meteor remove autopublish to remove prototyping publish (unsecure)
           //links is the name of the publication you decide to make
-  Meteor.publish('links', () => {
-    return Links.find({url: '1st link'});
+  Meteor.publish('links', function(){
+    //only returns link if they have a user id.
+    return Links.find({userId: this.userId});
   });
 }
