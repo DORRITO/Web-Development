@@ -13,3 +13,15 @@ if(Meteor.isServer){
     return Links.find({userId: this.userId});
   });
 }
+
+Meteor.methods({
+  greetUser(name = 'user'){
+    console.log('greetUser is running');
+
+    if(!name){
+      throw new Meteor.Error('invalid-arguments', 'name is required');
+    }
+
+    return `hello ${name}!`;
+  }
+})
