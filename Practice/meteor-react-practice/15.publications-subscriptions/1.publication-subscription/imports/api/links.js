@@ -1,7 +1,8 @@
 import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
-//meteor npm install shortid
+import shortid from 'shortid';//meteor npm install shortid
+
 
 //make a collection on client and server
 export const Links = new Mongo.Collection('links');
@@ -29,12 +30,13 @@ Meteor.methods({
     new SimpleSchema({
       url: {
         type: String,
-        label: 'Your link',
+        label: 'Your link', //adds your label to error/feedback
         regEx: SimpleSchema.RegEx.Url
       }
     }).validate({ url })
 
     Links.insert({
+      _id: shortid.generate(), //adds shortid id instead of meteor id
       url,
       userId: this.userId
     });
