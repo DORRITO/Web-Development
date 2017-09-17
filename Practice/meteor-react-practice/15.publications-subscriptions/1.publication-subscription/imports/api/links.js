@@ -1,6 +1,7 @@
 import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
+//meteor npm install shortid
 
 //make a collection on client and server
 export const Links = new Mongo.Collection('links');
