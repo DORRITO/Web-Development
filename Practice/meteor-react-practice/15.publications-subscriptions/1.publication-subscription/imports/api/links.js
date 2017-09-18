@@ -6,7 +6,7 @@ import shortid from 'shortid';//meteor npm install shortid
 
 //make a collection on client and server
 export const Links = new Mongo.Collection('links');
-
+//publish a publication, which is grabbing data SECURELY from the aboove mongo.collection
 if(Meteor.isServer){
   //makes a publication, only available on server.  publications let us see api collections.
   //'meteor remove autopublish' to remove prototyping publish (unsecure).  'meteor add accounts-password for a real one'

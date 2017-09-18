@@ -1,13 +1,13 @@
 import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
-import SimpleSchema from 'simple-schema';
+import SimpleSchema from 'simpl-schema';
 import shortid from 'shortid';
 
 export const Links = new Mongo.Collection('links');
-//publish a database/publication
+//publish a publication, which is grabbing data SECURELY from the aboove mongo.collection
 if(Meteor.isServer){
   Meteor.publish('links', function(){
-    return Links.find({})
+    return Links.find({userId: this.userId})
   });
 }
 
