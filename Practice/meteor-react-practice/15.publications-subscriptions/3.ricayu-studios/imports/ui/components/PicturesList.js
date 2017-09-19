@@ -17,7 +17,7 @@ export default class PicturesList extends React.Component{
     //////////////////////////////////////
     componentDidMount(){
       this.picturesTracker = Tracker.autorun(() => {
-        //subscribe/get the publication named links that you created.  which gets the api data
+        //subscribe/get the publication named pictures that you created.  which gets the api data
         Meteor.subscribe('picturesAPI');
         const pictures = PicturesAPI.find().fetch();
         this.setState({ pictures });
@@ -26,7 +26,7 @@ export default class PicturesList extends React.Component{
 
     //////////////////////////////////////
     componentWillUnmount(){
-      this.linksTracker.stop();
+      this.picturesTracker.stop();
     }//////////////////////////////////////
 
     //////////////////////////////////////
@@ -40,7 +40,7 @@ export default class PicturesList extends React.Component{
     render(){
       return(
         <div>
-          <p>Pictures List</p>
+          <p>Pictures List:</p>
           <div>{this.renderPicturesListItems()}</div>
         </div>
       )

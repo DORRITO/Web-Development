@@ -3,7 +3,7 @@ import {Accounts} from 'meteor/accounts-base';
 import {Link} from 'react-router';
 
 import PicturesAPI from './../api/picturesAPI';
-import {PicturesList} from './components/PicturesList';
+import PicturesList from './components/PicturesList';
 
 export default class MyPage extends React.Component{
 
@@ -19,7 +19,7 @@ export default class MyPage extends React.Component{
 
     if(picture){
       Meteor.call('picturesAPI.insert', picture);
-      //Links.insert({ url, userId: Meteor.userId() });
+      //picturesapi.insert({ url, userId: Meteor.userId() });
       this.refs.picture.value = '';
     }
   }///////////////////////////////

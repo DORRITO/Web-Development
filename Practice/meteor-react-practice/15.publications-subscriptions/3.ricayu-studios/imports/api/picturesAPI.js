@@ -9,13 +9,13 @@ export const PicturesAPI = new Mongo.Collection('picturesAPI');
 if(Meteor.isServer){
           //pictureAPI is the name of the publication you decide to make
   Meteor.publish('picturesAPI', function(){
-    return Links.find({userId: this.userId});
+    return PicturesAPI.find({userId: this.userId});
   });
 }
 
 //method naming convention:  resource.action
 Meteor.methods({
-  'picturesAPI.insert'(pictureName) {
+  'picturesAPI.insert'(picture) {
     if(!this.userId){
       throw new Meteor.Error('not-authorized');
     }
@@ -25,11 +25,11 @@ Meteor.methods({
         type: String,
         label: 'Your picture', //adds your label to error/feedback
       }
-    }).validate({ pictureName })
-
+    }).validate({ picture })
+    console.log('things are happening');
     PicturesAPI.insert({
       _id: shortid.generate(), //adds shortid id instead of meteor id
-      pictureName,
+      picture,
       userId: this.userId
     });
   }
