@@ -26,7 +26,7 @@ Meteor.methods({
         label: 'Your picture', //adds your label to error/feedback
       }
     }).validate({ picture })
-    console.log('things are happening');
+    
     PicturesAPI.insert({
       _id: shortid.generate(), //adds shortid id instead of meteor id
       picture,

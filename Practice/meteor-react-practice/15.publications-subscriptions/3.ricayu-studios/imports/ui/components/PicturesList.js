@@ -32,7 +32,7 @@ export default class PicturesList extends React.Component{
     //////////////////////////////////////
     renderPicturesListItems(){
       return this.state.pictures.map((picture) => {
-        return <p key={picture._id}>{picture.url}</p>
+        return <p key={picture._id}>{picture.pictureName}</p>
       });
     }//////////////////////////////////////
 
