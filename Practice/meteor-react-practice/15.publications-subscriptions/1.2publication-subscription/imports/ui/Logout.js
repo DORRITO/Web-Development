@@ -8,7 +8,7 @@ import AddLink from './AddLink'
 export default () => {
     return(
       <div>
-        <PrivateHeader title="Your links from Logout!"/>
+        <PrivateHeader title={"Your links from Logout!"}/>
         <AddLink />
         <LinksList />
       </div>
