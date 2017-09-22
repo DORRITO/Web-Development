@@ -12,5 +12,10 @@ Tracker.autorun(() => {
 });
 
 Meteor.startup(() => {
-    ReactDOM.render(App, document.getElementById('app'));
+    ReactDOM.render(<MyComponent />, document.getElementById('app'));
 })
+
+import React from 'react';
+const MyComponent = () => {
+  return(<div><h1>MyComponent is here!</h1></div>);
+};
