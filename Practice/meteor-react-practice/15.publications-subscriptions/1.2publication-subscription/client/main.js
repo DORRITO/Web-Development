@@ -12,10 +12,12 @@ Tracker.autorun(() => {
 });
 
 Meteor.startup(() => {
-    ReactDOM.render(<MyComponent />, document.getElementById('app'));
+    ReactDOM.render(App, document.getElementById('app'));
 })
 
-import React from 'react';
-const MyComponent = () => {
-  return(<div><h1>MyComponent is here!</h1></div>);
-};
+/////////////stateless component practice////////////
+//<MyComponent name="CHIp"/>
+// import React from 'react';
+// const MyComponent = (props) => {
+//   return(<div><h1>MyComponent is here! {props.name}</h1></div>);
+// };
