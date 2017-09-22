@@ -1,6 +1,5 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
-import {Accounts} from 'meteor/accounts-base';
 
 import {Links} from '../api/links';
 import LinksList from './LinksList';
@@ -8,11 +7,6 @@ import PrivateHeader from './PrivateHeader';
 import AddLink from './AddLink'
 
 export default class Logout extends React.Component{
-
-  /////////////////////
-  onLogout(){
-    Accounts.logout();
-  }////////////////////
 
   //////////////////////////////
   onSubmit(e){
@@ -29,9 +23,7 @@ export default class Logout extends React.Component{
   render(){
     return(
       <div>
-        <h1>Your Links</h1>
-        <button onClick={this.onLogout.bind(this)}>Logout</button>
-        <PrivateHeader />
+        <PrivateHeader title="Your links from Logout!"/>
         <AddLink />
         <LinksList />
         <form onSubmit={this.onSubmit.bind(this)}>
