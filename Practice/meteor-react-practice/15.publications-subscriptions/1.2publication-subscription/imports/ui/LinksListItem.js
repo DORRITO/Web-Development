@@ -4,6 +4,10 @@ import Clipboard from 'clipboard';
 
 export default class LinksListItem extends React.Component{
 
+  constructor(props){
+    super(props);
+  }
+
   componentDidMount(){
     //npm install clipboard
     this.clipboard = new Clipboard(this.refs.copy);
