@@ -38,7 +38,8 @@ Meteor.methods({
     Links.insert({
       _id: shortid.generate(), //adds shortid id instead of meteor id
       url,
-      userId: this.userId
+      userId: this.userId,
+      visible: true
     });
   }
 })
