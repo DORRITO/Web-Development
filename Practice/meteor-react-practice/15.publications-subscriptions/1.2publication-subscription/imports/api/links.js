@@ -18,10 +18,10 @@ if(Meteor.isServer){
   });
 }
 
-
 //method naming convention:  resource.action
 //archiving emails?:         emails.archive
 Meteor.methods({
+  ///////////////insert link///////////////////////////
   'links.insert'(url) {
     if(!this.userId){
       throw new Meteor.Error('not-authorized');
@@ -41,5 +41,28 @@ Meteor.methods({
       userId: this.userId,
       visible: true
     });
-  }
-})
+  }, ///////////////////////////////////////////////////////
+
+  ///////////////set visibility/////////////////
+  'links.setVisibility'(_id, visible){
+    if(!this.userId){
+      throw new Meteor.Error('not-authorized');
+    }
+    new SimpleSchema({
+      _id: {
+        type: String,
+        min: 1
+      },
+      visible:{
+        type: Boolean
+      }
+    }).validate({ _id, visible});
+    //update, updates based off id and useris, and then sets it to visible or not
+    Links.update({
+      _id,
+      userId: this.userId
+    }, {
+      $set: {visible}
+    });
+  }///////////////////////////////////////////
+});
