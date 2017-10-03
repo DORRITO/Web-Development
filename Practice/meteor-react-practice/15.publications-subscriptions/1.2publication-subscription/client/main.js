@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
+import {Session} from 'meteor/session'; //meteor add session
 
 import {App, onAuthChange} from '../imports/ui/App';
 // simple schema config file turns its errors into meteor errors, so I don't have to use try catch over and over
@@ -12,6 +13,7 @@ Tracker.autorun(() => {
 });
 
 Meteor.startup(() => {
+    Session.set('showVisible', true);
     ReactDOM.render(App, document.getElementById('app'));
 })
 
