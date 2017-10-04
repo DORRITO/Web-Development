@@ -20,7 +20,7 @@ export default class LinksListItem extends React.Component{
       setTimeout(() => this.setState({ justCopied: false }), 1000);
     }).on('error', () => {alert('unable to copy')})
   }
-
+//
   componentWillUnmount(){
     this.clipboard.destroy();
   }
