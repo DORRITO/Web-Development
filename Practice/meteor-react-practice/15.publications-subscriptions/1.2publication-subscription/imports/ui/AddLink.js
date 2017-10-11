@@ -2,6 +2,13 @@ import React from 'react';
 import {Meteor} from 'meteor/meteor';
 
 export default class AddLink extends React.Component{
+  ////////////////////////
+  constructor(props){   //
+    super(props)        //
+      this.state = {    //
+        url: 'Andrew was here'       //
+      };                //
+  }///////////////////////
 
   //////////////////////////////
   onSubmit(e){
@@ -19,7 +26,7 @@ export default class AddLink extends React.Component{
     return (
       <div>
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input type="text" ref="url" placeholder="URL" />
+          <input type="text" ref="url" placeholder="URL" value={this.state.url}/>
           <button>Add Link</button>
         </form>
       </div>
