@@ -6,28 +6,31 @@ export default class AddLink extends React.Component{
   constructor(props){   //
     super(props)        //
       this.state = {    //
-        url: 'Andrew was here'       //
+        url: ''         //
       };                //
   }///////////////////////
 
   //////////////////////////////
   onSubmit(e){
-    const url = this.refs.url.value.trim();
+    //const url = this.state.url
+    const {url} = this.state; //same thing
     e.preventDefault();
 
     if(url){
-      Meteor.call('links.insert', url);
-      //Links.insert({ url, userId: Meteor.userId() });
-      this.refs.url.value = '';
+      Meteor.call('links.insert', url, (err, res) => {
+        if (!err){
+          this.setState({ url: ''});
+        }
+      });
     }
   }///////////////////////////////
 
-  ////////////////////////////////
+  ///////need onchange if you use a vlue field in the input, or it wont let you type////////////
   onChange(e){
     this.setState({
       url: e.target.value
     });
-  }///////////////////////////////
+  }//////////////////////////////////////////////////////////////////////////////////////////////
 
   render() {
     return (
