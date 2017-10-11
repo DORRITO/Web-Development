@@ -22,11 +22,18 @@ export default class AddLink extends React.Component{
     }
   }///////////////////////////////
 
+  ////////////////////////////////
+  onChange(e){
+    this.setState({
+      url: e.target.value
+    });
+  }///////////////////////////////
+
   render() {
     return (
       <div>
         <form onSubmit={this.onSubmit.bind(this)}>
-          <input type="text" ref="url" placeholder="URL" value={this.state.url}/>
+          <input type="text" ref="url" placeholder="URL" value={this.state.url} onChange={this.onChange.bind(this)} />
           <button>Add Link</button>
         </form>
       </div>
