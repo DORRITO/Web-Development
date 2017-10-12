@@ -22,7 +22,7 @@ export default class AddLink extends React.Component{
 
     Meteor.call('links.insert', url, (err, res) => {
       if (!err){
-        this.setState({ url: '', isOpen: false, error: '' });
+        this.handleModalClose();
       } else {
         this.setState({ error: err.reason });
       }
@@ -36,18 +36,34 @@ export default class AddLink extends React.Component{
     });
   }//////////////////////////////////////////////////////////////////////////////////////////////
 
+  /////////////////////
+  handleModalClose() {
+    this.setState({
+      isOpen: false,
+      url: '',
+      error: ''
+    });
+  }///////////////////
+
   render() {
     return (
       <div>
         <button onClick={() => this.setState({isOpen: true})}>+ Add Link</button>
-        <Modal isOpen={this.state.isOpen} contentLable="Add link">
+        <Modal isOpen={this.state.isOpen}
+               contentLable="Add link"
+               onAfterOpen={() => this.refs.url.focus()} {/* puts mouse on input */}
+               onRequestClose={this.handleModalClose.bind(this)} >
           <h1>Add Link</h1>
           {this.state.error ? <p>{this.state.error}</p> : undefined}
           <form onSubmit={this.onSubmit.bind(this)}>
-            <input type="text" ref="url" placeholder="URL" value={this.state.url} onChange={this.onChange.bind(this)} />
+            <input type="text"
+                   ref="url"
+                   placeholder="URL"
+                   value={this.state.url}
+                   onChange={this.onChange.bind(this)} />
             <button>Add Link</button>
           </form>
-          <button onClick={() => this.setState({isOpen: false, url: '', error: ''})}>Close</button>
+          <button onClick={this.handleModalClose.bind(this)}>Close</button>
         </Modal>
       </div>
     )
