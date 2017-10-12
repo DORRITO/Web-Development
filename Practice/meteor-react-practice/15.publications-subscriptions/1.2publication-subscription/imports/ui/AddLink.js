@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-modal';
 import {Meteor} from 'meteor/meteor';
 
 export default class AddLink extends React.Component{
@@ -35,10 +36,13 @@ export default class AddLink extends React.Component{
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit.bind(this)}>
-          <input type="text" ref="url" placeholder="URL" value={this.state.url} onChange={this.onChange.bind(this)} />
-          <button>Add Link</button>
-        </form>
+        <Modal isOpen={true} contentLable="Add link">
+          <p>Add Link</p>
+          <form onSubmit={this.onSubmit.bind(this)}>
+            <input type="text" ref="url" placeholder="URL" value={this.state.url} onChange={this.onChange.bind(this)} />
+            <button>Add Link</button>
+          </form>
+        </Modal>
       </div>
     )
   }
