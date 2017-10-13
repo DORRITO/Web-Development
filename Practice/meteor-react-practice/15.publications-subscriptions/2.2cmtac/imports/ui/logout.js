@@ -1,16 +1,11 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
-import {Accounts} from 'meteor/accounts-base';
 
 import {Links} from './../api/links.js';
 import LinksList from './linksList';
-
+import PrivateHeader from './PrivateHeader';
 
 export default class Logout extends React.Component{
-
-  onLogout(){
-    Accounts.logout();
-  }
 
   //////////////////////////////
   onSubmit(e){
@@ -27,8 +22,7 @@ export default class Logout extends React.Component{
   render(){
     return(
       <div>
-        <h1>Secure logout page!</h1>
-        <button onClick={this.onLogout.bind(this)}>Logout</button>
+        <PrivateHeader title="Secure logout page for the CMTAC"/>
         <LinksList />
         <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" ref="url" placeholder="URL" />
