@@ -1,9 +1,9 @@
 import React from 'react';
-import {Meteor} from 'meteor/meteor';
 
 import {Links} from './../api/links.js';
 import LinksList from './linksList';
 import PrivateHeader from './PrivateHeader';
+import AddLink from './AddLink';
 
 export default class Logout extends React.Component{
 
