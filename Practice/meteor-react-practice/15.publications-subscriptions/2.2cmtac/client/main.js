@@ -1,12 +1,14 @@
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
+import {Session} from 'meteor/session'; //meteor add session
 
 import {App, onAuthChange} from './../imports/App';
 import '../imports/startup/simple-schema-configuration.js';
 
 Meteor.startup(() => {
-    ReactDOM.render(App, document.getElementById('app'));
+  Session.set('showVisible', true);
+  ReactDOM.render(App, document.getElementById('app'));
 });
 
 Tracker.autorun(() => {
