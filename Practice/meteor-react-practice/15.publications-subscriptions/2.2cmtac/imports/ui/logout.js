@@ -1,19 +1,17 @@
 import React from 'react';
 
-import {Links} from './../api/links.js';
 import LinksList from './linksList';
 import PrivateHeader from './PrivateHeader';
 import AddLink from './AddLink';
+import LinksListFilters from './LinksListFilters';
 
-export default class Logout extends React.Component{
-
-  render(){
-    return(
-      <div>
-        <PrivateHeader title="Secure logout page for the CMTAC"/>
-        <AddLink />
-        <LinksList />
-      </div>
-    );
-  }
+export default () => {
+  return(
+    <div>
+      <PrivateHeader title="Secure logout page for the CMTAC"/>
+      <LinksListFilters />
+      <AddLink />
+      <LinksList />
+    </div>
+  );
 }

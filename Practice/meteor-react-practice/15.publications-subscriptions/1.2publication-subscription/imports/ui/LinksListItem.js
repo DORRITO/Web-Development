@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Clipboard from 'clipboard';
+import Clipboard from 'clipboard'; //npm install clipboard
 import {Meteor} from 'meteor/meteor';
 
 export default class LinksListItem extends React.Component{
