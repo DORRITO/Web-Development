@@ -17,5 +17,5 @@ Meteor.startup(() => {
     } else {
       next()
     }
+  });
 });
-}

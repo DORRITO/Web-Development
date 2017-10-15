@@ -30,7 +30,7 @@ export default class LinksListItem extends React.Component{
       <div>
         <p>{this.props.url}</p>
         <p>{this.props.shortUrl}</p>
-        <p>{this.props.visible.toString()}</p>
+        {/* <p>{this.props.visible.toString()}</p> */}
         <a href={this.props.shortUrl} target="_blank">
           Visit
         </a>
