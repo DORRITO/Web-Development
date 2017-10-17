@@ -15,4 +15,3 @@ Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
   onAuthChange(isAuthenticated);
 });
-//
