@@ -7,7 +7,7 @@ export default class LinksListFilters extends React.Component{
   constructor(props){      //
     super(props);          //
       this.state = {       //
-        showVisible: false //
+        showVisible: true //
       };                   //
   }//////////////////////////
 
