@@ -57,6 +57,7 @@ export default class AddLink extends React.Component{
           {this.state.error ? <p>{this.state.error}</p> : undefined}
           <form onSubmit={this.onSubmit.bind(this)}>
             <input type="text"
+                   ref="url"
                    placeholder="URL"
                    value={this.state.url}
                    onChange={this.onChange.bind(this)} />
