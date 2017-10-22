@@ -13,7 +13,6 @@ if(Meteor.isServer){
 
 //now make a method to call when the user clicks a button/////
 Meteor.methods({
-
   //////////////////insert///////////////////////
   'links.insert'(url) {
     if(!this.userId){
