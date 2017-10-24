@@ -34,16 +34,18 @@ export default class Signup extends React.Component{
   ////////////////////////////////
   render(){
     return(
-      <div>
-        <h1>Signup page</h1>
-        {this.state.error}
-                                  {/*no validate gets rid of browser validation  */}
-        <form onSubmit={this.onSubmit.bind(this)} noValidate>
-            <input type="email" ref="email" name="email" placeholder="email" />
-            <input type="password" ref="password" name="password" placeholder="password" />
-            <button>Create account</button>
-        </form>
-        <Link to="/login"> Need to signin?</Link>
+      <div className="boxed-view">
+        <div className="boxed_view__box">
+          <h1>Signup page</h1>
+          {this.state.error}
+                                    {/*no validate gets rid of browser validation  */}
+          <form onSubmit={this.onSubmit.bind(this)} noValidate>
+              <input type="email" ref="email" name="email" placeholder="email" />
+              <input type="password" ref="password" name="password" placeholder="password" />
+              <button>Create account</button>
+          </form>
+          <Link to="/login"> Need to signin?</Link>
+        </div>
       </div>
     );
   }//////////////////////////////////
