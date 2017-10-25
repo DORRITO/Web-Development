@@ -14,3 +14,8 @@
   text-align: center;
   width: 24rem;  //240 pixels
 }
+
+.boxed-view-form{
+  display: flex;
+  flex-direction: column;
+}
