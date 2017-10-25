@@ -8,6 +8,15 @@
   width: 100vw; //viewport width
 }
 
+.boxed-view--modal{
+  background: fade-out($boxed-view-overlay-bg, .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .boxed_view__box{ //element two underscores
   background-color: $boxed-view-bg;
   padding: 2.4rem;
