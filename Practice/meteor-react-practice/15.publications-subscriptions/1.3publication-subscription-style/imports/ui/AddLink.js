@@ -48,7 +48,7 @@ export default class AddLink extends React.Component{
   render() {
     return (
       <div>
-        <button onClick={() => this.setState({isOpen: true})}>+ Add Link</button>
+        <button className="button" onClick={() => this.setState({isOpen: true})}>+ Add Link</button>
         <Modal isOpen={this.state.isOpen}
                contentLable="Add link"
                onAfterOpen={() => this.refs.url.focus()} //puts mouse on input
