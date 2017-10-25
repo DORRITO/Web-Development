@@ -1,7 +1,8 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
-import {Session} from 'meteor/session'; //meteor add session
+import {Session} from 'meteor/session'; //meteor add session --save
+import FlipMove from 'react-flip-move'; //meteor npm install react-flip-move --save
 
 import {Links} from '../api/links';
 import LinksListItem from './LinksListItem';
@@ -51,7 +52,9 @@ export default class LinksList extends React.Component{
   render(){
     return(
       <div>
-        <div>{this.renderLinksListItems()}</div>
+        <FlipMove maintainContainerHeight={true}>
+          {this.renderLinksListItems()}
+        </FlipMove>
       </div>
     )
   }///////////////////////////////////////////////
