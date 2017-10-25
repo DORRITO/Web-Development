@@ -9,9 +9,11 @@ export default () => {
     return(
       <div>
         <PrivateHeader title={"Your links from Logout!"}/>
-        <LinksListFilters />
-        <AddLink />
-        <LinksList />
+        <div className="page-content">
+          <LinksListFilters />
+          <AddLink />
+          <LinksList />
+        </div>
       </div>
     );
 };
