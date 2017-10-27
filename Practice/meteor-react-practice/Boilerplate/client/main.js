@@ -13,7 +13,6 @@ Tracker.autorun(() => {
 });
 
 Meteor.startup(() => {
-    Session.set('showVisible', true);
     ReactDOM.render(App, document.getElementById('app'));
 })
 
