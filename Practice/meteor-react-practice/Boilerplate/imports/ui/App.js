@@ -2,17 +2,17 @@ import React from 'react';
 import {Meteor} from 'meteor/meteor';
 import {Router, Route, browserHistory} from 'react-router';
 
+import Dashboard from './Dashboard';
 import Signup from './Signup';
 import Login from './Login';
-import Logout from './Logout';
 
 const unauthenticatedPages = ['/', '/login'];
-const authenticatedPages = ['/logout'];
+const authenticatedPages = ['/dashboard'];
 
 /////dont let users hit the back button/////
 const onEnterPublicPage = () => {
   if(Meteor.userId()){
-    browserHistory.replace('/logout');
+    browserHistory.replace('/dashboard');
   }
 }/////////////////////////////////////
 
@@ -31,8 +31,7 @@ export const onAuthChange = (isAuthenticated) => {
 
   //if its authenticated, go to logout page, if its not, go to signup page!
   if(isUnauthenticatedPage && isAuthenticated){
-    console.log('your in');
-    browserHistory.replace('/logout');
+    browserHistory.replace('/dashboard');
   } else if(isAuthenticatedPage && !isAuthenticated){
     console.log('your out')
     browserHistory.replace('/login');
@@ -44,7 +43,7 @@ export const App=(
     <Router history={browserHistory}>
       <Route path="/" component={Signup} onEnter={onEnterPublicPage} />
       <Route path="/login" component={Login} onEnter={onEnterPublicPage} />
-      <Route path="/logout" component={Logout} onEnter={onEnterPrivatePage}/>
+      <Route path="/dashboard" component={Dashboard} onEnter={onEnterPrivatePage}/>
       <Route path="*" component={Signup} />
     </Router>
   </div>
