@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { WebApp } from 'meteor/webapp';
 
 import '../imports/api/users';
-import {Links} from '../imports/api/links'
 // simple schema config file turns its errors into meteor errors, so I don't have to use try catch over and over
 import '../imports/startup/simple-schema-configuration.js';
 
