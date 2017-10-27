@@ -1,0 +1,30 @@
+//BEM naming
+.boxed-view{
+  align-items: center; //aligns vertically
+  background: $boxed-view-overlay-bg;
+  display: flex;  //uses flexbox!
+  justify-content: center; //aligns horizontally
+  height: 100vh; //vh = viewport height (100% of the total height),  a viewport unit.
+  width: 100vw; //viewport width
+}
+
+.boxed-view--modal{
+  background: fade-out($boxed-view-overlay-bg, .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.boxed_view__box{ //element two underscores
+  background-color: $boxed-view-bg;
+  padding: 2.4rem;
+  text-align: center;
+  width: 24rem;  //240 pixels
+}
+
+.boxed-view__form{
+  display: flex;
+  flex-direction: column;
+}
