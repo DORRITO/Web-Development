@@ -14,8 +14,7 @@ const PrivateHeader = (props) => {
 };
 
 PrivateHeader.propTypes ={
-  title: PropTypes.string.isRequired,
-  handleLogout: PropTypes.func.isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default PrivateHeader;
