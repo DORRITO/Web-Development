@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 //meteor npm install react-addons-pure-render-mixin --save  (lets the next line happen)
 //meteor add react-meteor-data to use creat container
-import {createContainer} from 'meteor/react-meteor-data';
 import { withTracker } from 'meteor/react-meteor-data';
 
 export const PrivateHeader = (props) => {
@@ -16,7 +15,7 @@ export const PrivateHeader = (props) => {
     </div>
   );
 };
-
+//////////////////////////////////////////////////////////////////////
 PrivateHeader.propTypes ={
   title: PropTypes.string.isRequired,
   handleLogout: PropTypes.func.isRequired
