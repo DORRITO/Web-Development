@@ -52,7 +52,7 @@ export class Login extends React.Component{
 Login.propTypes ={
   loginWithPassword: PropTypes.func.isRequired
 }
-
+//
 export default withTracker(() => {
   return {
     loginWithPassword: Meteor.loginWithPassword
