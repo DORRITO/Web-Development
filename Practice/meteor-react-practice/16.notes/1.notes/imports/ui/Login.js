@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import {Meteor} from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-//
+
 export class Login extends React.Component{
 
   /////////////////////
