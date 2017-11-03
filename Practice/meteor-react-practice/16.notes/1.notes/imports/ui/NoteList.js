@@ -15,7 +15,7 @@ export const NoteList = (props) =>{
 
 ///////////////////////////////////////////////////
 NoteList.propTypes = {
-  notes: React.PropTypes.array.isRequired
+  notes: PropTypes.array.isRequired
 };
 
 export default withTracker(() => {
