@@ -23,5 +23,5 @@ export default withTracker(() => {
 
   return{
     notes: Notes.find().fetch()
-  }
+  };
 })(NoteList);
