@@ -44,6 +44,7 @@ export const App=(
       <Route path="/" component={Signup} onEnter={onEnterPublicPage} />
       <Route path="/login" component={Login} onEnter={onEnterPublicPage} />
       <Route path="/dashboard" component={Dashboard} onEnter={onEnterPrivatePage}/>
+      <Route path="/dashboard/:id" component={Dashboard} onEnter={onEnterPrivatePage}/>
       <Route path="*" component={Signup} />
     </Router>
   </div>

@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Session} from 'meteor/session'; //meteor add session
+import {browserHistory} from 'react-router';
 
 import {App, onAuthChange} from '../imports/ui/App';
 // simple schema config file turns its errors into meteor errors, so I don't have to use try catch over and over
@@ -12,8 +13,17 @@ Tracker.autorun(() => {
   onAuthChange(isAuthenticated);
 });
 
+Tracker.autorun(() => {
+  const selectedNoteId = Session.get('selectedNoteId');
+
+  if(selectedNoteId){
+    browserHistory.replace(`/dashboard/${selectedNoteId}`);
+  }
+});
+
 Meteor.startup(() => {
-    ReactDOM.render(App, document.getElementById('app'));
+  Session.set('selectedNoteId', undefined);
+  ReactDOM.render(App, document.getElementById('app'));
 })
 
 /////////////stateless component practice////////////

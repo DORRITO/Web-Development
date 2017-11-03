@@ -1,10 +1,12 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
+import {Session} from 'meteor/session';
 import PropTypes from 'prop-types';
 
-const NoteListItem = (props) => {
+export const NoteListItem = (props) => {
   return(
-    <div>
+    <div onClick={() => {
+      props.Session.set('selectedNoteId', props.note._id) }}>
       <h5>{props.note.title || 'Untitled note'}</h5>
     </div>
   )
@@ -12,11 +14,9 @@ const NoteListItem = (props) => {
 
 /////////////////////////////////////////////////////////////////////////////////
 NoteListItem.propTypes ={
-  note: PropTypes.func.isRequired
+  note: PropTypes.func.isRequired,
+  Session: PropTypes.func.isRequired
 }
-export default NoteListItem;
-// export default withTracker(() => {
-//   return {
-//     loginWithPassword: Meteor.loginWithPassword
-//   };
-// })(Login);
+export default withTracker(() => {
+  return {Session};
+})(NoteListItem);
