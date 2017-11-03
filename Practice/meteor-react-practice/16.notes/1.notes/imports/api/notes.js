@@ -4,11 +4,11 @@ import SimpleSchema from 'simpl-schema';
 
 export const Notes = new Mongo.Collection('notes');
 
-if (Meteor.isServer{
+if (Meteor.isServer){
   Meteor.publish('notes', function(){
     return Notes.find({userId: this.userId});
   });
-})
+}
 
 Meteor.methods({ //methods to use
   ///////////////insert notes//////////////////////
