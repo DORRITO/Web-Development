@@ -14,8 +14,8 @@ const NoteListItem = (props) => {
 NoteListItem.propTypes ={
   note: PropTypes.func.isRequired
 }
-
-export default withTracker;//(() => {
+export default NoteListItem;
+// export default withTracker(() => {
 //   return {
 //     loginWithPassword: Meteor.loginWithPassword
 //   };
