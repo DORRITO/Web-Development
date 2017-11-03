@@ -13,6 +13,10 @@ export const NoteListHeader = (props) => {
   );
 };
 ///////////////////////////////////////////
+NoteListHeader.propTypes = {
+  meteorCall: PropTypes.func.isRequired
+}
+
 export default withTracker(() => {
   return {
     meteorCall: Meteor.call
