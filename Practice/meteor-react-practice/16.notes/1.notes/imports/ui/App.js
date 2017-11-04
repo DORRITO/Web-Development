@@ -48,14 +48,27 @@ export const onAuthChange = (isAuthenticated) => {
   }
 };/////////////////////////////////////////////////////////////////////
 
+////////when a page url is changed///////
+export const globalOnChange = (prevState, nextState) => {
+  globalOnEnter(nextState);
+};////////////////////////////////////////
+
+////////when a page is entered////////////
+export const globalOnEnter = (nextState) => {
+  const lastRoute = nextState.routes[nextState.routes.length -1];
+  Session.set('currentPagePrivacy', lastRoute.privay);
+};////////////////////////////////////////
+
 export const App=(
   <div>
     <Router history={browserHistory}>
-      <Route path="/" component={Signup} onEnter={onEnterPublicPage} />
-      <Route path="/login" component={Login} onEnter={onEnterPublicPage} />
-      <Route path="/dashboard" component={Dashboard} onEnter={onEnterPrivatePage}/>
-      <Route path="/dashboard/:id" component={Dashboard} onEnter={onEnterNotePage}/>
-      <Route path="*" component={Signup} />
+      <Route onEnter={globalOnEnter} onChange={globalOnChange}>
+        <Route path="/" component={Signup} privacy="unauth" onEnter={onEnterPublicPage} />
+        <Route path="/login" component={Login} privacy="unauth" onEnter={onEnterPublicPage} />
+        <Route path="/dashboard" component={Dashboard} privacy="auth" onEnter={onEnterPrivatePage}/>
+        <Route path="/dashboard/:id" component={Dashboard} privacy="auth" onEnter={onEnterNotePage}/>
+        <Route path="*" component={Signup} />
+      </Route>
     </Router>
   </div>
 )
