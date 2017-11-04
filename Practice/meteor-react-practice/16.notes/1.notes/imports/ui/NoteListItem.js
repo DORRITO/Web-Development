@@ -15,8 +15,8 @@ export const NoteListItem = (props) => {
 
 /////////////////////////////////////////////////////////////////////////////////
 NoteListItem.propTypes ={
-  note: PropTypes.func.isRequired,
-  Session: PropTypes.func.isRequired
+  note: PropTypes.object.isRequired,
+  Session: PropTypes.object.isRequired
 }
 export default withTracker(() => {
   return {Session};
