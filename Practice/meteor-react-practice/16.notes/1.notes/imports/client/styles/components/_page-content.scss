@@ -3,3 +3,10 @@
   max-width: $site-max-width;
   padding: $space;
 }
+.page-content__sidebar{
+  width: $page-content-sidebar-width;
+}
+
+.page-content__main{
+  width: $page-content-main-width;
+}
