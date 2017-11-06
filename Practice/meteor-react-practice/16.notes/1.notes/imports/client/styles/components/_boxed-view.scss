@@ -1,7 +1,6 @@
 //BEM naming
 .boxed-view{
   align-items: center; //aligns vertically
-  background: $boxed-view-overlay-bg;
   display: flex;  //uses flexbox!
   justify-content: center; //aligns horizontally
   height: 100vh; //vh = viewport height (100% of the total height),  a viewport unit.
@@ -19,6 +18,7 @@
 
 .boxed_view__box{ //element two underscores
   background-color: $boxed-view-bg;
+  border: 1px solid $boxed-view-border-color;
   padding: 2.4rem;
   text-align: center;
   width: 24rem;  //240 pixels

@@ -1,8 +1,12 @@
 //colors
-$brand-primary: #5b4681;
+$brand-primary: #397ab1;
 $grey: #dddddd;
 $light-grey: #f9f9f9;
 $dark-grey: #777777;
+
+//body-background-color
+$body-background-color: #fafafa;
+$body-default-color: #333333;
 
 //spacing
 $space: 1.4rem;
@@ -19,9 +23,10 @@ $input-spacing: 1rem;
 //boxed view
 $boxed-view-overlay-bg: $grey;
 $boxed-view-bg: white;
+$boxed-view-border-color: $grey;
 
 //button
-$button-bg: #5b4681;
+$button-bg: $brand-primary;
 $button-color: white;
 $button-pill-color: $brand-primary;
 $button--secondary-bg: $light-grey;
