@@ -1,4 +1,5 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -27,7 +28,7 @@ h2{
 p{
   margin-bottom: $space;
 }
-         
+
 a{
   color: $body-default-color;
 }
