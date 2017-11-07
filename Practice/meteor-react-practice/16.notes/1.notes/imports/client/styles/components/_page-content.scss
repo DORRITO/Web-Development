@@ -17,6 +17,7 @@
   top: $header-height;
   left: -100vw;
   bottom: 0;
+  z-index: 1; //sidebar will always be on top. needed since -webkit-overflow-scrolling: touch; sometimes makes this buggy.
 
     @include desktop{
       display: flex;
