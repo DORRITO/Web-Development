@@ -1,5 +1,9 @@
 // _ <--- on file name means its a partial
+//variables first
 @import './variables';
+//then mixins
+@import './mixins/media-query-mixins';
+//other files access what is above
 @import './base';
 @import './components/boxed-view';
 @import './components/button';
