@@ -11,7 +11,7 @@ import '../imports/startup/simple-schema-configuration.js';
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
   const currentPagePrivacy = Session.get('currentPagePrivacy');
-  
+
   onAuthChange(isAuthenticated, currentPagePrivacy);
 });
 
@@ -23,8 +23,15 @@ Tracker.autorun(() => {
   }
 });
 
+Tracker.autorun(() => {
+  const isNavOpen = Session.get('isNavOpen');
+
+  document.body.classList.toggle('is-nav-open', isNavOpen);
+})
+
 Meteor.startup(() => {
   Session.set('selectedNoteId', undefined);
+  Session.set('isNavOpen', false);
   ReactDOM.render(App, document.getElementById('app'));
 })
 
