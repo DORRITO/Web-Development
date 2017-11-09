@@ -3,9 +3,11 @@ import {Meteor} from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import {Session} from 'meteor/session';
 import PropTypes from 'prop-types';
-import {BrowserRouter} from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 
 import {Notes} from '../api/notes';
+
+export const history = createHistory();
 
 export class Editor extends React.Component{
   constructor(props){
@@ -32,7 +34,7 @@ export class Editor extends React.Component{
   /////////////////////////////////////////////////////////
   handleRemoval(){
     this.props.call('notes.remove', this.props.note._id);
-    this.props.BrowserRouter.push('/dashboard');
+    this.props.history.push('/dashboard');
   }//////////////////////////////////////////////////////////
 
   /////////////////////////////////////////////////////////
@@ -72,7 +74,7 @@ Editor.propTypes ={
   note: PropTypes.object,
   selectedNoteId: PropTypes.string,
   call: PropTypes.func.isRequired,
-  BrowserRouter: PropTypes.func.isRequired
+  history: PropTypes.object.isRequired
 };
 
 export default withTracker(() => {
@@ -82,6 +84,6 @@ export default withTracker(() => {
     selectedNoteId,
     note: Notes.findOne(selectedNoteId),
     call: Meteor.call,
-    BrowserRouter
+    history: history
   };
 })(Editor);

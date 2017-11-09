@@ -1,7 +1,6 @@
 import React from 'react';
 import {Meteor} from 'meteor/meteor';
-// import {Router, Route, browserHistory} from 'react-router';
-import {Router, Route, BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import {Session} from 'meteor/session';
 
 import Dashboard from './Dashboard';
@@ -25,9 +24,9 @@ export const onAuthChange = (isAuthenticated, currentPagePrivacy) => {
 
   //if its authenticated, go to logout page, if its not, go to signup page!
   if(isUnauthenticatedPage && isAuthenticated){
-    BrowserRouter.replace('/dashboard');
+    history.replace('/dashboard');
   } else if(isAuthenticatedPage && !isAuthenticated){
-    BrowserRouter.replace('/login');
+    history.replace('/login');
   }
 };/////////////////////////////////////////////////////////////////////
 
@@ -43,17 +42,17 @@ export const globalOnEnter = (nextState) => {
 };////////////////////////////////////////
 
 export const App=(
-  <div>
-    <BrowserRouter>
-        <Route onEnter={globalOnEnter} onChange={globalOnChange}>
-          <div>
-            <Route exact path="/" component={Signup} privacy="unauth" />
-            <Route exact path="/login" component={Login} privacy="unauth" />
-            <Route exact path="/dashboard" component={Dashboard} privacy="auth" />
-            <Route exact path="/dashboard/:id" component={Dashboard} privacy="auth" onEnter={onEnterNotePage} onLeave={onLeaveNotePage}/>
-            <Route path="*" component={Signup} />
-          </div>
-        </Route>
-    </BrowserRouter>
-  </div>
+  <BrowserRouter>
+    {/* <Route onEnter={globalOnEnter} onChange={globalOnChange}> */}
+      <div>
+        <Switch>
+          <Route exact path="/" component={Signup} privacy="unauth" />
+          <Route exact path="/login" component={Login} privacy="unauth" />
+          <Route exact path="/dashboard" component={Dashboard} privacy="auth" />
+          <Route exact path="/dashboard/:id" component={Dashboard} privacy="auth" onEnter={onEnterNotePage} onLeave={onLeaveNotePage}/>
+          <Route path="*" component={Signup} />
+        </Switch>
+      </div>
+    {/* </Route> */}
+  </BrowserRouter>
 )
