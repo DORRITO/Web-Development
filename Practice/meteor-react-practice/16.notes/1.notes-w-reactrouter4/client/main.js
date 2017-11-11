@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
@@ -25,7 +26,7 @@ Tracker.autorun(() => {
 Meteor.startup(() => {
   Session.set('selectedNoteId', undefined);
   Session.set('isNavOpen', false);
-  ReactDOM.render(App, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
 })
 
 /////////////stateless component practice////////////
