@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 import {Meteor} from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -10,7 +10,9 @@ export class Login extends React.Component{
   constructor(props){
     super(props);
     this.state ={
-      error: ''
+      error: '',
+      email: '',
+      password: ''
     };
   }/////////////////////
 
@@ -18,8 +20,7 @@ export class Login extends React.Component{
   onSubmit(e){
     e.preventDefault();
 
-    let email = this.refs.email.value.trim();
-    let password = this.refs.password.value.trim();
+    let {email, password} = this.state;
 
     this.props.loginWithPassword({email}, password, (err) => {
       if(err){
@@ -30,16 +31,24 @@ export class Login extends React.Component{
     });
   }/////////////////////////////////////////////////
 
+  ////////////sets email////////////////////////
+  onEmailChange(e) {
+   this.setState({ email: e.target.value.trim() })
+ }////////////sets password////////////////////
+ onPasswordChange(e) {
+   this.setState({ password: e.target.value.trim() })
+ }//////////////////////////////////////////////////
+
   ////////////////////////////////
   render(){
     return(
       <div className="boxed-view">
         <div className="boxed_view__box">
           <h1>Login</h1>
-          {this.state.error}
+          {this.state.error ? <p>{this.state.error}</p> : undefined}
           <form onSubmit={this.onSubmit.bind(this)} className="boxed-view__form" noValidate>
-              <input type="email" ref="email" name="email" placeholder="email" />
-              <input type="password" ref="password" name="password" placeholder="password" />
+              <input type="email" name="email" placeholder="email" onChange={this.onEmailChange.bind(this)} value={this.state.email}/>
+              <input type="password" name="password" placeholder="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password}/>
               <button className="button">Login</button>
           </form>
           <Link to="/"> Need to make an account?</Link>
