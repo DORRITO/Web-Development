@@ -27,7 +27,7 @@ Meteor.startup(() => {
   Session.set('selectedNoteId', undefined);
   Session.set('isNavOpen', false);
   ReactDOM.render(<App />, document.getElementById('app'));
-})
+});
 
 /////////////stateless component practice////////////
 //<MyComponent name="CHIp"/>

@@ -2,16 +2,20 @@ import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Route, Redirect } from 'react-router-dom';
 
-export const PrivateRoute = ({
+export const PublicRoute = ({
   isAuthenticated,
   component: Component,
   ...rest
 }) => (
     <Route {...rest} render={(props) => (
-      isAuthenticated ? (<Component {...props} />) : (<Redirect to="/" />)
+      isAuthenticated ? (
+        <Redirect to="/dashboard" />
+      ) : (
+          <Component {...props} />
+        )
     )} />
   );
 
 export default withTracker(() => ({
   isAuthenticated: !!Meteor.userId()
-}))(PrivateRoute);
+})) (PublicRoute);

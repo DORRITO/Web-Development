@@ -8,14 +8,10 @@ export const PublicRoute = ({
   ...rest
 }) => (
     <Route {...rest} render={(props) => (
-      isAuthenticated ? (
-        <Redirect to="/dashboard" />
-      ) : (
-          <Component {...props} />
-        )
+      isAuthenticated ? ( <Redirect to="/dashboard" />) : ( <Component {...props} /> )
     )} />
   );
 
-export default withTracker(() => {
+export default withTracker(() => ({
   isAuthenticated: !!Meteor.userId()
-}) (PublicRoute);
+})) (PublicRoute);

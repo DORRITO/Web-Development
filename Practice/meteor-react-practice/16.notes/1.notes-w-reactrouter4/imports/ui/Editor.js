@@ -19,7 +19,7 @@ export class Editor extends React.Component{
   /////////////////////////////////////////////////////////
   handleBodyChange(e){
     const body = e.target.value;
-    this.setState({body})
+    this.setState({body});
     this.props.call('notes.update', this.props.note._id, {body});
   }//////////////////////
   /////////////////////
@@ -81,7 +81,7 @@ Editor.propTypes ={
   Session: PropTypes.object.isRequired
 };
 
-export default withTracker(() => {
+export default withRouter(withTracker(() => {
   const selectedNoteId = Session.get('selectedNoteId');
 
   return {
@@ -90,4 +90,4 @@ export default withTracker(() => {
     call: Meteor.call,
     Session
   };
-})(Editor);
+})(Editor));

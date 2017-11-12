@@ -8,10 +8,14 @@ export const PrivateRoute = ({
   ...rest
 }) => (
     <Route {...rest} render={(props) => (
-      isAuthenticated ? (<Component {...props} />) : (<Redirect to="/" />)
+      isAuthenticated ? (
+        <Component {...props} />
+      ) : (
+          <Redirect to="/" />
+        )
     )} />
   );
 
 export default withTracker(() => ({
   isAuthenticated: !!Meteor.userId()
-}))(PrivateRoute);
+})) (PrivateRoute);
