@@ -3,8 +3,8 @@ import SimpleSchema from 'simpl-schema';
 import {Accounts} from 'meteor/accounts-base';
 
 Accounts.validateNewUser((user) => {
-  const email = user.username[0].address;
-
+  const username = user.username;
+  console.log(username)
   new SimpleSchema({
     username: {
       type: String,
