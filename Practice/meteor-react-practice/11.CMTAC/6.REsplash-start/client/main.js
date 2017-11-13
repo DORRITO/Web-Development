@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 // import {Tracker} from 'meteor/tracker';
 
-import {App} from '../imports/ui/mainApp/App';
+import {App} from '../imports/ui/MainApp/App';
 // simple schema config file turns its errors into meteor errors, so I don't have to use try catch over and over
 import '../imports/startup/simple-schema-configuration.js';
 
