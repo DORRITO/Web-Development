@@ -16,7 +16,7 @@ export const App = () => (
   <Router history={history}>
     <Switch>
       <PublicRoute exact path="/" component={Login} />
-      <PublicRoute path="/login" component={Signup} />
+      <PublicRoute path="/signup" component={Signup} />
       <PrivateRoute exact path="/dashboard" component={Dashboard} />
       <PrivateRoute path="/dashboard/:id" component={Dashboard} />
       <Route path="*" component={Login} />

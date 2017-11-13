@@ -51,7 +51,7 @@ export class Login extends React.Component{
               <input type="password" name="password" placeholder="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password}/>
               <button className="button">Login</button>
           </form>
-          <Link to="/"> Need to make an account?</Link>
+          <Link to="/Signup"> Need to make an account?</Link>
         </div>
       </div>
     );
