@@ -5,8 +5,7 @@ import PrivateHeader from './PrivateHeader';
 export default () => {
     return(
       <div>
-        <PrivateHeader title="Default prop here!"/>
-        This is the body
+        <PrivateHeader title="Presented by the Mayors Cross Map Townsmanship Officionados Club"/>
       </div>
     );
 };

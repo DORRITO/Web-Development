@@ -7,8 +7,8 @@ import createHistory from 'history/createBrowserHistory';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import Dashboard from './../Dashboard';
-import Signup from './../Signup';
-import Login from './../Login';
+import Signup from './../LoginAndSignup/Signup';
+import Login from './../LoginAndSignup/Login';
 
 export const history = createHistory()
 

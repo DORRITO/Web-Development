@@ -10,9 +10,7 @@ export const PublicHeader = (props) => {
 
   return (
     <div className="header">
-      <div className="header__content">
         <h1 className="header__title">{props.greeting}</h1>
-      </div>
     </div>
   );
 };
@@ -22,5 +20,5 @@ PublicHeader.propTypes ={
 };
 
 export default withTracker(() => {
-  return { greeting: 'The Cross Map Townsmanship Officionados Club welcomes you to Terraria!' };
+  return { greeting: 'The Mayors Cross Map Townsmanship Aficionados Club welcomes you to Terraria!' };
 })(PublicHeader);
