@@ -4,6 +4,8 @@ import {Meteor} from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
+import PublicHeader from './PublicHeader';
+
 export class Login extends React.Component{
 
   /////////////////////
@@ -42,16 +44,19 @@ export class Login extends React.Component{
   ////////////////////////////////
   render(){
     return(
-      <div className="boxed-view">
-        <div className="boxed_view__box">
-          <h1>CMTAC Login</h1>
-          {this.state.error ? <p>{this.state.error}</p> : undefined}
-          <form onSubmit={this.onSubmit.bind(this)} className="boxed-view__form" noValidate>
-              <input type="text" name="username" placeholder="username" onChange={this.onusernameChange.bind(this)} value={this.state.username}/>
-              <input type="password" name="password" placeholder="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password}/>
-              <button className="button">Login to Terra!</button>
-          </form>
-          <Link to="/Signup"> Need to make character account?</Link>
+      <div>
+        <PublicHeader />
+        <div className="boxed-view">
+          <div className="boxed_view__box">
+            <h1>CMTAC Login</h1>
+            {this.state.error ? <p>{this.state.error}</p> : undefined}
+            <form onSubmit={this.onSubmit.bind(this)} className="boxed-view__form" noValidate>
+                <input type="text" name="username" placeholder="username" onChange={this.onusernameChange.bind(this)} value={this.state.username}/>
+                <input type="password" name="password" placeholder="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password}/>
+                <button className="button">Login to Terraria!</button>
+            </form>
+            <Link to="/Signup"> Need to make character account?</Link>
+          </div>
         </div>
       </div>
     );
@@ -63,7 +68,5 @@ Login.propTypes ={
 }
 
 export default withTracker(() => {
-  return {
-    loginWithPassword: Meteor.loginWithPassword
-  };
+  return {loginWithPassword: Meteor.loginWithPassword};
 })(Login);

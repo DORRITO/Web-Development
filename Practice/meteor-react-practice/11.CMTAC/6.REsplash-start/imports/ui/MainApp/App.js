@@ -12,6 +12,7 @@ import Login from './../Login';
 
 export const history = createHistory()
 
+
 export const App = () => (
   <Router history={history}>
     <Switch>
