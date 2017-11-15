@@ -48,12 +48,12 @@ export class Login extends React.Component{
         <PublicHeader />
         <div className="boxed-view">
           <div className="boxed_view__box">
-            <h1>CMTAC Login</h1>
+            <h1>MCMTAC Login</h1>
             {this.state.error ? <p>{this.state.error}</p> : undefined}
             <form onSubmit={this.onSubmit.bind(this)} className="boxed-view__form" noValidate>
                 <input type="text" name="username" placeholder="username" onChange={this.onusernameChange.bind(this)} value={this.state.username}/>
                 <input type="password" name="password" placeholder="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password}/>
-                <button className="button">Login to Terraria!</button>
+                <button className="button">Enter Terraria!</button>
             </form>
             <Link to="/Signup"> Need to make character account?</Link>
           </div>
