@@ -6,16 +6,17 @@ import {Session} from 'meteor/session';
 //meteor add react-meteor-data to use creat container
 import { withTracker } from 'meteor/react-meteor-data';
 
+import Player from './PlayerComponents/Player';
+
 export const PrivateHeader = (props) => {
 
   return (
-    <div className="header">
+    <div>
       <h2>Terraria</h2>
-      <div className="header__content">
-        <h1 className="header__title">{props.title}</h1>
-        <button className="button button--link-text" onClick={() => props.handleLogout()}>Logout</button>
-      </div>
-      <h5 className="header__title">{props.greeting}</h5>
+      <h1>{props.title}</h1>
+      <h5>{props.greeting}</h5>
+      <button onClick={() => props.handleLogout()}>Logout</button>
+      <Player name="yo"/>
     </div>
   );
 };
