@@ -16,7 +16,11 @@ export const PrivateHeader = (props) => {
       <h1>{props.title}</h1>
       <h5>{props.greeting}</h5>
       <button onClick={() => props.handleLogout()}>Logout</button>
-      <Player name="yo"/>
+      <div className="playersSection">
+        <Player name="Rychar"/>
+        <Player name="Tylendel"/>
+        <Player name="Wolfbane"/>
+      </div>
     </div>
   );
 };
