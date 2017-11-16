@@ -18,7 +18,6 @@ export class Player extends React.Component{
   //**************dice roll*********************************
   roll() {
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) })
-   console.log(this.props.isGM())
  }//*******************************************************
 
   //////////////////////////////////////////////////////////////////
@@ -42,5 +41,5 @@ Player.propTypes ={
 };
 
 export default withTracker(() => {
-  return {isGM: !!Meteor.userId()};
+  return {};
 })(Player);

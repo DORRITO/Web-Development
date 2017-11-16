@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export class Dice extends React.Component{
   ///////////////////
@@ -7,9 +6,14 @@ export class Dice extends React.Component{
     super(props);
     this.state = {
       d20: '',
-      modifier: 0,
+      modifier: 0
     };
   }//////////////////
+
+  //********is the user a GM**************
+  isGM = () => {
+    return Meteor.user().username === 'me'
+  }//*************************************
 
   //*********************dice*********************************
   ///////modifier//////
@@ -23,16 +27,13 @@ export class Dice extends React.Component{
 
   //////////////////////////////////////////////////////////////////////////////
   render(){
+    let isGM = this.isGM() ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later'
     return (
       <div>
         <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
         {this.state.d20}
-        <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
-        {/*make this only seen to gm*/}
+        {isGM}
       </div>
     );
   }
 };/////////////////////////////////////////////////////////////////////////////
-
-Dice.propTypes ={
-};
