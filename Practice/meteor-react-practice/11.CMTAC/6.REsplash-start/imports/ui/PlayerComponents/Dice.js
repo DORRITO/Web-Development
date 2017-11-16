@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 export class Dice extends React.Component{
-  //******************
+  ///////////////////
   constructor(props){
     super(props);
     this.state = {
       d20: '',
       modifier: 0,
     };
-  }//*****************
-
+  }//////////////////
 
   //*********************dice*********************************
   ///////modifier//////
@@ -23,7 +21,7 @@ export class Dice extends React.Component{
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
  }//************************************************************
 
-  //////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
   render(){
     return (
       <div>
@@ -33,8 +31,8 @@ export class Dice extends React.Component{
         {/*make this only seen to gm*/}
       </div>
     );
-  }////////////////////////////////////////////////////////////////////////////
-};
-//////////////////////////////////////////////////////////////////////
+  }
+};/////////////////////////////////////////////////////////////////////////////
+
 Dice.propTypes ={
 };

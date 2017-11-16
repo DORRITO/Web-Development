@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+
+import {Dice} from './Dice';
+import PlayerBoxIcon from './PlayerBoxIcon';
+
 export class GM extends React.Component{
   //******************
   constructor(props){
@@ -20,12 +24,11 @@ export class GM extends React.Component{
   render(){
     return (
       <div>
-        <h5>{this.props.name}</h5>
-        <div className="divWithPicture"></div>
-        <div>
-          <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
-          {this.state.d20}
-          <form><input placeholder={0} /></form>
+        <PlayerBoxIcon icon={this.props.icon}/>
+        <div className="divWithbackground">
+          <h5>{this.props.name}</h5>
+          <Dice />
+          <button>Incapacitate</button>
         </div>
       </div>
     );
@@ -34,6 +37,7 @@ export class GM extends React.Component{
 //////////////////////////////////////////////////////////////////////
 GM.propTypes ={
   name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
   // roll: PropTypes.func.isRequired
 };
 

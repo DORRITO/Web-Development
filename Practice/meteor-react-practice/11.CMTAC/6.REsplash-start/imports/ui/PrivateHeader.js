@@ -7,6 +7,7 @@ import {Session} from 'meteor/session';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import Player from './PlayerComponents/Player';
+import GM from './PlayerComponents/GM';
 
 export const PrivateHeader = (props) => {
 
@@ -17,10 +18,11 @@ export const PrivateHeader = (props) => {
       <h5>{props.greeting}</h5>
       <button onClick={() => props.handleLogout()}>Logout</button>
       <div className="playersSection">
-        <Player name="Rychar"/>
-        <Player name="Tylendel"/>
-        <Player name="Wolfbane"/>
+        <Player name="Rychar" icon="I'm a sign and building" />
+        <Player name="Tylendel" icon="I'm a castle" />
+        <Player name="Wolfbane" icon="I'm a tent and fireplace" />
       </div>
+      <GM name="GM" icon="i'm a puppet master"/>
     </div>
   );
 };

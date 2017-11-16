@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import {Dice} from './Dice';
+import PlayerBoxIcon from './PlayerBoxIcon';
 
 export class Player extends React.Component{
   //******************
@@ -17,15 +18,18 @@ export class Player extends React.Component{
   //**************dice roll*********************************
   roll() {
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) })
+   console.log(this.props.isGM())
  }//*******************************************************
 
   //////////////////////////////////////////////////////////////////
   render(){
     return (
       <div>
-        <h5>{this.props.name}</h5>
-        <div className="divWithPicture"></div>
-        <Dice />
+        <PlayerBoxIcon icon={this.props.icon}/>
+        <div className="divWithbackground">
+          <h5>{this.props.name}</h5>
+          <Dice />
+        </div>
       </div>
     );
   }////////////////////////////////////////////////////////////////////////////
@@ -33,9 +37,10 @@ export class Player extends React.Component{
 //////////////////////////////////////////////////////////////////////
 Player.propTypes ={
   name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
   // roll: PropTypes.func.isRequired
 };
 
 export default withTracker(() => {
-  return {};
+  return {isGM: !!Meteor.userId()};
 })(Player);
