@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
+
+import {Dice} from './Dice';
+
 export class Player extends React.Component{
   //******************
   constructor(props){
@@ -22,11 +25,7 @@ export class Player extends React.Component{
       <div>
         <h5>{this.props.name}</h5>
         <div className="divWithPicture"></div>
-        <div>
-          <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
-          {this.state.d20}
-          <form><input placeholder={0} /></form>
-        </div>
+        <Dice />
       </div>
     );
   }////////////////////////////////////////////////////////////////////////////
