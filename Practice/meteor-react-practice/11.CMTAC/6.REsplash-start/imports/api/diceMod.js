@@ -11,14 +11,27 @@ if (Meteor.isServer){
 }
 /////////////////////////////////////////////////
 Meteor.methods({
-  'diceMod.insert'(modifier){
-    console.log('greetUser is running');
+
+  //***********************************************
+  'diceMod.insert'(_id, modifier){
+    console.log('update is running!');
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
 
     return DiceMod.insert({
+      _id,
       modifier
     });
-  }//////////////////////////////////////////////
+  },//***********************************************
+
+  //***********************************************
+  'diceMod.update'(_id, modifier){
+    console.log('update is running!');
+    if(!this.userId){
+      throw new Meteor.Error('not-authorized')
+    }
+
+    return DiceMod.update(_id, {$set: {modifier}});
+  }//***********************************************
 });
