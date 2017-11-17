@@ -2,7 +2,7 @@ import {Mongo} from 'meteor/mongo';
 import {Meteor} from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
 
-export const DiceMod = new Mongo.Collection('dicMod');
+export const DiceMod = new Mongo.Collection('diceMod');
 
 if (Meteor.isServer){
   Meteor.publish('diceMod', function(){
@@ -11,14 +11,14 @@ if (Meteor.isServer){
 }
 /////////////////////////////////////////////////
 Meteor.methods({
-  'diceMod.update'(update){
+  'diceMod.insert'(modifier){
     console.log('greetUser is running');
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
 
-    DiceMod.update({
-      $set: { ...update }
+    return DiceMod.insert({
+      modifier
     });
   }//////////////////////////////////////////////
 });

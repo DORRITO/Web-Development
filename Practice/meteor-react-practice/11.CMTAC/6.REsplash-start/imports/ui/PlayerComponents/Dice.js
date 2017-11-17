@@ -20,7 +20,8 @@ export class Dice extends React.Component{
     Tracker.autorun(() => {
       if (Meteor.user()) {
 
-        const modifier = DiceMod.findOne({ modifier})
+        Meteor.subscribe('diceMod');
+        const modifier = DiceMod.find().fetch();
         console.log(modifier)
 
         isGM = Meteor.user().username === 'me';
@@ -32,13 +33,13 @@ export class Dice extends React.Component{
   //*********************dice*********************************
   ///////modifier//////
   onModifierChange(e) {
-    Meteor.call('diceMod.update'(2))
-    conso
     this.setState({ modifier: e.target.value })
   }
   ///////dice roll////
   roll() {
-    // Meteor.call('diceMod');
+    let modifier = 15
+    Meteor.call('diceMod.insert', modifier)
+    // DiceMod.insert({modifier: 25, userId: Meteor.userId() })
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
  }//************************************************************
 
