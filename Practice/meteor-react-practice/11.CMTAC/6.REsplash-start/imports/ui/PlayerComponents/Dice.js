@@ -22,7 +22,6 @@ export class Dice extends React.Component{
     });
   }
 
-
   //*********************dice*********************************
   ///////modifier//////
   onModifierChange(e) {
