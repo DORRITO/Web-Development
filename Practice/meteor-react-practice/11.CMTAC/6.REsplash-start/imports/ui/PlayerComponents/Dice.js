@@ -1,6 +1,9 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import { withTracker } from 'meteor/react-meteor-data';
+
+import {DiceMod} from './../../api/diceMod';
 
 export class Dice extends React.Component{
   ///////////////////
@@ -16,6 +19,10 @@ export class Dice extends React.Component{
   componentDidMount(){
     Tracker.autorun(() => {
       if (Meteor.user()) {
+
+        const modifier = DiceMod.findOne({ modifier})
+        console.log(modifier)
+
         isGM = Meteor.user().username === 'me';
         this.setState({ isGM })
       }
@@ -25,10 +32,13 @@ export class Dice extends React.Component{
   //*********************dice*********************************
   ///////modifier//////
   onModifierChange(e) {
+    Meteor.call('diceMod.update'(2))
+    conso
     this.setState({ modifier: e.target.value })
   }
   ///////dice roll////
   roll() {
+    // Meteor.call('diceMod');
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
  }//************************************************************
 

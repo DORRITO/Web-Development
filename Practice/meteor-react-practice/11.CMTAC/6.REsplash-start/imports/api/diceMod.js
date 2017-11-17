@@ -6,12 +6,19 @@ export const DiceMod = new Mongo.Collection('dicMod');
 
 if (Meteor.isServer){
   Meteor.publish('diceMod', function(){
-    return DiceMod.find({userId: this.userId});
+    return DiceMod.find({});
   });
 }
+/////////////////////////////////////////////////
 Meteor.methods({
-  greetUser(){
+  'diceMod.update'(update){
     console.log('greetUser is running');
-    return 'hello user';
-  }
+    if(!this.userId){
+      throw new Meteor.Error('not-authorized')
+    }
+
+    DiceMod.update({
+      $set: { ...update }
+    });
+  }//////////////////////////////////////////////
 });
