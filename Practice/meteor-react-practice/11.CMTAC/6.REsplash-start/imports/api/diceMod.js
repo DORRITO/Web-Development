@@ -14,7 +14,6 @@ Meteor.methods({
 
   //***********************************************
   'diceMod.insert'(_id, modifier){
-    console.log('update is running!');
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
@@ -27,7 +26,6 @@ Meteor.methods({
 
   //***********************************************
   'diceMod.update'(_id, modifier){
-    console.log('update is running!');
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
