@@ -19,7 +19,7 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized')
     }
 
-    return DiceMod.insert({
+    DiceMod.insert({
       _id,
       modifier
     });

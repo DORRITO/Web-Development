@@ -37,8 +37,8 @@ export class Dice extends React.Component{
   }
   ///////dice roll////
   roll() {
-    let modifier = 16
-    Meteor.call('diceMod.insert', Meteor.userId(), {modifier: 16})
+    let modifier = 15
+    Meteor.call('diceMod.update', Meteor.userId(), modifier)
     // Meteor.call('diceMod.update', {modifier: 16})
     // DiceMod.insert({modifier: 25, userId: Meteor.userId() })
    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
