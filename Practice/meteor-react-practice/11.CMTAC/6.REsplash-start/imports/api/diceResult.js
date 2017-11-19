@@ -13,23 +13,23 @@ if (Meteor.isServer){
 Meteor.methods({
 
   //***********************************************
-  'diceResult.insert'(_id, modifier){
+  'diceResult.insert'(_id, result){
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
 
     DiceResult.insert({
       _id,
-      modifier
+      result
     });
   },//***********************************************
 
   //***********************************************
-  'diceResult.update'(_id, modifier){
+  'diceResult.update'(_id, result){
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
 
-    return DiceResult.update(_id, {$set: {modifier}});
+    return DiceResult.update(_id, {$set: {result}});
   }//***********************************************
 });
