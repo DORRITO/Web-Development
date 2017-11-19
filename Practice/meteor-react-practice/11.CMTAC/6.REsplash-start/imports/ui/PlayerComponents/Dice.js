@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
+import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import {DiceMod} from './../../api/diceMod';
@@ -10,6 +11,7 @@ export class Dice extends React.Component{
   constructor(props){
     super(props);
     this.state = {
+      owner: this.props.owner,
       d20: '',
       modifier: 0,
       isGM: ''
@@ -57,6 +59,10 @@ export class Dice extends React.Component{
     );
   }
 };/////////////////////////////////////////////////////////////////////////////
+
+Dice.propTypes ={
+  name: PropTypes.string.isRequired
+};
 
 export default withTracker(() => {
   return {};
