@@ -26,7 +26,7 @@ export class Dice extends React.Component{
       if (Meteor.user()) {
         Meteor.subscribe('diceMod', 'diceResult');
         const modifier = DiceMod.find().fetch()[0]
-        const d20 = DiceResult.find().fetch()[0]
+        const d20 = DiceResult.find().fetch()
         console.log(!!d20)
         console.log(d20)
 
@@ -48,8 +48,9 @@ export class Dice extends React.Component{
   ///////dice roll////
   roll() {
     // Meteor.subscribe('diceResult');
-    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
-    Meteor.call('diceResult.insert', Meteor.userId(), this.state.d20, this.state.owner)
+    let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
+    this.setState({ d20 })
+    Meteor.call('diceResult.insert', d20, this.state.owner)
  }//**********************************************************************************************************
 
   //////////////////////////////////////////////////////////////////////////////
