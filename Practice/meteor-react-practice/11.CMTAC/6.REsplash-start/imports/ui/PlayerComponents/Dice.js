@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import {DiceMod} from './../../api/diceMod';
+import {DiceResult} from './../../api/diceResult';
 
 export class Dice extends React.Component{
   ///////////////////
@@ -23,10 +24,11 @@ export class Dice extends React.Component{
     Tracker.autorun(() => {
 
       if (Meteor.user()) {
-        Meteor.subscribe('diceMod');
+        Meteor.subscribe('diceMod', 'diceResult');
         const modifier = DiceMod.find().fetch()[0]
-        console.log(!!modifier)
-        console.log(modifier)
+        const d20 = DiceResult.find().fetch()[0]
+        console.log(!!d20)
+        console.log(d20)
 
         isGM = Meteor.user().username === 'me'; //CHANGE CHANGE CHANGE IN FINAL VERSION
         modifier ? this.setState({ isGM, modifier: modifier.modifier }) : this.setState({ isGM })
@@ -45,7 +47,9 @@ export class Dice extends React.Component{
   }
   ///////dice roll////
   roll() {
-   this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
+    // Meteor.subscribe('diceResult');
+    this.setState({ d20: Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier) })
+    Meteor.call('diceResult.insert', Meteor.userId(), this.state.d20, this.state.owner)
  }//**********************************************************************************************************
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,7 +65,7 @@ export class Dice extends React.Component{
 };/////////////////////////////////////////////////////////////////////////////
 
 Dice.propTypes ={
-  name: PropTypes.string.isRequired
+  owner: PropTypes.string.isRequired
 };
 
 export default withTracker(() => {

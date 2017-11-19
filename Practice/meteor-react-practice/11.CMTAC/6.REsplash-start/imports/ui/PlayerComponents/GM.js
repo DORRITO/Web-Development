@@ -27,7 +27,7 @@ export class GM extends React.Component{
         <PlayerBoxIcon icon={this.props.icon}/>
         <div className="divWithbackground">
           <h5>{this.props.name}</h5>
-          <Dice />
+          <Dice owner={this.props.name}/>
           <button>Incapacitate</button>
         </div>
       </div>
