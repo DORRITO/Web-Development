@@ -12,14 +12,15 @@ if (Meteor.isServer){
 /////////////////////////////////////////////////
 Meteor.methods({
   //***********************************************
-  'diceResult.insert'(result, owner){
+  'diceResult.insert'(_id, result){
     if(!this.userId){
       throw new Meteor.Error('not-authorized')
     }
 
     DiceResult.insert({
-      result,
-      owner
+      _id,
+      result
+
     });
   },//***********************************************
 
