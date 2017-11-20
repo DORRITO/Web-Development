@@ -20,7 +20,6 @@ Meteor.methods({
     DiceResult.insert({
       _id,
       result
-
     });
   },//***********************************************
 
