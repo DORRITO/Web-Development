@@ -14,7 +14,6 @@ export class Dice extends React.Component{
     this.state = {
       owner: this.props.owner,
       d20: '',
-      d20List: [],
       modifier: 0,
       isGM: ''
     };
@@ -23,16 +22,17 @@ export class Dice extends React.Component{
   //*********************************mostly modifier dealings******************************************
   componentDidMount(){
     Tracker.autorun(() => {
+      Meteor.subscribe('diceMod');
+      Meteor.subscribe('diceResult');
       if (Meteor.user()) {
-        Meteor.subscribe('diceMod', 'diceResult');
-        const modifier = DiceMod.find().fetch()[0];
-        const d20List  = DiceResult.find().fetch();
-        const d20ListTest  = DiceResult.findOne({"_id": String(this.state.owner)})._id
 
-        console.log(d20ListTest)
+        const modifier = DiceMod.find().fetch()[0];
+        const d20 =  DiceResult.findOne({"_id": String(this.state.owner)}).result
+        // DiceResult.find().findOne({"_id": String(this.state.owner)})._id
+        console.log(d20)
 
         isGM = Meteor.user().username === 'me'; //CHANGE CHANGE CHANGE IN FINAL VERSION
-        modifier ? this.setState({ isGM, d20List ,modifier: modifier.modifier }) : this.setState({ isGM })
+        modifier ? this.setState({ isGM, d20 ,modifier: modifier.modifier }) : this.setState({ isGM })
       }
     });
   }//***************************************************************************************************
@@ -50,12 +50,12 @@ export class Dice extends React.Component{
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     Meteor.subscribe('diceResult');
-    const isD20 = DiceResult.find().fetch();
+    const isD20 = DiceResult.find().fetch()[0];
     const owner = this.state.owner;
 
-    this.setState({ d20 })
-    // isD20 ? Meteor.call('diceResult.update', this.state.owner, d20) : Meteor.call('diceResult.insert', owner, d20)
-    Meteor.call('diceResult.update', this.state.owner, d20)
+    // this.setState({ d20 })
+    isD20 ? Meteor.call('diceResult.update', owner, d20) : Meteor.call('diceResult.insert', owner, d20)
+    // Meteor.call('diceResult.insert', this.state.owner, d20)
  }//**********************************************************************************************************
 
   //////////////////////////////////////////////////////////////////////////////
