@@ -13,7 +13,7 @@ export class Dice extends React.Component{
     super(props);
     this.state = {
       owner: this.props.owner,
-      d20: '',
+      d20: 0,
       modifier: 0,
       isGM: ''
     };
@@ -50,12 +50,10 @@ export class Dice extends React.Component{
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     Meteor.subscribe('diceResult');
-    const isD20 = DiceResult.find().fetch()[0];
+    const isD20 = DiceResult.findOne({"_id": String(this.state.owner)});
     const owner = this.state.owner;
 
-    // this.setState({ d20 })
     isD20 ? Meteor.call('diceResult.update', owner, d20) : Meteor.call('diceResult.insert', owner, d20)
-    // Meteor.call('diceResult.insert', this.state.owner, d20)
  }//**********************************************************************************************************
 
   //////////////////////////////////////////////////////////////////////////////
