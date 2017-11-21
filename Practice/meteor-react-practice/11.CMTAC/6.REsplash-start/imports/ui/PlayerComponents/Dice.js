@@ -24,12 +24,11 @@ export class Dice extends React.Component{
     Tracker.autorun(() => {
       Meteor.subscribe('diceMod');
       Meteor.subscribe('diceResult');
+      const isReady = Meteor.subscribe('diceResult').ready();
       if (Meteor.user()) {
-
+        console.log(!!isReady)
         const modifier = DiceMod.find().fetch()[0];
-        const d20 =  DiceResult.findOne({"_id": String(this.state.owner)}).result
-        // DiceResult.find().findOne({"_id": String(this.state.owner)})._id
-        console.log(d20)
+        const d20 = isReady ? DiceResult.findOne({"_id": String(this.state.owner)}).result : '0'
 
         isGM = Meteor.user().username === 'me'; //CHANGE CHANGE CHANGE IN FINAL VERSION
         modifier ? this.setState({ isGM, d20 ,modifier: modifier.modifier }) : this.setState({ isGM })
