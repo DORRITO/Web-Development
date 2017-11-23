@@ -20,7 +20,7 @@ export class Dice extends React.Component{
   }//////////////////
 
   //*********************************mostly modifier dealings******************************************
-  componentDidMount(){
+  componentWillMount(){
     Tracker.autorun(() => {
       Meteor.subscribe('diceMod');
       Meteor.subscribe('diceResult');
@@ -28,7 +28,7 @@ export class Dice extends React.Component{
       if (Meteor.user()) {
         console.log(!!isReady)
         const modifier = DiceMod.find().fetch()[0];
-        const d20 = isReady ? DiceResult.findOne({"_id": String(this.state.owner)}).result : '0'
+        const d20 = DiceResult.findOne({"_id": String(this.state.owner)}).result
 
         isGM = Meteor.user().username === 'me'; //CHANGE CHANGE CHANGE IN FINAL VERSION
         modifier ? this.setState({ isGM, d20 ,modifier: modifier.modifier }) : this.setState({ isGM })
@@ -41,13 +41,17 @@ export class Dice extends React.Component{
   onModifierChange(e) {
     let modifier = e.target.value
     Meteor.subscribe('diceMod');
+    Meteor.subscribe('diceResult');
+
     const isData = DiceMod.find().fetch()[0]
+    const ownerIs = DiceResult.findOne({"_id": String(this.state.owner)})._id
 
     isData ? Meteor.call('diceMod.update', Meteor.userId(), modifier) : Meteor.call('diceMod.insert', Meteor.userId(), modifier)
   }
   ///////dice roll////
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
+    d20 < 0 ? d20 = 0 : d20 = d20
     Meteor.subscribe('diceResult');
     const isD20 = DiceResult.findOne({"_id": String(this.state.owner)});
     const owner = this.state.owner;
