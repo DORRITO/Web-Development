@@ -11,6 +11,7 @@ import GM from './PlayerComponents/GM';
 
 export const PrivateHeader = (props) => {
 
+  //////////
   return (
     <div>
       <h2>Terraria</h2>

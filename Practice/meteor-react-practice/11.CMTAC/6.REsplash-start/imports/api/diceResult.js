@@ -11,6 +11,7 @@ if (Meteor.isServer){
 }
 /////////////////////////////////////////////////
 Meteor.methods({
+  
   //***********************************************
   'diceResult.insert'(_id, result){
     if(!this.userId){
