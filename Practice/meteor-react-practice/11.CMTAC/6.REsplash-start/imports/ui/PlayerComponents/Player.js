@@ -12,6 +12,10 @@ export class Player extends React.Component{
     this.state = {
       d20: '',
       modifier: 0,
+      subscription : {
+				"usersData" : Meteor.subscribe('diceResult')
+			},
+      isReady: ''
     };
   }//*****************
 
