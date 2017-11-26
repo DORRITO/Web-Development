@@ -24,7 +24,7 @@ export class Dice extends React.Component{
 
 
   //*********************************mostly modifier dealings******************************************
-  componentWillMount(){
+  componentDidMount(){
     // setTimeout(function(){}, 1000);
     Tracker.autorun(() => {
       Meteor.subscribe('diceMod');
@@ -34,20 +34,15 @@ export class Dice extends React.Component{
         if (Meteor.user()) {
           const modifier = DiceMod.find().fetch()[0];
           const d20 = DiceResult.findOne({"_id": String(this.state.owner)})
-          // const d20 = DiceResult.find().fetch()
-          //
-          // const d20Map = d20.map( (usersData)=>{
-          //                 console.log(usersData._id)
-  				// 		            return usersData._id
-          //               })
-          // console.log(d20)
 
           isGM = Meteor.user().username === 'me'; //CHANGE CHANGE CHANGE IN FINAL VERSION
           modifier ? this.setState({ isGM, d20: d20.result, modifier: modifier.modifier }) : this.setState({ isGM })
         }
     })
   }//***************************************************************************************************
-
+  // componentDidMount(){
+  //   if (!this.state.isReady){ window.location.reload()}
+  // }
   //*************************dice functions*************************************************************
   ///////modifier//////
   onModifierChange(e) {
