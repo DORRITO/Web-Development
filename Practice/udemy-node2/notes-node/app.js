@@ -2,11 +2,22 @@ console.log('starting app');
 
 const fs = require('fs');
 const os = require('os');
+const _ = require('lodash');
 const notes = require('./notes.js');
 
-var add = notes.add(1,2);
-console.log(`Result: ${add}`);
+/*********lodash string testing**************
+// console.log(_.isString(true));
+// console.log(_.isString('string!'));
+/*******************************************/
 
-let user = os.userInfo();
+let filteredArray = _.uniq(['chip', 1, 'chip', 1, 2, 3, 4]);
+console.log(filteredArray);
 
-fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
+//*******add function from notes***********
+// var add = notes.add(1,2);
+// console.log(`Result: ${add}`);
+/**************************************/
+
+// let user = os.userInfo();
+
+// fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
