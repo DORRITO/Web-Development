@@ -21,11 +21,12 @@ export class Dice extends React.Component{
     };
   }//////////////////
 
-
+  // componentWillMount(){
+     // Meteor.setTimeout(function(){console.log('hi')}, 1000);
+  // }
 
   //*********************************mostly modifier dealings******************************************
   componentDidMount(){
-    // setTimeout(function(){}, 1000);
     Tracker.autorun(() => {
       Meteor.subscribe('diceMod');
       Meteor.subscribe('diceResult');
