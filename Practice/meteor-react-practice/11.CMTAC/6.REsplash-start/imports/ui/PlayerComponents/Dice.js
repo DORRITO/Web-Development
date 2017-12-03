@@ -41,9 +41,7 @@ export class Dice extends React.Component{
         }
     })
   }//***************************************************************************************************
-  // componentDidMount(){
-  //   if (!this.state.isReady){ window.location.reload()}
-  // }
+ 
   //*************************dice functions*************************************************************
   ///////modifier//////
   onModifierChange(e) {
