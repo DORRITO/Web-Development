@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
 
 //action generators - function that return ation objects
-
+//destructuring argument.  
 const incrementCount = ({incrementBy = 1} = {}) => ({
   type: 'INCREMENT',
   incrementBy
