@@ -23,7 +23,6 @@ const withAdminWarning = (WrappedComponent) => {
   );
 };
 
-
 const requireAuthentication = (WrappedComponent) => {
   return (props) => (
     <div>
@@ -31,15 +30,6 @@ const requireAuthentication = (WrappedComponent) => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
 
 // const requireAuthentication = (WrappedComponent) => {
 //   return (props) => (
