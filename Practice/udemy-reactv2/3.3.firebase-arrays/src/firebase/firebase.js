@@ -1,22 +1,29 @@
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyAapA5P8gWC83aHK26xgDDMzIBC4dw914w",
-  authDomain: "expensify-a13e6.firebaseapp.com",
-  databaseURL: "https://expensify-a13e6.firebaseio.com",
-  projectId: "expensify-a13e6",
-  storageBucket: "expensify-a13e6.appspot.com",
-  messagingSenderId: "124728096317"
+  apiKey: "AIzaSyCXDJQdE5T8ea6wYhQXty7noaK-L0jTTkA",
+  authDomain: "expensify-f6f19.firebaseapp.com",
+  databaseURL: "https://expensify-f6f19.firebaseio.com",
+  projectId: "expensify-f6f19",
+  storageBucket: "expensify-f6f19.appspot.com",
+  messagingSenderId: "94075439417"
 };
 
 firebase.initializeApp(config);
 
 const database = firebase.database();
 
-database.ref().on('value', (snapshot) => {
-  const val = snapshot.val();
-  console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
-})
+database.ref('examples').push({
+  description: 'this',
+  note: 'that',
+  amount: '50 billion',
+  createdAt: 'moment function im sure'
+});
+
+// database.ref().on('value', (snapshot) => {
+//   const val = snapshot.val();
+//   console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
+// })
 
 // Setup data sub -> Andrew is a Software Developer at Amazon.
 
