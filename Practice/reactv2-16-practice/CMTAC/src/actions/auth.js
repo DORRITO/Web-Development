@@ -20,3 +20,18 @@ export const startLogout = () => {
     return firebase.auth().signOut();
   };
 };
+
+export const signup = () => ({
+  type: 'SIGnUP'
+});
+
+export const startSignup = () => {
+  return () => {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
+  }
+}
