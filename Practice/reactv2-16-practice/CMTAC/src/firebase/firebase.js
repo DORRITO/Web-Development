@@ -12,6 +12,8 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+// const screatUserWithEmailAndPassword = firebase.auth().signInWithEmailAndPassword('me', '123');
+// const signInWithEmailAndPassword = firebase.auth().signInWithEmailAndPassword('me', '123');
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 

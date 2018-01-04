@@ -7,10 +7,7 @@ export default (state = {}, action) => {
     case 'LOGOUT':
       return {};
       case 'SIGNUP':
-      return {
-        email: 'me',
-        password: 123
-      };
+      return {};
     default:
       return state;
   }
