@@ -41,15 +41,18 @@ const getNote = (title) => {
     console.log('Getting the note', title);
 };
 
-const remove = (title) => {
+/////////////remove note////////////////////
+const removeNote = (title) => {
     let notes = fetchNotes();
     const filteredNotes = notes.filter((note) => note.title !== title);
     saveNotes(filteredNotes);
-};
+
+    return notes.length !== filteredNotes.length;
+};////////////////////////////////////////////////
 
 module.exports = {
     addNote,
     getAll,
     getNote,
-    remove
+    removeNote
 };
