@@ -24,7 +24,10 @@ if(command === 'add'){
 } else if (command === 'list'){
     notes.getAll();
 } else if(command === 'read'){
-    notes.getNote(argv.title);
+    const read = notes.getNote(argv.title);
+    if(read){
+        console.log(read);
+    }else{"No notes found"};
 } else if(command === 'remove'){
     const noteRemoved = notes.removeNote(argv.title);
     const message = noteRemoved ? 'Note was removed' : 'Note not found';
