@@ -13,7 +13,7 @@ const addNote = (title, body) => {
         notes = JSON.parse(notesString);
     }catch(e){}
 
-    const duplicateNotes = notes.filter((note) => notes.title === title);
+    const duplicateNotes = notes.filter((note) => note.title === title);
 
     if(duplicateNotes.length === 0){
         notes.push(note);
