@@ -12,7 +12,7 @@ console.log('Command: ', command);
 console.log('Yargs', argv);
 
 if(command === 'add'){
-   const note = notes.addNote(argv.title, argv.body);
+   let note = notes.addNote(argv.title, argv.body);
    if(note){
        console.log('note created!');
        console.log('----');
@@ -24,10 +24,13 @@ if(command === 'add'){
 } else if (command === 'list'){
     notes.getAll();
 } else if(command === 'read'){
-    const read = notes.getNote(argv.title);
-    if(read){
-        console.log(read);
-    }else{"No notes found"};
+    let note = notes.getNote(argv.title);
+    if(note){
+        console.log("note read");
+        console.log("----");
+        console.log(`Title: ${note.title}`);
+        console.log(`Body: ${note.body}`);
+    }else{console.log('no notes found')};
 } else if(command === 'remove'){
     const noteRemoved = notes.removeNote(argv.title);
     const message = noteRemoved ? 'Note was removed' : 'Note not found';
