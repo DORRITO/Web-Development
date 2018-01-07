@@ -22,8 +22,9 @@ const argv = yargs.command('add', 'add a new note', {title: titleOptions,  body:
     .command('remove', 'remove a note', {title: titleOptions})
     .help()
     .argv;
-//////////////////////////////////////////
+//***********************
 const command = argv._[0];
+///////////////////////////////////////////
 
 if(command === 'add'){
    let note = notes.addNote(argv.title, argv.body);
