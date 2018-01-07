@@ -16,18 +16,10 @@ bodyOptions = {
 };
 
 ///////////////yarg commands///////////////
-const argv = yargs
-    .command('add', 'add a new note', {
-        title: titleOptions,
-        body: bodyOptions
-    })
+const argv = yargs.command('add', 'add a new note', {title: titleOptions,  body: bodyOptions})
     .command('list', 'list all notes')
-    .command('read', 'read a note', {
-        title: titleOptions
-    })
-    .command('remove', 'remove a note', {
-        title: titleOptions
-    })
+    .command('read', 'read a note', {title: titleOptions})
+    .command('remove', 'remove a note', {title: titleOptions})
     .help()
     .argv;
 //////////////////////////////////////////
