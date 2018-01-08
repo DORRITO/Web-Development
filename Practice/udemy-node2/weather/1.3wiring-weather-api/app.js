@@ -1,19 +1,20 @@
-// const yargs = require('yargs');
+const yargs = require('yargs');
 
-// const geocode = require('./geocode/geocode');
+const geocode = require('./geocode/geocode');
+const weather = require('./weather/weather');
 
-// const argv = yargs
-//     .options({
-//         a: {
-//             demand: true,
-//             alias: 'address',
-//             describe: 'address to fetch weather for',
-//             string: true
-//         }
-//     })
-//     .help()
-//     .alias('h', 'help')
-//     .argv;
+const argv = yargs
+    .options({
+        a: {
+            demand: true,
+            alias: 'address',
+            describe: 'address to fetch weather for',
+            string: true
+        }
+    })
+    .help()
+    .alias('h', 'help')
+    .argv;
 
 // geocode.geocodeAddress(argv.address, (errorMessage, results) => {
 //     if(errorMessage){
@@ -23,18 +24,10 @@
 //     }
 // });
 
-const request = require('request');
-
-request({
-    url: `https://api.darksky.net/forecast/f08eb677673ef8e25444c3d098236e93/33.4475319,-112.5364865`,
-    json: true
-}, (error, response, body) => {
-    if(!error && response.statusCode === 200){
-        console.log(body.currently.temperature);
+weather.getWeather(33.4475319, -112.5364865, (errorMessage, weatherResults) => {
+    if(errorMessage){
+        console.log(errorMessage);
     }else{
-        console.log('unable to fetch weather.');
+        console.log(JSON.stringify(weatherResults, undefined, 2));
     }
-})
-
-//f08eb677673ef8e25444c3d098236e93
-//https://api.darksky.net/forecast/f08eb677673ef8e25444c3d098236e93/33.4475319,-112.5364865
+});
