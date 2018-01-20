@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 
-class App extends Component {
+class Contact extends Component {
 
   state = {
     response: ''
@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch('/home');
+    const response = await fetch('/contact');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -36,5 +36,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Contact;
 console.log('this is happening')
