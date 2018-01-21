@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import '../App.css';
 
-class Contact extends Component {
+class Signup extends Component {
 
   state = {
     response: ''
@@ -30,9 +30,9 @@ class Contact extends Component {
       <div className="App">
         <header className="App-header">
           <div><Link to="/">Home</Link>&nbsp;
-          <Link to="/about">About</Link></div>
+          <Link to="/login">Login</Link></div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Signup page</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
       </div>
@@ -40,5 +40,5 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default Signup;
 console.log('this is happening')
