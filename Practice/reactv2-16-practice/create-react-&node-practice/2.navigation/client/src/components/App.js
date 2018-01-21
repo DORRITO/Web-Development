@@ -32,7 +32,7 @@ class App extends Component {
           <div><Link to="/about">About</Link>&nbsp;
           <Link to="/contact">Contact</Link></div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">This is the home page from the front end!</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
       </div>
