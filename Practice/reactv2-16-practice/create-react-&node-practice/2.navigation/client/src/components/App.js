@@ -29,8 +29,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div><Link to="/login">Login</Link>&nbsp;
-          <Link to="/signup">Signup</Link></div>
+          <div><Link to="/about">About</Link>&nbsp;
+          <Link to="/contact">Contact</Link></div>
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">This is the home page from the front end!</h1>
         </header>

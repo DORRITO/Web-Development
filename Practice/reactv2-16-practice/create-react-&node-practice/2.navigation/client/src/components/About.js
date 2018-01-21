@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import '../App.css';
 
-class Login extends Component {
+class About extends Component {
 
   state = {
     response: ''
@@ -17,7 +17,7 @@ class Login extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch('/login');
+    const response = await fetch('/about');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -30,9 +30,9 @@ class Login extends Component {
       <div className="App">
         <header className="App-header">
           <div><Link to="/">Home</Link>&nbsp;
-          <Link to="/signup">Signup</Link></div>
+          <Link to="/contact">Contact</Link></div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Signup page</h1>
+          <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
       </div>
@@ -40,5 +40,5 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default About;
 console.log('this is happening')

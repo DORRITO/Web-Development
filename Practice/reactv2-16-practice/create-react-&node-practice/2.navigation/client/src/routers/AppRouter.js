@@ -3,8 +3,8 @@ import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import App from '../components/App';
-import Login from '../components/Login';
-import Signup from '../components/Signup';
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 export const history = createHistory();
 
@@ -13,9 +13,8 @@ const AppRouter = () => (
       <div>
         <Switch>
           <Route path="/" component={App} exact={true} />
-          <Route path="/login" component={Login}/>
-          <Route path="/signup" component={Signup}/>
-          <Route path="*" component={App} />
+          <Route path="/about" component={About}/>
+          <Route path="/contact" component={Contact}/>
           </Switch>
       </div>
     </Router>
