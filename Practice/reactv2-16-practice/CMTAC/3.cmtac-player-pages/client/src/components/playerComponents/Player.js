@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Dice} from './Dice';
-import DisablePlayer from './DisablePlayer';
+import onCheckboxChange from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
 
 export class Player extends React.Component{
@@ -11,9 +11,16 @@ export class Player extends React.Component{
     super(props);
     this.state = {
       d20: '',
+      isChecked: false,
       modifier: 0
     };
   }//*****************
+
+    //**********************************
+    onCheckboxChange = (e) => {
+        let isChecked = e.target.checked
+        this.setState({isChecked})
+    }//**********************************
 
   //////////////////////////////////////////////////////////////////
   render(){
@@ -21,10 +28,10 @@ export class Player extends React.Component{
       <div>
         <PlayerBoxIcon icon={this.props.icon}/>
         <div className="divWithbackground">
-          <h5>{this.props.name}</h5>
-          <Dice owner={this.props.name}/>
-        </div>
-        <DisablePlayer />
+            <h5>{this.props.name}</h5>
+            {!this.state.isChecked ? <Dice owner={this.props.name}/> : 'INCAPACITATED'}
+        </div> 
+        <input type="checkbox" onChange={this.onCheckboxChange.bind(this)} />
       </div>
     );
   }////////////////////////////////////////////////////////////////////////////
