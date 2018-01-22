@@ -41,4 +41,3 @@ class Signup extends Component {
 }
 
 export default Signup;
-console.log('this is happening')

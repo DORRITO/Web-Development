@@ -41,4 +41,3 @@ class App extends Component {
 }
 
 export default App;
-console.log('this is happening')

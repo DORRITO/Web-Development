@@ -23,9 +23,9 @@ export const GamePage = () => {
   };
   //////////////////////////////////////////////////////////////////////
   GamePage.propTypes ={
-    title: PropTypes.string.isRequired,
+    // title: PropTypes.string.isRequired,
     // handleLogout: PropTypes.func.isRequired,
-    greeting: PropTypes.string.isRequired
+    // greeting: PropTypes.string.isRequired
   };
 
   export default GamePage;

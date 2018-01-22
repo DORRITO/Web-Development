@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Dice} from './Dice';
+import DisablePlayer from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
 
 export class Player extends React.Component{
@@ -23,6 +24,7 @@ export class Player extends React.Component{
           <h5>{this.props.name}</h5>
           <Dice owner={this.props.name}/>
         </div>
+        <DisablePlayer />
       </div>
     );
   }////////////////////////////////////////////////////////////////////////////
