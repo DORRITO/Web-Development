@@ -1,12 +1,9 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import {Tracker} from 'meteor/tracker';
 import PropTypes from 'prop-types';
-import { withTracker } from 'meteor/react-meteor-data';
 import { Route, Redirect } from 'react-router-dom';
 
-import {DiceMod} from './../../api/diceMod';
-import {DiceResult} from './../../api/diceResult';
+// import {DiceMod} from './../../api/diceMod';
+// import {DiceResult} from './../../api/diceResult';
 
 export class Dice extends React.Component{
   ///////////////////

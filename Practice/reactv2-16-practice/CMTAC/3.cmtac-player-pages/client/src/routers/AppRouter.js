@@ -3,6 +3,7 @@ import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import App from '../components/App';
+import GamePage from '../components/GamePage';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
 
