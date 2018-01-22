@@ -1,4 +1,5 @@
 const Rychar = [{
     login: 'rychar',
-    password: ''
+    password: '',
+    loggedIn: 'false'
 }]

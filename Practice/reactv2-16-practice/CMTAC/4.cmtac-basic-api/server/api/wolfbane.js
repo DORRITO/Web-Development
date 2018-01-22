@@ -1,4 +1,5 @@
 const Wolfbane = [{
     login: 'wolfbane',
-    password: ''
+    password: 'reygan',
+    loggedIn: 'false'
 }]
