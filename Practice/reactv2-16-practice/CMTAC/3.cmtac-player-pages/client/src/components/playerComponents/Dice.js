@@ -30,13 +30,16 @@ export class Dice extends React.Component{
   ///////modifier//////
   onModifierChange(e) {
     let modifier = e.target.value
+    this.setState({modifier})
   }
   ///////dice roll////
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     d20 < 1 ? d20 = 1 : d20 = d20
+    this.setState({d20})
 
  }//*************************************************************************************
+//  {this.state.isGM ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later to gm, not me'}
 
   //////////////////////////////////////////////////////////////////////////////
   render(){
@@ -44,7 +47,7 @@ export class Dice extends React.Component{
         <div>
           <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
           {this.state.d20}
-          {this.state.isGM ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later to gm, not me'}
+          <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )
   }
