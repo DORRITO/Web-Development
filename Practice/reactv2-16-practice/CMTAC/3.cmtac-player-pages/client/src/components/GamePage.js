@@ -27,3 +27,5 @@ export const GamePage = () => {
     // handleLogout: PropTypes.func.isRequired,
     greeting: PropTypes.string.isRequired
   };
+
+  export default GamePage;
