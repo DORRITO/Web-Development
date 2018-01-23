@@ -40,7 +40,7 @@ class Login extends Component {
             <form className="boxed-view__form" noValidate>
                 <input type="text" name="username" placeholder="username" />
                 <input type="password" name="password" placeholder="password" />
-                <button className="button">Enter Terraria!</button>
+                <button className="button"><Link to="/gamepage">Enter Terraria!</Link></button>
             </form>
           </div>
         </div>

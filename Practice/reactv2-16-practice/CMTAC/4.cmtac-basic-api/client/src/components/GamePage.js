@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import {Player} from './playerComponents/Player';
@@ -10,7 +11,7 @@ export const GamePage = () => {
     return (
       <div>
         <h2>Terraria</h2>
-        <button>Logout</button>
+        <button><Link to="/">Logout</Link></button>
         <h1>Presented by the Mayors Cross Map Townsmanship Aficionados Club</h1>
         <h5>(In cooperation with the arcane order)</h5>
         <div className="playersSection">
