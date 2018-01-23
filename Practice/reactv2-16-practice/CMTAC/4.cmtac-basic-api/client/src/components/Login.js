@@ -29,10 +29,22 @@ class Login extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Link to="/">Home</Link>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Login page</h1>
+          <h3><Link to="/">Home</Link></h3>
+          <h1 className="App-title">The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
         </header>
+
+        <div className="boxed-view" >
+          <div className="boxed_view__box">
+            <h1>MCMTAC Login</h1>
+            <form className="boxed-view__form" noValidate>
+                <input type="text" name="username" placeholder="username" />
+                <input type="password" name="password" placeholder="password" />
+                <button className="button">Enter Terraria!</button>
+            </form>
+          </div>
+        </div>
+
         <p className="App-intro">{this.state.response}</p>
       </div>
     );

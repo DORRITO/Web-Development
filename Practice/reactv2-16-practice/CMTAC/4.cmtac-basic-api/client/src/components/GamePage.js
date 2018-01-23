@@ -10,6 +10,7 @@ export const GamePage = () => {
     return (
       <div>
         <h2>Terraria</h2>
+        <button>Logout</button>
         <h1>Presented by the Mayors Cross Map Townsmanship Aficionados Club</h1>
         <h5>(In cooperation with the arcane order)</h5>
         <div className="playersSection">

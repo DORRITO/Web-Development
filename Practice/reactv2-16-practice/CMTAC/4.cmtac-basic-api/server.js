@@ -8,7 +8,7 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.send({ express: 'this is the login page from the back end' });
+  res.send({ express: 'backend: please enter your username and password' });
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -16,7 +16,7 @@ const AppRouter = () => (
           <Route path="/login" component={Login}/>
           <Route path="/gamepage" component={GamePage}/>
           <Route path="*" component={App} />
-          </Switch>
+        </Switch>
       </div>
     </Router>
   );
