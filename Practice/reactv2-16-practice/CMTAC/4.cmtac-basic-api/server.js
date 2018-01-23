@@ -1,10 +1,14 @@
 const express = require('express');
-
 const app = express();
 const port = process.env.PORT || 8000;
 
+const Rychar = require('./server/api/rychar');
+const Tylendel = require('./server/api/tylendel');
+const Wolfbane = require('./server/api/wolfbane');
+
 app.get('/home', (req, res) => {
-  res.send({ express: 'this is the home page from the back end' });
+  res.send({ express: 'this is the home page from the back end',
+             Rychar });
 });
 
 app.get('/login', (req, res) => {
