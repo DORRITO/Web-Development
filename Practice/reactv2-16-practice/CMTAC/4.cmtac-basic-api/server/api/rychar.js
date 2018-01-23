@@ -1,4 +1,4 @@
-exports.Rychar = {
+module.exports = {
     name: 'Rychar',
     login: 'rychar',
     password: '',
