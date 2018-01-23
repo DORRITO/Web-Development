@@ -9,8 +9,7 @@ const Wolfbane = require('./server/api/wolfbane');
 
 
 app.get('/home', (req, res) => {
-  res.send({ express: 'this is the home page from the back end',
-             Rychar });
+  res.send({ express: 'this is the home page from the back end'});
 });
 
 app.get('/login', (req, res) => {

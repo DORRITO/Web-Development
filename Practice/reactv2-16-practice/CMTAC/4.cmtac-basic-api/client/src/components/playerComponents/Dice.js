@@ -6,28 +6,41 @@ import { Route, Redirect } from 'react-router-dom';
 // import {DiceResult} from './../../api/diceResult';
 
 export class Dice extends React.Component{
-  ///////////////////
+  
   constructor(props){
     super(props);
     this.state = {
       owner: this.props.owner,
       d20: '',
       modifier: 0,
-      isGM: ''
+      isGM: '',
+      name: ''
     };
-  }//////////////////
+  }
 
   // componentWillMount(){
      // Meteor.setTimeout(function(){console.log('hi')}, 1000);
   // }
 
-  //*********************************mostly modifier dealings**************************
   componentDidMount(){
-    
-  }//**********************************************************************************
+    this.callApi()
+      .then(res => {
+        const owner = {...res}
+        console.log(owner)
+        this.setState({ name: res.Rychar.name})
+      })
+      .catch(err => console.log(err));
+  }
  
-  //*************************dice functions********************************************
-  ///////modifier//////
+  callApi = async () => {
+    const response = await fetch('/players');
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
+
   onModifierChange(e) {
     let modifier = e.target.value
     this.setState({modifier})
@@ -47,6 +60,7 @@ export class Dice extends React.Component{
         <div>
           <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
           {this.state.d20}
+          {this.state.name}1{this.state.owner}2
           <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )
