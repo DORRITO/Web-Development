@@ -1,4 +1,5 @@
-const Wolfbane = [{
+const GM = [{
     login: 'gm',
-    password: '123'
+    password: '123',
+    loggedIn: 'false'
 }]

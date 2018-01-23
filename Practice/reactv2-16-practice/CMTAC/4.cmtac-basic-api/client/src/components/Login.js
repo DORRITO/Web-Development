@@ -29,10 +29,9 @@ class Login extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div><Link to="/">Home</Link>&nbsp;
-          <Link to="/signup">Signup</Link></div>
+          <Link to="/">Home</Link>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Signup page</h1>
+          <h1 className="App-title">Login page</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
       </div>
