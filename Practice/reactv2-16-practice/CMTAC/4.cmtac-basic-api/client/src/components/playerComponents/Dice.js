@@ -12,9 +12,9 @@ export class Dice extends React.Component{
     this.state = {
       owner: this.props.owner,
       d20: '',
+      players: {},
       modifier: 0,
       isGM: '',
-      name: ''
     };
   }
 
@@ -24,12 +24,8 @@ export class Dice extends React.Component{
 
   componentDidMount(){
     this.callApi()
-      .then(res => {
-        const owner = {...res}
-        console.log(owner)
-        this.setState({ name: res.Rychar.name})
-      })
-      .catch(err => console.log(err));
+      .then(res =>  this.setState({ name: res[this.state.owner].name }) )
+      .catch(err => console.log(err))
   }
  
   callApi = async () => {
@@ -60,7 +56,6 @@ export class Dice extends React.Component{
         <div>
           <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
           {this.state.d20}
-          {this.state.name}1{this.state.owner}2
           <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )
