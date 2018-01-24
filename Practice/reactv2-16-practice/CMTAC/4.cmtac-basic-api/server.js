@@ -25,7 +25,9 @@ app.route('/players')
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
-    res.send({ GM, Rychar, Tylendel, Wolfbane });
+    console.log('patch is working!')
+    console.log(req, 'req')
+    // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
