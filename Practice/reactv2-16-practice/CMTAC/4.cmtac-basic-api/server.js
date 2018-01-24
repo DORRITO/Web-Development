@@ -24,7 +24,7 @@ app.route('/players')
   .get(function (req, res)  {
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
-  .patcht(function (req, res)  {
+  .patch(function (req, res)  {
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 
