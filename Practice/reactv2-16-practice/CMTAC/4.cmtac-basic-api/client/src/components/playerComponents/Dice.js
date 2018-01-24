@@ -15,6 +15,7 @@ export class Dice extends React.Component{
       players: {},
       modifier: 0,
       isGM: '',
+      name: ''
     };
   }
 
@@ -55,7 +56,7 @@ export class Dice extends React.Component{
       return (
         <div>
           <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
-          {this.state.d20}
+          {this.state.d20}{this.state.name}
           <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )

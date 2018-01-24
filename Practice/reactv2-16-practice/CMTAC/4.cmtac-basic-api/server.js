@@ -16,8 +16,16 @@ app.get('/login', (req, res) => {
   res.send({ express: 'backend: please enter your username and password' });
 });
 
-app.get('/players', (req, res) => {
-  res.send({ GM, Rychar, Tylendel, Wolfbane });
-});
+// app.get('/players', (req, res) => {
+//   res.send({ GM, Rychar, Tylendel, Wolfbane });
+// });
+
+app.route('/players')
+  .get(function (req, res)  {
+    res.send({ GM, Rychar, Tylendel, Wolfbane });
+  })
+  .patcht(function (req, res)  {
+    res.send({ GM, Rychar, Tylendel, Wolfbane });
+  })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
