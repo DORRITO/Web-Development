@@ -24,7 +24,6 @@ export class Dice extends React.Component{
   // }
 
   componentDidMount(){
-    fetch('/players?name=cat', {method: 'PATCH'});
     this.callApi()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
@@ -54,6 +53,8 @@ export class Dice extends React.Component{
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     d20 < 1 ? d20 = 1 : d20 = d20
+    fetch('/players?name=cat', {method: 'PATCH'});
+
     this.setState({d20})
 
  }//*************************************************************************************
