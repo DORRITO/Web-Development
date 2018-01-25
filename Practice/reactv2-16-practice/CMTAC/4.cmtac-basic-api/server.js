@@ -4,6 +4,8 @@ const _ = require('lodash');
 var bodyParser = require('body-parser');
 
 // app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
@@ -21,18 +23,22 @@ app.get('/login', (req, res) => {
 });
 
 // app.get('/players', (req, res) => {
-//   res.send({ GM, Rychar, Tylendel, Wolfbane });
+//   console.log(res.body, 'res body');
+//   console.log(req.body, 'req body');
 // });
 
 app.route('/players')
   .get(function (req, res)  {
+    // console.log(req.body, 'req.body log');
+    // console.log(res.body, 'req,body')
+    console.log(req.query, 'query')
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
-    console.log('patch is working!')
-    let body = _.pick(req.body, ['dice']);
-    console.log(body, 'bodyyyy')
-    console.log(body.dice, 'body.dice')
+    // console.log('patch is working!')
+    // let body = _.pick(req.body, ['dice']);
+    // console.log(res.body, 'bodyyyy')
+    // console.log(body.dice, 'body.dice')
     // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 

@@ -25,14 +25,19 @@ export class Dice extends React.Component{
 
   componentDidMount(){
     this.callApi()
-      .then(res =>  this.setState({ name: res[this.state.owner].name }) )
+      .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
-    fetch('/players', { method: 'PATCH', body: {dice: '2'} })
+    // fetch('/players', { 
+    //   method: 'PATCH',
+    //   headers: {'Content-Type':'application/json'},
+    //   body: { dice: '2'} 
+    // })
   }
- 
+
   callApi = async () => {
-    const response = await fetch('/players');
+    const response = await fetch('/players?type=cat');
     const body = await response.json();
+    // console.log(body)
 
     if (response.status !== 200) throw Error(body.message);
 
