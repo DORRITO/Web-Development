@@ -27,11 +27,6 @@ export class Dice extends React.Component{
     this.callApi()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
-    // fetch('/players', { 
-    //   method: 'PATCH',
-    //   headers: {'Content-Type':'application/json'},
-    //   body: { dice: '2'} 
-    // })
   }
 
   callApi = async () => {
@@ -53,7 +48,14 @@ export class Dice extends React.Component{
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     d20 < 1 ? d20 = 1 : d20 = d20
-    fetch('/players?name=cat', {method: 'PATCH'});
+
+    // fetch('/players?name=cat', {method: 'PATCH'});
+
+    // fetch('/players', { 
+    //   method: 'PATCH',
+    //   headers: {'Content-Type':'application/json'},
+    //   body: { dice: '2'} 
+    // })
 
     this.setState({d20})
 
