@@ -33,11 +33,11 @@ app.route('/players')
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
-    // console.log('patch is working!')
-    let body = _.pick(req.query, ['name']);
-    console.log(req.query, 'body from req query');
-    console.log(body, 'body from pick');
-    // console.log(body.dice, 'body.dice')
+    // let body = _.pick(req.query, ['name']);
+    // console.log(body, 'body from pick');
+    GM.name = req.query.name
+    console.log(GM);
+    console.log(req.query.name, 'body from req query');
     // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 
