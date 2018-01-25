@@ -29,15 +29,14 @@ app.get('/login', (req, res) => {
 
 app.route('/players')
   .get(function (req, res)  {
-    // console.log(req.body, 'req.body log');
-    // console.log(res.body, 'req,body')
-    console.log(req.query, 'query')
+    // console.log(req.query, 'query')
     res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
     // console.log('patch is working!')
-    // let body = _.pick(req.body, ['dice']);
-    // console.log(res.body, 'bodyyyy')
+    let body = _.pick(req.query, ['name']);
+    console.log(req.query, 'body from req query');
+    console.log(body, 'body from pick');
     // console.log(body.dice, 'body.dice')
     // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
