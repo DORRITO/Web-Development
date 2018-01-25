@@ -24,10 +24,10 @@ export class Dice extends React.Component{
   // }
 
   componentDidMount(){
+    fetch('/players?name=cat', {method: 'PATCH'});
     this.callApi()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
-      fetch('/players?name=cat', {method: 'PATCH'});
     // fetch('/players', { 
     //   method: 'PATCH',
     //   headers: {'Content-Type':'application/json'},

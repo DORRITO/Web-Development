@@ -36,9 +36,7 @@ app.route('/players')
     // let body = _.pick(req.query, ['name']);
     // console.log(body, 'body from pick');
     GM.name = req.query.name
-    console.log(GM);
-    console.log(req.query.name, 'body from req query');
-    // res.send({ GM, Rychar, Tylendel, Wolfbane });
+    res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
