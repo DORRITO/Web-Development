@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const _ = require('lodash');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost');
 var bodyParser = require('body-parser');
+const _ = require('lodash');
 
 // app.use(bodyParser.urlencoded({ extended: false }))
 // app.use(bodyParser.urlencoded({ extended: true}));
@@ -12,10 +14,12 @@ const port = process.env.PORT || 8000;
 const playersAPI = require('./server/api/players');
 const Players = playersAPI.Players;
 
-// const GM = require('./server/api/gm');
-// const Rychar = require('./server/api/rychar');
-// const Tylendel = require('./server/api/tylendel');
-// const Wolfbane = require('./server/api/wolfbane');
+Players.find({}, function(err, players) {
+  if (err) throw err;
+
+  // object of all the users
+  console.log(players);
+});
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
