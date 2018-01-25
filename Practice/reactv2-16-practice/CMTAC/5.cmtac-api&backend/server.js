@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
-const Players = require('./server/api/players');
+const playersAPI = require('./server/api/players');
+const Players = playersAPI.Players;
+
 // const GM = require('./server/api/gm');
 // const Rychar = require('./server/api/rychar');
 // const Tylendel = require('./server/api/tylendel');
@@ -25,18 +27,26 @@ app.get('/login', (req, res) => {
 
 app.route('/players')
   .get(function (req, res)  {
-    // console.log(req.query, 'query')
-    console.log(Players)
     res.send({ Players });
     // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
-    let user = req.query.name
+    let userInfo = req.query;
+    let name = userInfo.name;
+    let dice = userInfo.dice;
+    // console.log(userInfo, name, dice);
+    console.log(Players.GM.dice, 'before!');
+    // console.log(Players[name].dice);
+    Players[name].dice = dice;
+    console.log(Players.GM.dice, 'after!');
+    // console.log(Players.userName.userDice);
+
+    // console.log(Players)
     
-    // let body = _.pick(req.query, ['name']);
+    // let body = _.pick(req.query, ['name', 'dice']);
     // console.log(body, 'body from pick');
-    Players.GM.name = req.query.name
-    res.send({ Players });
+    // Players.GM.name = req.query.name
+    // res.send({ Players });
     // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
 
