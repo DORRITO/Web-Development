@@ -31,34 +31,39 @@ export class Dice extends React.Component{
 
   callGetAPI = async () => {
     const response = await fetch('/players');
-    // const response = await fetch('/players?type=cat');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
-
     return body;
+  };
+  callFetchAPI = async (d20) => {
+    const response = await fetch(`/players?name=${this.state.name}&dice=${d20}`, {method: 'PATCH'});
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+    return body;
+    // fetch('/players', { 
+    //   method: 'PATCH',
+    //   headers: {'Content-Type':'application/json'},
+    //   body: { dice: '2'} 
+    // })
   };
 
   onModifierChange(e) {
     let modifier = e.target.value
     this.setState({modifier})
   }
-  ///////dice roll////
+  
+  ///////////////////////////roll///////////////////////////////////////
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     d20 < 1 ? d20 = 1 : d20 = d20
 
-    fetch(`/players?name=${this.state.name}&dice=${d20}`, {method: 'PATCH'});
+    this.callFetchAPI(d20)
+      .then(res => this.setState({ d20: res.Players[this.state.owner].dice }) )
+      .catch(err => console.log(err))
+  }///////////////////////////////////////////////////////////////////////
 
-    // fetch('/players', { 
-    //   method: 'PATCH',
-    //   headers: {'Content-Type':'application/json'},
-    //   body: { dice: '2'} 
-    // })
-
-    this.setState({d20})
-
- }//*************************************************************************************
 //  {this.state.isGM ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later to gm, not me'}
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,8 +75,8 @@ export class Dice extends React.Component{
           <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )
-  }
-};/////////////////////////////////////////////////////////////////////////////
+  }/////////////////////////////////////////////////////////////////////////////
+};
 
 Dice.propTypes ={
   owner: PropTypes.string.isRequired
