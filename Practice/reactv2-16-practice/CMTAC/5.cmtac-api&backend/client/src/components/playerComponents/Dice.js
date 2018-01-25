@@ -24,12 +24,12 @@ export class Dice extends React.Component{
   // }
 
   componentDidMount(){
-    this.callApi()
+    this.callGetApi()
       .then(res => this.setState({ name: res.Players[this.state.owner].name }) )
       .catch(err => console.log(err))
   }
 
-  callApi = async () => {
+  callGetApi = async () => {
     const response = await fetch('/players');
     // const response = await fetch('/players?type=cat');
     const body = await response.json();

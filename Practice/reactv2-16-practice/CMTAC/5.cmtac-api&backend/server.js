@@ -34,20 +34,13 @@ app.route('/players')
     let userInfo = req.query;
     let name = userInfo.name;
     let dice = userInfo.dice;
-    // console.log(userInfo, name, dice);
-    console.log(Players.GM.dice, 'before!');
-    // console.log(Players[name].dice);
+
     Players[name].dice = dice;
     console.log(Players.GM.dice, 'after!');
-    // console.log(Players.userName.userDice);
-
-    // console.log(Players)
     
     // let body = _.pick(req.query, ['name', 'dice']);
     // console.log(body, 'body from pick');
-    // Players.GM.name = req.query.name
-    // res.send({ Players });
-    // res.send({ GM, Rychar, Tylendel, Wolfbane });
+    res.send({ Players });
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
