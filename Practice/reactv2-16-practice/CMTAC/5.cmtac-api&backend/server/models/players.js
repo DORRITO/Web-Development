@@ -1,10 +1,49 @@
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-var Players = mongoose.model('Players', {
+let Players = mongoose.model('Players', {
     Players: {
       type: Object,
       required: true,
     }
-  });
+});
   
-  module.exports = {Players};
+// let newPlayers = new Players({
+//     Players: {
+//         Rychar:{
+//             name: 'Rychar',
+//             dice: '',
+//             login: 'rychar',
+//             password: '',
+//             loggedIn: false
+//         },
+//         Tylendel: {
+//             name: 'Tylendel',
+//             dice: '',
+//             login: 'tylendel',
+//             password: 'fishface',
+//             loggedIn: false
+//         },
+//         Wolfbane: {
+//             name: 'Wolfbane',
+//             dice: '',
+//             login: 'wolfbane',
+//             password: 'reygan',
+//             loggedIn: false
+//         }, 
+//         GM : {
+//             name: 'GM',
+//             dice: '',
+//             login: 'gm',
+//             password: '123',
+//             loggedIn: false
+//         }    
+//     }
+// });
+
+// newPlayers.save().then((doc) => {
+//     console.log('saved players', doc)
+// }, (e) => {
+//     console.log('unable to save players')
+// });
+
+module.exports = {Players};
