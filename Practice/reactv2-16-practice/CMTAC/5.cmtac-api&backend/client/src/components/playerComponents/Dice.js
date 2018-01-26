@@ -25,14 +25,13 @@ export class Dice extends React.Component{
 
   componentDidMount(){
     this.callGetAPI()
-      .then(res => this.setState({ name: res.Players[this.state.owner].name }) )
+      .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
   }
 
   callGetAPI = async () => {
     const response = await fetch('/players');
     const body = await response.json();
-
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
@@ -53,7 +52,7 @@ export class Dice extends React.Component{
     let modifier = e.target.value
     this.setState({modifier})
   }
-  
+
   ///////////////////////////roll///////////////////////////////////////
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)

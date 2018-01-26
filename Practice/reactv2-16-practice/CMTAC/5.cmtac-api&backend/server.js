@@ -12,16 +12,6 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
 let {PlayersAPI} = require('./server/models/players');
-PlayersAPI.find().then((players) => {
-  console.log(players[0].Players)
-})
-
-// Players.find({}, function(err, players) {
-//   if (err) throw err;
-
-//   // object of all the users
-//   console.log(players);
-// });
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
@@ -34,7 +24,13 @@ app.get('/login', (req, res) => {
 app.route('/players')
   .get(function (req, res)  {
 
-    res.send({ Players });
+    PlayersAPI.find().then((players) => {
+      // console.log(players[0].Players);
+      if(!players){return res.status(404).send()}
+    
+      console.log(players[0].Players);
+      res.send( players[0].Players );
+    })
   })
   .patch(function (req, res)  {
 
