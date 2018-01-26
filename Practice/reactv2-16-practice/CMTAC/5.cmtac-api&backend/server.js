@@ -7,14 +7,14 @@ mongoose.connect('mongodb://localhost:27017/CMTAC');
 var bodyParser = require('body-parser');
 const _ = require('lodash');
 
-// app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.urlencoded());
+
+// app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
+let {Players} = require('./server/models/players');
 const playersAPI = require('./server/api/players');
-const Players = playersAPI.Players;
+// const Players = playersAPI.Players;
 
 // Players.find({}, function(err, players) {
 //   if (err) throw err;
