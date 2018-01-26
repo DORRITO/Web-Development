@@ -1,13 +1,13 @@
 let mongoose = require('mongoose');
 
-let Players = mongoose.model('Players', {
+let PlayersAPI = mongoose.model('Players', {
     Players: {
       type: Object,
       required: true,
     }
 });
   
-// let newPlayers = new Players({
+// let newPlayers = new PlayersAPI({
 //     Players: {
 //         Rychar:{
 //             name: 'Rychar',
@@ -46,4 +46,4 @@ let Players = mongoose.model('Players', {
 //     console.log('unable to save players')
 // });
 
-module.exports = {Players};
+module.exports = {PlayersAPI};

@@ -11,9 +11,10 @@ const _ = require('lodash');
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
-let {Players} = require('./server/models/players');
-const playersAPI = require('./server/api/players');
-// const Players = playersAPI.Players;
+let {PlayersAPI} = require('./server/models/players');
+PlayersAPI.find().then((players) => {
+  console.log(players[0].Players)
+})
 
 // Players.find({}, function(err, players) {
 //   if (err) throw err;
@@ -32,20 +33,21 @@ app.get('/login', (req, res) => {
 
 app.route('/players')
   .get(function (req, res)  {
+
     res.send({ Players });
-    // res.send({ GM, Rychar, Tylendel, Wolfbane });
   })
   .patch(function (req, res)  {
-    let userInfo = req.query;
-    let name = userInfo.name;
-    let dice = userInfo.dice;
 
-    Players[name].dice = dice;
-    console.log(Players.GM.dice, 'after!');
+    // let userInfo = req.query;
+    // let name = userInfo.name;
+    // let dice = userInfo.dice;
+
+    // Players[name].dice = dice;
+    // console.log(Players.GM.dice, 'after!');
     
     // let body = _.pick(req.query, ['name', 'dice']);
     // console.log(body, 'body from pick');
-    res.send({ Players });
+    // res.send({ Players });
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
