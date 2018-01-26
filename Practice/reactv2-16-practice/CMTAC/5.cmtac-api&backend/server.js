@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost');
+
+mongoose.Promise = global.Promise; //use built in promise library
+mongoose.connect('mongodb://localhost:27017/CMTAC');
 var bodyParser = require('body-parser');
 const _ = require('lodash');
 
@@ -14,12 +16,12 @@ const port = process.env.PORT || 8000;
 const playersAPI = require('./server/api/players');
 const Players = playersAPI.Players;
 
-Players.find({}, function(err, players) {
-  if (err) throw err;
+// Players.find({}, function(err, players) {
+//   if (err) throw err;
 
-  // object of all the users
-  console.log(players);
-});
+//   // object of all the users
+//   console.log(players);
+// });
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
