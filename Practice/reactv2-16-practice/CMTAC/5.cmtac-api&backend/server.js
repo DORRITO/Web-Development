@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 var mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise; //use built in promise library
-mongoose.connect('mongodb://localhost:27017/CMTAC');
+var {mongoose} = require('./server/db/mongoose');
 var bodyParser = require('body-parser');
 const _ = require('lodash');
 
