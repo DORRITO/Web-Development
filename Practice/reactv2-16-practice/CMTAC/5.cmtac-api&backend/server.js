@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
 let {PlayersAPI} = require('./server/models/players');
-PlayersAPI.findOne({_id: '123' }).then((player) => {console.log(player)})
+// PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
