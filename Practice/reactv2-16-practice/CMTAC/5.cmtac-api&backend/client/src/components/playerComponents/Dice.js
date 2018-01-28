@@ -60,7 +60,7 @@ export class Dice extends React.Component{
     d20 < 1 ? d20 = 1 : d20 = d20
     
     this.callFetchAPI(d20)
-      .then(res => console.log(res[this.state.owner].dice) )
+      .then(res => this.setState({d20: res[this.state.owner].dice}) )
       .catch(err => console.log(err))
   }///////////////////////////////////////////////////////////////////////
 

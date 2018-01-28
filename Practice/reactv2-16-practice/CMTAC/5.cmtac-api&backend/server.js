@@ -40,10 +40,9 @@ app.route('/players')
     // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: set}, {new: true} ).then((player) => {console.log(player)})
     // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
     PlayersAPI.findOneAndUpdate({_id: 123}, {$set: set}, {new: true}).then((players) => {
-      if(!players){return res.status(404).send()}
+      if(!players){return res.status(404).send()};
       res.send( players.Players );
-    }).catch((e) => { res.status(400).send()})
-    // Players[name].dice = dice;
+    }).catch((e) => { res.status(400).send()});
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
