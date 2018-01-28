@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
 let {PlayersAPI} = require('./server/models/players');
-// PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
@@ -34,16 +33,14 @@ app.route('/players')
     // let userInfo = req.query; //query if using url string
     let name = req.body.name;
     let dice = req.body.dice;
-
-    PlayersAPI.findOne({name, dice}).then((players) => {
+    // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
+    PlayersAPI.findOneAndUpdate({_id: 123}, {$set: {"Players[name].dice": dice}}, {new: true}).then((players) => {
+      console.log(players);
       if(!players){return res.status(404).send()}
-      
       res.send( players[0].Players );
-    })
+
+    }).catch((e) => { res.status(400).send()})
     // Players[name].dice = dice;
-    // console.log(Players.GM.dice, 'after!');
-    
-    // res.send({ Players });
   })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
