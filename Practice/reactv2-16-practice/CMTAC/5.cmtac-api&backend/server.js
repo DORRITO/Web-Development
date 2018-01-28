@@ -33,12 +33,15 @@ app.route('/players')
     // let userInfo = req.query; //query if using url string
     let name = req.body.name;
     let dice = req.body.dice;
-    // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
-    PlayersAPI.findOneAndUpdate({_id: 123}, {$set: {"Players[name].dice": dice}}, {new: true}).then((players) => {
-      console.log(players);
-      if(!players){return res.status(404).send()}
-      res.send( players[0].Players );
 
+    let diceRoll = `Players.${name}.dice`;
+    let set = {}; 
+    set[diceRoll] = dice; //have to do this to set variables
+    // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: set}, {new: true} ).then((player) => {console.log(player)})
+    // PlayersAPI.findOneAndUpdate({_id: 123 }, {$set: {"Players.GM.dice": "123"}}, {new: true} ).then((player) => {console.log(player)})
+    PlayersAPI.findOneAndUpdate({_id: 123}, {$set: set}, {new: true}).then((players) => {
+      if(!players){return res.status(404).send()}
+      res.send( players.Players );
     }).catch((e) => { res.status(400).send()})
     // Players[name].dice = dice;
   })
