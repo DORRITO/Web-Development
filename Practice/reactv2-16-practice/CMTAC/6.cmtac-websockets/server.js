@@ -8,7 +8,6 @@ const io = socketIO(server);
 
 const {mongoose} = require('./server/db/mongoose');
 const bodyParser = require('body-parser');
-// const _ = require('lodash');
 
 // app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
@@ -16,7 +15,11 @@ const port = process.env.PORT || 8000;
 
 let {PlayersAPI} = require('./server/models/players');
 
-io.on('connection', (socket) => {console.log('new user connected')});
+io.on('connection', (socket) => {
+  console.log('new user connected')
+
+  socket.on('disconnect', () => {console.log('user was disconnected')});
+});
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
@@ -35,7 +38,6 @@ app.route('/players')
     })
   })
   .patch(function (req, res)  {
-    // let body = _.pick(req.body, ['name', 'dice']);
     // let userInfo = req.query; //query if using url string
     let name = req.body.name;
     let dice = req.body.dice;
