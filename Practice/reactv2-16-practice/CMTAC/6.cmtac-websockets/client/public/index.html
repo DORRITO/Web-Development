@@ -18,5 +18,11 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="app"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('connect', () => {console.log('connected to server')});
+      socket.on('disconnect', () => {console.log('disconnected')});
+    </script>
   </body>
 </html>

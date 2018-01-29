@@ -3,10 +3,11 @@ const express = require('express');
 const socketIO = require('socket.io');
 
 const app = express();
-var server = http.createServer(app);
+const server = http.createServer(app);
+const io = socketIO(server);
 
-var {mongoose} = require('./server/db/mongoose');
-var bodyParser = require('body-parser');
+const {mongoose} = require('./server/db/mongoose');
+const bodyParser = require('body-parser');
 // const _ = require('lodash');
 
 // app.use(bodyParser.urlencoded());
@@ -14,6 +15,8 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 
 let {PlayersAPI} = require('./server/models/players');
+
+io.on('connection', (socket) => {console.log('new user connected')});
 
 app.get('/home', (req, res) => {
   res.send({ express: 'this is the home page from the back end'});
