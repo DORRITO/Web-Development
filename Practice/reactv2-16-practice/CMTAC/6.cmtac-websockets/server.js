@@ -1,6 +1,9 @@
+const http = require('http');
 const express = require('express');
-const app = express();
 const socketIO = require('socket.io');
+
+const app = express();
+var server = http.createServer(app);
 
 var {mongoose} = require('./server/db/mongoose');
 var bodyParser = require('body-parser');
@@ -45,4 +48,4 @@ app.route('/players')
     }).catch((e) => { res.status(400).send()});
   })
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen(port, () => console.log(`Listening on port ${port}`));
