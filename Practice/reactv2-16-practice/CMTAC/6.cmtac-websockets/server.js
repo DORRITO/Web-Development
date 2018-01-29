@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-var mongoose = require('mongoose');
+const socketIO = require('socket.io');
 
 var {mongoose} = require('./server/db/mongoose');
 var bodyParser = require('body-parser');
-const _ = require('lodash');
+// const _ = require('lodash');
 
 // app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
