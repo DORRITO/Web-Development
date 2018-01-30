@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 // app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
+app.use(express.static(`${__dirname}/client/build`));
 
 let {PlayersAPI} = require('./server/models/players');
 
