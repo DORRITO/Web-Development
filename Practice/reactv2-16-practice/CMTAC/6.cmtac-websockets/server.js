@@ -14,10 +14,13 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 app.use(express.static(`${__dirname}/client/build`));
 
+const {generateMessage} = require('./server/utils/message');
 let {PlayersAPI} = require('./server/models/players');
 
 io.on('connection', (socket) => {
   console.log('new user connected');
+
+  socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
 
   socket.on('createMessage', (message) => {
     console.log('createMessage', message);
