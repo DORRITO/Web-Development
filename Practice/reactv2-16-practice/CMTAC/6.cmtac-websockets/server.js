@@ -17,7 +17,17 @@ app.use(express.static(`${__dirname}/client/build`));
 let {PlayersAPI} = require('./server/models/players');
 
 io.on('connection', (socket) => {
-  console.log('new user connected')
+  console.log('new user connected');
+
+  socket.emit('newMessage', {
+    from: 'newmessage emit',
+    text: 'from socket emit server',
+    createdAt: 123
+  });
+
+  socket.on('createMessage', (message) => {
+    console.log('createMessage', message);
+  })
 
   socket.on('disconnect', () => {console.log('user was disconnected')});
 });
