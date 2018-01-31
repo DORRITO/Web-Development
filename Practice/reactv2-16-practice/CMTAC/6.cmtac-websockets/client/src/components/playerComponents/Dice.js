@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
+import openSocket from 'socket.io-client';
+const  socket = openSocket('http://localhost:8000');
 
 // import {DiceMod} from './../../api/diceMod';
 // import {DiceResult} from './../../api/diceResult';
@@ -24,6 +26,9 @@ export class Dice extends React.Component{
   // }
 
   componentDidMount(){
+    socket.on('connect', function(){
+      console.log('connected to server from reaeaccct');
+    });
     this.callGetAPI()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
