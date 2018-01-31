@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Dice} from './Dice';
 import {Chat} from './Chat';
-import onCheckboxChange from './DisablePlayer';
+// import onCheckboxChange from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
 
 export class Player extends React.Component{

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Redirect } from 'react-router-dom';
-import openSocket from 'socket.io-client';
-const  socket = openSocket('http://localhost:8000');
+// import { Route, Redirect } from 'react-router-dom';
+// import openSocket from 'socket.io-client';
+// const  socket = openSocket('http://localhost:8000');
 
 export class Dice extends React.Component{
   
@@ -56,7 +56,7 @@ export class Dice extends React.Component{
   ///////////////////////////roll///////////////////////////////////////
   roll() {
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
-    d20 < 1 ? d20 = 1 : d20 = d20
+    if(d20 < 1){ d20 = 1 }
     
     this.callFetchAPI(d20)
       .then(res => this.setState({d20: res[this.state.owner].dice}) )
