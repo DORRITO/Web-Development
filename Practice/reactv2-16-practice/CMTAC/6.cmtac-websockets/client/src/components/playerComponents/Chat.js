@@ -12,14 +12,19 @@ export class Chat extends React.Component{
   }
 
   componentDidMount(){
-    socket.on('connect', function(){
-      console.log('connected to server from reaeaccct');
-    });
+    // socket.on('connect', function(){
+    //   console.log('connected to server from reaeaccct');
+    // });
   }
 
   ///////////////////////////roll///////////////////////////////////////
   send(e) {
     e.preventDefault();
+
+    socket.emit('createMessage', {
+        from: 'userreactsaywahhhh',
+        text: e.target.value
+    }, function(){});
     // let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     // d20 < 1 ? d20 = 1 : d20 = d20
     console.log('hi')
