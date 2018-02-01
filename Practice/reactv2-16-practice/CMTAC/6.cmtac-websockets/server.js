@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 app.use(express.static(`${__dirname}/client/build`));
 
-const {diceSocket} = require('./server/utils/diceSocket');
+const {diceSocket, modifierSocket} = require('./server/utils/diceSocket');
 const {generateMessage} = require('./server/utils/message');
 let {PlayersAPI} = require('./server/models/players');
 
