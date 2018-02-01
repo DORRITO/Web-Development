@@ -9,21 +9,12 @@ export class Chat extends React.Component{
     this.state = {
       text: '',
       nextId: 0,
-      chatList: [{from:'adasd', text:'moooofasaa', createdAt: 1}, {from:'adasd222', text:'moooofasaa3333', createdAt: 2}]
+      chatList: []
     };
   }
   
   componentDidMount(){
-    // socket.on('newMessage', 
-    //     // function(message){
-    //     // console.log({...message})
-    //     // console.log(this.state.chatList, 'hooodalaka')
-    //     // let newArray = this.state.chatList.slice();
-    //     // newArray.push({...message});
-    //     // this.setState({chatList: this.state.chatList.push({...message}) });
-    //     // console.log({newArray}, 'hhwahhhchaa')
-    //     // this.state.chatList.push({...message});
-    // );
+    socket.on('newMessage', (message) => {this.state.chatList.push({...message}) });
   }
 //   updateChat(){console.log('ahsdjdklajksdakjsd')}
   ///////////updates text change//////////
@@ -34,7 +25,7 @@ export class Chat extends React.Component{
   ////////////////////////map throw chat state////////////////////////
   renderChatList() {
     return this.state.chatList.map((chatItem) => {
-        return <li key={chatItem.createdAt}>from: {chatItem.from}</li>
+        return <li key={chatItem.createdAt}>{chatItem.from}: {chatItem.text}</li>
     });
   }///////////////////////////////////////////////////////////////////
 
