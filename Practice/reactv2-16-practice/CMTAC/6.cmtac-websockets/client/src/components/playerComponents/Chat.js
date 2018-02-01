@@ -16,7 +16,10 @@ export class Chat extends React.Component{
   
   //////////////////////////////////////////////////////////////////////////////////
   componentDidMount(){
-    socket.on('newMessage', (message) => {this.state.chatList.push({...message}) });
+    // socket.on('newMessage', (message) => {this.state.chatList.push({...message}) });
+    socket.on('newMessage', (message) => {
+        this.setState({ chatList: [...this.state.chatList, {...message}] }) 
+    });
   }//////////////////////////////////////////////////////////////////////////////////
 
   ///////////updates text change//////////
@@ -29,7 +32,8 @@ export class Chat extends React.Component{
     return this.state.chatList.map((chatItem) => {
         return <li key={chatItem.createdAt}>{chatItem.from}: {chatItem.text}</li>
     });
-  }///////////////////////////////////////////////////////////////////
+  }
+  ///////////////////////////////////////////////////////////////////
 
   ///////////////////////////roll///////////////////////////////////////
    send(e) {
@@ -46,7 +50,7 @@ export class Chat extends React.Component{
         <div>
           <form onSubmit={this.send.bind(this)}>
             <input type="text" onChange={this.onTextChange.bind(this)} placeholder="message"/>
-            <button >Send chat</button>
+            <button>Send chat</button>
           </form>
           <ul>{this.renderChatList()}</ul>
         </div>
