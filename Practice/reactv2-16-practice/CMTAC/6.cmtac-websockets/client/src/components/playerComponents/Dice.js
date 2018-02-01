@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { Route, Redirect } from 'react-router-dom';
-// import openSocket from 'socket.io-client';
-// const  socket = openSocket('http://localhost:8000');
+import openSocket from 'socket.io-client';
+const  socket = openSocket('http://localhost:8000');
 
 export class Dice extends React.Component{
   
@@ -58,9 +58,13 @@ export class Dice extends React.Component{
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     if(d20 < 1){ d20 = 1 }
     
+    socket.on('newMessage', (message) => {
+      this.setState({ chatList: [...this.state.chatList, {...message}] }) 
+  });
     this.callFetchAPI(d20)
-      .then(res => this.setState({d20: res[this.state.owner].dice}) )
-      .catch(err => console.log(err))
+    socket.on('dice', (data) => {this.setState({d20: data.dice})});
+      // .then(res => this.setState({d20: res[this.state.owner].dice}) )
+      // .catch(err => console.log(err))
   }///////////////////////////////////////////////////////////////////////
 
 //  {this.state.isGM ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later to gm, not me'}
