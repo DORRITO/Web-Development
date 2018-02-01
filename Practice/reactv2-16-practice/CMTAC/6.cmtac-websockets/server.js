@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8000;
 app.use(express.static(`${__dirname}/client/build`));
 
+const {diceSocket} = require('./server/utils/diceSocket');
 const {generateMessage} = require('./server/utils/message');
 let {PlayersAPI} = require('./server/models/players');
 
@@ -28,8 +29,6 @@ io.on('connection', (socket) => {
     io.emit('newMessage', generateMessage(message.from, message.text));
       callback('this is from the server');
   })
-
-
 
   app.get('/home', (req, res) => {
     res.send({ express: 'this is the home page from the back end'});
@@ -53,7 +52,7 @@ io.on('connection', (socket) => {
       let name = req.body.name;
       let dice = req.body.dice;
 
-      // io.emit('dice', );
+      io.emit('dice', diceSocket(name, dice));
 
       let diceRoll = `Players.${name}.dice`;
       let set = {}; 
