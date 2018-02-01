@@ -26,6 +26,8 @@ export class Dice extends React.Component{
     this.callGetAPI()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
+
+      socket.on('modifier2', (modifier) => {this.setState({modifier})});
   }
 
   callGetAPI = async () => {
@@ -50,7 +52,7 @@ export class Dice extends React.Component{
   ////////dice modifier/////////
   onModifierChange(e) {
     let modifier = e.target.value
-    this.setState({modifier})
+    socket.emit('modifier1', modifier);
   }/////////////////////////////
 
   ///////////////////////////roll///////////////////////////////////////

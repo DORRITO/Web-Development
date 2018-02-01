@@ -24,6 +24,10 @@ io.on('connection', (socket) => {
 
   socket.emit('newMessage', generateMessage('AO Admin', 'The MCMTAC welcomes you to chat.'));
 
+  socket.on('modifier1', (mod) => {
+    io.emit('modifier2', modifierSocket(mod) )
+  })
+
   socket.on('createMessage', (message, callback) => {
     console.log('createMessage', message);
     io.emit('newMessage', generateMessage(message.from, message.text));
