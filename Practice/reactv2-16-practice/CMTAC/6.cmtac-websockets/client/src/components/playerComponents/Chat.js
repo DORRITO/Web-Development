@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import openSocket from 'socket.io-client';
 const  socket = openSocket('http://localhost:8000');
 
@@ -13,10 +14,11 @@ export class Chat extends React.Component{
     };
   }
   
+  //////////////////////////////////////////////////////////////////////////////////
   componentDidMount(){
     socket.on('newMessage', (message) => {this.state.chatList.push({...message}) });
-  }
-//   updateChat(){console.log('ahsdjdklajksdakjsd')}
+  }//////////////////////////////////////////////////////////////////////////////////
+
   ///////////updates text change//////////
   onTextChange(e){
     this.setState({text: e.target.value});
@@ -33,7 +35,7 @@ export class Chat extends React.Component{
    send(e) {
     e.preventDefault();
     socket.emit('createMessage', {
-        from: 'user',
+        from: this.props.owner,
         text: this.state.text
     }, function(){});
   }///////////////////////////////////////////////////////////////////////
@@ -50,4 +52,8 @@ export class Chat extends React.Component{
         </div>
       )
   }/////////////////////////////////////////////////////////////////////////////
+};
+
+Chat.propTypes ={
+    owner: PropTypes.string.isRequired
 };

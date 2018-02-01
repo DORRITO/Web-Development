@@ -33,7 +33,7 @@ export class Player extends React.Component{
             {!this.state.isChecked ? <Dice owner={this.props.name}/> : 'INCAPACITATED'}
         </div> 
         <input type="checkbox" onChange={this.onCheckboxChange.bind(this)}></input>FINISH HIM
-        <Chat />
+        <Chat owner={this.props.name}/>
       </div>
     );
   }////////////////////////////////////////////////////////////////////////////
