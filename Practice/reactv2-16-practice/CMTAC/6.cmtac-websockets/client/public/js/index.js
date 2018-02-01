@@ -7,8 +7,3 @@ socket.on('connect', function(){
 socket.on('disconnect', function(){console.log('disconnected')});
 
 socket.on('newMessage', function(message){console.log('newMessage', message) });
-
-// socket.emit('createMessage', {
-//     from: 'asdasd',
-//     text: 'hey'
-// }, function(data){console.log('got it', data) });
