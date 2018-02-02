@@ -41,6 +41,7 @@ export class Chat extends React.Component{
         from: this.props.owner,
         text: this.state.text
     }, function(){});
+    this.setState({text: ''});
   }///////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,7 +49,7 @@ export class Chat extends React.Component{
       return (
         <div>
           <form onSubmit={this.send.bind(this)}>
-            <input type="text" onChange={this.onTextChange.bind(this)} placeholder="message"/>
+            <input type="text" onChange={this.onTextChange.bind(this)} value={this.state.text} placeholder="message"/>
             <button>Send chat</button>
           </form>
           <ul>{this.renderChatList()}</ul>
