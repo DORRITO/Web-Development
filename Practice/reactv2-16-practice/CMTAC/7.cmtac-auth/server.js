@@ -43,8 +43,7 @@ io.on('connection', (socket) => {
     PlayersAPI.find().then((players) => {
       if(!players){return res.status(404).send()}
       console.log(players[0].Players);
-      // res.send( players[0].Players );
-      res.send( players[0] );
+      res.send( players[0].Players );
     })
   });
 
