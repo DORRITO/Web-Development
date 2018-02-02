@@ -37,6 +37,16 @@ class Login extends Component {
     console.log('im firing!')
   }////////////////////////////////////////
 
+  ///////////updates text change//////////
+  onLoginChange(e){
+    this.setState({login: e.target.value});
+  }////////////////////////////////////////
+
+  ///////////updates text change//////////
+  onPassChange(e){
+    this.setState({password: e.target.value});
+  }////////////////////////////////////////
+
   render() {
     return (
       <div className="App">
@@ -50,8 +60,8 @@ class Login extends Component {
           <div className="boxed_view__box">
             <h1>MCMTAC Login</h1>
             <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
-                <input type="text" name="username" placeholder="username" />
-                <input type="password" name="password" placeholder="password" />
+                <input type="text" name="username" onChange={this.onLoginChange.bind(this)} placeholder="username" />
+                <input type="password" name="password" onChange={this.onPassChange.bind(this)} placeholder="password" />
                 <button className="button">Enter Terraria!</button>
             </form>
           </div>
