@@ -60,9 +60,6 @@ export class Dice extends React.Component{
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     if(d20 < 1){ d20 = 1 }
     
-    socket.on('newMessage', (message) => {
-      this.setState({ chatList: [...this.state.chatList, {...message}] }) 
-  });
     this.callFetchAPI(d20)
     socket.on('dice', (data) => {this.setState({d20: data.dice})});
       // .then(res => this.setState({d20: res[this.state.owner].dice}) )
