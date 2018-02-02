@@ -28,6 +28,7 @@ export class Dice extends React.Component{
       .catch(err => console.log(err))
 
       socket.on('modifier2', (modifier) => {this.setState({modifier})});
+      socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
   }//////////////////////////////////////////////////////////////////////////
 
   ///////////////////grab data/////////////////////////////////
@@ -47,9 +48,9 @@ export class Dice extends React.Component{
       body: JSON.stringify({ name: this.state.name, dice: d20}) 
     });
 
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-    return body;
+    // const body = await response.json();
+    // if (response.status !== 200) throw Error(body.message);
+    // return body;
   };//////////////////////////////////////////////////////////////////////
 
   ////////dice modifier/////////
@@ -63,8 +64,8 @@ export class Dice extends React.Component{
     let d20 = Math.floor(Math.random() * 20 + 1) + Number(this.state.modifier)
     if(d20 < 1){ d20 = 1 }
     
-    this.callFetchAPI(d20)
-    socket.on('dice', (data) => {this.setState({d20: data.dice})});
+    this.callFetchAPI(d20);
+    // socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
       // .then(res => this.setState({d20: res[this.state.owner].dice}) )
       // .catch(err => console.log(err))
   }///////////////////////////////////////////////////////////////////////
@@ -76,7 +77,7 @@ export class Dice extends React.Component{
       return (
         <div>
           <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
-          {this.state.d20}{this.state.name}
+          {this.state.d20}
           <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/>
         </div>
       )
