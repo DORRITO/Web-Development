@@ -27,8 +27,8 @@ export class Dice extends React.Component{
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
 
-      socket.on('modifier2', (modifier) => {this.setState({modifier})});
       socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
+      socket.on('modifier2', (data) => {if(data.name === this.state.owner){this.setState({modifier: data.modifier})} });
   }//////////////////////////////////////////////////////////////////////////
 
   ///////////////////grab data/////////////////////////////////
@@ -42,12 +42,13 @@ export class Dice extends React.Component{
   //////////////////////grab dice from data//////////////////////////////////
   callFetchAPI = async (d20) => {
     // const response = await fetch(`/players?name=${this.state.name}&dice=${d20}`, {method: 'PATCH'});
-    const response = await fetch('/players', { 
+    // const response = await fetch('/players', { 
+    fetch('/players', { 
       method: 'PATCH',
       headers: {'Content-Type':'application/json'}, 
       body: JSON.stringify({ name: this.state.name, dice: d20}) 
     });
-
+    
     // const body = await response.json();
     // if (response.status !== 200) throw Error(body.message);
     // return body;
@@ -55,8 +56,9 @@ export class Dice extends React.Component{
 
   ////////dice modifier/////////
   onModifierChange(e) {
+    let name = this.state.owner
     let modifier = e.target.value
-    socket.emit('modifier1', modifier);
+    socket.emit('modifier1', name, modifier);
   }/////////////////////////////
 
   ///////////////////////////roll///////////////////////////////////////

@@ -5,8 +5,8 @@ let diceSocket = (name, dice) => {
     };
 };
 
-let modifierSocket = (modifier) => {
-  return modifier
+let modifierSocket = (name, modifier) => {
+  return {name, modifier}
 };
 
 module.exports = {diceSocket, modifierSocket};
