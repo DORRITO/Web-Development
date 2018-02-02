@@ -39,12 +39,16 @@ class Login extends Component {
 
   ///////////updates text change//////////
   onLoginChange(e){
-    this.setState({login: e.target.value});
+    let login = e.target.value.trim().toLowerCase()
+    this.setState({login});
+    console.log(this.state.login);
   }////////////////////////////////////////
 
   ///////////updates text change//////////
   onPassChange(e){
-    this.setState({password: e.target.value});
+    let password = e.target.value.trim().toLowerCase()
+    this.setState({password});
+    console.log(this.state.password);
   }////////////////////////////////////////
 
   render() {
