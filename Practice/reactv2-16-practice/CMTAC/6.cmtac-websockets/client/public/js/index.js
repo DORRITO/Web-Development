@@ -5,5 +5,3 @@ socket.on('connect', function(){
 });
 
 socket.on('disconnect', function(){console.log('disconnected')});
-
-socket.on('newMessage', function(message){console.log('newMessage', message) });
