@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import titleCase from 'title-case';
+import {history} from './../routers/AppRouter';
 
 import logo from './../images/cmtacSign.png';
 import '../App.css';
@@ -33,14 +34,12 @@ class Login extends Component {
   onLoginChange(e){
     let login = e.target.value.trim().toLowerCase()
     this.setState({login});
-    console.log(this.state.login);
   }////////////////////////////////////////
 
   ///////////updates text change//////////
   onPassChange(e){
     let password = e.target.value.trim().toLowerCase()
     this.setState({password});
-    console.log(this.state.password);
   }////////////////////////////////////////
 
   ///////////updates text change//////////
@@ -50,7 +49,7 @@ class Login extends Component {
     let lowerPass = this.state.password.toLowerCase();
     
     this.callApi()
-      .then(res => { res[capLogin].password === lowerPass ? console.log('workin') : console.log('not workin') })
+      .then(res => { res[capLogin].password === lowerPass ? history.push('/gamepage') : console.log('nope') })
       .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
   }////////////////////////////////////////
 
