@@ -4,14 +4,14 @@ module.exports = {
             name: 'Rychar',
             dice: '',
             login: 'rychar',
-            password: '',
+            password: 'ricroll',
             loggedIn: 'false'
         },
         Tylendel: {
             name: 'Tylendel',
             dice: '',
             login: 'tylendel',
-            password: 'fishface',
+            password: 'fishface6',
             loggedIn: 'false'
         },
         Wolfbane: {
@@ -25,7 +25,7 @@ module.exports = {
             name: 'GM',
             dice: '',
             login: 'gm',
-            password: '123',
+            password: 'me',
             loggedIn: 'false'
         }    
     }

@@ -46,11 +46,12 @@ class Login extends Component {
   ///////////updates text change//////////
   onSubmit(e){
     e.preventDefault();
-   // this.setState({text: e.target.value});
-   console.log(titleCase(this.state.login))
-  //  this.callApi()
-  //  .then(res => console.log(res))
-  //  .catch(err => console.log(err));
+    let capLogin = titleCase(this.state.login);
+    let lowerPass = this.state.password.toLowerCase();
+    
+    this.callApi()
+      .then(res => { res[capLogin].password === lowerPass ? console.log('workin') : console.log('not workin') })
+      .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
   }////////////////////////////////////////
 
   render() {
