@@ -27,8 +27,8 @@ export class Dice extends React.Component{
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
 
-      socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
-      socket.on('modifier2', (data) => {if(data.name === this.state.owner){this.setState({modifier: data.modifier})} });
+    socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
+    socket.on('modifier2', (data) => {if(data.name === this.state.owner){this.setState({modifier: data.modifier})} });
   }//////////////////////////////////////////////////////////////////////////
 
   ///////////////////grab data/////////////////////////////////
