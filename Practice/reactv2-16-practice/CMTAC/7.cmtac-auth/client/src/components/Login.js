@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import titleCase from 'title-case';
 
 import logo from './../images/cmtacSign.png';
 import '../App.css';
@@ -15,10 +16,9 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    console.log('is this even working')
-    this.callApi()
-      .then(res => console.log('whhaaaaat'))
-      .catch(err => console.log(err));
+    // this.callApi()
+    //   .then(res => console.log('whhaaaaat'))
+    //   .catch(err => console.log(err));
   }
 
   callApi = async () => {
@@ -26,16 +26,8 @@ class Login extends Component {
     const body = await response.json();
     
     if (response.status !== 200) throw Error(body.message);
-    console.log(body)
     return body;
   };
-
-   ///////////updates text change//////////
-   onSubmit(e){
-     e.preventDefault();
-    // this.setState({text: e.target.value});
-    console.log('im firing!')
-  }////////////////////////////////////////
 
   ///////////updates text change//////////
   onLoginChange(e){
@@ -51,6 +43,16 @@ class Login extends Component {
     console.log(this.state.password);
   }////////////////////////////////////////
 
+  ///////////updates text change//////////
+  onSubmit(e){
+    e.preventDefault();
+   // this.setState({text: e.target.value});
+   console.log(titleCase(this.state.login))
+  //  this.callApi()
+  //  .then(res => console.log(res))
+  //  .catch(err => console.log(err));
+  }////////////////////////////////////////
+
   render() {
     return (
       <div className="App">
@@ -64,8 +66,8 @@ class Login extends Component {
           <div className="boxed_view__box">
             <h1>MCMTAC Login</h1>
             <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
-                <input type="text" name="username" onChange={this.onLoginChange.bind(this)} placeholder="username" />
-                <input type="password" name="password" onChange={this.onPassChange.bind(this)} placeholder="password" />
+                <input type="text" name="username" onChange={this.onLoginChange.bind(this)} value={this.state.login} placeholder="username" />
+                <input type="password" name="password" onChange={this.onPassChange.bind(this)} value={this.state.password} placeholder="password" />
                 <button className="button">Enter Terraria!</button>
             </form>
           </div>
