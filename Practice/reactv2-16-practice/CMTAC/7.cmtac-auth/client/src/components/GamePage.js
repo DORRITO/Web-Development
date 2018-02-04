@@ -26,7 +26,7 @@ import {Player} from './playerComponents/Player';
             <Player name="Tylendel" icon="I'm a castle" />
             <Player name="Wolfbane" icon="I'm a tent and fireplace" />
           </div>
-          <Player name="GM" icon="i'm a puppet master"/>
+          <Player name="Gm" icon="i'm a puppet master"/>
         </div>
       );
   };////////////////////////////////////////////////////////////////////////////

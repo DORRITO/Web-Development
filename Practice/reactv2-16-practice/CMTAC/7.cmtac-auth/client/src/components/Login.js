@@ -66,8 +66,8 @@ class Login extends Component {
           <div className="boxed_view__box">
             <h1>MCMTAC Login</h1>
             <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
-                <input type="text" name="username" onChange={this.onLoginChange.bind(this)} value={this.state.login} placeholder="username" />
-                <input type="password" name="password" onChange={this.onPassChange.bind(this)} value={this.state.password} placeholder="password" />
+                <input type="text" onChange={this.onLoginChange.bind(this)} value={this.state.login} placeholder="username" />
+                <input type="password" onChange={this.onPassChange.bind(this)} value={this.state.password} placeholder="password" />
                 <button className="button">Enter Terraria!</button>
             </form>
           </div>
