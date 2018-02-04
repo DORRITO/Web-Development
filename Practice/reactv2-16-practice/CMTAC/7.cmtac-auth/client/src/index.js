@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AppRouter from './routers/AppRouter';
 import registerServiceWorker from './registerServiceWorker';
-import { createStore } from 'redux'
+
+import store from './redux/store/store';
 
 function counter(state = 0, action) {
     switch (action.type) {
@@ -15,8 +16,6 @@ function counter(state = 0, action) {
       return state
     }
   }
-
-  let store = createStore(counter)
 
   store.subscribe(() =>
   console.log(store.getState())
