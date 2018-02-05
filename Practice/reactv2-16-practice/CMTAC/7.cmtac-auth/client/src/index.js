@@ -9,19 +9,16 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux'
 
 //actions
-const incrementCount = ({incrementBy} = {}) => ({
-    type: 'INCREMENT',
-    incrementBy
+const getName = ({name} = {}) => ({
+    type: 'GETNAME',
+    name
 });
 
-const store = createStore((state = {count: 0}, action) => {
+const store = createStore((state = {user: ''}, action) => {
     switch (action.type) {
-        case 'INCREMENT':
-        return {count: state.count + action.incrementBy}
-        case 'DECREMENT':
-        return state - 1
-        default:
-        return state
+        case 'GETNAME':
+            return {user: action.name}
+        default: return state
     }
 });
 // let store = createStore(counter)
@@ -30,7 +27,7 @@ store.subscribe(() =>
   console.log(store.getState())
 )
 
-store.dispatch(incrementCount({ incrementBy: 1 }))
+store.dispatch(getName({ name: 'Rychar' }))
 
 const app = (
     <Provider store={store}>
