@@ -9,9 +9,9 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux'
 
 //actions
-const incrementCount = (incrementBy = {}) => ({
+const incrementCount = ({incrementBy} = {}) => ({
     type: 'INCREMENT',
-    incrementBy : incrementBy.incrementBy
+    incrementBy
 });
 
 const store = createStore((state = {count: 0}, action) => {
