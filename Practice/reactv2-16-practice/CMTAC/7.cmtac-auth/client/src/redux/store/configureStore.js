@@ -6,6 +6,3 @@ export default () => {
 
     return store;
 }
-// export default createStore(nameReducer)
-
-// export default 

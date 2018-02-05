@@ -38,7 +38,6 @@ const state = store.getState()
 
 const selectName = nameSelector(state.user, state.authed)
 console.log(selectName);
-// console.log(store.getState())
 
 const app = (
     <Provider store={store}>

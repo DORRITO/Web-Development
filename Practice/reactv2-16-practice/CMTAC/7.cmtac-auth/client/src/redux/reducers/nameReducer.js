@@ -9,8 +9,6 @@ export default (state = {user: '', authed: false}, action) => {
         default: return state
     }
 };
-// user: action.name, authed: action.auth
-// ...action.updates
 // return {
 //     ...state,
 //     ...action.updates
