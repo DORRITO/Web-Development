@@ -5,29 +5,40 @@ import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import registerServiceWorker from './registerServiceWorker';
 
+import configureStore from './redux/store/configureStore';
+import getName from './redux/actions/nameAction';
+import nameSelector from './redux/selectors/nameSelector';
 
-import { createStore } from 'redux'
+const store = configureStore();
 
-//actions
-const getName = ({name} = {}) => ({
-    type: 'GETNAME',
-    name
-});
+//gets name and if authorized
+// const getName = ({name = '', auth} = {}) => ({
+//     type: 'GETNAME',
+//     name,
+//     auth
+// });
 
-const store = createStore((state = {user: ''}, action) => {
-    switch (action.type) {
-        case 'GETNAME':
-            return {user: action.name}
-        default: return state
-    }
-});
-// let store = createStore(counter)
+// const nameReducer = ((state = {user: '', authed: false}, action) => {
+//     switch (action.type) {
+//         case 'GETNAME':
+//             return {user: action.name, authed: action.auth}
+//         default: return state
+//     }
+// });
 
-store.subscribe(() =>
-  console.log(store.getState())
-)
+// const store = createStore(nameReducer);
 
-store.dispatch(getName({ name: 'Rychar' }))
+// store.subscribe(() => {
+//     const state = store.getState();
+//     console.log(store.getState())
+// });
+
+store.dispatch(getName({ name: 'Rychar', auth: true }))
+const state = store.getState()
+
+const selectName = nameSelector(state.user, state.authed)
+console.log(selectName);
+// console.log(store.getState())
 
 const app = (
     <Provider store={store}>

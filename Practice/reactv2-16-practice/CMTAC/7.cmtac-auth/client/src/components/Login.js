@@ -17,6 +17,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
+    // store.dispatch(getName({ name: 'Rychar' }))
     // this.callApi()
     //   .then(res => console.log('whhaaaaat'))
     //   .catch(err => console.log(err));

@@ -1,11 +1,11 @@
-// import { createStore } from 'redux'
+import { createStore } from 'redux';
+import nameReducer from './../reducers/nameReducer';
 
-// // export default store = createStore();
-// export default createStore();
+export default () => {
+    const store = createStore(nameReducer);
 
-// // export default () => {
-// //     const store = createStore();
-// //     return store;
-// // }
-// // export default store;
+    return store;
+}
+// export default createStore(nameReducer)
 
+// export default 
