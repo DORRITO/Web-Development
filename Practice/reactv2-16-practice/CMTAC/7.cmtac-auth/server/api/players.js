@@ -22,7 +22,7 @@ module.exports = {
             loggedIn: 'false'
         }, 
         GM : {
-            name: 'GM',
+            name: 'Gm',
             dice: '',
             login: 'gm',
             password: 'me123',
