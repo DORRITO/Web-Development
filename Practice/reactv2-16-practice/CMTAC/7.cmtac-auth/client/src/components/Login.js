@@ -19,7 +19,7 @@ class Login extends Component {
   }
 
   // componentDidMount() {
-  //   console.log(this.props.user)
+  //   console.log(this.props.user, this.props.authed)
   // }
 
   /////////////////////////////////////////////////////
@@ -87,6 +87,7 @@ class Login extends Component {
 //////////////////////////////////////
 const mapStateToProps = (state) => {
   return{
+    ...state,
     user: state.user,
     authed: state.authed
   };

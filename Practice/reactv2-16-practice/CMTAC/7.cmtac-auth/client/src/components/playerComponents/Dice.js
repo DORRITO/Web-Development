@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import openSocket from 'socket.io-client';
 import {connect} from 'react-redux';
 
-const  socket = openSocket('http://localhost:8000');
+const socket = openSocket('http://localhost:8000');
 
-export class Dice extends React.Component{
+class Dice extends React.Component{
   
   constructor(props){
     super(props);
@@ -25,6 +25,7 @@ export class Dice extends React.Component{
   // }
   //////////////////////user users name////////////////////////////////////
   componentDidMount(){
+    console.log(this.props, 'awuhhwuhh')
     this.callGetAPI()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
@@ -91,6 +92,7 @@ export class Dice extends React.Component{
 //////////////////////////////////////
 const mapStateToProps = (state) => {
   return{
+    ...state,
     user: state.user,
     authed: state.authed
   };

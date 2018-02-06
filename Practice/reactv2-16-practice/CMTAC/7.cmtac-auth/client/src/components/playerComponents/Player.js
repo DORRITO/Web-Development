@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Dice} from './Dice';
+import Dice from './Dice';
 import {Chat} from './Chat';
 // import onCheckboxChange from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
