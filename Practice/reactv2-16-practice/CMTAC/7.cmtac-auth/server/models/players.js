@@ -33,10 +33,10 @@ let newPlayers = new PlayersAPI({
             loggedIn: false
         }, 
         Gm : {
-            name: 'GM',
+            name: 'Gm',
             dice: '',
             login: 'gm',
-            password: 'me',
+            password: 'me123',
             loggedIn: false
         }    
     }

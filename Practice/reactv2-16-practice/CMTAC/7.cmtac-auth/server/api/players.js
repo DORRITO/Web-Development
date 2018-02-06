@@ -25,7 +25,7 @@ module.exports = {
             name: 'GM',
             dice: '',
             login: 'gm',
-            password: 'me',
+            password: 'me123',
             loggedIn: 'false'
         }    
     }
