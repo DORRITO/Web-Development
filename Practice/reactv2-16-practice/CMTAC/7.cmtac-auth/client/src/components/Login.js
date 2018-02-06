@@ -19,7 +19,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    // store.dispatch(getName({ name: 'Rychar' }))
+    console.log(this.props.user)
     // this.callApi()
     //   .then(res => console.log('whhaaaaat'))
     //   .catch(err => console.log(err));
@@ -54,7 +54,8 @@ class Login extends Component {
     this.callApi()
       .then(res => { 
         if(res[capLogin].password === lowerPass){
-          history.push('/gamepage')
+          // history.push('/gamepage')
+          this.props.dispatch(getName({ name: 'meow', auth: true }));
         }else{console.log('nope')}
       })
       .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
