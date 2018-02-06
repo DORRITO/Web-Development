@@ -8,6 +8,8 @@ import {history} from './../routers/AppRouter';
 import logo from './../images/cmtacSign.png';
 import '../App.css';
 
+const loginFail = 'This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'
+
 class Login extends Component {
 
   constructor(props){
@@ -54,9 +56,9 @@ class Login extends Component {
         if(res[capLogin].password === lowerPass){
           this.props.dispatch(getName({ name: capLogin, auth: true }));
           history.push('/gamepage')
-        }
+        }else{alert(loginFail)}
       })
-      .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
+      .catch(err => alert(loginFail));
   }////////////////////////////////////////
 
   render() {
