@@ -75,13 +75,11 @@ class Dice extends React.Component{
       // .catch(err => console.log(err))
   }///////////////////////////////////////////////////////////////////////
 
-//  {this.state.isGM ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : 'change this later to gm, not me'}
-
   //////////////////////////////////////////////////////////////////////////////
   render(){
       return (
         <div>
-          <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button>
+          {this.props.user === this.props.owner || this.props.user === 'Gm' ? <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button> : <button>Roll +{this.state.modifier}</button>}
           {this.state.d20}
           {this.props.user === 'Gm' ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : ''}
         </div>
