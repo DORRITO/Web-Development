@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import titleCase from 'title-case';
+import getName from './../redux/actions/nameAction';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {history} from './../routers/AppRouter';
@@ -18,7 +19,6 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.user, this.props.authed)
     // store.dispatch(getName({ name: 'Rychar' }))
     // this.callApi()
     //   .then(res => console.log('whhaaaaat'))
@@ -52,7 +52,11 @@ class Login extends Component {
     let lowerPass = this.state.password.toLowerCase();
     
     this.callApi()
-      .then(res => { res[capLogin].password === lowerPass ? history.push('/gamepage') : console.log('nope') })
+      .then(res => { 
+        if(res[capLogin].password === lowerPass){
+          history.push('/gamepage')
+        }else{console.log('nope')}
+      })
       .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
   }////////////////////////////////////////
 
