@@ -18,6 +18,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.user, this.props.authed)
     // store.dispatch(getName({ name: 'Rychar' }))
     // this.callApi()
     //   .then(res => console.log('whhaaaaat'))
@@ -80,5 +81,14 @@ class Login extends Component {
     );
   }
 }
+//////////////////////////////////////
+const mapStateToProps = (state) => {
+  return{
+    user: state.user,
+    authed: state.authed
+  };
+};/////////////////////////////////////
+
 // <button className="button"><Link to="/gamepage">Enter Terraria!</Link></button>
-export default Login;
+// export default Login;
+export default connect(mapStateToProps)(Login);
