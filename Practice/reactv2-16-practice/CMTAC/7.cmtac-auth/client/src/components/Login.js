@@ -18,20 +18,18 @@ class Login extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log(this.props.user)
-    // this.callApi()
-    //   .then(res => console.log('whhaaaaat'))
-    //   .catch(err => console.log(err));
-  }
+  // componentDidMount() {
+  //   console.log(this.props.user)
+  // }
 
+  /////////////////////////////////////////////////////
   callApi = async () => {
     const response = await fetch('/login');
     const body = await response.json();
     
     if (response.status !== 200) throw Error(body.message);
     return body;
-  };
+  };//////////////////////////////////////////////////////
 
   ///////////updates text change//////////
   onLoginChange(e){
@@ -54,9 +52,9 @@ class Login extends Component {
     this.callApi()
       .then(res => { 
         if(res[capLogin].password === lowerPass){
-          // history.push('/gamepage')
-          this.props.dispatch(getName({ name: 'meow', auth: true }));
-        }else{console.log('nope')}
+          this.props.dispatch(getName({ name: capLogin, auth: true }));
+          history.push('/gamepage')
+        }
       })
       .catch(err => alert('This login or password is not registered with the MCMTAC. \n\nIf you enter at this point, a member of the arcane order may incinerate you. While some of our citizens might try a taste of a well done version of you, We like you the way you are, please register!'));
   }////////////////////////////////////////
@@ -94,6 +92,4 @@ const mapStateToProps = (state) => {
   };
 };/////////////////////////////////////
 
-// <button className="button"><Link to="/gamepage">Enter Terraria!</Link></button>
-// export default Login;
 export default connect(mapStateToProps)(Login);
