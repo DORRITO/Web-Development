@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { Route, Redirect } from 'react-router-dom';
 import openSocket from 'socket.io-client';
+import {connect} from 'react-redux';
+
 const  socket = openSocket('http://localhost:8000');
 
 export class Dice extends React.Component{
@@ -85,6 +87,16 @@ export class Dice extends React.Component{
       )
   }/////////////////////////////////////////////////////////////////////////////
 };
+
+//////////////////////////////////////
+const mapStateToProps = (state) => {
+  return{
+    user: state.user,
+    authed: state.authed
+  };
+};/////////////////////////////////////
+
+export default connect(mapStateToProps)(Dice);
 
 Dice.propTypes ={
   owner: PropTypes.string.isRequired
