@@ -35,6 +35,12 @@ export default class Chat extends React.Component{
     });
   }///////////////////////////////////////////////////////////////////
 
+  ////////////////////////
+  clear(e) {
+    e.preventDefault();
+    this.setState({chatList: []})
+  }///////////////////////////
+
   ///////////////////////////roll///////////////////////////////////////
    send(e) {
     e.preventDefault();
@@ -52,6 +58,7 @@ export default class Chat extends React.Component{
           <form onSubmit={this.send.bind(this)}>
             <input type="text" onChange={this.onTextChange.bind(this)} value={this.state.text} placeholder="message"/>
             <button>Send chat</button>
+            <button onClick={this.clear.bind(this)}>Clear Chat</button>
           </form>
           <ul>{this.renderChatList()}</ul>
         </div>
