@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {history} from './../routers/AppRouter';
 // import PropTypes from 'prop-types';
 
-import {Player} from './playerComponents/Player';
+import Player from './playerComponents/Player';
   class GamePage extends Component {
     constructor(props){
       super(props);

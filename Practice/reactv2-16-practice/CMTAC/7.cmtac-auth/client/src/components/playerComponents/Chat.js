@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import openSocket from 'socket.io-client';
 const  socket = openSocket('http://localhost:8000');
 
-export class Chat extends React.Component{
+export default class Chat extends React.Component{
   
   constructor(props){
     super(props);

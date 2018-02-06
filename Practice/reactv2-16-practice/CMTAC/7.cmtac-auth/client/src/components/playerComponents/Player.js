@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
 import Dice from './Dice';
-import {Chat} from './Chat';
+import Chat from './Chat';
 // import onCheckboxChange from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
 
-export class Player extends React.Component{
+class Player extends React.Component{
   //******************
   constructor(props){
     super(props);
@@ -38,6 +39,18 @@ export class Player extends React.Component{
     );
   }////////////////////////////////////////////////////////////////////////////
 };
+
+//////////////////////////////////////
+const mapStateToProps = (state) => {
+  return{
+    ...state,
+    user: state.user,
+    authed: state.authed
+  };
+};/////////////////////////////////////
+
+export default connect(mapStateToProps)(Player);
+
 //////////////////////////////////////////////////////////////////////
 Player.propTypes ={
   name: PropTypes.string.isRequired,
