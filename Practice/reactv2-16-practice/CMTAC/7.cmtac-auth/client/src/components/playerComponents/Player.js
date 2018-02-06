@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import Dice from './Dice';
 import Chat from './Chat';
-// import onCheckboxChange from './DisablePlayer';
 import PlayerBoxIcon from './PlayerBoxIcon';
 
 class Player extends React.Component{
