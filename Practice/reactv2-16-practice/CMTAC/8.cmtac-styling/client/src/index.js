@@ -4,11 +4,14 @@ import './index.css';
 import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import registerServiceWorker from './registerServiceWorker';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import configureStore from './redux/store/configureStore';
+
 // import getName from './redux/actions/nameAction';
 // import nameSelector from './redux/selectors/nameSelector';
+
 
 const store = configureStore();
 

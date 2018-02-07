@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from './../images/cmtacSign.png';
 import '../App.css';
+import logo from './../images/cmtacSign.png';
+import {greenA400} from 'material-ui/styles/colors';
 
 class App extends Component {
 
