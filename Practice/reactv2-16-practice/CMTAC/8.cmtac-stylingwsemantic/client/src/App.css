@@ -24,6 +24,8 @@
 
 .App-Map{
   margin-top: -1rem;
+  width: 50%;
+  height: 25rem;
 }
 
 /* @keyframes App-logo-spin {
