@@ -23,11 +23,13 @@
 }
 
 .App-Map{
-  margin-top: -1rem;
   width: 50%;
   height: 25rem;
 }
 
+.To-Login{
+  margin-top: 1rem;
+}
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
