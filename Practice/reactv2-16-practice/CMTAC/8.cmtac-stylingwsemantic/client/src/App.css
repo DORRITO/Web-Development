@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #65e69f;
-  height: 150px;
+  height: 9rem;
   padding: 20px;
   color: brown;
 }
@@ -23,7 +23,7 @@
 }
 
 .App-Map{
-  padding-top: -100;
+  margin-top: -1rem;
 }
 
 /* @keyframes App-logo-spin {

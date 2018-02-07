@@ -22,10 +22,10 @@ class App extends Component {
       <div className="App">
         <Header as='h1' className="App-header" size="medium">
           <div><Image src={logo} alt="logo" size='small' verticalAlign='middle'/></div>
-          <div><Link to="/login">Login</Link></div>
           <div>{' '}Presented by the Mayors Cross Map Townsmanship Aficionados Club</div>
         </Header>
         <Image className="App-Map" src={map} verticalAlign='middle'/>
+        <div><Link to="/login">To Login</Link></div>
         <h3>The story so far</h3>
       </div>
     );
