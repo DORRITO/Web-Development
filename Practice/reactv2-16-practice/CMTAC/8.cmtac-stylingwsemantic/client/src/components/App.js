@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Header, Image } from 'semantic-ui-react';
+import { Header, Image} from 'semantic-ui-react';
 import '../App.css';
 import logo from './../images/cmtacSign.png';
 import map from './../images/map_colored.jpeg';
@@ -25,7 +25,7 @@ class App extends Component {
           <div><Link to="/login">Login</Link></div>
           <div>{' '}Presented by the Mayors Cross Map Townsmanship Aficionados Club</div>
         </Header>
-        <Image src={map} verticalAlign='middle'/>
+        <Image className="App-Map" src={map} verticalAlign='middle'/>
         <h3>The story so far</h3>
       </div>
     );

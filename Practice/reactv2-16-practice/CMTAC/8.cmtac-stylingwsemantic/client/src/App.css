@@ -1,11 +1,10 @@
 .App {
   text-align: center;
-  overflow: hidden;
 }
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
-  height: 80px;
+  /* height: 80px; */
 }
 
 .App-header {
@@ -23,19 +22,11 @@
   font-size: large;
 }
 
+.App-Map{
+  padding-top: -100;
+}
+
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-} */
-/* {
-  "palette": {
-      "primary2Color": "#00e5ff",
-      "primary1Color": "rgba(100, 221, 23, 0.97)",
-      "primary3Color": "#00c853",
-      "accent1Color": "#388e3c",
-      "pickerHeaderColor": "#00e5ff"
-  },
-  "textField": {
-      "errorColor": "#64dd17"
-  }
 } */
