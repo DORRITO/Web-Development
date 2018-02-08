@@ -66,8 +66,10 @@ class Login extends Component {
     return (
       <div className="App">
         <Header as='h1' className="App-header" size="medium">
-          <h3><Link style={{color: '#4b220a'}} to="/">Home</Link></h3>
-          <h1>{' '}The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
+          <Button color="teal" ><Link style={{color: 'black'}}  to="/">Home</Link></Button>
+          <h1 className='Top-H1'>{' '}The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
+          <h3 className='Top-H3'>{' '}The Arcane Order is currently prohibiting most travel to the East, this portal will take you to the West.  Please enjoy!</h3>
+          <h6 className='Top-H6'>{' '}The MCMTAC reminds you to please not to try to head East under the current advisory.  We don't want you incinerated!</h6>
         </Header>
         <img src={logo} className="App-logo" alt="logo" />
         <div className="boxed-view" >

@@ -37,6 +37,21 @@
   
 }
 
+.Top-H1{
+  color: #4b220a;
+  margin-top: 0rem;
+  margin-bottom: -1.5rem;
+}
+
+.Top-H3{
+  color: #4b220a;
+  margin-bottom: -1.25rem;
+}
+.Top-H6{
+  color: #4b220a;
+  font-size: .55rem;
+  /* margin-bottom: 0rem; */
+}
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
