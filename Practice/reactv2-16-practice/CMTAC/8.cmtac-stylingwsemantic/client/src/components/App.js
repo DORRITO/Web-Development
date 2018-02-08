@@ -25,8 +25,8 @@ class App extends Component {
           <div>{' '}Presented by the Mayors Cross Map Townsmanship Aficionados Club</div>
         </Header>
         <Image className="App-Map" src={map} verticalAlign='middle'/>
-        <div><Modal dimmer closeIcon trigger={<Label color="blue">The story so far...</Label>}>
-          <Modal.Header>Last time on TerraForma:</Modal.Header>
+        <div><Modal dimmer closeIcon trigger={<Label color="blue" className="Pointer">The story so far...</Label>}>
+          <Modal.Header>Last time on Terraforma!</Modal.Header>
           <Modal.Content>
             Rychar, Tylendel, and the ever antagonistic and reluctant Wolfbane ventured into the sand village in order to get back the stolen water for the town. 
             <br />In the process they got a sandperson banished, but found out what happened to the water.
