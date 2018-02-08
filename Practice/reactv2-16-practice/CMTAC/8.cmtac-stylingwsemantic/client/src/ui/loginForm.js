@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import titleCase from 'title-case';
 import getName from './../redux/actions/nameAction';
 import {history} from './../routers/AppRouter';
@@ -17,6 +18,11 @@ class LoginForm extends Component {
     };
   }
   
+    componentDidMount() {
+      console.log(this.props.user, this.props.authed)
+      console.log(this.state.login)
+      console.log(this.state.password)
+    }
   /////////////////////////////////////////////////////
   callApi = async () => {
     const response = await fetch('/login');
@@ -45,8 +51,9 @@ class LoginForm extends Component {
     let lowerPass = this.state.password.toLowerCase();
     
     this.callApi()
-      .then(res => { 
-        if(res[capLogin].password === lowerPass){
+      .then(res => {
+        if(res[capLogin].password === lowerPass){ 
+          console.log('im a workin!')  
           this.props.dispatch(getName({ name: capLogin, auth: true }));
           history.push('/gamepage')
         }else{alert(loginFail)}
@@ -76,4 +83,15 @@ class LoginForm extends Component {
     );
   }
 }
-export default LoginForm;
+
+//////////////////////////////////////
+const mapStateToProps = (state) => {
+    return{
+      ...state,
+      user: state.user,
+      authed: state.authed
+    };
+  };/////////////////////////////////////
+  
+  export default connect(mapStateToProps)(LoginForm);
+// export default LoginForm;
