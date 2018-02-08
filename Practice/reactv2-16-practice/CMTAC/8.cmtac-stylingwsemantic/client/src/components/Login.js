@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {history} from './../routers/AppRouter';
 
+import LoginForm from './../ui/loginForm';
+
 import {Button, Header} from 'semantic-ui-react';
 import logo from './../images/cmtacSign.png';
 import '../App.css';
@@ -82,7 +84,7 @@ class Login extends Component {
             </form>
           </div>
         </div>
-
+        <LoginForm />
         <p className="App-intro">{this.state.response}</p>
       </div>
     );
