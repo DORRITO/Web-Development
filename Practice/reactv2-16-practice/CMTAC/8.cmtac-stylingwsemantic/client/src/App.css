@@ -14,6 +14,11 @@
   color: brown;
 }
 
+.Header-gamepage{
+  background-color: #65e69f;
+  color: brown;
+}
+
 .App-title {
   font-size: 1.5em;
 }
@@ -25,6 +30,11 @@
 .App-Map{
   width: 50%;
   height: 25rem;
+}
+
+.Header-gamepage{
+  margin: 0 6rem -2rem 4rem;
+  color: #4b220a;
 }
 
 .To-Login{
@@ -42,7 +52,6 @@
   margin-top: 0rem;
   margin-bottom: -1.5rem;
 }
-
 .Top-H3{
   color: #4b220a;
   margin-bottom: -1.25rem;
@@ -50,7 +59,6 @@
 .Top-H6{
   color: #4b220a;
   font-size: .55rem;
-  /* margin-bottom: 0rem; */
 }
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
