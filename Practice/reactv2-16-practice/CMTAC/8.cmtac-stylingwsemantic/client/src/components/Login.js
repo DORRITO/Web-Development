@@ -66,18 +66,17 @@ class Login extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h3><Link to="/">Home</Link></h3>
           <h1 className="App-title">The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
         </header>
-
+        <img src={logo} className="App-logo" alt="logo" />
         <div className="boxed-view" >
           <div className="boxed_view__box">
             <h1>MCMTAC Login</h1>
             <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
                 <input type="text" onChange={this.onLoginChange.bind(this)} value={this.state.login} placeholder="username" />
                 <input type="password" onChange={this.onPassChange.bind(this)} value={this.state.password} placeholder="password" />
-                <Button color='green'>Enter Terraria!</Button>
+                <Button basic color='green'>Enter Terraria!</Button>
             </form>
           </div>
         </div>

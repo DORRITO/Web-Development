@@ -33,7 +33,7 @@ class App extends Component {
             <br />Now They are back in town, and have come across the Arcane Order, who don't look too impressed with Tylendel...
           </Modal.Content>
         </Modal></div>
-        <div className="To-Login"><Button basic color="olive"><Link style={{color: 'olive'}} to="/login">To Login</Link></Button></div>
+        <div className="To-Login"><Button basic color="olive"><h4><Link style={{color: '#4b220a'}} to="/login">To Login</Link></h4></Button></div>
       </div>
     );
   }

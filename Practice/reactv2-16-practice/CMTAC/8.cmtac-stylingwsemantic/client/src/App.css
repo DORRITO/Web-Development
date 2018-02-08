@@ -2,10 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo { */
   /* animation: App-logo-spin infinite 20s linear; */
   /* height: 80px; */
-}
+/* } */
 
 .App-header {
   background-color: #65e69f;
@@ -29,6 +29,7 @@
 
 .To-Login{
   margin-top: 1.5rem;
+  display: inline-block;
 }
 
 .Pointer:hover{
