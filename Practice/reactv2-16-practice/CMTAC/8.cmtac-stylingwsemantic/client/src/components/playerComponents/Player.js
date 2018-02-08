@@ -27,9 +27,11 @@ class Player extends React.Component{
   render(){
     return (
       <div>
+        <div>
+        <h2>{this.props.name}</h2>
         <PlayerBoxIcon icon={this.props.icon}/>
+        </div>
         <div className="divWithbackground">
-            <h5>{this.props.name}</h5>
             {!this.state.isChecked ? <Dice owner={this.props.name}/> : 'INCAPACITATED'}
         </div> 
         {this.props.user === 'Gm' ? <div><input type="checkbox" onChange={this.onCheckboxChange.bind(this)}></input>FINISH HIM</div> : ''}
