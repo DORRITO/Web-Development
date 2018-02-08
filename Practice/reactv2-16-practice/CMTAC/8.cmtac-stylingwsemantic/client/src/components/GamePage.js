@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {history} from './../routers/AppRouter';
 // import PropTypes from 'prop-types';
-import { Menu } from 'semantic-ui-react';
+import { Grid, Menu } from 'semantic-ui-react';
 
 import Player from './playerComponents/Player';
   class GamePage extends Component {
@@ -24,12 +24,16 @@ import Player from './playerComponents/Player';
             <h5>(In cooperation with the arcane order)</h5></div>
             <Menu.Item header onClick={this.onClick.bind(this)}>Logout</Menu.Item>
           </Menu>
-          <div className="playersSection">
-            <Player name="Rychar" icon="I'm a sign and building" />
-            <Player name="Tylendel" icon="I'm a castle" />
-            <Player name="Wolfbane" icon="I'm a tent and fireplace" />
-          </div>
-          <Player name="Gm" icon="i'm a puppet master"/>
+          <Grid columns='3' textAlign='center' verticalAlign="middle" className="playersSection">
+            <Grid.Row>
+              <Grid.Row><Player name="Rychar" icon="I'm a sign and building" /></Grid.Row>
+              <Player name="Tylendel" icon="I'm a castle" />
+              <Player name="Wolfbane" icon="I'm a tent and fireplace" />
+              <Grid.Column >
+                <Grid.Row><Player name="Gm" icon="i'm a puppet master"/></Grid.Row>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </div>
       );
   };////////////////////////////////////////////////////////////////////////////
