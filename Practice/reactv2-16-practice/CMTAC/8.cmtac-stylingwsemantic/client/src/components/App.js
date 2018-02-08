@@ -25,6 +25,7 @@ class App extends Component {
           <div>{' '}Presented by the Mayors Cross Map Townsmanship Aficionados Club</div>
         </Header>
         <Image className="App-Map" src={map} verticalAlign='middle'/>
+        <div className="To-Login"><Button basic color="olive"><h4><Link style={{color: '#4b220a'}} to="/login">To Login</Link></h4></Button></div>
         <div><Modal dimmer closeIcon trigger={<Label color="blue" className="Pointer">The story so far...</Label>}>
           <Modal.Header>Last time on Terraforma!</Modal.Header>
           <Modal.Content>
@@ -33,7 +34,6 @@ class App extends Component {
             <br />Now They are back in town, and have come across the Arcane Order, who don't look too impressed with Tylendel...
           </Modal.Content>
         </Modal></div>
-        <div className="To-Login"><Button basic color="olive"><h4><Link style={{color: '#4b220a'}} to="/login">To Login</Link></h4></Button></div>
       </div>
     );
   }

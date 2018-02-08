@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {history} from './../routers/AppRouter';
 
-import {Button} from 'semantic-ui-react';
+import {Button, Header} from 'semantic-ui-react';
 import logo from './../images/cmtacSign.png';
 import '../App.css';
 
@@ -65,10 +65,10 @@ class Login extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h3><Link to="/">Home</Link></h3>
-          <h1 className="App-title">The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
-        </header>
+        <Header as='h1' className="App-header" size="medium">
+          <h3><Link style={{color: '#4b220a'}} to="/">Home</Link></h3>
+          <h1>{' '}The Mayors Cross Map Townsmanship Aficionados Club welcomes you to enter Terraria!</h1>
+        </Header>
         <img src={logo} className="App-logo" alt="logo" />
         <div className="boxed-view" >
           <div className="boxed_view__box">
@@ -76,7 +76,7 @@ class Login extends Component {
             <form className="boxed-view__form" onSubmit={this.onSubmit.bind(this)} noValidate>
                 <input type="text" onChange={this.onLoginChange.bind(this)} value={this.state.login} placeholder="username" />
                 <input type="password" onChange={this.onPassChange.bind(this)} value={this.state.password} placeholder="password" />
-                <Button basic color='green'>Enter Terraria!</Button>
+                <Button color='green'>Enter Terraria!</Button>
             </form>
           </div>
         </div>
