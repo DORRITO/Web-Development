@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import openSocket from 'socket.io-client';
 import {connect} from 'react-redux';
 
+import { Button } from 'semantic-ui-react';
+
 const socket = openSocket('http://localhost:8000');
 
 class Dice extends React.Component{
@@ -79,7 +81,7 @@ class Dice extends React.Component{
   render(){
       return (
         <div>
-          {this.props.user === this.props.owner || this.props.user === 'Gm' ? <button onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</button> : <button>Roll +{this.state.modifier}</button>}
+          {this.props.user === this.props.owner || this.props.user === 'Gm' ? <Button color="green" size={"tiny"} onClick={this.roll.bind(this)}>Roll +{this.state.modifier}</Button> : <Button color="green" size={"tiny"} >Roll +{this.state.modifier}</Button>}
           {this.state.d20}
           {this.props.user === 'Gm' ? <input type="number" placeholder={0} onChange={this.onModifierChange.bind(this)} value={this.state.modifier}/> : ''}
         </div>
