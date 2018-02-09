@@ -13,7 +13,7 @@ import Player from './playerComponents/Player';
 
     onClick(e){
       e.preventDefault();
-      history.push('/');
+      history.push('/login');
     }
     ////////////////////////////////////////////////////////////////////////////////
     render() {
