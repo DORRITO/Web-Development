@@ -25,21 +25,21 @@ import GridColumn from 'semantic-ui-react/dist/commonjs/collections/Grid/GridCol
             <h5>(In cooperation with the arcane order)</h5></div>
             <Menu.Item header onClick={this.onClick.bind(this)}>Logout</Menu.Item>
           </Menu>
-          <Grid columns='6' inverted textAlign='center' verticalAlign="middle" className="playersSection">
+          <Grid style={{marginTop: '2.5rem'}} columns='6' textAlign='center' verticalAlign="middle" className="playersSection">
             <Grid.Row>
               <GridColumn>
-                <Segment><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></Segment>
+                <Segment raised color="orange" size={'large'}><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></Segment>
               </GridColumn>
               <GridColumn>
-                <Segment><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></Segment>
+                <Segment raised color="yellow" size={'large'}><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></Segment>
               </GridColumn>
               <GridColumn>
-                <Segment><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></Segment>
+                <Segment raised color="orange" size={'large'}><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></Segment>
               </GridColumn>
             </Grid.Row>
-            <Grid.Row>
+            <Grid.Row style={{marginTop: '1rem'}} columns='2'>
               <GridColumn>
-                <Segment><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></Segment>
+                <Segment style={{paddingRight: '10rem', paddingLeft: '10rem'}} raised color="green" size={'huge'} ><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></Segment>
               </GridColumn>
             </Grid.Row>
           </Grid>
