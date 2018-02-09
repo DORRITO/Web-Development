@@ -30,7 +30,18 @@ class Dice extends React.Component{
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))
 
-    socket.on('dice', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
+    socket.on('dice', (data) => {if(data.name === this.state.owner && data.name !== 'Tylendel'){
+                                  setTimeout(() => {this.setState({d20: `3...`})}, 500);
+                                  setTimeout(() => {this.setState({d20: `2...`})}, 1000);
+                                  setTimeout(() => {this.setState({d20: `1...`})}, 1500);
+                                  setTimeout(() => {this.setState({d20: data.dice})}, 2000);
+                                }else if(data.name === this.state.owner && data.name === 'Tylendel'){
+                                  setTimeout(() => {this.setState({d20: `3...`})}, 500);
+                                  setTimeout(() => {this.setState({d20: `2...`})}, 1000);
+                                  setTimeout(() => {this.setState({d20: `6...`})}, 1500);
+                                  setTimeout(() => {this.setState({d20: `6!?!`})}, 1800);
+                                  setTimeout(() => {this.setState({d20: data.dice})}, 2400);
+                                }});
     socket.on('modifier2', (data) => {if(data.name === this.state.owner){this.setState({modifier: data.modifier})} });
   }//////////////////////////////////////////////////////////////////////////
 
