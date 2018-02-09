@@ -4,6 +4,7 @@ import {history} from './../routers/AppRouter';
 import { Grid, Menu } from 'semantic-ui-react';
 
 import Player from './playerComponents/Player';
+import GridColumn from 'semantic-ui-react/dist/commonjs/collections/Grid/GridColumn';
   class GamePage extends Component {
     constructor(props){
       super(props);
@@ -24,14 +25,14 @@ import Player from './playerComponents/Player';
             <h5>(In cooperation with the arcane order)</h5></div>
             <Menu.Item header onClick={this.onClick.bind(this)}>Logout</Menu.Item>
           </Menu>
-          <Grid columns='3' textAlign='center' verticalAlign="middle" className="playersSection">
+          <Grid columns='6' inverted textAlign='center' verticalAlign="middle" className="playersSection">
             <Grid.Row>
-              <Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} />
-              <Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} />
-              <Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} />
-              <Grid.Column >
-                <Grid.Row><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></Grid.Row>
-              </Grid.Column>
+              <GridColumn><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></GridColumn>
+              <GridColumn><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></GridColumn>
+              <GridColumn><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></GridColumn>
+            </Grid.Row>
+            <Grid.Row>
+              <GridColumn><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></GridColumn>
             </Grid.Row>
           </Grid>
         </div>
