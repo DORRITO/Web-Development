@@ -25,7 +25,7 @@ import Player from './playerComponents/Player';
             <h5>(In cooperation with the arcane order)</h5></div>
             <Menu.Item header onClick={this.onClick.bind(this)}>Logout</Menu.Item>
           </Menu>
-          <Grid style={{marginTop: '2.5rem'}} columns='3' textAlign='center' verticalAlign="middle" className="playersSection">
+          <Grid columns='3' textAlign='center' verticalAlign="middle" className="playersSection">
             <Grid.Row>
               <GridColumn>
                 <Segment raised color="orange"><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></Segment>
@@ -37,7 +37,7 @@ import Player from './playerComponents/Player';
                 <Segment raised color="orange"><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></Segment>
               </GridColumn>
             </Grid.Row>
-            <Grid.Row style={{marginTop: '1rem'}} columns='2'>
+            <Grid.Row columns='2'>
               <GridColumn>
                 <Segment style={{paddingRight: '10rem', paddingLeft: '10rem'}} raised color="green"><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></Segment>
               </GridColumn>
