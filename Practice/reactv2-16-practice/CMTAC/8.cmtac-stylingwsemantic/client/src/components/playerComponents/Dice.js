@@ -27,7 +27,6 @@ class Dice extends React.Component{
   // }
   //////////////////////user users name////////////////////////////////////
   componentDidMount(){
-    console.log(this.props, 'awuhhwuhh')
     this.callGetAPI()
       .then(res => this.setState({ name: res[this.state.owner].name }) )
       .catch(err => console.log(err))

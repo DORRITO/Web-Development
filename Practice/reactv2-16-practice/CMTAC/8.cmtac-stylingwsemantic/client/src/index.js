@@ -6,20 +6,21 @@ import AppRouter from './routers/AppRouter';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store/configureStore';
 import 'semantic-ui-css/semantic.min.css';
+
 import getName from './redux/actions/nameAction';
-import nameSelector from './redux/selectors/nameSelector';
+// import nameSelector from './redux/selectors/nameSelector';
 
 const store = configureStore();
 
-store.subscribe(() => {
-    const state = store.getState();
-    console.log(store.getState())
-});
+// store.subscribe(() => {
+//     const state = store.getState();
+//     console.log(store.getState())
+// });
 
 store.dispatch(getName({ name: 'Gm', auth: true }))
-const state = store.getState()
+// const state = store.getState()
 
-const selectName = nameSelector(state.user, state.authed)
+// const selectName = nameSelector(state.user, state.authed)
 // console.log(selectName);
 
 const app = (
