@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import openSocket from 'socket.io-client';
 import {connect} from 'react-redux';
 
-import incapacitate from '.Incapacitate';
+// import incapacitate from '.Incapacitate';
 import Dice from './Dice';
 import Chat from './Chat';
 import PlayerBoxIcon from './PlayerBoxIcon';
