@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import {connect} from 'react-redux';
 import openSocket from 'socket.io-client';
+
 const  socket = openSocket('http://localhost:8000');
 
 export default class Chat extends React.Component{

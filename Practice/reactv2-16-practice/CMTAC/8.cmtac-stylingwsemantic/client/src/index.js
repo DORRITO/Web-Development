@@ -17,7 +17,7 @@ const store = configureStore();
 //     console.log(store.getState())
 // });
 
-// store.dispatch(getName({ name: 'Gm', auth: true }))
+store.dispatch(getName({ name: 'Gm', auth: true }))
 // const state = store.getState()
 
 // const selectName = nameSelector(state.user, state.authed)
