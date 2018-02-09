@@ -42,10 +42,6 @@
   margin-bottom: 1rem;
 }
 
-.Player-boxes{
-  margin-top: -5rem;
-}
-
 .Pointer:hover{
   cursor: pointer;
   

@@ -88,4 +88,3 @@ const mapStateToProps = (state) => {
   };/////////////////////////////////////
   
   export default connect(mapStateToProps)(LoginForm);
-// export default LoginForm;
