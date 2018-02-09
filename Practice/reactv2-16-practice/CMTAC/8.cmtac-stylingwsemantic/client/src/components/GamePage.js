@@ -26,11 +26,11 @@ import Player from './playerComponents/Player';
           </Menu>
           <Grid columns='3' textAlign='center' verticalAlign="middle" className="playersSection">
             <Grid.Row>
-              <Player name="Rychar" icon={["building outline", "university", "building"]} />
-              <Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome"]} />
-              <Player name="Wolfbane" icon={["fire", "tree", "leaf"]} />
+              <Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} />
+              <Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} />
+              <Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} />
               <Grid.Column >
-                <Grid.Row><Player name="Gm" icon={["asl", "signing", "detective"]}/></Grid.Row>
+                <Grid.Row><Player name="Gm" icon={["asl", , , [, "black", ]]}/></Grid.Row>
               </Grid.Column>
             </Grid.Row>
           </Grid>

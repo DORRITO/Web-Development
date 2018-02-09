@@ -54,7 +54,7 @@ export default connect(mapStateToProps)(Player);
 
 //////////////////////////////////////////////////////////////////////
 Player.propTypes ={
-  name: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
+  // icon: PropTypes.array.isRequired
   // roll: PropTypes.func.isRequired
 };
