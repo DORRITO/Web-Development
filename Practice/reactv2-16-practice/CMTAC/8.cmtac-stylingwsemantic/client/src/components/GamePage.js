@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {history} from './../routers/AppRouter';
 // import PropTypes from 'prop-types';
-import { Grid, Menu } from 'semantic-ui-react';
+import { Grid, Menu, Segment } from 'semantic-ui-react';
 
 import Player from './playerComponents/Player';
 import GridColumn from 'semantic-ui-react/dist/commonjs/collections/Grid/GridColumn';

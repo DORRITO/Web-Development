@@ -37,6 +37,22 @@
   color: #4b220a;
 }
 
+.Icon-left{
+  background-color: blue;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+}
+.Icon-middle{
+  background-color: green;
+  margin-left: 0rem;
+  margin-bottom: 0rem;
+}
+.Icon-right{
+  background-color: blue;
+  margin-left: 0rem;
+  margin-bottom: 0rem;
+}
+
 .To-Login{
   margin-top: 1rem;
   margin-bottom: 1rem;
