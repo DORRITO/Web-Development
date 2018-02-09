@@ -21,7 +21,7 @@ class Player extends React.Component{
   }//*****************
 
   componentDidMount(){
-    socket.on('incapacitated2', (data) => console.log(data.isChecked, data.name));
+    socket.on('incapacitated2', (data) => {if(data.name === this.props.user){this.setState({isChecked: data.isChecked})} });
     // socket.on('incapacitated', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
   }//////////////////////////////////////////////////////////////////////////
 
@@ -30,7 +30,6 @@ class Player extends React.Component{
         let isChecked = e.target.checked;
         let name = this.props.name;
         socket.emit('incapacitated', isChecked, name);
-        this.setState({isChecked})
     }//**********************************
 
   //////////////////////////////////////////////////////////////////
