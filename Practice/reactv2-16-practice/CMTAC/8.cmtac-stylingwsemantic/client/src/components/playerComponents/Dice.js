@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 // import { Route, Redirect } from 'react-router-dom';
 import openSocket from 'socket.io-client';
 import {connect} from 'react-redux';
-
-import { Button } from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 const socket = openSocket('http://localhost:8000');
 

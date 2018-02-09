@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import openSocket from 'socket.io-client';
 import {connect} from 'react-redux';
 
 import Dice from './Dice';
 import Chat from './Chat';
 import PlayerBoxIcon from './PlayerBoxIcon';
+
+const socket = openSocket('http://localhost:8000');
 
 class Player extends React.Component{
   //******************
@@ -17,9 +20,16 @@ class Player extends React.Component{
     };
   }//*****************
 
+  componentDidMount(){
+    socket.on('incapacitated2', (data) => console.log(data.isChecked, data.name));
+    // socket.on('incapacitated', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
+  }//////////////////////////////////////////////////////////////////////////
+
     //**********************************
     onCheckboxChange = (e) => {
-        let isChecked = e.target.checked
+        let isChecked = e.target.checked;
+        let name = this.props.name;
+        socket.emit('incapacitated', isChecked, name);
         this.setState({isChecked})
     }//**********************************
 

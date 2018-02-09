@@ -24,9 +24,13 @@ io.on('connection', (socket) => {
 
   socket.emit('newMessage', generateMessage('AO Admin', 'The MCMTAC welcomes you to chat.'));
 
+  socket.on('incapacitated', (isChecked, name) => {
+    io.emit('incapacitated2', {isChecked, name})
+  });
+
   socket.on('modifier1', (name, mod) => {
     io.emit('modifier2', modifierSocket(name, mod) )
-  })
+  });
 
   socket.on('createMessage', (message, callback) => {
     console.log('createMessage', message);

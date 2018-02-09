@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {history} from './../routers/AppRouter';
-// import PropTypes from 'prop-types';
+
 import { Grid, GridColumn, Menu, Segment } from 'semantic-ui-react';
 
 import Player from './playerComponents/Player';
@@ -47,11 +47,5 @@ import Player from './playerComponents/Player';
       );
   };////////////////////////////////////////////////////////////////////////////
 }
-//////////////////////////////////////////////////////////////////////
-GamePage.propTypes ={
-  // title: PropTypes.string.isRequired,
-  // handleLogout: PropTypes.func.isRequired,
-  // greeting: PropTypes.string.isRequired
-};
 
 export default GamePage;
