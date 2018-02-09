@@ -17,12 +17,7 @@ class LoginForm extends Component {
         password: '',
     };
   }
-  
-    componentDidMount() {
-      console.log(this.props.user, this.props.authed)
-      console.log(this.state.login)
-      console.log(this.state.password)
-    }
+
   /////////////////////////////////////////////////////
   callApi = async () => {
     const response = await fetch('/login');
@@ -53,7 +48,6 @@ class LoginForm extends Component {
     this.callApi()
       .then(res => {
         if(res[capLogin].password === lowerPass){ 
-          console.log('im a workin!')  
           this.props.dispatch(getName({ name: capLogin, auth: true }));
           history.push('/gamepage')
         }else{alert(loginFail)}

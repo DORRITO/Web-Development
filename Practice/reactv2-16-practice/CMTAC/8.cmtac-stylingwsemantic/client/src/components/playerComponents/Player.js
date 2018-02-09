@@ -15,17 +15,16 @@ class Player extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      d20: '',
       isChecked: false,
       modifier: 0,
       knockedOut: ''
     };
   }//*****************
 
+  //********************************************************************
   componentDidMount(){
     socket.on('incapacitated2', (data) => {if(data.name === this.props.user){this.setState({isChecked: data.isChecked, knockedOut: data.name})} });
-    // socket.on('incapacitated', (data) => {if(data.name === this.state.owner){this.setState({d20: data.dice})} });
-  }//////////////////////////////////////////////////////////////////////////
+  }//********************************************************************
 
   //**********************************
   onCheckboxChange = (e) => {
@@ -67,5 +66,4 @@ export default connect(mapStateToProps)(Player);
 Player.propTypes ={
   name: PropTypes.string.isRequired
   // icon: PropTypes.array.isRequired
-  // roll: PropTypes.func.isRequired
 };
