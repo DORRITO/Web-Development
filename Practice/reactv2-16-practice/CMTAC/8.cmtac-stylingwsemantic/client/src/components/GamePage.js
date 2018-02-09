@@ -27,12 +27,20 @@ import GridColumn from 'semantic-ui-react/dist/commonjs/collections/Grid/GridCol
           </Menu>
           <Grid columns='6' inverted textAlign='center' verticalAlign="middle" className="playersSection">
             <Grid.Row>
-              <GridColumn><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></GridColumn>
-              <GridColumn><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></GridColumn>
-              <GridColumn><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></GridColumn>
+              <GridColumn>
+                <Segment><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></Segment>
+              </GridColumn>
+              <GridColumn>
+                <Segment><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></Segment>
+              </GridColumn>
+              <GridColumn>
+                <Segment><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></Segment>
+              </GridColumn>
             </Grid.Row>
             <Grid.Row>
-              <GridColumn><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></GridColumn>
+              <GridColumn>
+                <Segment><Player name="Gm" icon={["asl", null, null, [null, "black", null]]}/></Segment>
+              </GridColumn>
             </Grid.Row>
           </Grid>
         </div>
