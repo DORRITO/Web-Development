@@ -31,7 +31,7 @@ import Player from './playerComponents/Player';
                 <Segment raised color="orange"><Player name="Rychar" icon={["building outline", "university", "building", ["black", "orange", "orange"]]} /></Segment>
               </GridColumn>
               <GridColumn>
-                <Segment raised color="yellow"><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["black", "yellow", "yellow"]]} /></Segment>
+                <Segment raised color="yellow"><Player name="Tylendel" icon={["fort awesome", "fort awesome", "fort awesome", ["yellow", "black", "black"]]} /></Segment>
               </GridColumn>
               <GridColumn>
                 <Segment raised color="orange"><Player name="Wolfbane" icon={["fire", "tree", "leaf", ['orange', 'green', 'green']]} /></Segment>
