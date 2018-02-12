@@ -7,10 +7,11 @@
   height: 100vh;
 }
 
-.Centered-Box{
+/* .Centered-Box{
   margin-top: 16%;
   background-color: #92a8d1;
+} */
+
+.Display{
+  display: inline-block
 }
-.ui.clearing.segment::after {
-  height: 1.5em;
- } 
