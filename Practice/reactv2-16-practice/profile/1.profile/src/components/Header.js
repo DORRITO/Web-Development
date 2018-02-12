@@ -50,5 +50,3 @@ const AppHeader = () => (
 )
 
 export default AppHeader;
-
-// <Segment circular style={circle}></Segment>
