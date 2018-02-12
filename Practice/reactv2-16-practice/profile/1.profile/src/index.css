@@ -1,5 +1,17 @@
-body {
+.App{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  height: 100%;
+  width: 100%;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  overflow: hidden;
+  background-color: aqua;
+  background-image: url(images/Desert.jpg);
+  background-size: cover;                   
+  background-repeat: no-repeat;
+  background-position: center center; 
+
 }
