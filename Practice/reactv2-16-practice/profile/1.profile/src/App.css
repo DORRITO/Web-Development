@@ -1,8 +1,16 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   /* height: 100%;
   width: 100%; */
 
   font-size: 62.5%;
   height: 100vh;
 }
+
+.Centered-Box{
+  margin-top: 16%;
+  background-color: #92a8d1;
+}
+.ui.clearing.segment::after {
+  height: 1.5em;
+ } 
