@@ -1,9 +1,7 @@
 import React from 'react'
-import GridRow, { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Grid, Header, Image, Segment } from 'semantic-ui-react'
 
 import profileImage from './../images/profileimage.jpg';
-
-const circle = { width: 200, height: 200 }
 
 const AppHeader = () => (
   <Header>
