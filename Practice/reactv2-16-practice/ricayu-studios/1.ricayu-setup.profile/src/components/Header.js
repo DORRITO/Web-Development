@@ -4,6 +4,7 @@ import { Button, Container, Dropdown, Grid, Header, Image, Menu, Segment } from 
 // import profileImage from './../images/profileimage.jpg';
 
 const AppHeader = () => (
+    <Header>
     <Menu fixed='top' inverted>
     <Container>
       <Menu.Item as='a' header>
@@ -30,6 +31,7 @@ const AppHeader = () => (
       </Dropdown>
     </Container>
   </Menu>
+    </Header>
 )
 
 export default AppHeader;

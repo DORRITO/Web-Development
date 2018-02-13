@@ -7,6 +7,25 @@
   height: 100vh;
 }
 
+.BackgroundImage{
+  background-image: url(images/ballerina.jpg);
+  background-size: cover;                   
+  /* background-repeat: no-repeat; */
+  background-position: center; 
+  transform: scale(.90);
+  margin-left: -5rem;
+  height: 100vh;
+  z-index: -1;
+}
+
+.BackgroundBlack{
+  width: 100%;
+  height: 100%;
+
+  height: 100%;
+  background-color: black;
+}
+
 .Display-Block{
   display: inline-block
 }
