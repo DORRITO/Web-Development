@@ -7,11 +7,11 @@
   width: 100%; */
   /* opacity: .8;
   filter: alpha(opacity=50); */
-  overflow: hidden;
+  /* overflow: hidden;
   background-image: url(images/Desert.jpg);
   background-size: cover;                   
   background-repeat: no-repeat;
-  background-position: center center; 
+  background-position: center center;  */
 
-  z-index: -1;
+  /* z-index: -1; */
 }

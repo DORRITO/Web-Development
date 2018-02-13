@@ -1,1 +1,1 @@
-##Portfolio page to showcase web pages as I create them
+#A website for my friend who is a photographer.
