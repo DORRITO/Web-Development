@@ -12,21 +12,15 @@ const AppHeader = () => (
         <div className="Main-Theme">Ricayu Studios</div>
       </Menu.Item>
       <Menu.Item as='a' style={{ color: '#E0661F' }}>Home</Menu.Item>
-      <Dropdown item simple text='Dropdown' style={{ color: '#E0661F' }}>
+      <Menu.Item as='a' style={{ color: '#E0661F' }}>About Me</Menu.Item>
+      <Menu.Item as='a' style={{ color: '#E0661F' }}>Contact Me</Menu.Item>
+      <Dropdown item simple text='Services' style={{ color: '#E0661F' }}>
         <Dropdown.Menu>
-          <Dropdown.Item>List Item</Dropdown.Item>
-          <Dropdown.Item>List Item</Dropdown.Item>
+          <Dropdown.Item>Weddings</Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Header>Header Item</Dropdown.Header>
-          <Dropdown.Item>
-            <i className='dropdown icon' />
-            <span className='text'>Submenu</span>
-            <Dropdown.Menu>
-              <Dropdown.Item>List Item</Dropdown.Item>
-              <Dropdown.Item>List Item</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown.Item>
-          <Dropdown.Item>List Item</Dropdown.Item>
+          <Dropdown.Item>Portraits/Senior Pictures</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item>Events/Sports Pictures</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </Container>
