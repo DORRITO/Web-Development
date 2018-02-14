@@ -4,10 +4,7 @@ import React from 'react';
 
 const Home = () => (
     <div className='BackgroundBlack'>
-    <div className='BackgroundImage'>
-        <h1>asdas</h1>
-        <h1>asdas</h1>
-    </div>
+    <div className='BackgroundImage' />
     </div>
 )
 
