@@ -12,7 +12,7 @@ const platArr = [true, true, true, true, true, true, true, '$500'];
 const Portraits = () => (
     <div>
         <h1>CHIGGA BOOM contact</h1>
-        <Services serviceNames={servNamesArr} silver={silvArr} gold={goldArr} plat={platArr}/>
+        <Services serviceNames={servNamesArr} silver={silvArr} gold={goldArr} plat={platArr} title='Portraits/Senior Pictures:' subTitle="Additional fees for travel outside of Yuma not included"/>
     </div>
 )
 

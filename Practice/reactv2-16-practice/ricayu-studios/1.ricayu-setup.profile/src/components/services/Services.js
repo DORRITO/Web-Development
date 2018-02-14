@@ -1,9 +1,11 @@
 import React from 'react';
-import {Table, Icon} from 'semantic-ui-react';
+import {Header, Icon, Table} from 'semantic-ui-react';
 
 // import profileImage from './../images/profileimage.jpg';
-// {props.serviceNames[0]}
+
 const Services = (props) => (
+    <div>
+    <Header as='h1' textAlign='center'>{props.title}</Header>
     <Table color='orange' sortable>
         <Table.Header >
           <Table.Row >
@@ -65,6 +67,8 @@ const Services = (props) => (
           </Table.Row>
         </Table.Body>
     </Table>
+    <Header as='h5' textAlign='center'>{props.subTitle}</Header>
+    </div>
 )
 
 export default Services;
