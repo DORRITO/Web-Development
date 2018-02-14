@@ -7,13 +7,10 @@ const AppHeader = () => (
     <Header>
     <Menu fixed='top' inverted>
     <Container>
-      <Menu.Item as='a' header>
-        <Image size='mini' src='/logo.png' style={{ marginRight: '1.5rem', marginLeft: '-9rem' }} />
-        <div className="Main-Theme">Ricayu Studios</div>
-      </Menu.Item>
-      <Menu.Item as='a' style={{ color: '#E0661F' }}>Home</Menu.Item>
-      <Menu.Item as='a' style={{ color: '#E0661F' }}>About Me</Menu.Item>
-      <Dropdown item simple text='Services' style={{ color: '#E0661F' }}>
+      <Menu.Item as='a' style={{  marginLeft: '-6rem', color: '#FFA60D'}}>Ricayu Studios</Menu.Item>
+      <Menu.Item as='a' style={{ color: '#FFA60D' }}>Home</Menu.Item>
+      <Menu.Item as='a' style={{ color: '#FFA60D' }}>About Me</Menu.Item>
+      <Dropdown item simple text='Services' style={{ color: '#FFA60D' }}>
         <Dropdown.Menu>
           <Dropdown.Item>Weddings</Dropdown.Item>
           <Dropdown.Divider />
@@ -22,7 +19,7 @@ const AppHeader = () => (
           <Dropdown.Item>Events/Sports Pictures</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <Menu.Item as='a' style={{ color: '#E0661F' }}>Contact Me</Menu.Item>
+      <Menu.Item as='a' style={{ color: '#FFA60D' }}>Contact Me</Menu.Item>
     </Container>
   </Menu>
     </Header>
