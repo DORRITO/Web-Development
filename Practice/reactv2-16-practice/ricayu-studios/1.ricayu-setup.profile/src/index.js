@@ -8,7 +8,6 @@ import 'semantic-ui-css/semantic.min.css';
 
 const app = (
     <div>
-        <App />
         <AppRouter />
     </div>
 )
