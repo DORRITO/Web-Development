@@ -6,7 +6,7 @@ import {Header, Icon, Table} from 'semantic-ui-react';
 const Services = (props) => (
     <div>
     <Header as='h1' textAlign='center'>{props.title}</Header>
-    <Table color='orange' sortable>
+    <Table color='orange' celled>
         <Table.Header >
           <Table.Row >
             <Table.HeaderCell>Services</Table.HeaderCell>
