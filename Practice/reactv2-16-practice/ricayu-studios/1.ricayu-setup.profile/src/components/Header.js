@@ -22,11 +22,11 @@ const AppHeader = () => (
 
     <Menu.Menu position='right'>
         <Link to="/contact"><Menu.Item as='a' style={{ color: '#FFA60D' }}>Contact Me</Menu.Item></Link>
-        <Menu.Item as='a' >
-            <Icon name='facebook' size='large' color='blue'/>
-            <Icon name='twitter' size='large' inverted color='blue'/>
-            <Icon name='youtube' size='large' inverted color='red'/>
-            <Icon name='instagram' size='large' inverted color='pink'/>
+        <Menu.Item>
+            <a href="https://www.facebook.com/fontanes/?fref=ts" target="_blank"><Icon name='facebook' size='large' color='blue'/></a>
+            <a href="https://twitter.com/Richardfontanes" target="_blank"><Icon name='twitter' size='large' inverted color='blue'/></a>
+            <a href="https://www.youtube.com/channel/UCGdrfxOGBIBpmoYoxsYHZFw" target="_blank"><Icon name='youtube' size='large' inverted color='red'/></a>
+            <a href="https://www.instagram.com/ricayu1/" target="_blank"><Icon name='instagram' size='large' inverted color='pink'/></a>
         </Menu.Item>
     </Menu.Menu>
   </Menu>
