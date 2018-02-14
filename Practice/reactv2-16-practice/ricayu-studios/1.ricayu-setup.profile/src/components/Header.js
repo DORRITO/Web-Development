@@ -23,7 +23,7 @@ const AppHeader = () => (
       <Link to="/contact"><Menu.Item as='a' style={{ color: '#FFA60D' }}>Contact Me</Menu.Item></Link>
     </Container>
   </Menu>
-    </Header>
+  </Header>
 )
 
 export default AppHeader;
