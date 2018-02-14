@@ -8,7 +8,7 @@ const Services = (props) => (
     <h1>CHIGGA BOOM contact</h1>
     <h1>CHIGGA BOOM contact</h1>
     <h1>CHIGGA BOOM servicceeee</h1>
-    <h3>{props.name}</h3>
+    <h3>{props.serviceNames[0]}</h3>
     </div>
 )
 
