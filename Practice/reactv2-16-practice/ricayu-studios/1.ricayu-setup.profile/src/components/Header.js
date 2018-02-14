@@ -13,11 +13,11 @@ const AppHeader = () => (
       <Link to="/about"><Menu.Item as='a' style={{ color: '#FFA60D' }}>About Me</Menu.Item></Link>
       <Dropdown item simple text='Services' style={{ color: '#FFA60D' }}>
         <Dropdown.Menu>
-          <Dropdown.Item>Weddings</Dropdown.Item>
+            <Link to="/weddings"><Dropdown.Item style={{ color: 'black' }}>Weddings</Dropdown.Item></Link>
           <Dropdown.Divider />
-          <Dropdown.Item>Portraits/Senior Pictures</Dropdown.Item>
+            <Link to="/portraits"><Dropdown.Item style={{ color: 'black' }}>Portraits/Senior Pictures</Dropdown.Item></Link>
           <Dropdown.Divider />
-          <Dropdown.Item>Events/Sports Pictures</Dropdown.Item>
+            <Link to="/events"><Dropdown.Item style={{ color: 'black' }}>Events/Sports Pictures</Dropdown.Item></Link>
         </Dropdown.Menu>
       </Dropdown>
       <Link to="/contact"><Menu.Item as='a' style={{ color: '#FFA60D' }}>Contact Me</Menu.Item></Link>

@@ -30,6 +30,10 @@
   display: inline-block
 }
 
+.LinkBlack{
+  color: black;
+}
+
 .Main-Theme{
   color: #FFA60D;
 }
