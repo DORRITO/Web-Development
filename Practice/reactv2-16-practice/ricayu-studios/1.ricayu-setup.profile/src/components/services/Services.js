@@ -17,42 +17,42 @@ const Services = (props) => (
         <Table.Body>
           <Table.Row>
             <Table.Cell>{props.serviceNames[0]}</Table.Cell>
-            <Table.Cell>200</Table.Cell>
+            <Table.Cell>{props.silver[0] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[1]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[1] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[2]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[2] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[3]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[3] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[4]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[4] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[5]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[5] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[6]}</Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[6] ? <Icon name='camera retro' color='grey'/> : ''}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell></Table.Cell>
-            <Table.Cell>310</Table.Cell>
+            <Table.Cell>{props.silver[7]}</Table.Cell>
             <Table.Cell>0g</Table.Cell>
           </Table.Row>
         </Table.Body>
