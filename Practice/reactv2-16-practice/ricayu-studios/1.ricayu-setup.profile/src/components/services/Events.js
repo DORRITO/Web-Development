@@ -6,10 +6,10 @@ import Services from './Services';
 
 const Events = () => (
     <div>
-    <h1>CHIGGA BOOM contact</h1>
-    <h1>CHIGGA BOOM contact</h1>
-    <h1>CHIGGA BOOM events</h1>
-    <Services />
+        <h1>CHIGGA BOOM contact</h1>
+        <h1>CHIGGA BOOM contact</h1>
+        <h1>CHIGGA BOOM events</h1>
+        <Services />
     </div>
 )
 
