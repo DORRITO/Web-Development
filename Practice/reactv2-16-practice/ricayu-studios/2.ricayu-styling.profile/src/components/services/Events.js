@@ -20,6 +20,3 @@ const Events = () => (
 )
 
 export default Events;
-
-// <Header style={{color: 'white'}} as='h1' textAlign='center'>Events/Sports Pictures:</Header>
-//             <Header style={{color: 'white'}} as='h5' textAlign='center'>Usually shot hourly: contact me for specific rates!</Header>
