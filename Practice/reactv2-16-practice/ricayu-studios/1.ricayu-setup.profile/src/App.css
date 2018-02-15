@@ -19,10 +19,7 @@
 }
 
 .BackgroundBlack{
-  width: 100%;
-  height: 100%;
-
-  height: 100%;
+  height: 110vh;
   background-color: black;
 }
 
@@ -36,4 +33,16 @@
 
 .Main-Theme{
   color: #FFA60D;
+}
+
+.Theme-Title{
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: white;
+  margin-left: 65%;
+  width: 40rem;
+}
+
+.Theme-White{
+  color: white;
 }
