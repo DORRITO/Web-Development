@@ -7,10 +7,10 @@ import {Dropdown, Header, Icon, Menu} from 'semantic-ui-react'
 const AppHeader = () => (
     <Header>
     <Menu fixed='top' inverted>
-      <Link to="/"><Menu.Item style={{ color: '#FFA60D'}}>Ricayu Studios</Menu.Item></Link>
-      <Link to="/"><Menu.Item style={{ color: '#FFA60D' }}>Home</Menu.Item></Link>
-      <Link to="/about"><Menu.Item style={{ color: '#FFA60D' }}>About Me</Menu.Item></Link>
-      <Dropdown item simple text='Services' style={{ color: '#FFA60D', marginTop: '-.5rem' }}>
+      <Link to="/"><Menu.Item style={{ color: '#FF530D'}}>Ricayu Studios</Menu.Item></Link>
+      <Link to="/"><Menu.Item style={{ color: '#FF530D' }}>Home</Menu.Item></Link>
+      <Link to="/about"><Menu.Item style={{ color: '#FF530D' }}>About Me</Menu.Item></Link>
+      <Dropdown item simple text='Services' style={{ color: '#FF530D', marginTop: '-.5rem' }}>
         <Dropdown.Menu>
             <Link to="/weddings"><Dropdown.Item style={{ color: 'black' }}>Weddings</Dropdown.Item></Link>
           <Dropdown.Divider />
@@ -21,7 +21,7 @@ const AppHeader = () => (
       </Dropdown>
 
     <Menu.Menu position='right'>
-        <Link to="/contact"><Menu.Item style={{ color: '#FFA60D' }}>Contact Me</Menu.Item></Link>
+        <Link to="/contact"><Menu.Item style={{ color: '#FF530D' }}>Contact Me</Menu.Item></Link>
         <Menu.Item>
             <a href="https://www.facebook.com/fontanes/?fref=ts" rel="noopener noreferrer" target="_blank"><Icon name='facebook' size='large' color='blue'/></a>
             <a href="https://twitter.com/Richardfontanes" rel="noopener noreferrer" target="_blank"><Icon name='twitter' size='large' inverted color='blue'/></a>
