@@ -19,45 +19,45 @@ const Services = (props) => (
         <Table.Body>
           <Table.Row>
             <Table.Cell>{props.serviceNames[0]}</Table.Cell>
-            {props.silver[0] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[0] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[0] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[0] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[0] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[0] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[1]}</Table.Cell>
-            {props.silver[1] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[1] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[1] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[1] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[1] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[1] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[2]}</Table.Cell>
-            {props.silver[2] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[2] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[2] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[2] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[2] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[2] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[3]}</Table.Cell>
-            {props.silver[3] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[3] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[3] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[3] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[3] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[3] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[4]}</Table.Cell>
-            {props.silver[4] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[4] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[4] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[4] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[4] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[4] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[5]}</Table.Cell>
-            {props.silver[5] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[5] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[5] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[5] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[5] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[5] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell> : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row>
             <Table.Cell>{props.serviceNames[6]}</Table.Cell>
-            {props.silver[6] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.gold[6] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
-            {props.plat[6] ? <Table.Cell textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.silver[6] ? <Table.Cell style={{backgroundColor: '#CBDED9'}} textAlign='center'><Icon name='camera retro' size='large' color='grey'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.gold[6] ? <Table.Cell style={{backgroundColor: '#FFFFDB'}} textAlign='center'><Icon name='camera retro' size='large' color='yellow'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
+            {props.plat[6] ? <Table.Cell style={{backgroundColor: '#FFE4C4'}} textAlign='center'><Icon name='camera retro' size='large' color='teal'/></Table.Cell>  : <Table.Cell textAlign='center'></Table.Cell>}
           </Table.Row>
           <Table.Row active>
             <Table.Cell></Table.Cell>
