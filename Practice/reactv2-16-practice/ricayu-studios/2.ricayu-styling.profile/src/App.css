@@ -20,17 +20,6 @@
   z-index: -1;
 }
 
-.BackgroundImageRic{
-  margin: 10rem 0 0 0;
-  background-image: url(images/ric.jpg);
-  background-repeat: no-repeat;
-  /* background-position: center;  */
-  transform: scale(.95);
-  /* margin: -2rem 20rem 0 -5rem; */
-  height: 50vh;
-  z-index: -1;
-}
-
 .BackgroundBlack{
   height: 110vh;
   background-color: black;
@@ -65,7 +54,7 @@
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   color: white;
-  margin: 2rem 0 0 65%;
+  margin: 4rem 0 0 65%;
   width: 40rem;
 }
 

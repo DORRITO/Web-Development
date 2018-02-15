@@ -27,10 +27,10 @@ const Home = () => (
                    <img src={band} />
                 </div>
                 <div>
-                   <img style={{height: '24.2rem'}} src={cake} />
+                <img src={oceanportrait} />
                 </div>
                 <div>
-                   <img src={oceanportrait} />
+                   <img style={{height: '24.2rem'}} src={cake} />
                 </div>
             </Carousel>
             </div>
