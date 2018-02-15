@@ -1,12 +1,14 @@
 import React from 'react';
+import {Header, Image} from 'semantic-ui-react'
 
 import ric from './../images/ric.jpg';
 
 const About = () => (
     <div className='BackgroundBlack' >
         <div className="BackgroundImage">
-
+        <h1></h1><h1></h1>
         <div className="Theme-White">
+            <Image className="Theme-Carousel" src={ric} />
             <p >Hello!
             Photography is not a product. It is a collaboration and relationship between 
             the photographer and my clients. Before I start working with a prospective client, 
