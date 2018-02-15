@@ -13,14 +13,7 @@
   background-size: cover;                   
   background-repeat: no-repeat;
   background-position: center center;  */
-  background-image: url(images/ballerina.jpg);
-  background-size: cover;         
-  background-repeat: no-repeat;
-  background-position: center; 
-  transform: scale(.95);
-  margin: -2rem 20rem 0 -5rem;
-  height: 110vh;
-  z-index: -1;
+  
   /* z-index: -1; */
 }
 
