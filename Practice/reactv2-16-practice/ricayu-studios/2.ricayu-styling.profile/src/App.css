@@ -37,9 +37,13 @@
   color: #FF530D;
 }
 
+.Theme-About{
+  margin: 1rem -10rem 0 39rem;
+  width: 60rem;
+}
+
 .Theme-Carousel{
   margin: 3rem -10rem 0 50rem;
-
 }
 .Theme-Carousel img{
   width: auto;
