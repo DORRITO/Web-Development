@@ -3,12 +3,11 @@ import {Link} from 'react-router-dom';
 import {Dropdown, Header, Icon, Menu} from 'semantic-ui-react'
 
 // import profileImage from './../images/profileimage.jpg';
-
+// <Link to="/"><Menu.Item style={{ color: '#FF530D' }}>Home</Menu.Item></Link>
 const AppHeader = () => (
     <Header>
     <Menu fixed='top' inverted>
       <Link to="/"><Menu.Item style={{ color: '#FF530D'}}>Ricayu Studios</Menu.Item></Link>
-      <Link to="/"><Menu.Item style={{ color: '#FF530D' }}>Home</Menu.Item></Link>
       <Link to="/about"><Menu.Item style={{ color: '#FF530D' }}>About Me</Menu.Item></Link>
       <Dropdown item simple text='Services' style={{ color: '#FF530D', marginTop: '-.5rem' }}>
         <Dropdown.Menu>
