@@ -2,10 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import {Dropdown, Header, Icon, Menu} from 'semantic-ui-react'
 
-// import profileImage from './../images/profileimage.jpg';
-// <Link to="/"><Menu.Item style={{ color: '#FF530D' }}>Home</Menu.Item></Link>
 const AppHeader = () => (
-    <Header>
+  <Header>
     <Menu fixed='top' inverted>
       <Link to="/"><Menu.Item style={{ color: '#FF530D'}}>Ricayu Studios</Menu.Item></Link>
       <Link to="/about"><Menu.Item style={{ color: '#FF530D' }}>About Me</Menu.Item></Link>
@@ -19,16 +17,16 @@ const AppHeader = () => (
         </Dropdown.Menu>
       </Dropdown>
 
-    <Menu.Menu position='right'>
-        <Link to="/contact"><Menu.Item style={{ color: '#FF530D' }}>Contact Me</Menu.Item></Link>
-        <Menu.Item>
-            <a href="https://www.facebook.com/fontanes/?fref=ts" rel="noopener noreferrer" target="_blank"><Icon name='facebook' size='large' color='blue'/></a>
-            <a href="https://twitter.com/Richardfontanes" rel="noopener noreferrer" target="_blank"><Icon name='twitter' size='large' inverted color='blue'/></a>
-            <a href="https://www.youtube.com/channel/UCGdrfxOGBIBpmoYoxsYHZFw" rel="noopener noreferrer" target="_blank"><Icon name='youtube' size='large' inverted color='red'/></a>
-            <a href="https://www.instagram.com/ricayu1/" rel="noopener noreferrer" target="_blank"><Icon name='instagram' size='large' inverted color='pink'/></a>
-        </Menu.Item>
-    </Menu.Menu>
-  </Menu>
+      <Menu.Menu position='right'>
+          <Link to="/contact"><Menu.Item style={{ color: '#FF530D' }}>Contact Me</Menu.Item></Link>
+          <Menu.Item>
+              <a href="https://www.facebook.com/fontanes/?fref=ts" rel="noopener noreferrer" target="_blank"><Icon name='facebook' size='large' color='blue'/></a>
+              <a href="https://twitter.com/Richardfontanes" rel="noopener noreferrer" target="_blank"><Icon name='twitter' size='large' inverted color='blue'/></a>
+              <a href="https://www.youtube.com/channel/UCGdrfxOGBIBpmoYoxsYHZFw" rel="noopener noreferrer" target="_blank"><Icon name='youtube' size='large' inverted color='red'/></a>
+              <a href="https://www.instagram.com/ricayu1/" rel="noopener noreferrer" target="_blank"><Icon name='instagram' size='large' inverted color='pink'/></a>
+          </Menu.Item>
+      </Menu.Menu>
+    </Menu>
   </Header>
 )
 
