@@ -35,6 +35,13 @@
   color: #FFA60D;
 }
 
+.Theme-Carousel{
+  margin-left: 65%;
+}
+.Theme-Carousel img{
+  height: 30rem;
+  width: 30rem;
+}
 .Theme-Title{
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
