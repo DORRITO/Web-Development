@@ -1,0 +1,48 @@
+.App {
+  /* text-align: center; */
+  /* height: 100%;
+  width: 100%; */
+  font-size: 62.5%;
+  /* font-size: 62.5%; */
+  /* height: 100vh; */
+}
+
+.BackgroundImage{
+  background-image: url(images/ballerina.jpg);
+  background-size: cover;         
+  background-repeat: no-repeat;
+  background-position: center; 
+  transform: scale(.95);
+  margin: -2rem 20rem 0 -5rem;
+  height: 110vh;
+  z-index: -1;
+}
+
+.BackgroundBlack{
+  height: 110vh;
+  background-color: black;
+}
+
+.Display-Block{
+  display: inline-block
+}
+
+.Link-Black{
+  color: black;
+}
+
+.Main-Theme{
+  color: #FFA60D;
+}
+
+.Theme-Title{
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: white;
+  margin-left: 65%;
+  width: 40rem;
+}
+
+.Theme-White{
+  color: white;
+}
