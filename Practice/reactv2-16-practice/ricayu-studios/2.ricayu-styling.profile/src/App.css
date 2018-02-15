@@ -1,3 +1,5 @@
+/* @import "node_modules/react-image-gallery/styles/css/image-gallery.css"; */
+
 .App {
   /* text-align: center; */
   /* height: 100%;
@@ -36,11 +38,17 @@
 }
 
 .Theme-Carousel{
-  margin-left: 65%;
+  margin: 2.5rem -10rem 0 50rem;
+
 }
 .Theme-Carousel img{
-  height: 30rem;
-  width: 30rem;
+  width: auto;
+  height: auto;
+}
+
+.image-gallery-thumbnail img {
+  width: auto;
+  height: 75px;
 }
 .Theme-Title{
   font-family: 'Great Vibes', cursive;
