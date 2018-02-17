@@ -1,7 +1,27 @@
-/* .App {
-} */
-
-.Centered {
-  /* background-color: black; */
+.App {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
+.Centered {
+  margin: 25vh 0 -2.25rem 0;
+  padding: 0px 0 0px 0;
+  margin-left: 33.3vw;
+}
+
+.Centered2 {
+  margin-left: 33.3vw;
+  padding: 0px 0 0px 0;
+}
+
+.Boxes{
+  height: 25vh;
+}
+
+.Inside{
+  background-color: 'green';
+  width: 33.3vw;
+}
+
+/* !important */
