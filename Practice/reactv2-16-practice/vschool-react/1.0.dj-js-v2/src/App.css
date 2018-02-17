@@ -1,14 +1,15 @@
 .App {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
 .Centered {
-  margin: 25vh 0 -2.25rem 0;
+  margin: 25vh 0 -2.1rem 0;
   padding: 0px 0 0px 0;
   margin-left: 33.3vw;
 }
+
 
 .Centered2 {
   margin-left: 33.3vw;
@@ -24,4 +25,7 @@
   width: 33.3vw;
 }
 
-/* !important */
+.ui.inverted.blue.segment.Change:hover {
+  background-color: black!important;
+  color: #fff!important;
+}
