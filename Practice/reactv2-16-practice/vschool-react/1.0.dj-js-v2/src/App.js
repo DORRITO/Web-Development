@@ -9,9 +9,9 @@ class App extends Component {
         <div className="Centered">
           <Grid className="Boxes" container columns={3} >
             <Segment.Group horizontal className='Inside'>
-                <div className="ui blue inverted segment Change">meow</div>
-                <Segment className="Change2" color='green' inverted></Segment>
-                <Segment className="Change3" color='red' inverted></Segment>
+                <div className="ui blue inverted segment Change1"></div>
+                <div className="ui green inverted segment Change2"></div>
+                <div className="ui red inverted segment Change3"></div>
             </Segment.Group>
           </Grid>
         </div>
@@ -19,9 +19,9 @@ class App extends Component {
         <div className="Centered2">
           <Grid className="Boxes" container columns={3}>
             <Segment.Group horizontal className='Inside'>
-                <Segment className="Change4" color='orange' inverted></Segment>
-                <Segment className="Change5" color='yellow' inverted></Segment>
-                <Segment className="Change6" color='black' inverted></Segment>
+                <div className="ui orange inverted segment Change4"></div>
+                <div className="ui yellow inverted segment Change5"></div>
+                <div className="ui black inverted segment Change6"></div>
             </Segment.Group>
           </Grid>
         </div>

@@ -25,7 +25,42 @@
   width: 33.3vw;
 }
 
-.ui.inverted.blue.segment.Change:hover {
+.ui.inverted.blue.segment.Change1:hover {
   background-color: black!important;
-  color: #fff!important;
+  transition: background-color 2s;
+}
+
+.ui.inverted.green.segment.Change2:hover {
+  margin-right: 50px;
+  transition: margin-right 1s ease-in-out;
+}
+
+.ui.inverted.red.segment.Change3:hover {
+  opacity: .1;
+  transition: opacity 2s;
+}
+
+.ui.inverted.orange.segment.Change4:hover {
+  animation: move-in-steps 6s infinite;
+}
+
+.ui.inverted.yellow.segment.Change5:hover {
+  width: 300px;
+  transition: width 3s;
+}
+
+.ui.inverted.black.segment.Change6:hover {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  transition: 2s;
+}
+
+@keyframes move-in-steps {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
 }
