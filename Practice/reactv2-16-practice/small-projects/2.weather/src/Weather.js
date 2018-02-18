@@ -14,7 +14,8 @@ class Weather extends React.Component {
             location: '',
             country: '',
             description: '',
-            rain: false
+            rain: false,
+            background: ''
         };
     }///////////////////////
 
@@ -28,16 +29,23 @@ class Weather extends React.Component {
             // this.setState({weatherRes: res})
             this.callAPI(api)
                 .then(res => {
-                        let kTemp = res.main.temp;
-                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1) + '°F';
-                        let cTemp = (kTemp - 273.15).toFixed(1) + '°C';
-                        let country = res.sys.country;
-                        let location = res.name;
-                        let description = res.weather[0].description;
-                        let rain = res.weather[0].main === 'Rain'|| res.weather[0].main === 'Drizzle'|| res.weather[0].main === 'Thunderstorm';
-                        this.setState({weather: fTemp, cTemp, location, country, description, rain});
+                    let kTemp = res.main.temp;
+                    let fTemp = (kTemp * (9/5) - 459.67)
+                    let cTemp = (kTemp - 273.15);
+                    let country = res.sys.country;
+                    let location = res.name;
+                    let description = res.weather[0].description;
+                    let rain = res.weather[0].main === 'Rain'|| res.weather[0].main === 'Drizzle'|| res.weather[0].main === 'Thunderstorm';
+                    this.setState({weather: fTemp.toFixed(1) + '°F', cTemp: cTemp.toFixed(1) + '°C', location, country, description, rain});
+
+                    if(fTemp > 95){
+                        this.setState({background: 'App-Hot'});
+                    }else if(fTemp < 30){
+                        this.setState({background: 'App-Freezing'});
+                    }else if(fTemp < 55){
+                        this.setState({background: 'App-Cold'})
                     }
-                )
+                })
                 .catch(err => console.log(err));
         });
     }//*********************************************************************
@@ -53,6 +61,7 @@ class Weather extends React.Component {
     ////////////////////////////////////////////////////////////////////////////
     render() {
       return (
+        <div className={`App ${this.state.background}`}>
         <Grid centered columns={2}>
             {this.state.rain ? <ReactRain numDrops="500" /> : null}
             <Segment style={{backgroundColor: '#D6E3E8B3'}} padded raised>
@@ -65,6 +74,7 @@ class Weather extends React.Component {
             </Grid.Row>
             </Segment>
         </Grid>
+        </div>
       );
     }//////////////////////////////////////////////////////////////////////////////
   }
