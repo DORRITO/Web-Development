@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   align-items: center;
-  background: url('https://cdn.pixabay.com/photo/2018/02/13/14/00/turkey-3150822_960_720.jpg');
+  background: url('turkey.jpg');
   background-size: cover;
   display: flex;
   height: 100vh;
