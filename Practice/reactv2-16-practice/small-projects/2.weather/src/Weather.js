@@ -30,7 +30,7 @@ class Weather extends React.Component {
             this.callAPI(api)
                 .then(res => {
                     let kTemp = res.main.temp;
-                    let fTemp = (kTemp * (9/5) - 459.67)
+                    let fTemp = (kTemp * (9/5) - 459.67);
                     let cTemp = (kTemp - 273.15);
                     let country = res.sys.country;
                     let location = res.name;
@@ -38,11 +38,11 @@ class Weather extends React.Component {
                     let rain = res.weather[0].main === 'Rain'|| res.weather[0].main === 'Drizzle'|| res.weather[0].main === 'Thunderstorm';
                     this.setState({weather: fTemp.toFixed(1) + '°F', cTemp: cTemp.toFixed(1) + '°C', location, country, description, rain});
 
-                    if(fTemp > 95){
+                    if(fTemp >= 95){
                         this.setState({background: 'App-Hot'});
-                    }else if(fTemp < 30){
+                    }else if(fTemp <= 30){
                         this.setState({background: 'App-Freezing'});
-                    }else if(fTemp < 55){
+                    }else if(fTemp <= 55){
                         this.setState({background: 'App-Cold'})
                     }
                 })
