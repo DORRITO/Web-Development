@@ -7,6 +7,10 @@ class Weather extends React.Component {
             weather: 72
         };
     }
+    //***********************
+    componentDidMount(){
+        navigator.geolocation.getCurrentPosition((position) => console.log(position) )
+    }//***********************
 
     render() {
       return (
