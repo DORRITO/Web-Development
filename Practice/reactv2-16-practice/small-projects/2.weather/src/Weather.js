@@ -1,5 +1,8 @@
 import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
+import ReactRain from 'react-rain-animation';
+ 
+import "react-rain-animation/lib/style.css";
 
 class Weather extends React.Component {
     ///////////////////////
@@ -25,8 +28,8 @@ class Weather extends React.Component {
             this.callAPI(api)
                 .then(res => {
                         let kTemp = res.main.temp;
-                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1) + '°';
-                        let cTemp = (kTemp - 273.15).toFixed(1) + '°';
+                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1) + '°F';
+                        let cTemp = (kTemp - 273.15).toFixed(1) + '°C';
                         let country = res.sys.country;
                         let location = res.name;
                         let description = res.weather[0].description;
@@ -49,12 +52,13 @@ class Weather extends React.Component {
     render() {
       return (
         <Grid centered columns={2}>
-            <Segment style={{backgroundColor: '#D6E3E8B3'}} padded>
-            <Grid.Row centered >
+            <ReactRain numDrops="500" />
+            <Segment style={{backgroundColor: '#D6E3E8B3'}} padded raised>
+            <Grid.Row centered>
                 <Grid.Column textAlign='center'>
-                    <h1>{this.state.weather}</h1>
-                    <h2>{this.state.description ? this.state.description : ''}</h2>
-                    <h2>{this.state.location ? `In ${this.state.location}, ${this.state.country}` : ''}</h2>
+                    <h1 className='Decoration'>{this.state.weather}</h1>
+                    <h2 className='Decoration'>{this.state.description ? this.state.description : ''}</h2>
+                    <h2 className='Decoration'>{this.state.location ? `In ${this.state.location}, ${this.state.country}` : ''}</h2>
                 </Grid.Column>
             </Grid.Row>
             </Segment>
