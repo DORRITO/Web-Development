@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid, Segment } from 'semantic-ui-react';
 
 class Weather extends React.Component {
     ///////////////////////
@@ -47,11 +48,17 @@ class Weather extends React.Component {
     ////////////////////////////////////////////////////////////////////////////
     render() {
       return (
-        <div>
-          <h1>{this.state.weather}</h1>
-          <h2>{this.state.description ? this.state.description : ''}</h2>
-          <h2>{this.state.location ? `In ${this.state.location}, ${this.state.country}` : ''}</h2>
-        </div>
+        <Grid centered columns={2}>
+            <Segment style={{backgroundColor: '#D6E3E8B3'}} padded>
+            <Grid.Row centered >
+                <Grid.Column textAlign='center'>
+                    <h1>{this.state.weather}</h1>
+                    <h2>{this.state.description ? this.state.description : ''}</h2>
+                    <h2>{this.state.location ? `In ${this.state.location}, ${this.state.country}` : ''}</h2>
+                </Grid.Column>
+            </Grid.Row>
+            </Segment>
+        </Grid>
       );
     }//////////////////////////////////////////////////////////////////////////////
   }
