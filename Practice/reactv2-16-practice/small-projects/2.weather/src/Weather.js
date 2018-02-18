@@ -6,7 +6,10 @@ class Weather extends React.Component {
         super(props);
         this.state = {
             weather: 'grabbing your weather...',
-            weatherRes: ''
+            cTemp: '',
+            location: '',
+            country: '',
+            description: ''
         };
     }///////////////////////
 
@@ -21,12 +24,15 @@ class Weather extends React.Component {
             this.callAPI(api)
                 .then(res => {
                         let kTemp = res.main.temp;
-                        let fTemp = kTemp * (9/5) - 459.67;
-                        let cTemp = kTemp - 273.15;
-                        console.log(fTemp.toFixed(1), cTemp.toFixed(1))
+                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1);
+                        let cTemp = (kTemp - 273.15).toFixed(1);
+                        let country = res.sys.country;
+                        let location = res.name;
+                        let description = res.description;
+                        this.setState({weather: fTemp, cTemp, location, country, description});
                     }
                 )
-                .catch(err => console.log(err))
+                .catch(err => console.log(err));
         });
     }//*********************************************************************
 
