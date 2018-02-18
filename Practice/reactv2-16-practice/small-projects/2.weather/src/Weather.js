@@ -13,7 +13,8 @@ class Weather extends React.Component {
             cTemp: '',
             location: '',
             country: '',
-            description: ''
+            description: '',
+            rain: false
         };
     }///////////////////////
 
@@ -33,7 +34,8 @@ class Weather extends React.Component {
                         let country = res.sys.country;
                         let location = res.name;
                         let description = res.weather[0].description;
-                        this.setState({weather: fTemp, cTemp, location, country, description});
+                        let rain = res.weather[0].main === 'Rain'|| res.weather[0].main === 'Drizzle'|| res.weather[0].main === 'Thunderstorm';
+                        this.setState({weather: fTemp, cTemp, location, country, description, rain});
                     }
                 )
                 .catch(err => console.log(err));
@@ -52,7 +54,7 @@ class Weather extends React.Component {
     render() {
       return (
         <Grid centered columns={2}>
-            <ReactRain numDrops="500" />
+            {this.state.rain ? <ReactRain numDrops="500" /> : null}
             <Segment style={{backgroundColor: '#D6E3E8B3'}} padded raised>
             <Grid.Row centered>
                 <Grid.Column textAlign='center'>
