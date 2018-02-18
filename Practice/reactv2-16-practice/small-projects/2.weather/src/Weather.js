@@ -24,11 +24,11 @@ class Weather extends React.Component {
             this.callAPI(api)
                 .then(res => {
                         let kTemp = res.main.temp;
-                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1);
-                        let cTemp = (kTemp - 273.15).toFixed(1);
+                        let fTemp = (kTemp * (9/5) - 459.67).toFixed(1) + '°';
+                        let cTemp = (kTemp - 273.15).toFixed(1) + '°';
                         let country = res.sys.country;
                         let location = res.name;
-                        let description = res.description;
+                        let description = res.weather[0].description;
                         this.setState({weather: fTemp, cTemp, location, country, description});
                     }
                 )
@@ -49,6 +49,8 @@ class Weather extends React.Component {
       return (
         <div>
           <h1>{this.state.weather}</h1>
+          <h2>{this.state.description ? this.state.description : ''}</h2>
+          <h2>{this.state.location ? `In ${this.state.location}, ${this.state.country}` : ''}</h2>
         </div>
       );
     }//////////////////////////////////////////////////////////////////////////////
