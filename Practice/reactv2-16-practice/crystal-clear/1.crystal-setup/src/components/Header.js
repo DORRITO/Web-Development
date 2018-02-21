@@ -19,7 +19,7 @@ class Header extends React.Component {
     render() {
       return (
         <div className='Header'>
-          JABAWAAKKIIII
+          <h1 className="Text">Crystal</h1>
         </div>
       );
     }//////////////////////////////////////////////////////////////////////////////

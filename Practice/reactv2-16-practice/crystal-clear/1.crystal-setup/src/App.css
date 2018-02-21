@@ -1,13 +1,24 @@
+.App{
+  margin-top: -3rem;
+}
+
 .Header {
-  /* align-items: center; */
   background: url('pool.jpg');
   background-size: cover ;
   /* background-size: contain; */
   /* display: flex; */
   background-repeat: no-repeat;
   height: 120vh;
+  /* align-items: center; */
   /* justify-content: center; */
   width: 100vw;
-  /* background-size: contain; */
   transform: scale(.95);
+}
+
+.Text{
+  font-family: 'Playball', cursive;
+  color: #FFFFFF;
+  margin-bottom: -20rem;
+  text-align: center;
+  font-size: 500%;
 }
