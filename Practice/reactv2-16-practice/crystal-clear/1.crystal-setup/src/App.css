@@ -2,23 +2,36 @@
   margin-top: -10rem;
 }
 
-.Header {
+.Header-Text{
+  margin-top: -10rem;
+}
+
+.Title {
   background: url('pool.jpg');
   background-size: cover ;
   /* background-size: contain; */
   /* display: flex; */
   background-repeat: no-repeat;
-  height: 130vh;
+  height: 128vh;
   /* align-items: center; */
   /* justify-content: center; */
   width: 100vw;
   transform: scale(.95);
 }
 
-.Text{
+.Text1{
   font-family: 'Playball', cursive;
   color: #FFFFFF;
   /* background-color: black; */
   text-align: center;
-  font-size: 500%;
+  font-size: 600%;
+  margin-top: 3.5rem;
+}
+.Text2{
+  font-family: 'Playball', cursive;
+  color: #FFFFFF;
+  /* background-color: black; */
+  text-align: center;
+  font-size: 600%;
+  margin-top: -1rem;
 }
