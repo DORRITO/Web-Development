@@ -3,6 +3,7 @@ import './App.css';
 
 import Title from './components/Header';
 import Clients from './components/Clients';
+import Services from './components/Services';
 
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <Title />
-        <Clients name="clients"/>
+        <Clients />
+        <Services />
       </div>
     );
   }
