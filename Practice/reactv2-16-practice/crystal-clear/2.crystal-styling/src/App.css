@@ -19,6 +19,7 @@
   height: 40vh;
   width: 30vw;
   margin: 0rem 0 0 0;
+  padding-left: 8rem;
 }
 .Residential{
   background: url('https://images.pexels.com/photos/459570/pexels-photo-459570.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
@@ -30,6 +31,7 @@
   height: 40vh;
   width: 30vw;
   margin: 0rem 0 0 0;
+  padding-left: 8rem;
 }
 
 .Services{
@@ -55,8 +57,6 @@
 .Text1{
   font-family: 'Playball', cursive;
   color: #FFFFFF;
-  /* background-color: black; */
-  
   text-align: center;
   font-size: 600%;
   margin-top: 3.5rem;
@@ -64,12 +64,11 @@
 .Text2{
   font-family: 'Playball', cursive;
   color: #FFFFFF;
-  /* background-color: black; */
   text-align: center;
   font-size: 600%;
   margin-top: -1rem;
 }
 .Text-Services{
   font-family: 'Playball', cursive;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
 }
