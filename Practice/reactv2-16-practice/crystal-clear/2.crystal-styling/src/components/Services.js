@@ -5,29 +5,29 @@ class Servies extends Component {
   render() {
     return (
       <div className="Services" >
-        <Segment size='large' stacked inverted style={{backgroundColor: '#E5E5DB'}}>
+        <Segment size='large' stacked  style={{backgroundColor: '#E5E5DB'}}>
           <Grid columns={3}>
-            <Grid.Column><Icon size='large' color='bue' inverted name='wrench' />
+            <Grid.Column><Icon size='big' inverted color='blue' name='wrench' />
               Maintenance
               <h6>meow</h6>
             </Grid.Column>
-            <Grid.Column><Icon size='large' color='bue' inverted name='leaf' />
+            <Grid.Column><Icon size='big' inverted color='green' name='leaf' />
               Cleaning
               <h6>meow</h6>
             </Grid.Column>
-            <Grid.Column><Icon size='large' color='bue' inverted name='archive' />
+            <Grid.Column><Icon size='big' color='orange' inverted name='archive' />
               Supplies
               <h6>meow</h6>
             </Grid.Column>
-            <Grid.Column><Icon size='large' color='bue' inverted name='first aid' />
+            <Grid.Column><Icon size='big' color='red' inverted name='first aid' />
               Restoration
               <h6>meow</h6>
             </Grid.Column>
-            <Grid.Column><Icon size='large' color='bue' inverted name='tint' />
+            <Grid.Column><Icon size='big' color='pink' inverted name='tint' />
               Chemicals
               <h6>meow</h6>
             </Grid.Column>
-            <Grid.Column><Icon size='large' color='bue' inverted name='child' />
+            <Grid.Column><Icon size='big' color='blue' inverted name='child' />
               Customer Service
               <h6>meow</h6>
             </Grid.Column>
