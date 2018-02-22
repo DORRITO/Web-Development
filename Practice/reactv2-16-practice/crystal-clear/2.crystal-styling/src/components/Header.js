@@ -35,10 +35,10 @@ class Title extends React.Component {
       <div className='Title'>
       <h1>{null}</h1><h1>{null}</h1><h1>{null}</h1>
       <a onClick={this.scrollTo}>
-        <Header style={{margin: '2rem 0 0 25%', display: 'inline-block'}} dividing floated='left'>Services</Header>
+        <Header style={{margin: '2rem 0 0 25%', display: 'inline-block', cursor: 'pointer'}} dividing floated='left'>Services</Header>
       </a>
       <a onClick={this.scrollToBottom}>
-        <Header style={{margin: '2rem 25% 0 0', display: 'inline-block'}} dividing floated='right'>Contact</Header>
+        <Header style={{margin: '2rem 25% 0 0', display: 'inline-block', cursor: 'pointer'}} dividing floated='right'>Contact</Header>
       </a>
       <h1 className="Text1">Crystal</h1>
       <h1>{null}</h1><h1>{null}</h1><h1>{null}</h1><h1>{null}</h1>
