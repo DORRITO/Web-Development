@@ -17,6 +17,11 @@
   margin: 0rem 0 0 0;
 }
 
+.Contact{
+  height: 25vh;
+  margin-left: 45vw;
+}
+
 .Residential{
   background: url('https://images.pexels.com/photos/459570/pexels-photo-459570.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
   background-size: contain;
@@ -32,7 +37,7 @@
 .Services{
   /* background-color: blue; */
   height: 25vh;
-  margin-top: 2rem;
+  margin: 2rem 0 6rem 0;
 }
 
 .Title {
