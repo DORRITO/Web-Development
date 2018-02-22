@@ -1,0 +1,73 @@
+.App{
+  margin-top: -10rem;
+
+  transform: scale(.95);
+}
+
+.Commercial{
+  background: url('commercial.jpg');
+  background-size: contain ;
+  /* background-size: contain; */
+  /* display: flex; */
+  background-repeat: no-repeat;
+  border-style: solid;
+  display: inline-block;
+  height: 50vh;
+  width: 48vw;
+  margin: 0rem 0 0 0;
+}
+
+.Contact{
+  height: 25vh;
+  margin-left: 40vw;
+}
+
+.Residential{
+  background: url('https://images.pexels.com/photos/459570/pexels-photo-459570.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
+  background-size: contain;
+  border-style: solid;
+  display: flex;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 50vh;
+  width: 45vw;
+  margin: 0rem 0 0 0;
+}
+
+.Services{
+  /* background-color: blue; */
+  height: 25vh;
+  margin: 2rem 0 6rem 0;
+}
+
+.Title {
+  background: url('pool.jpg');
+  background-size: cover ;
+  /* background-size: contain; */
+  /* display: flex; */
+  /* background-repeat: no-repeat; */
+  border-style: solid;
+  height: 128vh;
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100vw;
+  
+}
+
+.Text1{
+  font-family: 'Playball', cursive;
+  color: #FFFFFF;
+  /* background-color: black; */
+  
+  text-align: center;
+  font-size: 600%;
+  margin-top: 3.5rem;
+}
+.Text2{
+  font-family: 'Playball', cursive;
+  color: #FFFFFF;
+  /* background-color: black; */
+  text-align: center;
+  font-size: 600%;
+  margin-top: -1rem;
+}
