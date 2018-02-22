@@ -10,7 +10,7 @@
 }
 
 .Commercial{
-  background: url('commercial.jpg');
+  background: url('./images/commercial.jpg');
   background-size: contain ;
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   padding-left: 8rem;
 }
 .Residential{
-  background: url('https://images.pexels.com/photos/459570/pexels-photo-459570.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
+  background: url('./images/residential.jpg');
   background-size: cover;
   border-style: solid;
   display: flex;
@@ -41,7 +41,7 @@
 }
 
 .Title {
-  background: url('pool.jpg');
+  background: url('./images/pool.jpg');
   background-size: cover ;
   /* background-size: contain; */
   /* display: flex; */
