@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 
-class Contact extends Component {
+import { Grid, Header, Segment } from 'semantic-ui-react';
+
+class Clients extends Component {
   render() {
     return (
-      <div className="SContact" >
+      <div className="Clients" >
+        <div className="Commercial">
+            <Header style={{margin: '2rem 0 0 25%', display: 'inline-block'}} floated='left'>Commercial</Header>
+        </div>
+        <div className="Residential">
+            <Header style={{margin: '2rem 25% 0 0', display: 'inline-block'}} floated='right'>Residential</Header>
+        </div>
       </div>
     );
   }
 }
 
-export default Contact;
+export default Clients;
