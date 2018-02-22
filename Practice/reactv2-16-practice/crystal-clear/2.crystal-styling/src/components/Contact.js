@@ -7,8 +7,9 @@ class Contact extends Component {
       <div className="Contact" >
         <Segment color='teal' textAlign='center' compact>
             <h1>Contact Us</h1>
-            <h3>(928) 919-4666</h3>
-            <h3>1981 S Avenue B, Yuma, AZ 85364</h3>
+            <h3 style={{marginBottom: '-1.5rem'}}>(928) 919-4666
+            <br />1981 S Avenue B, Yuma, AZ 85364</h3>
+            <h4>Mon - Fri 8AM- 5PM</h4>
             <Modal trigger={<Button inverted color='blue' size='tiny'>Careers</Button>}>
             <Modal.Header textAlign='centered'>Want to work for us?</Modal.Header>
             <Modal.Content>
