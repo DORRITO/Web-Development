@@ -23,27 +23,18 @@ class Title extends React.Component {
     Events.scrollEvent.remove('end');
   }
 
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
   scrollToBottom() {
     scroll.scrollToBottom();
   }
   scrollTo() {
-    scroll.scrollTo(100);
-  }
-  scrollMore() {
-    scroll.scrollMore(100);
-  }
-  handleSetActive(to) {
-    console.log(to);
+    scroll.scrollTo(800);
   }
 
   render() {
     return (
       <div className='Title'>
       <h1>{null}</h1><h1>{null}</h1><h1>{null}</h1>
-      <a onClick={this.scrollToBottom}>
+      <a onClick={this.scrollTo}>
         <Header style={{margin: '2rem 0 0 25%', display: 'inline-block'}} dividing floated='left'>Services</Header>
       </a>
       <a onClick={this.scrollToBottom}>

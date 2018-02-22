@@ -11,12 +11,13 @@ class Servies extends Component {
               <h4>Maintenance</h4>
               <h5>Equipment failing? Call us and we will fix it!
               <br />Or, If you are signed up for regular cleanings,
-              <br />one of our tech will notify us if they see anything wrong.</h5>
+              <br />one of our techs will notify us if they see anything wrong.</h5>
             </Grid.Column>
             <Grid.Column><Icon size='big' inverted color='green' name='leaf' />
               <h4>Cleaning</h4>
-              <h5>Our techs will scrub the sides of your pool
-              <br />and vacuum up dirt if they see it on every visit.</h5>
+              <h5>Our techs visit multiple times a week, and will scrub the 
+              <br />sides of your pool on each and every visit, and will
+              <br />vacuum up dirt if they see it.</h5>
             </Grid.Column>
             <Grid.Column><Icon size='big' color='orange' inverted name='archive' />
               <h4>Supplies</h4>
@@ -27,8 +28,8 @@ class Servies extends Component {
             <Grid.Column><Icon size='big' color='red' inverted name='first aid' />
               <h4>Restoration</h4>
               <h5>Is your pool looking like a radioactive quagmire? That's either
-              <br />algae or too many margaritas got spilled during your last party.
-              <br />Either way, call us and we can clean it up for you!</h5>
+              <br />algae or too many margaritas got spilled during your last party!
+              <br />Either way, call us and we can clean it up for you.</h5>
             </Grid.Column>
             <Grid.Column><Icon size='big' color='pink' inverted name='tint' />
               <h4>Chemicals</h4>
