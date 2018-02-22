@@ -1,8 +1,7 @@
 import React from 'react';
-import { Header, Segment } from 'semantic-ui-react';
+import {Header} from 'semantic-ui-react';
 
-import * as Scroll from 'react-scroll';
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import {Events, animateScroll as scroll, scrollSpy} from 'react-scroll';
 
 class Title extends React.Component {
     

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Grid, Header, Segment } from 'semantic-ui-react';
+import {Header, Segment } from 'semantic-ui-react';
 
 class Clients extends Component {
   render() {
