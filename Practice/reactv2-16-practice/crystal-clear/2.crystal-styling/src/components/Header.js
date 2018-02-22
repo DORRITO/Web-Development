@@ -27,7 +27,7 @@ class Title extends React.Component {
     scroll.scrollToBottom();
   }
   scrollTo() {
-    scroll.scrollTo(800);
+    scroll.scrollTo(673);
   }
 
   render() {
