@@ -5,7 +5,7 @@ class Servies extends Component {
   render() {
     return (
       <div className="Services" >
-        <Segment size='large' inverted style={{backgroundColor: '#E5E5DB'}}>
+        <Segment size='large' stacked inverted style={{backgroundColor: '#E5E5DB'}}>
           <Grid columns={3}>
             <Grid.Column><Icon size='large' color='bue' inverted name='wrench' />
               Maintenance
