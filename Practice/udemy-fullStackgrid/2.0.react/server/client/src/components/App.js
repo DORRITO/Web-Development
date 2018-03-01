@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 
 import Header from "./Header";
-
-const Landing = () => <h2>landing</h2>;
+import Landing from "./Landing";
 
 class App extends Component {
 
