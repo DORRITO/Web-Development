@@ -15,7 +15,7 @@ while (isSunk === false) {
   if (guess < 0 || guess > 6) {
     alert("Please enter a valid cell number!");
   } else {
-    guesses = guesses++;
+    guesses = guesses + 1;
   }
 
   //did guess hit?
@@ -33,5 +33,6 @@ while (isSunk === false) {
 }
 
 var stats = "You took " + guesses + " guesses to sink the battleship, " +
-  "which means your shooting accuracy was " +3 / guesses;
+  "which means your shooting accuracy was " + (3 / guesses);
+
 alert(stats);
