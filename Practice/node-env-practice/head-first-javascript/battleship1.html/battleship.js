@@ -21,6 +21,9 @@ while (isSunk === false) {
   //did guess hit?
   if (guess == location1 || guess == location2 || guess == location3) {
     hits = hits + 1;
+    alert("HIT!");
+  } else {
+    alert("MISS!");
   }
 
   //sunk?
