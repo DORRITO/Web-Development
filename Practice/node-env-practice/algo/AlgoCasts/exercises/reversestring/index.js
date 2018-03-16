@@ -9,8 +9,8 @@
 const reverse = (str) => {
     let reversed = '';
 
-   for(let char of str){
-       reversed = char + reversed;
+   for(let i of str){
+       reversed = i + reversed;
    }
 
    return reversed;
