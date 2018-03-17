@@ -11,7 +11,7 @@
 const reverseInt = (n) => {
     const rev = n.toString().split('').reverse().join('');
 
-    return n < 0 ? parseInt(rev) * -1 : parseInt(rev);
+    return parseInt(rev) * Math.sign(n);
 }
 
 module.exports = reverseInt;
