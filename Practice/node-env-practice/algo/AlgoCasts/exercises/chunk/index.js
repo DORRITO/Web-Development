@@ -10,10 +10,11 @@
 
 function chunk(array, size) {
   let chunked = [];
+  let index = 0;
 
-  for (let i of array) {
-    const last = chunked[chunked.length - 1];
-    !last || last.length === size ? chunked.push([i]) : last.push(i);
+  while (index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index += size;
   }
 
   return chunked;
