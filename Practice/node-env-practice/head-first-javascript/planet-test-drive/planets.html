@@ -8,6 +8,7 @@
         .redtext { color: red; } </style>
     <script>
         function init() {
+            console.log(1 > false)
             var planet = document.getElementById("greenplanet");
             planet.innerHTML = "Red Alert: hit by phaser fire!";
             planet.setAttribute("class", "redtext");
