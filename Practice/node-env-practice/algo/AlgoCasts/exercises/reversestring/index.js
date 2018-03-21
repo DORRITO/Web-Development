@@ -7,11 +7,7 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 const reverse = str => {
-  let rev = str.split('').reduce((reversed, char) => {
-    return char + reversed
-  }, '');
-  console.log(rev, 'skiddle boosh')
-  return rev;
+  return str.split("").reduce((total, i) => i + total, "");
 };
 
 module.exports = reverse;
