@@ -9,9 +9,8 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  
+  //
 }
-
 
 // (/[^\w]/g, '')
 module.exports = anagrams;
