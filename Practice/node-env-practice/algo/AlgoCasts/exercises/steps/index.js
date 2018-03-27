@@ -18,7 +18,7 @@
 //       '####'
 
 function steps(n, row = 0, stair = '') {
-    
+    //
 }
 
 
