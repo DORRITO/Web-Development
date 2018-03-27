@@ -14,6 +14,31 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n, row = 0, pyr = '') {
+    if ( n === row) { return }
+    if ( pyr.length === 2 * n - 1){
+        console.log(pyr);
+        return pyramid(n, row + 1);
+    }
+
+    let midpoint = Math.floor((2 * n - 1) / 2 );
+    let add;
+    if(midpoint - row <= pyr.length && midpoint + row >= pyr.length){
+        add = '#';
+    } else { add = ' ' }
+    pyramid(n, row, pyr + add);
+}
+
+// const midpoint = Math.floor((2 * n - 1) / 2 );
+
+//     for (let i = 0; i < n; i++){
+//         let pyr = ''
+//         for (let j = 0; j < n * 2 - 1; j++){
+//             if (midpoint - i <= j && midpoint + i >= j){
+//                 pyr += '#';
+//             } else { pyr += ' ' }
+//         }
+//         console.log(pyr);
+//     }
 
 module.exports = pyramid;
