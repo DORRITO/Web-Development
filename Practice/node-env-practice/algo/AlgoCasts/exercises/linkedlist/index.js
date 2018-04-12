@@ -15,4 +15,7 @@ class LinkedList {
   }
 }
 
+const list = new LinkedList();
+list.head = new Node(10);
+
 module.exports = { Node, LinkedList };
