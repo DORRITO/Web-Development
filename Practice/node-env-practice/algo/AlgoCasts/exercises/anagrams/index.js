@@ -9,7 +9,11 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  
+  return newStr(stringA) === newStr(stringB);
+}
+
+function newStr(str){
+    str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
 // (/[^\w]/g, '')
