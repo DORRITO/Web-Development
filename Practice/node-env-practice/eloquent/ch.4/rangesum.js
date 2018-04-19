@@ -6,6 +6,12 @@ const range = (start, end) => {
     return rangeArr;
 }
 
-const sum = numArr => Math.sum(numArr);
+const sum = numArr => {
+    let total = 0;
+    for (let i of numArr){
+        total += i;
+    }
+    return total;
+}
 
 console.log(sum(range(1, 10)));
