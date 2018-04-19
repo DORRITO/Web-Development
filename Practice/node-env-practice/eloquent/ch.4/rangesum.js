@@ -6,6 +6,6 @@ const range = (start, end) => {
     return rangeArr;
 }
 
+const sum = numArr => Math.sum(numArr);
 
-
-console.log(range(1, 10));
+console.log(sum(range(1, 10)));
