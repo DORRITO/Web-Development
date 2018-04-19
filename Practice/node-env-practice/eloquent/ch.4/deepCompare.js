@@ -1,3 +1,4 @@
+// checks if values are the same.  does a deep check if there is a object
 const deepEqual = (val1, val2) => {
   if (val1 === val2) {
     if (val1 === null || val2 === null) {
