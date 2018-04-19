@@ -1,6 +1,6 @@
-const range = (start, end) => {
+const range = (start, end, step = 1) => {
     rangeArr = [];
-    for (let i = start; i <= end; i++) {
+    for (let i = start; i <= end; i += step) {
         rangeArr.push(i);
     }
     return rangeArr;
@@ -14,4 +14,4 @@ const sum = numArr => {
     return total;
 }
 
-console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10, 2)));
