@@ -11,15 +11,13 @@
   background-color: #222;
   height: 20vh;
   padding: 20px;
-  color: white;
-  text-align: center;
+  color: #FFF !important;
 }
 
-.App-title {
-  color: #FFF;
+/* .App-title { */
   /* background-color: blue; */
-  padding-top: 3%;
-}
+  /* padding-top: 3% !important; */
+/* } */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
