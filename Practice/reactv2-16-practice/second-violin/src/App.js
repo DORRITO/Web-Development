@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div>
         <Header as="h2" className="App-header" textAlign="center" verticalalign="middle">
-          Welcome to Second Violin
+          <div className="App-title">Welcome to Second Violin</div>
         </Header>
         <button className="ui button">Button</button>
       </div>
