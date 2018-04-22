@@ -5,9 +5,13 @@
 
 .App-header {
   background-color: #222;
-  height: 20vh;
+  height: 15vh;
   padding: 20px;
   color: #FFF !important;
+}
+
+.App-segment{
+  background-color: aquamarine;
 }
 
 .App-title {
