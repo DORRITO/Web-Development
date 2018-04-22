@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Segment raised color='teal'>
+        <Segment className="App-segment" raised color='teal'>
           <Header as="h2" className="App-header" textAlign="center" verticalalign="middle">
             <div className="App-title">Welcome to Second Violin</div>
           </Header>
