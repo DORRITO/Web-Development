@@ -18,35 +18,41 @@ class LinkedList {
     this.head = new Node(data, this.head);
   }
 
-  size(){
+  size() {
     let num = 0;
     let node = this.head;
 
-    while(node){
-        num++;
-        node = node.next;
+    while (node) {
+      num++;
+      node = node.next;
     }
     return num;
   }
 
-  getFirst(){
-      return this.head;
+  getFirst() {
+    return this.head;
   }
 
-  getLast(){
-      let node = this.head;
-      if(node){
-          while(node){
-              if(!node.next){
-                  return node;
-              }
-            node = node.next;
-          }
+  getLast() {
+    let node = this.head;
+    if (node) {
+      while (node) {
+        if (!node.next) {
+          return node;
+        }
+        node = node.next;
       }
+    }
   }
 
-  clear(){
-      return this.head = null;
+  clear() {
+    return (this.head = null);
+  }
+
+  removeFirst() {
+    if (this.head) {
+        this.head = this.head.next;
+    }
   }
 }
 
