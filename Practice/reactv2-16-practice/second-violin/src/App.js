@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import { Header, Segment } from "semantic-ui-react";
 
+import Songs from './components/Songs';
+
 class App extends Component {
   render() {
     return (
@@ -11,6 +13,7 @@ class App extends Component {
             <div className="App-title">Welcome to Second Violin</div>
           </Header>
         </Segment>
+        <Songs />
       </div>
     );
   }
