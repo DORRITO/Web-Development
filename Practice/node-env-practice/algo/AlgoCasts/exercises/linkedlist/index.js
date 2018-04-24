@@ -44,6 +44,10 @@ class LinkedList {
           }
       }
   }
+
+  clear(){
+      return this.head = null;
+  }
 }
 
 module.exports = { Node, LinkedList };
