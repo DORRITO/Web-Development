@@ -11,21 +11,21 @@
         <a href="register.html">reg</a>
 
         <form>
-            Name<input type="text"/><br />
-            Last<input type="text"/><br />
-            email<input type="email" required><br />
-            password<input type="password" min="3"><br />
-            birthday<input type="date"><br />
+            Name<input type="text" name="firstname"/><br />
+            Last<input type="text" name="lastname"/><br />
+            email<input type="email" name="email" required><br />
+            password<input type="password" name="password" min="3"><br />
+            birthday<input type="date" name="birthday"><br />
             gender<br />
                 <input type="radio" name="gender">Male<br />
                 <input type="radio" name="gender">Female<br />
             Pets: <br />
-                <input type="checkbox">Cat<br />
-                <input type="checkbox">Dog<br />
+                <input type="checkbox" name="cat">Cat<br />
+                <input type="checkbox" name="dog">Dog<br />
             Cars: <br />
             <select>
-                <option value="volvo">Volvo</option>
-                <option value="Audi">Audi</option>
+                <option value="volvo" name="volvo">Volvo</option>
+                <option value="Audi" name="audi">Audi</option>
             </select><br />
             <input type="submit" value="register"/>
             <input type="reset"/>
