@@ -19,7 +19,7 @@ function midpoint(list) {
         slow = slow.next;
         fast = fast.next.next;
     }
-    return slow
+    return slow;
 }
 
 module.exports = midpoint;
