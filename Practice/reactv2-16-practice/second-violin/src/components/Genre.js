@@ -4,7 +4,9 @@ class Genre extends Component {
 
     render(){
         return(
-            "hi"
+            "genre"
         )
     }
 }
+
+export default Genre;
