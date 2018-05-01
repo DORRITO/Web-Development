@@ -1,9 +1,14 @@
 import React, {Component} from "react";
 
+import Rock from './genres/Rock';
+
 class Genre extends Component {
     render(){
         return(
-            <div>"genre"</div>
+            <div>
+                "genre"
+                <Rock />
+            </div>
         )
     }
 }
