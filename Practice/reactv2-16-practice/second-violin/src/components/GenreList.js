@@ -4,7 +4,12 @@ class GenreList extends Component {
     render(){
         return(
             <div>
-                "genre"
+                genres:
+                <span>Blues </span>
+                <span>Country </span>
+                <span>Pop </span>
+                <span>Rap </span>
+                <span>Rock </span>
             </div>
         )
     }
