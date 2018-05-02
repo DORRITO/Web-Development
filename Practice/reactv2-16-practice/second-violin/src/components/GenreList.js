@@ -1,5 +1,9 @@
 import React, {Component} from "react";
 
+import Country from './genres/Country';
+import Pop from './genres/Pop';
+import Rock from './genres/Rock';
+
 class GenreList extends Component {
     render(){
         return(
@@ -10,6 +14,8 @@ class GenreList extends Component {
                 <span>Pop </span>
                 <span>Rap </span>
                 <span>Rock </span>
+                <div>Checks to make sure components are working:</div>
+                <Country /><Pop /><Rock />
             </div>
         )
     }

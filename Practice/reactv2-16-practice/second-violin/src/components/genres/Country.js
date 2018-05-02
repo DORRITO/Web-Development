@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class Country extends Component{
     render(){
         return(
-            <div>Country</div>
+            <div>Country component</div>
         )
     }
 }
