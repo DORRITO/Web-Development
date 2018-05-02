@@ -6,7 +6,7 @@ import Pop from './genres/Pop';
 import Rap from './genres/Rap';
 import Rock from './genres/Rock';
 
-class GenreList extends Component {
+class GenreTitleList extends Component {
     render(){
         return(
             <div>
@@ -23,4 +23,4 @@ class GenreList extends Component {
     }
 }
 
-export default GenreList;
+export default GenreTitleList;

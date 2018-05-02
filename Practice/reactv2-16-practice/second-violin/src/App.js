@@ -3,7 +3,7 @@ import "./App.css";
 import { Header, Segment } from "semantic-ui-react";
 
 import Songs from './components/Songs';
-import GenreList from './components/GenreList';
+import GenreTitleList from './components/GenreTitleList';
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
             <div className="App-title">Welcome to Second Violin</div>
           </Header>
         </Segment>
-        <GenreList />
+        <GenreTitleList />
         <Songs />
       </div>
     );
