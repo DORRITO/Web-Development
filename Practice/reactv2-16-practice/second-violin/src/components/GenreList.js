@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Genre extends Component {
+class GenreList extends Component {
     render(){
         return(
             <div>
@@ -10,4 +10,4 @@ class Genre extends Component {
     }
 }
 
-export default Genre;
+export default GenreList;
