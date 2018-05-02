@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 
+import Blues from './genres/Blues';
 import Country from './genres/Country';
 import Pop from './genres/Pop';
+import Rap from './genres/Rap';
 import Rock from './genres/Rock';
 
 class GenreList extends Component {
@@ -15,7 +17,7 @@ class GenreList extends Component {
                 <span>Rap </span>
                 <span>Rock </span>
                 <div>Checks to make sure components are working:</div>
-                <Country /><Pop /><Rock />
+                <Blues /><Country /><Pop /><Rap /><Rock />
             </div>
         )
     }
