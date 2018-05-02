@@ -14,8 +14,8 @@ class App extends Component {
             <div className="App-title">Welcome to Second Violin</div>
           </Header>
         </Segment>
-        <Songs />
         <GenreList />
+        <Songs />
       </div>
     );
   }
