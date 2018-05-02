@@ -5,6 +5,7 @@ class Songs extends Component {
       return (
         <div>
           This is the song component
+          This will be a song list!
         </div>
       );
     }
