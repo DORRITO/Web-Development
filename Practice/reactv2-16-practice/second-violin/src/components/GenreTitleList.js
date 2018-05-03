@@ -10,7 +10,7 @@ class GenreTitleList extends Component {
     render(){
         return(
             <div>
-                genres:
+                genres: hi
                 <span>Blues </span>
                 <span>Country </span>
                 <span>Pop </span>
