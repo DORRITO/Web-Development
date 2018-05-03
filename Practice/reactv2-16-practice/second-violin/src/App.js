@@ -17,6 +17,9 @@ class App extends Component {
         <GenreTitleList />
         <Songs />
         <button>submit a song</button>
+        <footer><a>
+          rules (make me a modal)
+        </a></footer>
       </div>
     );
   }
