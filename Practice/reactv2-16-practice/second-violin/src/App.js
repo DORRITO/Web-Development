@@ -16,6 +16,7 @@ class App extends Component {
         </Segment>
         <GenreTitleList />
         <Songs />
+        <button>submit a song</button>
       </div>
     );
   }

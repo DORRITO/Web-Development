@@ -8,7 +8,7 @@ class Songs extends Component {
          <button>Weekly</button>
          <button>Monthly</button>
           This is the song component
-          This will be a song list!
+          This will be a song list! 1-100
         </div>
       );
     }
