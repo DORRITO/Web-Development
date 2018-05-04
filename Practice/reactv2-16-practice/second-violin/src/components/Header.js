@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 
-class Header extends Component{
+import { Header, Segment } from "semantic-ui-react";
+
+class PageHeader extends Component{
     render(){
         return(
             <Segment className="App-segment" raised color='teal'>
@@ -11,3 +13,5 @@ class Header extends Component{
         )
     }
 }
+
+export default PageHeader;
