@@ -1,9 +1,14 @@
 import React, {Component} from "react";
 
+import SongPageList from './../SongPageList';
+
 class Country extends Component{
     render(){
         return(
-            <div>Country component</div>
+            <div>
+                Country component
+                <SongPageList />
+            </div>
         )
     }
 }
