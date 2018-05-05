@@ -43,13 +43,18 @@ const array = [
     // const arr = array.map((item) => {
     //     return item.username + '?'
     // })
-    let arr = []
-    for (let i of array){
-        arr.push(i.username + '?')
-    }
-    console.log(arr)
+                                                // //another version
+                                                // let arr = []
+                                                // for (let i of array){
+                                                //     arr.push(i.username + '?')
+                                                // }
+    // console.log(arr)
   
   //Filter the array to only include users who are on team: red
+  const filtered = array.filter((item) => {
+      return item.team === 'red';
+  })
+  console.log(filtered)
   
   
   //Find out the total score of all users using reduce
