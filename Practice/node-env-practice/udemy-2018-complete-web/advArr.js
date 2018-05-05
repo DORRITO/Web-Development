@@ -28,19 +28,26 @@ const array = [
   ];
   
   //Create an array using forEach that has all the usernames with a "!" to each of the usernames
-  let meow = () => {
-    let arr = [];
-    array.forEach((item) => {
-      arr.push(item.username + '!')
-    })
-    console.log(arr)
-    return arr
-  }
+    //   let meow = () => {
+    //     let arr = [];
+    //     array.forEach((item) => {
+    //       arr.push(item.username + '!')
+    //     })
+    //     console.log(arr)
+    //     return arr
+    //   }
   
-  meow()
+    //   meow() 
   
   //Create an array using map that has all the usernames with a "? to each of the usernames
-  
+    // const arr = array.map((item) => {
+    //     return item.username + '?'
+    // })
+    let arr = []
+    for (let i of array){
+        arr.push(i.username + '?')
+    }
+    console.log(arr)
   
   //Filter the array to only include users who are on team: red
   
@@ -50,11 +57,11 @@ const array = [
   // (1), what is the value of i?
   // (2), Make this map function pure:
   const arrayNum = [1, 2, 4, 5, 8, 9];
-  const newArray = arrayNum.map((num, i) => {
-  	console.log(num, i);
-  	alert(num);
-  	return num * 2;
-  })
+//   const newArray = arrayNum.map((num, i) => {
+//   	console.log(num, i);
+//   	alert(num);
+//   	return num * 2;
+//   })
   
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
   
