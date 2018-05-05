@@ -58,21 +58,28 @@ const array = [
   
   
   //Find out the total score of all users using reduce
-  const score = array.reduce((total, i) => {
-    return  total + i.score
-  }, 0)
+    // const score = array.reduce((total, i) => {
+    //     return  total + i.score
+    // }, 0)
 
-  console.log(score);
+    // console.log(score);
 
 
   // (1), what is the value of i?
   // (2), Make this map function pure:
   const arrayNum = [1, 2, 4, 5, 8, 9];
-//   const newArray = arrayNum.map((num, i) => {
-//   	console.log(num, i);
-//   	alert(num);
-//   	return num * 2;
-//   })
+  const newArray = arrayNum.map((num, i) => {
+  	// console.log(num, i);
+  	// alert(num);
+  	return num * 2;
+  })
   
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
-  
+  let list = array.map((i) => {
+      i.items = i.items.map((j) => {
+          return j + '!'
+      })
+    return i;
+  })
+
+  console.log(list);
