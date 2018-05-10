@@ -4,21 +4,21 @@
 // with N levels using the # character.  Make sure the
 // step has spaces on the right hand side!
 // --- Examples
-//   steps(2)
+//   row(2)
 //       '# '
 //       '##'
-//   steps(3)
+//   row(3)
 //       '#  '
 //       '## '
 //       '###'
-//   steps(4)
+//   row(4)
 //       '#   '
 //       '##  '
 //       '### '
 //       '####'
 
 function steps(n) {
- ///   
+    
 }
 
 module.exports = steps;
