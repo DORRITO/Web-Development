@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Table } from "semantic-ui-react";
+
 class Songs extends Component {
     render() {
       return (
@@ -7,8 +9,13 @@ class Songs extends Component {
          <button>Daily</button>
          <button>Weekly</button>
          <button>Monthly</button>
-          This is the song component
-          This will be a song list! 1-100
+          <Table inverted color="teal">
+            <Table.Header>
+              <Table.Row >
+                <Table.HeaderCell  >Enter song list component here! 1-100</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+          </Table>
         </div>
       );
     }
