@@ -9,7 +9,13 @@ class LoginSignup extends Component {
   // }
 
   render() {
-    return <div>'Login, signup form'</div>;
+    return(
+      <div>'Login, signup form'
+        <button value="Login"></button>
+        <button value="Signup">test</button>
+      </div>
+
+    )
   }
 }
 
