@@ -7,6 +7,6 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-//
+
 
 module.exports = capitalize;
