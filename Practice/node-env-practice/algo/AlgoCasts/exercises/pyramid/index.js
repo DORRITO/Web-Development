@@ -14,7 +14,7 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
+function pyramid(n,) {
   //
 }
 
