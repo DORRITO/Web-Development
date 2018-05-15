@@ -14,9 +14,21 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n,) {
-  //
-}
+//function here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const midpoint = Math.floor((2 * n - 1) / 2 );
 
