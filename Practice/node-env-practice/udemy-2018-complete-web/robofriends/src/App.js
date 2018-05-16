@@ -14,6 +14,8 @@ class App extends Component {
     };
   }
 
+  componentWillMount(){}
+
   onSearchChange = (e) => {
     //   e.preventDefault();
     this.setState({ searchField: e.target.value})
