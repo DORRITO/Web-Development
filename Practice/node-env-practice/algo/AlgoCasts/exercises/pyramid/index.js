@@ -15,7 +15,9 @@
 //       '#####'
 
 //pyramid
-
+const pyramid = (n, row=0, py='') => {
+ 
+}
 
 
 

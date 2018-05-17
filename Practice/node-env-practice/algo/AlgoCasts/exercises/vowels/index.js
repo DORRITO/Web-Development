@@ -8,7 +8,9 @@
 //   vowels('Why?') --> 0
 
 //
-
+const vowels = str =>{
+   
+}
 
 
 
