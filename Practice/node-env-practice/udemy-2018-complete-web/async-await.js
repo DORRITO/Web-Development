@@ -5,12 +5,12 @@ fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
   .then(console.log)
 
-async function func(){
+async function ship(){
     const res = await fetch('https://swapi.co/api/starships/9/')
     const res2 = await res.json()
     console.log(res2)
 }
-func()
+// ship()
 
 // #2) ADVANCED: Update the function below from the video to also have
 // async await for this line: fetch(url).then(resp => resp.json())
@@ -23,13 +23,16 @@ const urls = [
 ]
 
 const getData = async function() {
-  const [ users, posts, albums ] = await Promise.all(urls.map(url =>
-      fetch(url).then(resp => resp.json())
-  ));
+  const [ users, posts, albums ] = await Promise.all(async function(url){
+    const res = await fetch(url);
+    return res.json();
+  });
   console.log('users', users);
   console.log('posta', posts);
   console.log('albums', albums);
 }
+
+
 
 // #3) Add a try catch block to the #2 solution in order to catch any errors.
 // Now chnage one of the urls so you console.log your error with 'ooooooops'
