@@ -14,18 +14,16 @@
 //       ' ### '
 //       '#####'
 
-//pyramid
-// const pyramid = (n, row=0, py='') => {
-//     for(let line = '#'; line.length < 8; line += '#'){
+
+
+
+
+
+// const pyramid = (n, row=0, pyr='') => {
+//     for(let line = '#'; line.length < n; line += '#'){
 //         console.log(line)
 //     }
 // }  // no space version!
-
-
-
-
-
-
 
 
 
@@ -46,17 +44,5 @@
 //         console.log(pyr);
 //     }
 ////////////////////////////////////////////
-// if ( n === row) { return }
-//     if ( pyr.length === 2 * n - 1){
-//         console.log(pyr);
-//         return pyramid(n, row + 1);
-//     }
-
-//     let midpoint = Math.floor((2 * n - 1) / 2 );
-//     let add;
-//     if(midpoint - row <= pyr.length && midpoint + row >= pyr.length){
-//         add = '#';
-//     } else { add = ' ' }
-//     pyramid(n, row, pyr + add);
 
 module.exports = pyramid;
