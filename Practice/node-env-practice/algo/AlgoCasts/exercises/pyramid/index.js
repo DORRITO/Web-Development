@@ -15,9 +15,11 @@
 //       '#####'
 
 //pyramid
-const pyramid = (n, row=0, py='') => {
- 
-}
+// const pyramid = (n, row=0, py='') => {
+//     for(let line = '#'; line.length < 8; line += '#'){
+//         console.log(line)
+//     }
+// }  // no space version!
 
 
 
