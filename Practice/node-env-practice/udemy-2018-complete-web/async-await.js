@@ -5,6 +5,12 @@ fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
   .then(console.log)
 
+async function func(){
+    const res = await fetch('https://swapi.co/api/starships/9/')
+    const res2 = await res.json()
+    console.log(res2)
+}
+func()
 
 // #2) ADVANCED: Update the function below from the video to also have
 // async await for this line: fetch(url).then(resp => resp.json())
