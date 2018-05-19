@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {Component} from "react";
 
-const App = () => {
-  return(
-    <div>
-      <h1>working page</h1>
-      <h1></h1>
-    </div>
-  )
-}
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      ship: ''
+    }
+  }
+    
+  componentDidMount() { this.starWars(32) }
+
+  starWars = async (shipNum) => {
+    try{
+      const res = await fetch(`https://swapi.co/api/starships/${shipNum}`);
+      const ship = await res.json()
+      console.log(ship)
+      this.setState({ship: ship.name})
+    } catch(e){ console.log( "this isn't working", e)}
+  }
+  
+  render(){
+    return(
+      <div>
+        <h1>Star Wars Ships</h1>
+        <h2>{this.state.ship}</h2>
+      </div>
+    )
+  } 
+};
 
 export default App;
