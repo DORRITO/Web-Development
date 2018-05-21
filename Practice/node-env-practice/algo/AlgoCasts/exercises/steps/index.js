@@ -18,7 +18,7 @@
 //       '####'
 
 const steps = (n, row=0, stair='') => {
-    //
+    ////
 }
 
 module.exports = steps;
