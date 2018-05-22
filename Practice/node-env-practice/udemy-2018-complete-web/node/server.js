@@ -3,13 +3,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
-
-
-app.get('/', (req, res) => {
-    console.log(req.body);
-    res.send('hellooooooo')
-})
+app.use(express.static(__dirname + '/public'))
 
 app.listen(3000);
