@@ -2,13 +2,13 @@ const express = require("express");
 
 const app = express();
 
+app.use((req,res,next) => {
+    console.log('<h1>HelooooooooO</h1>');
+    next();
+})
+
 app.get('/', (req, res) => {
-    const user = {
-        name: 'sally',
-        hobby: 'soccer'
-    }
-    res.send(user)
-    // res.send('hellooooooo')
+    res.send('hellooooooo')
 })
 
 app.listen(3000);
