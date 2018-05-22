@@ -8,6 +8,16 @@
 //   vowels('Why?') --> 0
 
 
+///
+
+
+
+
+
+
+module.exports = vowels;
+
+
 
 
 
@@ -15,4 +25,3 @@
 
 
 // .match(/[aeiou]/gi)
-module.exports = vowels;
