@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
-import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Navigation from './components/Navigation/Navigation';
-import Signin from './components/Signin/Signin';
-import Register from './components/Register/Register';
-import Logo from './components/Logo/Logo';
-import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import Rank from './components/Rank/Rank';
-import './App.css';
+import React, { Component } from "react";
+import Clarifai from "clarifai";
 
-//You must add your own API key here from Clarifai.
+import Navigation from "./components/Navigation/Navigation";
+import Logo from "./components/Logo/Logo";
+import Rank from "./components/Rank/Rank";
+import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
+import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import Register from './components/Register/Register';
+import Signin from './components/Signin/Signin';
+
+import Particles from "react-particles-js";
+import "./App.css";
+
 const app = new Clarifai.App({
- apiKey: 'YOUR_API_HERE'
+  apiKey: "d9c603000d2c4dd6accd873b126b8bfd"
 });
 
 const particlesOptions = {
@@ -25,7 +26,7 @@ const particlesOptions = {
       }
     }
   }
-}
+};
 
 class App extends Component {
   constructor() {
