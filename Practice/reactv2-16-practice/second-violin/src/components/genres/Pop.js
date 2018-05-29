@@ -1,16 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
 import SongPageList from './../SongPageList';
 
-class Pop extends Component{
-    render(){
+const Pop = () => {
         return(
             <div>
                 Pop component!
                 <SongPageList />
             </div>
         )
-    }
 }
 
 export default Pop;
