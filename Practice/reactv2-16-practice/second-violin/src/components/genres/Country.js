@@ -1,16 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
-import SongPageList from './../SongPageList';
+import SongPageList from "./../SongPageList";
 
-class Country extends Component{
-    render(){
-        return(
-            <div>
-                Country component
-                <SongPageList />
-            </div>
-        )
-    }
-}
+const Country = () => {
+  return (
+    <div>
+      Country component
+      <SongPageList />
+    </div>
+  );
+};
 
 export default Country;
