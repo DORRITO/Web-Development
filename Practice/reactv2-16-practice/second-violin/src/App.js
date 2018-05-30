@@ -11,7 +11,12 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      
+      main: true,
+      blues: false,
+      country: false,
+      pop: false,
+      rap: false,
+      rock: false
     }
   }
 
