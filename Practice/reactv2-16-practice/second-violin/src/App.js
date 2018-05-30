@@ -8,6 +8,13 @@ import GenreExp from './components/GenreExp';
 
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      
+    }
+  }
+
   render() {
     return (
       <div>
