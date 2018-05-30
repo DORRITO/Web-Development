@@ -16,7 +16,9 @@ class App extends Component {
       country: false,
       pop: false,
       rap: false,
-      rock: false
+      rock: false,
+      login: false,
+      signup: false
     }
   }
 
