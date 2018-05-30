@@ -22,13 +22,17 @@ class App extends Component {
     }
   }
 
+  songSubmit = () => {
+    alert('submitted song')
+  }
+
   render() {
     return (
       <div>
         <Header/>
         <GenreTitleList />
         <Songs />
-        <button>submit a song</button>
+        <button onClick={this.songSubmit}>submit a song</button>
         <GenreExp />
         <footer>
           Frisbee Productions 
