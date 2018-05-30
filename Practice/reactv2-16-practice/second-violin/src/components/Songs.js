@@ -23,7 +23,7 @@ class Songs extends Component {
         <Table inverted color="teal">
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>
+              <Table.HeaderCell textAlign='center'>
                 Enter song list component here! 1-100
               </Table.HeaderCell>
             </Table.Row>
