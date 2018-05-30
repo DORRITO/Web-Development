@@ -1,17 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
-import SongPageList from './../SongPageList';
+import SongPageList from "./../SongPageList";
 
-class Blues extends Component{
-    render(){
-        return(
-            <div>
-                Blues component
-                <SongPageList />
-            </div>
-            
-        )
-    }
-}
+const Blues = () => {
+  return (
+    <div>
+      Blues component
+      <SongPageList />
+    </div>
+  );
+};
 
 export default Blues;
