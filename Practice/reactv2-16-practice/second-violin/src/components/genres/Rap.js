@@ -1,16 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 
-import SongPageList from './../SongPageList';
+import SongPageList from "./../SongPageList";
 
-class Rap extends Component{
-    render(){
-        return(
-            <div>
-                Rap component
-                <SongPageList />
-            </div>
-        )
-    }
-}
+const Rap = () => {
+  return (
+    <div>
+      Rap component
+      <SongPageList />
+    </div>
+  );
+};
 
 export default Rap;
