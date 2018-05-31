@@ -5,11 +5,11 @@ class GenreList extends Component {
         return(
             <div>
                 genres: 
-                <span>Blues </span>
-                <span>Country </span>
-                <span>Pop </span>
-                <span>Rap </span>
-                <span>Rock </span>
+                <span onClick={this.page}>Blues </span>
+                <span onClick={this.page}>Country </span>
+                <span onClick={this.page}>Pop </span>
+                <span onClick={this.page}>Rap </span>
+                <span onClick={this.page}>Rock </span>
             </div>
         )
     }
