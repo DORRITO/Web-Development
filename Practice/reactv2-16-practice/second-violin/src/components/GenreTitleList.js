@@ -1,5 +1,9 @@
 import React, {Component} from "react";
 
+const page = () => {
+    alert('this page');
+}
+
 class GenreList extends Component {
     render(){
         return(
