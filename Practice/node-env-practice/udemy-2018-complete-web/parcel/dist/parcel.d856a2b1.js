@@ -19608,7 +19608,7 @@ var Hello = function Hello() {
   );
 };
 
-_reactDom2.default.render(Hello, document.getElementById('app'));
+_reactDom2.default.render(_react2.default.createElement(Hello, null), document.getElementById('app'));
 },{"react":6,"react-dom":7}],29:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
