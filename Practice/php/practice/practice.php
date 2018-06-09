@@ -7,5 +7,9 @@
 <body>
     This is working!
     <?php print "Hello again, <em>world</em>!"; ?>
+    <?php 
+        $hi = 'hi';
+        echo $hi; 
+    ?>
 </body>
 </html>
