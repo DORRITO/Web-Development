@@ -10,5 +10,13 @@
     <?php 
         require "test.php";
     ?>
+
+    <?php 
+        function yes(){
+            print 'yes';
+        }
+
+        yes();
+    ?>
 </body>
 </html>
