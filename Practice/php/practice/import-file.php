@@ -13,10 +13,10 @@
 
     <?php 
         function yes(){
-            print 'yes';
+            return 'yes';
         }
 
-        yes();
+        print yes();
     ?>
 </body>
 </html>
