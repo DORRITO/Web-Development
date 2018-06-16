@@ -5,7 +5,7 @@
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Contenet-type: text/html; charset=iso-8859-1' . "\r\n";
-   
+     /*cant use on local or free host*/
     $headers .= 'To: @yahoo.com' . "\r\n"; 
     $headers .= 'From: @yahoo.com' . "\r\n";
     $headers .= 'Reply-To: @yahoo.com' . "\r\n";
