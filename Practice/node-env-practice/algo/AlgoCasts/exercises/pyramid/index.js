@@ -15,18 +15,16 @@
 //       '#####'
 
 
-/////
+//
+
+
+
 
 // const pyramid = (n, row=0, pyr='') => {
 //     for(let line = '#'; line.length < n; line += '#'){
 //         console.log(line)
 //     }
 // }  // no space version!
-
-
-
-
-
 
 
 
