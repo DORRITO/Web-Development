@@ -10,4 +10,3 @@
     print "<br />After: ";
     include "file_delete.txt";
 ?>
-//
