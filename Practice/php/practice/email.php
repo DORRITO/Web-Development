@@ -13,4 +13,4 @@
     $addParams = "-fwebmaster@anything.com";
     mail($to, $subject, $msg, $headers, $addParams);
 ?>
-// add email to these
+// add email to these, wont work without  working server
