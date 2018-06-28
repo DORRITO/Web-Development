@@ -6,7 +6,7 @@ $password = '';
 $database = 'drupal1';
 
 //connect
-$connection = mysql_connect($server, $username, $password);
+$connection = mysqli_connect($server, $username, $password, $database);
 
 //print out error if no connection
 if (!$connection){
