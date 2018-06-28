@@ -14,5 +14,9 @@ if (!$connection){
 };
 
 //start query
+mysql_select_db($database);
+
+//query
+$result = mysql_query("SELECT * FROM people");
 
 ?>
