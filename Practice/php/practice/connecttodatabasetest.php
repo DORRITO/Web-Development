@@ -10,7 +10,7 @@ $connection = mysqli_connect($server, $username, $password, $database);
 
 //print out error if no connection
 if (!$connection){
-    die('<strong>unable to connect, </strong>' . mysql_error() . '</strong>');
+    die('<strong>unable to connect! error: , </strong>' . mysql_error() . '</strong>');
 };
 
 //start query
