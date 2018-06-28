@@ -19,4 +19,14 @@ mysql_select_db($database);
 //query
 $result = mysql_query("SELECT * FROM people");
 
+$output = '';
+while($row = mysql_fetch_array($result)){
+    foreach($row as $key => $val){
+        $output .=$key . ' = ' . $val . '<br />';
+    }
+    $output .= '<br />';
+}
+
+print $output;
+
 ?>
