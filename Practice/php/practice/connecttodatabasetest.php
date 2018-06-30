@@ -28,5 +28,5 @@ while($row = mysql_fetch_array($result)){
 }
 
 print $output;
-//temp not working
+//temp not working//
 ?>
