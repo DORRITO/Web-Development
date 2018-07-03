@@ -2,7 +2,7 @@
 
 function OpenCon(){
 $server = 'localhost';
-$username = 'drupaluser';
+$username = 'root';
 $password = '';
 $database = 'drupal1';
 
