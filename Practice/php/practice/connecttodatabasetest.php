@@ -33,6 +33,8 @@ function CloseCon($connection){
 
 // print $output;
     $conn = OpenCon();
+    $result = mysqli_query($conn, "SELECT * FROM hi");
+    print $result;
     print 'connected';
     CloseCon($conn);
 
