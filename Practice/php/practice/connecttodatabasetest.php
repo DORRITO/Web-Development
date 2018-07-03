@@ -7,14 +7,14 @@ $password = '';
 $database = 'drupaluser';
 
 //connect
-$connection = mysqli_connect($server, $username, $password, $database) or die("connect failed");
+$connection = new mysqli($server, $username, $password, $database) or die("connect failed");
 
 return $connection;
 }
 
 
 //start query
-mysql_select_db($database);
+// mysqli_select_db($connection, $database);
 
 function CloseCon($connection){
     $connection -> close();
@@ -32,5 +32,8 @@ function CloseCon($connection){
 // }
 
 // print $output;
+    OpenCon();
+    print 'connected';
+    CloseCon($connection)
 
 ?>
