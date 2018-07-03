@@ -9,15 +9,15 @@ $database = 'drupal1';
 //connect
 $connection = mysqli_connect($server, $username, $password, $database) or die("connect failed");
 
-return $conn;
+return $connection;
 }
 
 
 //start query
 mysql_select_db($database);
 
-function CloseCon($conn){
-    $conn -> close();
+function CloseCon($connection){
+    $connection -> close();
 }
 
 //query
