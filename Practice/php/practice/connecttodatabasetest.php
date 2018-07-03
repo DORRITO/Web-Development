@@ -4,7 +4,7 @@ function OpenCon(){
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'drupal1';
+$database = 'drupaluser';
 
 //connect
 $connection = mysqli_connect($server, $username, $password, $database) or die("connect failed");
