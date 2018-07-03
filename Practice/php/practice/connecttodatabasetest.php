@@ -2,9 +2,9 @@
 
 function OpenCon(){
 $server = 'localhost';
-$username = 'root';
+$username = 'drupaluser';
 $password = '';
-$database = 'drupaluser';
+$database = 'drupal1';
 
 //connect
 $connection = new mysqli($server, $username, $password, $database) or die("connect failed");
