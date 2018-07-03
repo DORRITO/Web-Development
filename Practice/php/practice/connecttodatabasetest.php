@@ -32,8 +32,8 @@ function CloseCon($connection){
 // }
 
 // print $output;
-    OpenCon();
+    $conn = OpenCon();
     print 'connected';
-    CloseCon($connection)
+    CloseCon($conn);
 
 ?>
