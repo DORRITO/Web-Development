@@ -3,3 +3,14 @@ description = A Great Theme
 core = 7.x
 
 screenshot = screenshot.png
+
+; Regions
+; ---------
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Left Sidebar
+regions[sidebar_second] = Righ Sidebar
+regions[footer] = Footer
