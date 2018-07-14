@@ -5,7 +5,7 @@ core = 7.x
 screenshot = screenshot.png
 
 ; Regions
-; ---------
+; ----------
 
 regions[header] = Header
 regions[highlighted] = Highlighted
@@ -14,3 +14,12 @@ regions[content] = Content
 regions[sidebar_first] = Left Sidebar
 regions[sidebar_second] = Righ Sidebar
 regions[footer] = Footer
+
+; Features
+; -----------
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = main_menu
+features[] = secondary_menu
