@@ -1,3 +1,5 @@
 name = My Great Theme
 description = A Great Theme
 core = 7.x
+
+screenshot = screenshot.png
