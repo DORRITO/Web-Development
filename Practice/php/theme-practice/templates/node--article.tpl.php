@@ -80,7 +80,7 @@
  * @ingroup themeable
  */
 ?>
-<h1>I am a node!</h1>
+<h1>I am an article!</h1>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
