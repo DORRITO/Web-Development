@@ -150,6 +150,7 @@
 
     <div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
+      <?php print $credits; ?>
     </div></div> <!-- /.section, /#footer -->
 
   </div></div> <!-- /#page, /#page-wrapper -->
