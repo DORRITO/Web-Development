@@ -15,7 +15,7 @@
 /* Component (SMACSS module) rules */
 @import "components/misc.css";
 /* Optionally, add your own components here. */
-@import "elegantgardens.css";
+@import "components/elegantgardens.css";
 @import "print.css";
 
 /* SMACSS theme rules */
