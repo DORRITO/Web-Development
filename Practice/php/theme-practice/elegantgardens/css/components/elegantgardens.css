@@ -1,0 +1,316 @@
+/*
+Theme Specific Core HTML Elements Styling
+*/
+body {
+    font-size: .875em;
+    border-top: 7px solid #90A860;
+    background: #eaeaea url(../../images/body_bg.png);
+    color: #666;
+  }
+  a{
+  color: #90A860;
+  text-decoration: none;
+  }
+  
+  h1, h2, h3, h4 {font-family: 'Quicksand', sans-serif;}
+  
+  h1 {
+  font-size: 34px;
+  color: #000;
+  font-weight: inherit;
+  margin:0;
+  padding:20px 0;
+  line-height:1em;
+  }
+  
+  h2, h3{
+  font-size:2em;
+  margin: 20px 0;
+  color: #000; 
+  font-weight: inherit;
+  line-height:1em;
+  }
+  
+  /*
+  Common styles for elements like lists, titles etc
+  */
+  
+  .block ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  }
+  .block ul li {
+  border-bottom: 1px dotted #737a84;
+  padding: 3px 5px;
+  letter-spacing: 2px;
+  list-style-type: none;
+  }
+  
+  .view h2 a {color:#000;}
+  
+  .view h2 a:hover {color:#90A860;}
+  
+  .views-field-title{
+  background: url(../../images/heading_bg.png) repeat-x 0 30px;
+  padding-right:20px;
+  }
+  
+  .views-field-title h2{
+  background: #FCFCFC;
+  padding-right: 10px;
+  display: inline-block;
+  }
+  
+  .page-views .view table td{vertical-align:top;}
+  .page-views .view table {margin-top:0;}
+  .page-views .view td {padding-right:30px;}
+  .page-views .view .cols-3 td.col-3 {padding-right:0;}
+  .page-views .view .cols-2 td.col-2 {padding-right:0;}
+  
+  /*responsive views grid*/
+  @media all and (min-width: 611px){
+  .page-views .view .cols-3 td {width:30%;}
+  .page-views .view .cols-2 td {width:45%;}
+  }
+  
+  @media all and (max-width: 610px){
+  table tr td{display:block;}
+  .page-views .view td {width:100%;}
+  }
+  
+  
+  /*
+  Main Menu
+  */
+  
+  
+  
+  #navigation .links li{
+  padding:0;
+  }
+  #navigation .links li a
+  {
+  float:left;
+  padding: 40px 20px 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration:none;
+  }
+  
+  #navigation .links li:hover > a, #navigation .links li.active:hover > a
+  {
+  color: #FFF;
+  background: #90A860;
+  }
+  
+  #navigation .links li.active > a {color:#90A860; }
+  
+  
+  /*
+  Footer
+  */
+  #footer{
+  margin: 0 auto 20px;
+  padding: 20px 20px 50px;
+  clear: both;
+  background: #333;
+  border-radius: 5px;
+  }
+  
+  #footer .block{
+  float:left; margin-right:30px;
+  }
+  #footer .block.last {
+  margin-right:0px;
+  }
+  #footer .block-title{
+  color: #888d92;
+  }
+  
+  #footer p{margin:0;}
+  
+  #footer #block-block-3 img{
+  padding: 0 3px;
+  }
+  
+  @media all and (min-width: 611px){
+  #footer .block{
+  width:21%; 
+      }
+  }
+  
+  @media all and (max-width: 610px){
+  #footer .block{
+  width:90%; 
+      }
+  
+  }
+  
+  
+  /*
+  Front Page Info Blocks
+  */
+  .region-front .block{
+  float:left; margin-right:30px;
+  background: url(../../images/heading_bg.png) repeat-x 0 30px;
+  }
+  .region-front .block.last {
+  margin-right:0px;
+  }
+  .region-front .block .block-title{
+  background: #FCFCFC;
+  padding-right: 10px;
+  display: inline-block;
+  }
+  
+  .region-front .block p{margin:0;padding:10px 0;}
+  
+  @media all and (min-width: 611px){
+  .region-front .block{
+  width:30%; 
+      }
+  }
+  
+  @media all and (max-width: 610px){
+  .region-front .block{
+  width:90%; 
+      }
+  
+  }
+  
+  /*
+  Node page
+  */
+  .page-node .field-name-field-image {float:left; padding-right:1em;}
+  section#comments{clear:both;}
+  
+  /* Blog Page Meta Links */
+  .page-blog .view span.views-field{
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  padding-left: 22px;
+  margin-right: 15px;
+  }
+  
+  .page-blog .view span.views-field-name{
+  background: url("../../images/sprite.png") no-repeat 0 -64px;}
+  
+  .page-blog .view span.views-field-created{
+  background: url("../../images/sprite.png") no-repeat 0 -80px;}
+  
+  .page-blog .view span.views-field-comment-count{
+  background: url("../../images/sprite.png") no-repeat 0 0;}
+  
+  .page-blog .view .views-field-nid {float:right;}
+  
+  /* button small */
+   
+  .button_small {
+      -moz-border-bottom-colors: none;
+      -moz-border-image: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      
+      border-color: #CCCCCC #CCCCCC #AAAAAA;
+      border-radius: 3px 3px 3px 3px;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: 0 0 1px #FFFFFF inset;
+      color: #555555;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 1px 5px;
+      font-size: 11px;
+      display: inline-block;
+      text-shadow: 0 0 0 transparent, 0 1px 0 #FFFFFF;
+      
+     background-image: -moz-linear-gradient(top, #fafafa, #E0E0E0);
+     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#E0E0E0));
+     background-image: -webkit-linear-gradient(top, #fafafa, #E0E0E0); 
+     background-image: -ms-linear-gradient(top, #fafafa, #E0E0E0);
+     background-image: -o-linear-gradient(top, #fafafa, #E0E0E0);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#E0E0E0')
+  }
+  
+  .button_small:hover {  
+    -webkit-box-shadow: 0 0 6px #cccccc;
+    -moz-box-shadow: 0 0 6px #cccccc;
+     box-shadow: 0 0 6px #cccccc; }
+  
+  /* Contact Form*/
+  
+  .contact-form .form-item{width:50%;}
+  
+  .contact-form label {
+  color: #666;
+  text-align: left;
+  font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;}
+  
+  .contact-form input, .contact-form textarea {
+  width:100%;
+      font: 12px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+      padding: 6px 0;
+      color: #999999;
+      border: 1px solid #d9d9d9;
+      outline: none;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 10px #eee inset;
+      -moz-box-shadow: 0 0 10px #eee inset;
+      -webkit-box-shadow: 0 0 10px #eee inset;
+      -ms-box-shadow: 0 0 10px #eee inset;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-transition: .3s ease-in-out;
+      -moz-transition: .3s ease-in-out;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+      -webkit-box-shadow: 0px 0px 5px #bfdeff;
+      -moz-box-shadow: 0px 0px 5px #bfdeff;
+      box-shadow: 0px 0px 5px #bfdeff;
+  }
+  
+  .contact-form input[type=radio], .contact-form input[type=checkbox] {
+      width: 12px;
+      margin: 8px 12px;
+      top: 3px;
+      position: relative;
+  }
+  
+  .contact-form #edit-submit {
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      text-shadow: 1px 1px 0px #fff;
+      display: block;
+      margin: 12px -2px 12px 0;
+      text-align: center;
+      padding: 6px 12px;
+      height: 36px;
+      cursor: pointer;
+      min-width: 96px;
+      width:auto;
+      background: #FBFBFB; /* old browsers */
+      background: -moz-linear-gradient(top, #FBFBFB 0%, #EEEEEE 99%); /* firefox */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(99%, #EEEEEE)); /* webkit */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#FBFBFB', endColorstr = '#EEEEEE', GradientType = 0); /* ie */
+      border: 1px solid #cfcfcf;
+      font-weight: bold;
+      color: #666;
+  }
+  
+  
