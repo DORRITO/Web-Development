@@ -25,9 +25,9 @@ function mytheme_breadcrumb($variables) {
     $variables['credits'] = t('Built by me!');
   }
 
-  function mytheme_preprocess_node(&$variables){
-    kpr($variables);
-  }
+  // function mytheme_preprocess_node(&$variables){
+  //   kpr($variables);
+  // }
 
   //?>
  
