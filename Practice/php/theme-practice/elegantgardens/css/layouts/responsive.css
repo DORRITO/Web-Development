@@ -18,7 +18,7 @@
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -63,26 +63,70 @@
   clear: both;
 }
 
+/* Position Logo & Navbar within Header*/
+
+/* Natural breakpoint for current theme is 610px. Menu & design breaks below this point*/
+
 /* Navigation bar */
-@media all and (min-width: 480px) {
+@media all and (min-width: 611px) {
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: 3em;
+    padding-top: 1.25em;
     position: relative;
   }
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
-    top: 0;
+    top: -150px;
     height: 3em;
     width: 100%;
   }
+  #header{
+  height:150px;
+  }
+  #logo{
+  margin-top:34px;
+  }
+  #navigation .links
+{
+width: 65%;
+float: right;
+border-bottom: 2px solid #000;
+}
+
+}
+
+
+@media all and (max-width: 610px){
+  #main {
+    /* Move all the children of #main down to make room. */
+    padding-top: 2em;
+    position: relative;
+  }
+
+#navigation{
+    position: absolute;
+    top: 0;
+    height: 3em;
+
+}
+  #header{
+  height:100%;
+  }
+
+#navigation .links
+{
+width: 100%;
+float: right;
+border-bottom: 2px solid #000;
+}
+
 }
 
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 611px) and (max-width: 959px) {
 
   /**
    * The layout when there is only one sidebar, the left one.
