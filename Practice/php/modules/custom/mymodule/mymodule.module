@@ -1,0 +1,4 @@
+<?php
+function mymodule_init(){
+    dpm("It's working!, It's working!");
+}
