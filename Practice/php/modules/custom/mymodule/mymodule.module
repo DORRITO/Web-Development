@@ -1,4 +1,15 @@
 <?php
-function mymodule_init(){
-    dpm("It's working!, It's working!");
+function mymodule_menu(){
+    $items = array();
+    $items['mymodule'] = array(
+        'title' => 'My Page',
+        'description' => 'Landing Page for My module',
+        'page callback' => 'mymodule_callback',
+        'access arguments' => array('access content'),
+    );
+    return $items;
+}
+
+function mymodule_callback(){
+    return 'My first page callback';
 }
