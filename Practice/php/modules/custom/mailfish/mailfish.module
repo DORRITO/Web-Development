@@ -1,0 +1,19 @@
+<?php
+/**
+ * implementation of hook_menu() for mailfish module
+ */
+function mailfish_menu(){
+    $items = array();
+    $items['node/%/subscribe'] = array(
+        'title' => 'Subscribe',
+        'description' => 'Subscribe to this node',
+        'page callback' => 'mailfish_subscribe',
+        'acces arguments' => array('access content'),
+        'type' => MENU_LOCAL_TASK,
+    );
+    return $items;
+}
+
+function mailfish_subscribe(){
+    return 'Placeholder text for the subscribe tab';
+}
