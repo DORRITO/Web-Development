@@ -1,0 +1,7 @@
+<?php
+/**
+ * implementation of hook_node_view()
+ */
+ function redlink_node_view($node, $view_mode){
+     dpm('You are viewing a node');
+ }
