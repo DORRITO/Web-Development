@@ -51,6 +51,12 @@ function mailfish_email_form_validate($form, &$form_state) {
       $message = t('The address %email is not a valid email address. Please re-enter your address.', array('%email' => $email));
       form_set_error('email', $message);
     }
+    //perform check on databse for previous signup 
+    $nid = $form_state['values']['nid'];
+    $previous_signup = db_query("SELECT mail FROM {mailfish} WHERE nid = :nid AND mail = :mail", array('nid' => $nid, 'mail' => $email))->fetchField();
+    if ($previous_signup) {
+        form_set_error('email', t('The address %email is already subscribed to this list.', array('%email' => $email)));
+    }
 }
 
 /**
@@ -65,5 +71,13 @@ function mailfish_email_form_submit($form, &$form_state) {
 }
 
 function mailfish_signup($email, $nid) {
-    dpm('pretending to sign up for the node');
+    // dpm('pretending to sign up for the node');
+    global $user;
+    $value = array(
+        'nid' => $nid,
+        'uid' => $user->uid,
+        'mail' => $email,
+        'created' => time(),
+    );  
+    drupal_write_record('mailfish', $value);
 }
