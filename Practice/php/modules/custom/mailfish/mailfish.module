@@ -42,7 +42,6 @@ function mailfish_email_form($form, $form_state, $nid = 0){
     );
     return $form;
 }
-
 /**
  * Validation handler for mailfish_email_form
  */
@@ -52,4 +51,19 @@ function mailfish_email_form_validate($form, &$form_state) {
       $message = t('The address %email is not a valid email address. Please re-enter your address.', array('%email' => $email));
       form_set_error('email', $message);
     }
+}
+
+/**
+ * Submission handler for mailfish email form
+ */
+function mailfish_email_form_submit($form, &$form_state) {
+    $nid = isset($form_state['values']['nid']) ? $form_state['values']['nid'] : 0;
+    if ($nid && is_numeric($nid)) { 
+      mailfish_signup($form_state['values']['email'], $nid);
+      drupal_set_message(t('Thank you for joining the mailing list. You have been added as %email.', array('%email' => $form_state['values']['email'])));
+    }
+}
+
+function mailfish_signup($email, $nid) {
+    dpm('pretending to sign up for the node');
 }
