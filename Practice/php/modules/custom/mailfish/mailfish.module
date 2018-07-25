@@ -15,5 +15,29 @@ function mailfish_menu() {
 }
 
 function mailfish_subscribe() {
-    return 'Placeholder text for the subscribe tab';
+    // return 'Placeholder text for the subscribe tab';
+    return drupal_get_form('mailfish_email_form');
+}
+
+/**
+ * Provide the form to add an email address
+ */
+function mailfish_email_form($form, $form_state, $nid = 0){
+    global $user;
+    $form['email'] = array(
+        '#title' => t('Email Address'),
+        '#type' => 'textfield',
+        '#size' => 25,
+        '#description' => TRUE,
+        '#default_value' => isset($user->mail) ? $user->mail : '',
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Sign up'),
+    );
+    $form['nid'] = array(
+        '#type' => 'hidden',
+        '#value' => $nid,
+    );
+    return $form;
 }
