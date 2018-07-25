@@ -7,17 +7,18 @@ function mailfish_menu() {
     $items['node/%/subscribe'] = array(
         'title' => 'Subscribe',
         'description' => 'Subscribe to this node',
-        'page callback' => 'mailfish_subscribe',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('mailfish_email_form', 1),
         'access arguments' => array('access content'),
         'type' => MENU_LOCAL_TASK,
     );
     return $items;
 }
-
-function mailfish_subscribe() {
-    // return 'Placeholder text for the subscribe tab';
-    return drupal_get_form('mailfish_email_form');
-}
+//i removed this function
+// function mailfish_subscribe() {
+//     // return 'Placeholder text for the subscribe tab';
+//     return drupal_get_form('mailfish_email_form');
+// }
 
 /**
  * Provide the form to add an email address
