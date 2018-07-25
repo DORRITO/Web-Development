@@ -42,3 +42,14 @@ function mailfish_email_form($form, $form_state, $nid = 0){
     );
     return $form;
 }
+
+/**
+ * Validation handler for mailfish_email_form
+ */
+function mailfish_email_form_validate($form, &$form_state) {
+    $email = $form_state['values']['email'];
+    if (!valid_email_address($email)) {
+      $message = t('The address %email is not a valid email address. Please re-enter your address.', array('%email' => $email));
+      form_set_error('email', $message);
+    }
+}
