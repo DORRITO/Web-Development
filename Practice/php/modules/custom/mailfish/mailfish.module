@@ -9,7 +9,7 @@ function mailfish_menu() {
         'description' => 'Subscribe to this node',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('mailfish_email_form', 1),
-        'access arguments' => array('access content'),
+        'access arguments' => array('submit mailfish signups'),
         'type' => MENU_LOCAL_TASK,
     );
     return $items;
@@ -81,3 +81,21 @@ function mailfish_signup($email, $nid) {
     );  
     drupal_write_record('mailfish', $value);
 }
+
+/**
+ * Implementation of hook_permission()
+ */
+function mailfish_permission() {
+    $perm = array(
+      'submit mailfish signups' => array(
+        'title' => t('Submit Mailfish Signups'),
+      ),  
+      'view mailfish report' => array(
+        'title' => t('View Mailfish Subscriptions Report'),
+      ),  
+      'administer mailfish settings' => array(
+        'title' => t('Administer Mailfish Settings'),
+      )   
+    );  
+    return $perm;
+  }
