@@ -111,12 +111,16 @@ function mailfish_permission() {
     $block = array();
     switch ($delta) {
     case 'mailfish_subscribe':
+       if (arg(0) == 'node' && is_numeric(arg(1)) && mailfish_get_node_enabled(arg(1))){
+        $nid = arg(1);
+        $form = drupal_get_form('mailfish_email_form',$nid);
         $block = array(
           'subject' => t('Sign Up for this node'),
-          'content' => t('sign up now'),
+          'content' => theme('mailfish_block', array('form' => drupal_render($form))),
         );
-        break;
-    } 
+      } 
+      break;
+    }
     return $block;
 }
 /**
