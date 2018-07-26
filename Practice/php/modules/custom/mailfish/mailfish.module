@@ -119,3 +119,16 @@ function mailfish_permission() {
     } 
     return $block;
 }
+/**
+ * implementation of hook_theme()
+ */
+function mailfish_theme() {
+    $theme = array();
+    $theme['mailfish_block'] = array(
+      'variables' => array(
+        'form' => '',
+      ),
+      'template' => 'mailfish-block',
+    );
+    return $theme;
+  }
