@@ -22,6 +22,14 @@ function mailfish_menu() {
          settings'),
         'file' => 'mailfish.admin.inc',
     );
+    //menu for admin reporting page
+    $items['admin/reports/mailfish'] = array(
+        'title' => 'Mailfish Signups',
+        'description' => 'View Mailfish Signups',
+        'page callback' => 'mailfish_signups',
+        'access arguments' => array('view mailfish report'),
+        'file' => 'mailfish.admin.inc',
+      );
     return $items;
 }
 //i removed this function
