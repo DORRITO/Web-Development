@@ -99,3 +99,23 @@ function mailfish_permission() {
     );  
     return $perm;
   }
+
+  function mailfish_block_info() {
+    $blocks = array();
+    $blocks['mailfish_subscribe'] = array(
+      'info' => t('Mailfish Signup Form'),
+    );
+    return $blocks;
+  } 
+  function mailfish_block_view($delta) {
+    $block = array();
+    switch ($delta) {
+    case 'mailfish_subscribe':
+        $block = array(
+          'subject' => t('Sign Up for this node'),
+          'content' => t('sign up now'),
+        );
+        break;
+    } 
+    return $block;
+}
