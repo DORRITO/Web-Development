@@ -12,6 +12,16 @@ function mailfish_menu() {
         'access arguments' => array('submit mailfish signups'),
         'type' => MENU_LOCAL_TASK,
     );
+    //menu for configuration screen
+    $items['admin/config/content/mailfish'] = array(
+        'title' => 'Mailfish Settings',
+        'description' => 'Administer Mailfish Settings.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('mailfish_admin_settings_form'),
+        'access arguments' => array('administer mailfish
+         settings'),
+        'file' => 'mailfish.admin.inc',
+    );
     return $items;
 }
 //i removed this function
@@ -111,7 +121,7 @@ function mailfish_permission() {
     $block = array();
     switch ($delta) {
     case 'mailfish_subscribe':
-       if (arg(0) == 'node' && is_numeric(arg(1)) && mailfish_get_node_enabled(arg(1))){
+       if (arg(0) == 'node' && is_numeric(arg(1))) {
         $nid = arg(1);
         $form = drupal_get_form('mailfish_email_form',$nid);
         $block = array(
