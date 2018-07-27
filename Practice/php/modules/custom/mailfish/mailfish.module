@@ -9,7 +9,8 @@ function mailfish_menu() {
         'description' => 'Subscribe to this node',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('mailfish_email_form', 1),
-        'access arguments' => array('submit mailfish signups'),
+        'access callback' => 'mailfish_access_subscribe_tab',
+        'access arguments' => array('create_mailfish_subscriptions'),
         'type' => MENU_LOCAL_TASK,
     );
     //menu for configuration screen
@@ -129,7 +130,7 @@ function mailfish_permission() {
     $block = array();
     switch ($delta) {
     case 'mailfish_subscribe':
-       if (arg(0) == 'node' && is_numeric(arg(1))) {
+       if (arg(0) == 'node' && is_numeric(arg(1)) && mailfish_get_node_enabled((arg(1))) ) {
         $nid = arg(1);
         $form = drupal_get_form('mailfish_email_form',$nid);
         $block = array(
