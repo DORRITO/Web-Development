@@ -198,3 +198,10 @@ function mailfish_set_node_enabled($nid){
           ->execute();
     }
 }
+function mailfish_delete_node_enabled($nid) {
+    if (is_numeric($nid)) {
+      db_delete('mailfish_enabled')
+        ->condition('nid', $nid)
+        ->execute();
+    }
+}
