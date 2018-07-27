@@ -178,7 +178,7 @@ function mailfish_theme() {
     }
   }
 
-  /**
+/**
  * determind if a node is set to display
  */
 function mailfish_get_node_enabled($nid){
@@ -204,4 +204,24 @@ function mailfish_delete_node_enabled($nid) {
         ->condition('nid', $nid)
         ->execute();
     }
+}
+
+function mailfish_node_load($nodes, $types) {
+    foreach ($nodes as $nid => $node) {
+      $node->mailfish_enabled = mailfish_get_node_enabled($node->nid);
+    }
+}
+function mailfish_node_insert($node) {
+    if ($node->mailfish_enabled) {
+      mailfish_set_node_enabled($node->nid);
+    }
+}
+function mailfish_node_update($node) {
+    mailfish_delete_node_enabled($node->nid);
+    if ($node->mailfish_enabled) {
+      mailfish_set_node_enabled($node->nid);
+    }
+}
+function mailfish_node_delete($node) {
+    mailfish_delete_node_enabled($node->nid);
 }
