@@ -159,5 +159,21 @@ function mailfish_theme() {
    * implementation of hook_form_BASE_form_alter
    */
   function mailfish_form_node_form_alter(&$form, $form_state) {
-    dpm($form_id);
-}
+    $node = $form['#node'];
+    $types = variable_get('mailfish_types', array());
+    if (!empty($types[$node->type]) && user_access('administer mailfish settings')) {
+      $form['mailfish'] = array(
+        '#title' => t('Mailfish'),
+        '#type' => 'fieldset',
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+        '#group' => 'additional_settings',
+      );
+      $form['mailfish']['mailfish_enabled'] = array(
+        '#title' => t('Collect e-mail addresses for this node.'),
+        '#type' => 'checkbox',
+        '#default_value' => isset($node->mailfish_enabled) ? 
+  $node->mailfish_enabled : FALSE,
+      );
+    }
+  }
