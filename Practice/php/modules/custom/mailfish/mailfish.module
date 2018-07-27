@@ -177,3 +177,17 @@ function mailfish_theme() {
       );
     }
   }
+
+  /**
+ * determind if a node is set to display
+ */
+function mailfish_get_node_enabled($nid){
+    if (is_numeric($nid)) {
+      $result = db_query("SELECT nid FROM {mailfish_enabled}
+        WHERE nid = :nid", array('nid' => $nid))->fetchField();
+      if ($result) {
+        return TRUE;
+      }   
+    }
+    return FALSE;
+}
