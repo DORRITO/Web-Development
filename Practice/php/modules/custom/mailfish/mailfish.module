@@ -10,7 +10,7 @@ function mailfish_menu() {
         'page callback' => 'drupal_get_form',
         'page arguments' => array('mailfish_email_form', 1),
         'access callback' => 'mailfish_access_subscribe_tab',
-        'access arguments' => array('create_mailfish_subscriptions'),
+        'access arguments' => array('create_mailfish_subscriptions', 1),
         'type' => MENU_LOCAL_TASK,
     );
     //menu for configuration screen
@@ -225,4 +225,8 @@ function mailfish_node_update($node) {
 }
 function mailfish_node_delete($node) {
     mailfish_delete_node_enabled($node->nid);
+}
+
+function mailfish_access_subscribe_tab($permission, $nid) {
+    return mailfish_get_node_enabled($nid) && user_access($permission);
 }
