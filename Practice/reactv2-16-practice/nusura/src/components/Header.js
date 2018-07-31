@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar className="Navbar" inverse collapseOnSelect staticTop>
+        <Navbar className="Navbar" inverse collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="https://nusura.com" target="_blank">

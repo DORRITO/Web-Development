@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
+        <img className="Background1" src="https://nusura.staging.wpengine.com/wp-content/uploads/2018/07/page-home-1.jpg"></img>
       </div>
     );
   }
