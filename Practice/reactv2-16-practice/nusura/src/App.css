@@ -17,7 +17,15 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+.Navbar{
+  align-items: center;
+  background-color: #AB433C;
+  /* display: flex; */
+
+  height: 80px;
+}
+
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
