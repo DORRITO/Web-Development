@@ -5,7 +5,6 @@ class Header extends Component {
   render() {
     return (
       <div>
-        About Products & Services SimulationDeck Case Studies News Contact
         <Navbar className="Navbar" inverse collapseOnSelect staticTop>
           <Navbar.Header>
             <Navbar.Brand>
@@ -38,17 +37,17 @@ class Header extends Component {
               <NavItem eventKey={2} href="#">
                 Producs & Services
               </NavItem>
-              <NavItem eventKey={3} href="#">
+              <NavItem eventKey={3} target="_blank" href="https://nusura.com/simulationdeck/">
                 SimulationDeck
               </NavItem>
               <NavItem eventKey={4} href="#">
-                Link Right
+                Case Studies
               </NavItem>
               <NavItem eventKey={5} href="#">
-                Link Right
+                News
               </NavItem>
               <NavItem eventKey={6} href="#">
-                Link Right
+                Contact
               </NavItem>
             </Nav>
           </Navbar.Collapse>
