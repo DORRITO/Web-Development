@@ -28,11 +28,11 @@ class Header extends Component {
                 title="About"
                 id="basic-nav-dropdown"
               >
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                <MenuItem eventKey={1.1}>Our Mission</MenuItem>
+                <MenuItem eventKey={1.2}>Our Approach</MenuItem>
+                <MenuItem eventKey={1.3}>Sectors We Serve</MenuItem>
                 <MenuItem divider />
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                <MenuItem eventKey={1.3}>Our Team</MenuItem>
               </NavDropdown>
               <NavItem eventKey={2} href="#">
                 Producs & Services
