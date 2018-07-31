@@ -27,12 +27,12 @@ class Header extends Component {
                 eventKey={1}
                 title="About"
                 id="basic-nav-dropdown"
+                className="Theme"
               >
-                <MenuItem eventKey={1.1}>Our Mission</MenuItem>
-                <MenuItem eventKey={1.2}>Our Approach</MenuItem>
-                <MenuItem eventKey={1.3}>Sectors We Serve</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={1.3}>Our Team</MenuItem>
+                <MenuItem href="https://nusura.com/mission/" target="_blank" className="Theme" eventKey={1.1}>Our Mission</MenuItem>
+                <MenuItem href="https://nusura.com/approach/" target="_blank" eventKey={1.2}>Our Approach</MenuItem>
+                <MenuItem href="https://nusura.com/sectors/" target="_blank" eventKey={1.3}>Sectors We Serve</MenuItem>
+                <MenuItem href="https://nusura.com/team/" target="_blank" eventKey={1.3}>Our Team</MenuItem>
               </NavDropdown>
               <NavItem eventKey={2} href="#">
                 Producs & Services
@@ -51,8 +51,7 @@ class Header extends Component {
               </NavItem>
             </Nav>
           </Navbar.Collapse>
-        </Navbar>;
-        <header className="App-header" />
+        </Navbar>
       </div>
     );
   }

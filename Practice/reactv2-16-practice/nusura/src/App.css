@@ -1,7 +1,7 @@
-.App {
-  /* text-align: center; */
-}
-/* //////app styles////// */
+/* .App {
+  text-align: center;
+} */
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -9,10 +9,6 @@
   color: white;
 }
 
-.nav.navbar-nav.navbar-right li a {
-  color: #FFFFFF;
-}
-/* ////////////////////// */
 .App-title {
   font-size: 1.5em;
 }
@@ -21,6 +17,7 @@
   font-size: large;
 }
 
+/* //////app styles////// */
 .Navbar{
   align-items: center;
   background-color: #AB433C;
@@ -28,6 +25,18 @@
 
   height: 80px;
 }
+
+.nav.navbar-nav.navbar-right li a {
+  color: #FFFFFF;
+}
+/* ////////////////////// */
+.navbar-nav > li > .dropdown-menu { 
+  background-color: #AB433C;
+}
+.navbar-nav > li > .dropdown-menu :hover { 
+  background-color: #AB433C;
+}
+
 
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
